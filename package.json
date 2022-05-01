@@ -1,0 +1,21 @@
+{
+  "name": "bishal.cc",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^4.13.0",
+    "gatsby-plugin-transition-link": "^1.20.5",
+    "gatsby-theme-blog": "^4.0.0",
+    "gatsby-theme-notes": "^4.0.0",
+    "gsap": "^3.10.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
