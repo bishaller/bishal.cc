@@ -1,3 +1,26 @@
 .svgSprite {
     display: none;
 }
+
+.footer {
+    padding-top: clamp(7rem, 15vw, 15rem);
+    padding-bottom: clamp(7rem, 15vw, 15rem);
+}
+
+.footer__image {
+    animation: rotate 9s linear infinite;
+    display: none;
+}
+
+.footer__main {
+    text-align: center;
+}
+
+.footer__title {
+    --wt: 400;
+    --fsz: clamp(3rem, 7.5vw, 7.5rem);
+    --lh: 1.05;
+    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
+    font: var(--font);
+    letter-spacing: -0.54vw;
+}
