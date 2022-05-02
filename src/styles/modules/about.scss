@@ -41,7 +41,6 @@
     pointer-events: auto;
     display: block;
     z-index: 999999;
-    overflow: hidden;
 
     @media #{$phone} {
         margin: 0;

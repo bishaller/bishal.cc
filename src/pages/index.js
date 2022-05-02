@@ -30,7 +30,7 @@ const WorkPage = () => {
         <Intro
           title={`Heckler for Unrestrained Design and Prototyping 🤘`}
           subtitle={`March 2022`}
-          description={`<p>Over the few following months this collection will fill up with all the characters represented in the film. Each of them will go up as a limited collection of NFTs available on OpenSea.</p>`}
+          description={`Over the few following months this collection will fill up with all the characters represented in the film. Each of them will go up as a limited collection of NFTs available on OpenSea.`}
         />
       </Layout>
     </main>

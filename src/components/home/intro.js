@@ -21,11 +21,10 @@ const Intro = ({ title, subtitle, description }) => {
               subtitle={subtitle}
               dangerouslySetInnerHTML={createHTML(subtitle)}
             />
+            <p
+              dangerouslySetInnerHTML={createHTML(description)}
+            />
           </div>
-          <div
-            className="billboard__description"
-            dangerouslySetInnerHTML={createHTML(description)}
-          />
         </div>
       </div>
     </section>

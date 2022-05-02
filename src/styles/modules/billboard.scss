@@ -1,9 +1,9 @@
 .billboard {
   padding: 12vw 0;
-  --stitleWeight: 400;
-  --stitleFontSize: clamp(3rem, 20.8vw, 18.75rem);
-  --stitleLineHeight: .8;
-  --stitleFont: var(--stitleWeight) var(--stitleFontSize)/var(--stitleLineHeight) var(--ff-default);
+  --wt: 400;
+  --fsz: clamp(3rem, 20.8vw, 18.75rem);
+  --lh: .8;
+  --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
   position: relative;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
 
 
 .billboard__title {
-  font: var(--stitleFont);
+  font: var(--font);
   letter-spacing: clamp(-1.25rem, -1.1vw, -1.25rem);
   text-align: left;
   z-index: 999;
@@ -30,8 +30,8 @@
   }
 
   strong {
-    --stitleFontSize: clamp(1rem, 1.83vw, 2.1875rem);
-    font-size: var(--stitleFontSize);
+    --fsz: clamp(1rem, 1.83vw, 2.1875rem);
+    font-size: var(--fsz);
     font-family: var(--ff-bodyItalic);
     font-weight: normal;
     letter-spacing: .5px;
@@ -43,9 +43,9 @@
     right: 0;
     text-align: right;
     background-color: yellow;
-    --padding-vertical: clamp(.25rem, 1vw, .5rem);
-    --padding-horizontal: clamp(0.625rem, 1vw, 1.25rem);
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    --pv: clamp(.25rem, 1vw, .5rem);
+    --ph: clamp(0.625rem, 1vw, 1.25rem);
+    padding: var(--pv) var(--ph);
     border-radius: 60px;
     text-transform: lowercase;
     transform: rotate(-15deg);

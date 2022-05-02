@@ -3,19 +3,59 @@
     position: relative;
     background-color: $c-black;
     color: $c-white;
+    padding: clamp(4rem, 7vw, 6.25rem) 0;
 }
 
 .intro__inner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.intro__header {
+    width: 50%;
+
+    @media #{$phone} {
+        width: 100%;
+    }
 }
 
 .intro__title {
     color: $c-white;
-    --stitleWeight: 400;
-    --stitleFontSize: clamp(3rem, 20.8vw, 5rem);
-    --stitleLineHeight: 1.05;
-    --stitleFont: var(--stitleWeight) var(--stitleFontSize)/var(--stitleLineHeight) var(--ff-default);
-    font: var(--stitleFont);
-    letter-spacing: -0.4vw
+    --wt: 400;
+    --fsz: clamp(2rem, 5vw, 5rem);
+    --lh: 1.05;
+    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
+    font: var(--font);
+    letter-spacing: -0.3vw;
+    margin-bottom: 0;
+
+    @media #{$phone} {
+        margin-bottom: 30px;
+    }
+}
+
+.intro__content {
+    width: 31.5%;
+    font-size: clamp(1.1rem, 1.2vw, 1.25rem);
+    line-height: 1.5;
+
+    p {
+        opacity: 0.65;
+        margin-bottom: 0;
+    }
+
+    @media #{$phone} {
+        width: 100%;
+    }
+}
+
+.intro__subTitle {
+    color: $c-white;
+    font-size: clamp(0.9rem, 1.2vw, 1.25rem);
+
+    @media #{$phone} {
+        margin-bottom: 10px;
+    }
 }
