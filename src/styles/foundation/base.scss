@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { 
+  box-sizing: inherit;
+}
+
+body {
+  background: $c-background; 
+  margin:0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin:0;
+}
+
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+	&:before,
+	&:after {
+	  content: "";
+	  display: table;
+	}
+	&:after {
+	  clear: both;
+	}
+}

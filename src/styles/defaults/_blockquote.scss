@@ -1,0 +1,21 @@
+blockquote {
+    border-left: 2px solid $c-text;
+    font-family: $ff-default;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 1.5rem;
+    font-style: italic;
+  
+    & * :last-child {
+        margin-bottom: 0;
+    }
+}
+
+blockquote, q {
+    quotes: "" "";
+  
+    &:before,
+    &:after {
+      content: "";
+    }
+  }

@@ -1,0 +1,51 @@
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type="week"],
+input[type="time"],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type="range"],
+input[type='url'],
+input[type='week'],
+input:not([type]),
+textarea,
+select {
+	border: 1px solid $cf-border;
+	background-color: $cf-input;
+	background: $cf-input;
+	border-radius: 3px;	
+	box-shadow: none;
+	color: rgba(0, 0, 0, .8);
+	@include fsz(16px);
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+
+	&:hover {
+		background-color: $cf-inputHover;
+		border-color: $cf-borderHover;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	}
+
+	&:active,
+	&:focus {
+		background-color: $cf-inputFocus;
+		border-color: $cf-bordeFocus;
+		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	}
+}
+
+textarea {
+	width: 100%;
+	height: 250px;
+	&:focus {
+		color: $cf-textFocus;
+	}
+}

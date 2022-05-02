@@ -1,0 +1,10 @@
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%; /* Adhere to container width. */
+    width: 100%;
+    height: auto; /* Make sure images are scaled correctly. */
+    vertical-align: middle; /*remove space under the img tag*/
+}

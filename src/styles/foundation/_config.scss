@@ -1,0 +1,108 @@
+// Shortcuts
+// $c- = Colors
+// $cf- = Color for Forms
+// $cb- = Color for Buttons
+// $ff- = Font Family
+// $lh = Line Height
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    //Style Colors
+    --screen: #E1E8EE;
+    --hr: #cccccc;
+    --textScreen: #0091FF;
+
+    //Project Colors
+    --c-text: #000000;
+    --c-textWhite: #ffffff;
+    --c-brandHome: rgb(42, 96, 236);
+    --c-link: var(--c-brandHome);
+
+    //Font Family
+    --ff-default: 'ApercuPro-Regular', sans-serif;
+    --ff-defaultLight: 'ApercuPro-Light', sans-serif;
+    --ff-defaultBold: 'ApercuPro-Bold', sans-serif;
+    --ff-body: 'FreightTextMedium', serif;
+    --ff-bodyItalic: 'FreightTextMediumItalic', serif;
+
+    --headerWeight: 700;
+    --headerFontSize: clamp(.875rem, 1.2vw, 1.25rem);;
+    --headerLineHeight: 1.1;
+    --headerFont: var(--headerWeight) var(--headerFontSize)/var(--headerLineHeight) var(--ff-defaultBold);
+
+}
+
+// Basic Colors & Styles
+$c-black: #000000;
+$c-white:  #ffffff;
+$c-red: #FF0000;
+$c-screen: var(--screen);
+$c-hr: var(--hr);
+$c-text-screen: var(--textScreen);
+
+// Text & Background Colors
+$c-text: var(--c-text);
+$c-textWhite: var(--c-textWhite);
+
+$c-brand--home: var(--c-brandHome);
+$c-background: var(--white);
+
+// Button Colors
+$cb-background:  #2A60EC;
+$cb-border: #ccc;
+$cb-border-hover: #ccc;
+$cb-border-focus: #ccc;
+$cb-border-input: #ccc;
+
+// Project Colors
+$c-brand: #006AAB;
+$c-primary: #F8E71C;
+$c-secondary: #001421;
+
+// Links
+$c-link:  #1983D4;
+$c-linkHover: var(--c-brandHome);
+$c-linkVisited: lighten($c-link, 20%);
+
+// Forms
+$cf-input: #ffffff;
+$cf-inputHover: #666666;
+$cf-inputFocus: #ffffff;
+
+$cf-text: #ccc;
+$cf-textFocus: #111111;
+$cf-placeholder: #666666;
+
+$cf-border: #ccc;
+$cf-borderHover: #333333;
+$cf-bordeFocus: #111111;
+
+// Fonts
+$ff-default: var(--ff-default);
+$ff-accentBold: var(--ff-accentBold);
+$ff-defaultBold: var(--ff-defaultBold);
+
+// Typography
+$lh-body: 1.6;
+$ff-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$ff-pre: "Courier 10 Pitch", Courier, monospace;
+
+// Media Queries
+$container: 100%;
+$containerMedium: 1280px;
+$medium-width: 1200px;
+$tablet-width: 768px;
+$phone-width: 640px;
+$phone-portrait-width: 567px;
+$header-width: 920px;
+$ipad-width: 1024px;
+
+$desktop: 'screen and (max-width: #{$containerMedium})';
+$medium-screen: 'screen and (max-width: #{$medium-width})';
+$ipad: 'screen and (max-width: #{$ipad-width})';
+$tablet: 'screen and (max-width: #{$tablet-width})';
+$phone: 'screen and (max-width: #{$phone-width})';
+$phone-portrait: 'screen and (max-width: #{$phone-portrait-width})';
+$header: 'screen and (max-width: #{$header-width})';

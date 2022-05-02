@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bishal/www/2021/
+    - /bin/cp -R public/* $DEPLOYPATH

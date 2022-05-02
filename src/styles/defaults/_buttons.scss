@@ -1,0 +1,126 @@
+button,
+.button {
+    -webkit-appearance: none;
+    text-decoration: none;
+    box-shadow: none;
+    border: 0;
+	border-radius: 4px;
+    background-color: $cb-background;
+    color: $c-white;
+    letter-spacing: 0;
+    font-family: $ff-defaultBold;
+    font-weight: 700;
+    @include fsz(24px);
+    color: $c-white;
+    line-height: 1;
+    padding: 17px 30px 15px;
+    pointer-events: all;
+    cursor: pointer;
+    display: inline-block;
+	transition: ease .25s;
+	box-shadow: 0 0 0 0 rgba($c-black, .25);
+
+    @media #{$phone} {
+        @include fsz(16px);
+        padding: 10px 25px;
+    }
+
+    @media #{$phone-portrait} {
+        padding: 10px 20px;
+    }
+
+    &:hover, &:focus {
+		transition: ease .3s;
+        color: $c-white;
+        box-shadow: 0 20px 25px -5px rgba($c-black, .25);
+		transform: translate(0, -3px);
+    }
+}
+
+.button--linkedin {
+    border: 1px solid #0A66C2;
+    color: #0A66C2;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        background-color: #0A66C2;
+    }
+}
+
+
+
+
+
+
+
+.buttonSpecial {
+    color: $c-black;
+    text-decoration: none;
+    --specialFontSize: clamp(.6rem, 10vw, 1rem);
+    --specialLineHeight: 1;
+    font: 700 var(--specialFontSize)/var(--specialLineHeight) var(--ff-defaultBold);
+    letter-spacing: -.2px;
+    display: inline-block;
+
+    svg.icon-arrow {
+        max-width: 15px;
+        max-height: 10px;
+        margin-left: 10px;
+        transition: all 450ms ease-out;
+    }
+
+    &:hover, &:focus, &:active {
+		.button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+            stroke: $c-black;
+		}
+        svg.icon-arrow {
+            transform: translateX(7px);
+            transition: all 250ms ease-out;
+        }
+
+        color: $c-black;
+        background-color: none !important;
+	}
+
+    &__underline {
+        display: block;
+        position: relative;
+        width: 160%;
+    }
+
+    &--alt {
+        z-index: 1;
+        position: relative;
+        border-bottom: 2px solid transparent;
+        transition: all 250ms ease-out;
+        --specialFontSize: clamp(1rem, 2vw, 1.25rem);
+        --specialLineHeight: 1;
+        letter-spacing: 0;
+        font: 700 var(--specialFontSize)/var(--specialLineHeight) var(--ff-defaultBold);
+
+        &:hover {
+            border-bottom: 2px solid black;
+            transition: all 250ms ease-in;
+        }
+    }
+}
+
+.button-stroke{
+	display: block;
+	width: 100%;
+	height: 20px;
+	stroke: $c-white;
+	position: absolute;
+	left: -10px;
+	bottom: -20px;
+	stroke-width: 1;
+	
+	&:nth-child(2) {
+		stroke-dasharray: 650px;
+		stroke-dashoffset: 650px;
+		stroke: $c-black;
+		stroke-width: 2;
+		transition: stroke-dashoffset 450ms ease-out;
+	}
+}

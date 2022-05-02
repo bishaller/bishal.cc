@@ -1,0 +1,60 @@
+body,
+input,
+select,
+textarea {
+    color: $c-text;
+    font-family: $ff-default;
+}
+
+body {
+    line-height: $lh-body;
+    font-weight: 400;
+    @include fsz(18px);
+}
+
+p {
+    margin: 0 0 20px;
+    & * :last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: $ff-default;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    color: $c-text;
+}
+
+
+b,
+strong {
+    font-weight: bold;
+}
+
+
+address {
+    margin: 0;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted $c-text;
+    cursor: help;
+}
+
+mark,
+ins {
+    background: $c-screen;
+    text-decoration: none;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}

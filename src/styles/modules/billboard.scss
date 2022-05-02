@@ -1,0 +1,117 @@
+.billboard {
+  padding: 12vw 0;
+  --stitleWeight: 400;
+  --stitleFontSize: clamp(3rem, 20.8vw, 18.75rem);
+  --stitleLineHeight: .8;
+  --stitleFont: var(--stitleWeight) var(--stitleFontSize)/var(--stitleLineHeight) var(--ff-default);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media #{$phone} {
+    padding: 20vw 0;
+  }
+}
+
+// .billboard__inner {
+// position: relative;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// }
+
+.billboard__title {
+  font: var(--stitleFont);
+  letter-spacing: clamp(-1.25rem, -1.1vw, -1.25rem);
+  text-align: left;
+  z-index: 999;
+  position: relative;
+  margin: 0 auto 4vw;
+  display: inline-block;
+
+  @media #{$tablet} {
+    letter-spacing: -1.3vw;
+  }
+
+  strong {
+    --stitleFontSize: clamp(1rem, 1.83vw, 2.1875rem);
+    font-size: var(--stitleFontSize);
+    font-family: var(--ff-bodyItalic);
+    font-weight: normal;
+    letter-spacing: .5px;
+    margin-top: 1.1%;
+    line-height: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    background-color: yellow;
+    --padding-vertical: clamp(.25rem, 1vw, .5rem);
+    --padding-horizontal: clamp(0.625rem, 1vw, 1.25rem);
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    border-radius: 60px;
+    text-transform: lowercase;
+    transform: rotate(-15deg);
+    box-shadow: 0 5px 60px rgba($c-black, 0.20);
+  }
+}
+
+.billboard__intro {
+  width: 100%;
+  margin-left: 1.4vw;
+}
+
+.billboard__bio {
+  max-width: 390px;
+  text-align: left;
+  font-family: var(--ff-default);
+  font-size: clamp(1.125rem, 1.43vw, 1.25rem);
+  line-height: 1.36;
+  letter-spacing: .01px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.billboard__description {
+  margin-bottom: 2vw;
+}
+
+.billboard__profile {
+  overflow: hidden;
+  margin-bottom: 25px;
+  max-width: 50px;
+  overflow: hidden;
+  filter: drop-shadow(0 13px 25px rgba($c-black, 0.35));
+
+  .gatsby-image-wrapper-constrained {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    border-radius: 50%;
+  }
+}
+
+
+.billBoard__mouse {
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: ease;
+  background-size: cover;
+  filter: saturate(1);
+  background-image: url("../images/gradient.svg");
+  opacity: .8;
+  z-index: -1;
+
+  @media #{$phone} {
+    display: none;
+  }
+}

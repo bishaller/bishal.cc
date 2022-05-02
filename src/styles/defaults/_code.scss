@@ -1,0 +1,29 @@
+code, kbd, tt, var {
+    background: $c-screen;
+    border-radius: 3px;
+    margin: 0 0 20px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    @include fsz(16px);
+    font-family: $ff-code;
+    display: inline-block;
+}
+
+pre {
+	background: $c-screen;
+    margin-bottom: 20px;
+    line-height: 1.6;
+	max-width: 100%;
+	overflow: auto;
+    padding: 15px;
+    border-radius: 3px;
+    font-family: $ff-pre;
+    @include fsz(16px);
+
+    & > code {
+        border-radius: 0;
+        display: block;
+        padding: 1rem 1.5rem;
+        white-space: pre;
+    }
+}
