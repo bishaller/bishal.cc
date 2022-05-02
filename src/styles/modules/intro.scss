@@ -42,8 +42,16 @@
     line-height: 1.5;
 
     p {
-        opacity: 0.65;
+        color: rgba($c-white, .65);
         margin-bottom: 0;
+    }
+
+    a {
+        color: rgba($c-white, .65);
+
+        &:hover, &:focus {
+            color: $c-brand;
+        }
     }
 
     @media #{$phone} {

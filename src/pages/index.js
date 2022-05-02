@@ -29,8 +29,8 @@ const WorkPage = () => {
         />
         <Intro
           title={`Heckler for Unrestrained Design and Prototyping 🤘`}
-          subtitle={`March 2022`}
-          description={`Over the few following months this collection will fill up with all the characters represented in the film. Each of them will go up as a limited collection of NFTs available on OpenSea.`}
+          subtitle={`April 2022`}
+          description={`I am learning to code and be consistent with it, which also sums up the in-progress version of my(this) personal site. If found, please do kindly bear with the bugs. Find updates on <a href="https://github.com/bishaller/2022.bishal.cc/" rel="noopener noreferrer nofollow" target="_blank">github</a>.`}
         />
       </Layout>
     </main>

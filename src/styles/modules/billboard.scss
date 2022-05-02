@@ -42,7 +42,7 @@
     bottom: 0;
     right: 0;
     text-align: right;
-    background-color: yellow;
+    background-color: $c-primary;
     --pv: clamp(.25rem, 1vw, .5rem);
     --ph: clamp(0.625rem, 1vw, 1.25rem);
     padding: var(--pv) var(--ph);
