@@ -138,18 +138,61 @@ button,
     font-family: var(--ff-default);
     font-weight: 400;
     letter-spacing: -0.2vw;
-    text-shadow: 0 5px 15px rgba($c-black, .25);
-    --pt: clamp(.7rem, 1.7vw, 1.625rem);
-    --pb: clamp(.75rem, 1.75vw, 1.75rem);
+    text-shadow: 0 5px 15px rgba($c-black, 0.25);
+    --pt: clamp(0.7rem, 1.7vw, 1.625rem);
+    --pb: clamp(0.75rem, 1.75vw, 1.75rem);
     --ph: clamp(1.5rem, 4.8vw, 5rem);
-    padding:  var(--pt) var(--ph) var(--pb);
+    padding: var(--pt) var(--ph) var(--pb);
     background: linear-gradient(180deg, rgba(89,190,255,1) 0%, rgba(42,96,236,1) 100%);
-    box-shadow: 0 40px 80px -10px rgba($c-black, .25);
+    box-shadow: 0 40px 80px -10px rgba($c-black, 0.25);
     svg {
         display: block;
         width: clamp(1rem, 3vw, 3.125rem);
         filter: drop-shadow(0 10px 15px rgba($c-black, .25));
-        margin-left: clamp(.5rem, 1.56vw, 1.56rem);
-        margin-bottom: clamp(.1rem, 1vw, .4rem);
+        margin-left: clamp(0.5rem, 1.56vw, 1.56rem);
+        margin-bottom: clamp(0.1rem, 1vw, 0.4rem);
+    }
+}
+
+
+.socialIcons {
+    display: block;
+    width: clamp(1.5rem, 2.5vw, 2.375rem);
+    height: 38px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    margin-right: 44px;
+    position: relative;
+    &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        right: -20px;
+        width: 4px;
+        height: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        background: $c-black;
+    }
+    &:last-child {
+        margin-right: 0;
+        &:after {
+            display: none;
+        }
+    }
+    &--twitter {
+        background-image: url("../images/twitter.svg");
+        width: clamp(1.5rem, 2.6vw, 2.6875rem);
+    }
+    &--linkedin {
+        background-image: url("../images/linkedin.svg");
+    }
+    &--dribbble {
+        background-image: url("../images/dribbble.svg");
+    }
+    &--instagram {
+        background-image: url("../images/instagram.svg");
     }
 }

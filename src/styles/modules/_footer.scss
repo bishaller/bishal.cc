@@ -24,3 +24,11 @@
     font: var(--font);
     letter-spacing: -0.54vw;
 }
+
+.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(3rem, 5.5vw, 5.5rem);
+}
