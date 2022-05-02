@@ -1,16 +1,17 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import * as React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 // Import Components
-import Billboard from "../components/home/billboard.js";
+import Billboard from "../components/home/billboard"
+import Intro from "../components/home/intro"
 
 // markup
 
 const WorkPage = () => {
   return (
     <main>
-      <Seo title="Bishal Mishra, UX &amp; Product Designer"/>
+      <Seo title="Bishal Mishra, UX &amp; Product Designer" />
       <Layout>
         <Billboard
           title={`I design.<br><strong>Experiences</strong>`}
@@ -26,9 +27,14 @@ const WorkPage = () => {
             },
           ]}
         />
+        <Intro
+          title={`Heckler for Unrestrained Design and Prototyping 🤘`}
+          subtitle={`March 2022`}
+          description={`<p>Over the few following months this collection will fill up with all the characters represented in the film. Each of them will go up as a limited collection of NFTs available on OpenSea.</p>`}
+        />
       </Layout>
     </main>
-  );
-};
+  )
+}
 
-export default WorkPage;
+export default WorkPage

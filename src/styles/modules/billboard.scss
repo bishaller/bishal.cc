@@ -8,17 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   @media #{$phone} {
     padding: 20vw 0;
   }
+  z-index: 0;
 }
 
-// .billboard__inner {
-// position: relative;
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// }
 
 .billboard__title {
   font: var(--stitleFont);

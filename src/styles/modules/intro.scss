@@ -1,0 +1,21 @@
+.intro {
+    z-index: 1;
+    position: relative;
+    background-color: $c-black;
+    color: $c-white;
+}
+
+.intro__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro__title {
+    color: $c-white;
+    --stitleWeight: 400;
+    --stitleFontSize: clamp(3rem, 20.8vw, 5rem);
+    --stitleLineHeight: 1.05;
+    --stitleFont: var(--stitleWeight) var(--stitleFontSize)/var(--stitleLineHeight) var(--ff-default);
+    font: var(--stitleFont);
+    letter-spacing: -0.4vw
+}
