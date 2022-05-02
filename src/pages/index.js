@@ -14,9 +14,9 @@ const WorkPage = () => {
       <Seo title="Bishal Mishra, UX &amp; Product Designer" />
       <Layout>
         <Billboard
-          title={`I design.<br><strong>Experiences</strong>`}
+          title={`I design<strong>Experiences</strong>`}
           description={`<p>
-          I am a Product Designer who turns complex problem sets to simple solutions, focused to build experiences that expands one’s capacity for impact 🚀.
+          I am a Product Designer who turns complex problem sets to simple solutions, focused in building experiences that expands one’s capacity for impact 🚀.
           </p>`}
           linkUrl={`/about/`}
           linkTitle={`go to about page`}
