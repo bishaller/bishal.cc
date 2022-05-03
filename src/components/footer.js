@@ -20,17 +20,6 @@ const Footer = () => {
           </a>
           <div className="footer__social">
             <a
-              className="socialIcons socialIcons--twitter"
-              title="Connect with Bishal on Twitter"
-              href="https://twitter.com/twitter"
-              target="_blank"
-              rel="nofollow noreferrer"
-            >
-              <span className="screen-reader-text">
-                Connect with Bishal on Twitter
-              </span>
-            </a>
-            <a
               className="socialIcons socialIcons--linkedin"
               title="Connect with Bishal on Linkedin"
               href="https://linkedin.com/in/bishaller"
@@ -39,6 +28,17 @@ const Footer = () => {
             >
               <span className="screen-reader-text">
                 Connect with Bishal on Linkedin
+              </span>
+            </a>
+            <a
+              className="socialIcons socialIcons--twitter"
+              title="Connect with Bishal on Twitter"
+              href="https://twitter.com/twitter"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              <span className="screen-reader-text">
+                Connect with Bishal on Twitter
               </span>
             </a>
             <a
@@ -66,13 +66,22 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer__image">
-        <StaticImage
-          src={"../images/footer_circle.svg"}
-          alt=""
-          width={10000}
-          className=""
-        />
+      <div className="footer__footer">
+        <div className="footer__media">
+          <StaticImage
+            src={"../images/footer_gradient.png"}
+            alt=""
+            width={10000}
+            className="footer__image"
+          />
+          <div className="footer__copyright">
+            <p>
+              &copy; {new Date().getFullYear()} Bishal Mishra. All rights
+              reserved.
+            </p>
+            <p>Work is in Progress</p>
+          </div>
+        </div>
       </div>
       <SvgSprite className="footer__svg" title="Svg Sprite" />
     </footer>

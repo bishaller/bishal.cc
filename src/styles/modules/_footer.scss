@@ -4,12 +4,27 @@
 
 .footer {
     padding-top: clamp(7rem, 15vw, 15rem);
-    padding-bottom: clamp(7rem, 15vw, 15rem);
+    background-color: $c-white;
+    position: relative;
+    z-index: 1;
+}
+
+.footer__media {
+    height: clamp(5rem, 55vw, 55rem);
+    overflow: hidden;
+    width: clamp(10rem, 105vw, 105rem);
 }
 
 .footer__image {
-    animation: rotate 9s linear infinite;
-    display: none;
+    animation: rotate 7s linear infinite;
+    top: 35%;
+    position: relative;
+    image-rendering: -webkit-optimize-contrast;
+    filter: blur(50px) saturate(1.1);
+    transition: transform ease;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transition: linear all .3s;
 }
 
 .footer__main {
@@ -30,5 +45,47 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: clamp(3rem, 5.5vw, 5.5rem);
+    border-bottom: 1px solid rgba($c-black, 0.2);
+    width: 45%;
+    margin: clamp(3rem, 5.5vw, 5.5rem) auto 0;
+    padding: clamp(0.625rem, 1.6vw, 1.5625rem) 0;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 1px;
+        background: rgba($c-black, 0.2);
+    }
+    @media #{$tablet} {
+        width: 80%;
+    }
+}
+
+.footer__footer {
+    position: relative;
+    margin-top: -15vw;
+}
+.footer__copyright {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    color: $c-white;
+    text-shadow: 0 0px 25px rgba($c-black, 0.5);
+    padding-bottom: 30px;
+    p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    @media #{$phone} {
+        padding-bottom: 15px;
+    }
 }

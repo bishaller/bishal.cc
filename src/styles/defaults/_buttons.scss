@@ -144,7 +144,9 @@ button,
     --ph: clamp(1.5rem, 4.8vw, 5rem);
     padding: var(--pt) var(--ph) var(--pb);
     background: linear-gradient(180deg, rgba(89,190,255,1) 0%, rgba(42,96,236,1) 100%);
-    box-shadow: 0 40px 80px -10px rgba($c-black, 0.25);
+    --bsb: clamp(1.5rem, 5vw, 5rem);
+    --bsbt: clamp(1.2rem, 2.5vw, 2.5rem);
+    box-shadow: 0 var(--bsbt) var(--bsb) -10px rgba($c-black, 0.25);
     svg {
         display: block;
         width: clamp(1rem, 3vw, 3.125rem);
@@ -164,17 +166,18 @@ button,
     background-position: center center;
     margin-right: 44px;
     position: relative;
+    filter: drop-shadow(0 5px 20px rgba($c-black, .25));
     &:after {
         position: absolute;
         display: block;
         content: '';
-        right: -20px;
+        right: -24px;
         width: 4px;
         height: 4px;
         top: 50%;
         transform: translateY(-50%);
         border-radius: 2px;
-        background: $c-black;
+        background: rgba($c-black, .2);
     }
     &:last-child {
         margin-right: 0;
