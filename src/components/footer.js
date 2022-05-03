@@ -79,7 +79,7 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Bishal Mishra. All rights
               reserved.
             </p>
-            <p>Work is in Progress</p>
+            <p>❤️  &nbsp;Work is in Progress</p>
           </div>
         </div>
       </div>

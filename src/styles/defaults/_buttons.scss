@@ -167,6 +167,7 @@ button,
     margin-right: 44px;
     position: relative;
     filter: drop-shadow(0 5px 20px rgba($c-black, .25));
+    transition: ease all .15s;
     &:after {
         position: absolute;
         display: block;
@@ -178,11 +179,20 @@ button,
         transform: translateY(-50%);
         border-radius: 2px;
         background: rgba($c-black, .2);
+        transition: ease all .15s;
     }
     &:last-child {
         margin-right: 0;
         &:after {
             display: none;
+        }
+    }
+    &:hover, &:focus {
+        transform: scale(1.1);
+        transition: ease all .15s;
+        &:after {
+            transform: none;
+            transition: ease all .15s;
         }
     }
     &--twitter {
