@@ -33,7 +33,7 @@ const Footer = () => {
             <a
               className="socialIcons socialIcons--twitter"
               title="Connect with Bishal on Twitter"
-              href="https://twitter.com/twitter"
+              href="https://twitter.com/bishaller"
               target="_blank"
               rel="nofollow noreferrer"
             >
