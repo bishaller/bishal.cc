@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbishal_cc_2021=self.webpackChunkbishal_cc_2021||[]).push([[562],{9615:function(e,n,l){l.r(n);var t=l(7294),c=l(3410);n.default=function(){return t.createElement("main",null,t.createElement(c.Z,null,t.createElement("h1",null," Writings")))}}}]);
-//# sourceMappingURL=component---src-pages-writings-js-5012d13a2ac3c57e3a2c.js.map
