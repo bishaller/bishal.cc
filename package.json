@@ -36,7 +36,7 @@
     "gatsby-remark-images-contentful": "^4.6.0",
     "gatsby-source-contentful": "^5.9.0",
     "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-transformer-json": "^3.9.0",
+    "gatsby-transformer-json": "^3.14.0",
     "gatsby-transformer-remark": "^4.4.1",
     "gatsby-transformer-sharp": "^3.9.0",
     "gatsby-transformer-sqip": "^3.9.0",

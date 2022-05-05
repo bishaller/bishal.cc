@@ -1,0 +1,22 @@
+[{
+    "projects": [{
+            "category": "website",
+            "title": "Super clean website for the wildyak",
+            "description": "Super clean website for the wildyak",
+            "image": {
+                "url": "../images/shots.jpg",
+                "alt": "wildyak Letter"
+            }
+        },
+        {
+            "category": "website",
+            "title": "A huge travel cms to support great content",
+            "description": "Super clean website for the wildyak",
+            "image": {
+                "url": "../images/shots.jpg",
+                "alt": "Explore himalaya"
+            }
+
+        }
+    ]
+}]
