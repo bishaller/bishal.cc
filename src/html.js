@@ -11,8 +11,10 @@ const HTML = (props) => {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="robots"
-          content="noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          content="all, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
+        <meta name="googlebot-news" content="all"/>
+        <meta name="googlebot" content="all"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="designer" content="Bishal Mishra" />
         <meta name="theme-color" content="#fff" />

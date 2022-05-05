@@ -167,7 +167,7 @@ button,
     margin-right: 44px;
     position: relative;
     filter: drop-shadow(0 5px 20px rgba($c-black, .25));
-    transition: ease all .15s;
+    transition: ease all 0.15s;
     &:after {
         position: absolute;
         display: block;
@@ -178,8 +178,8 @@ button,
         top: 50%;
         transform: translateY(-50%);
         border-radius: 2px;
-        background: rgba($c-black, .2);
-        transition: ease all .15s;
+        background: rgba($c-black, 0.2);
+        transition: ease all 0.15s;
     }
     &:last-child {
         margin-right: 0;
@@ -187,12 +187,13 @@ button,
             display: none;
         }
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         transform: scale(1.1);
-        transition: ease all .15s;
+        transition: ease all 0.15s;
         &:after {
             transform: none;
-            transition: ease all .15s;
+            transition: ease all 0.15s;
         }
     }
     &--twitter {

@@ -1,10 +1,12 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import {StaticImage} from "gatsby-plugin-image";
+import Seo from "../components/seo"
 
 const AboutPage = () => {
     return (
         <main className="mainStatic">
+            <Seo title="About Bishal || UX Designer, Product Lead, @bishaller" />
             <Layout>
                 <canvas id="gradient-canvas"/>
                 <div className="letter">
