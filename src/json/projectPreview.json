@@ -1,8 +1,8 @@
 [{
     "projects": [{
-            "category": "website",
-            "title": "Super clean website for the wildyak",
-            "description": "Super clean website for the wildyak",
+            "category": "Strategy, Copywriting, Design & Dev.",
+            "title": "perfect website page that explains everything.",
+            "description": "The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.",
             "image": {
                 "url": "../images/shots.jpg",
                 "alt": "wildyak Letter"

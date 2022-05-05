@@ -26,12 +26,12 @@ const ProjectPreview = () => {
   `)
 
   return (
-    <section className="projectPreview">
+    <div className="projectPreview">
+      <div className="siteContainer siteContainer--medium">
       {data.items.projects.map((data, index) => {
         return (
-          <div className="siteContainer" key={index}>
+          <section className="projectPreview__item" key={index}>
             <header className="projectPreview__header">
-              <div className="projectPreview__headerInner">
                 <div className="projectPreview__titles">
                   <p className="projectPreview__meta">{data.category}</p>
                   <h2 className="projectPreview__title" title={data.title}>
@@ -39,11 +39,10 @@ const ProjectPreview = () => {
                   </h2>
                 </div>
                 <div className="projectPreview__content">
-                  <p className="projectPreview__description">
+                  <p>
                     {data.description}
                   </p>
                 </div>
-              </div>
             </header>
             <div className="projectPreview__image">
               <Img
@@ -51,10 +50,11 @@ const ProjectPreview = () => {
                 alt={data.image.alt}
               />
             </div>
-          </div>
+          </section>
         )
       })}
-    </section>
+      </div>
+    </div>
   )
 }
 
