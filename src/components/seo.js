@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -23,9 +23,9 @@ function Seo({ description, lang, meta, title }) {
         }
       }
     `
-  );
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  )
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
   return (
     <Helmet
       htmlAttributes={{
@@ -109,7 +109,7 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:image`,
           content: `https://www.bishal.cc/bishal_mishra.jpg`,
-      },
+        },
       ].concat(meta)}
     >
       <script type="application/ld+json">
@@ -125,7 +125,7 @@ function Seo({ description, lang, meta, title }) {
              "jobTitle": "UI/UX Designer, Product Designer",
              "url": "https://bishal.cc/",
              "email": "hello@bishal.cc",
-             "image":"https://www.bishal.cc/bishal_mishra.jpg",
+             "logo":  "https://bishal.cc/#personlogo",
              "image": {
                  "@type": "ImageObject",
                  "@id": "https://bishal.cc/bishal_dp.jpeg",
@@ -135,9 +135,7 @@ function Seo({ description, lang, meta, title }) {
                  "height": 1500,
                  "caption": "Bishal Mishra's Display Picture"
              },
-             "logo": {
-                 "@id": "https://bishal.cc/#personlogo"
-             },
+             
              "sameAs": [
                  "https://bishal.cc",
                  "https://dribbble.com/bishaller",
@@ -206,24 +204,23 @@ function Seo({ description, lang, meta, title }) {
              ]
          }
      ]
- }
-       `}
+ `}
       </script>
     </Helmet>
-  );
+  )
 }
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-};
+}
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-};
+}
 
-export default Seo;
+export default Seo
