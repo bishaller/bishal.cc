@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const ProjectPreview = () => {
   const data = useStaticQuery(graphql`
@@ -11,7 +12,7 @@ const ProjectPreview = () => {
           description
           image {
             alt
-            URL {
+            url {
               childImageSharp {
                 fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_tracedSVG
@@ -42,6 +43,11 @@ const ProjectPreview = () => {
                 </div>
               </header>
               <div className="projectPreview__image">
+                <Img
+                  fluid={data.image.url.childImageSharp.fluid}
+                  alt={data.image.alt}
+                  style={{ maxWidth: data.image.width }}
+                />
               </div>
             </section>
           )

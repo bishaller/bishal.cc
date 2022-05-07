@@ -4,8 +4,9 @@
             "title": "idealaya: \n A thoughtful site for future crafters",
             "description": "The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.",
             "image": {
-                "URL": "../images/shots.jpg",
-                "alt": "Idealaya's website screenshots"
+                "url": "../images/work_preview_idealaya.png",
+                "alt": "Idealaya's website screenshots",
+                "width": "2480px"
             }
         },
         {
@@ -13,8 +14,9 @@
             "title": "A huge travel cms to support great content",
             "description": "Super clean website for the wildyak",
             "image": {
-                "URL": "../images/shots.jpg",
-                "alt": "Explore himalaya"
+                "url": "../images/shots.jpg",
+                "alt": "Explore himalaya",
+                "width": "2480px"
             }
         }
     ]
