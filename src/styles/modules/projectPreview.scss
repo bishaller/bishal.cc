@@ -1,17 +1,57 @@
+.projectPreview {
+    background-color: $c-white;
+    z-index: 1;
+    position: relative;
+}
 .projectPreview__item {
-    padding: 20vh 0;
+    padding-top: clamp(4rem, 10vw, 12.5rem);
+    background-color: $c-white;
 }
 
 .projectPreview__header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1040px;
+    margin: 0 auto clamp(2rem, 3.5vw, 3.5rem);
+
+    @media #{$phone} {
+        margin-bottom: 0;
+    }
 }
 
 .projectPreview__titles {
     width: 50%;
+
+    @media #{$phone} {
+        width: 100%;
+    }
+}
+
+.projectPreview__meta {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    letter-spacing: -0.1px;
+    @media #{$phone} {
+        margin-bottom: 10px;
+    }
+}
+
+.projectPreview__title {
+    --wt: 400;
+    --fsz: clamp(2.4rem, 4vw, 4rem);
+    --lh: 1;
+    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
+    font: var(--font);
+    letter-spacing: -0.2vw;
+    margin-bottom: 15px;
 }
 
 .projectPreview__content {
-    width: 50%;
+    width: 38.5%;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+    @media #{$phone} {
+        width: 100%;
+    }
 }

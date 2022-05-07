@@ -32,6 +32,7 @@
     "gatsby-plugin-sharp": "^3.9.0",
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-react-router-scroll": "^5.11.0",
+    "gatsby-remark-gifs": "^1.1.0",
     "gatsby-remark-images": "^5.2.0",
     "gatsby-remark-images-contentful": "^4.6.0",
     "gatsby-source-contentful": "^5.9.0",

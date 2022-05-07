@@ -13,9 +13,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-json`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-gifs"],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,7 +51,7 @@ module.exports = {
           quality: 100,
           placeholder: `dominantColor`,
           backgroundColor: `transparent`,
-        }
+        },
       },
     },
     {
@@ -59,12 +71,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-          precachePages: [
-              `/`,
-              `/about/`,
-              `/writings/`,
-          ],
+        precachePages: [`/`, `/about/`, `/writings/`],
       },
-  },
+    },
   ],
-};
+}

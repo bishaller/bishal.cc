@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 const ProjectPreview = () => {
   const data = useStaticQuery(graphql`
@@ -12,10 +11,10 @@ const ProjectPreview = () => {
           description
           image {
             alt
-            url {
+            URL {
               childImageSharp {
                 fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
@@ -28,10 +27,10 @@ const ProjectPreview = () => {
   return (
     <div className="projectPreview">
       <div className="siteContainer siteContainer--medium">
-      {data.items.projects.map((data, index) => {
-        return (
-          <section className="projectPreview__item" key={index}>
-            <header className="projectPreview__header">
+        {data.items.projects.map((data, index) => {
+          return (
+            <section className="projectPreview__item" key={index}>
+              <header className="projectPreview__header">
                 <div className="projectPreview__titles">
                   <p className="projectPreview__meta">{data.category}</p>
                   <h2 className="projectPreview__title" title={data.title}>
@@ -39,20 +38,14 @@ const ProjectPreview = () => {
                   </h2>
                 </div>
                 <div className="projectPreview__content">
-                  <p>
-                    {data.description}
-                  </p>
+                  <p>{data.description}</p>
                 </div>
-            </header>
-            <div className="projectPreview__image">
-              <Img
-                fluid={data.image.url.childImageSharp.fluid}
-                alt={data.image.alt}
-              />
-            </div>
-          </section>
-        )
-      })}
+              </header>
+              <div className="projectPreview__image">
+              </div>
+            </section>
+          )
+        })}
       </div>
     </div>
   )

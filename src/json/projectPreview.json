@@ -1,11 +1,11 @@
 [{
     "projects": [{
-            "category": "Strategy, Copywriting, Design & Dev.",
-            "title": "perfect website page that explains everything.",
+            "category": "Strategy, Copywriting, Design",
+            "title": "idealaya: \n A thoughtful site for future crafters",
             "description": "The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.",
             "image": {
-                "url": "../images/shots.jpg",
-                "alt": "wildyak Letter"
+                "URL": "../images/shots.jpg",
+                "alt": "Idealaya's website screenshots"
             }
         },
         {
@@ -13,10 +13,9 @@
             "title": "A huge travel cms to support great content",
             "description": "Super clean website for the wildyak",
             "image": {
-                "url": "../images/shots.jpg",
+                "URL": "../images/shots.jpg",
                 "alt": "Explore himalaya"
             }
-
         }
     ]
 }]
