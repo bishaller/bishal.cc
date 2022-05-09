@@ -6,12 +6,12 @@ import { Carousel } from "react-bootstrap"
 export const Slider = () => {
   const data = useStaticQuery(graphql`
     {
-      allImages: allFile(filter: { relativeDirectory: { eq: "" } }) {
+      allImages: allFile (filter: { relativeDirectory: { eq: "slider" } }) {
         edges {
           node {
             id
             childImageSharp {
-              fluid {
+              fluid(quality: 100) {
                 srcWebp
               }
             }
