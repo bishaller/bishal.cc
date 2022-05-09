@@ -7,7 +7,8 @@
                 "url": "../images/work_preview_idealaya.png",
                 "alt": "Idealaya's website screenshots",
                 "width": "2480px"
-            }
+            },
+            "video": "tets"
         },
         {
             "category": "website",
@@ -17,7 +18,8 @@
                 "url": "../images/shots.jpg",
                 "alt": "Explore himalaya",
                 "width": "2480px"
-            }
+            },
+            "video": "tets"
         }
     ]
 }]

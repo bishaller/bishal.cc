@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import Slider from "./Carousel"
 
 const ProjectPreview = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +16,7 @@ const ProjectPreview = () => {
             url {
               childImageSharp {
                 fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -47,6 +48,8 @@ const ProjectPreview = () => {
                   fluid={data.image.url.childImageSharp.fluid}
                   alt={data.image.alt}
                   style={{ maxWidth: data.image.width }}
+                />
+                <Slider relativePath={'slider-2'}
                 />
               </div>
             </section>
