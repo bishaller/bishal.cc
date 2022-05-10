@@ -39,7 +39,7 @@ const ProjectPreview = () => {
               </h2>
             </div>
             <div className="projectPreview__content">
-              <p>The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.</p>
+              <p>2019: idealaya's site is a site redesigned to portray their unique nature of work. The strategic copy and crisp interface helps this top-notch site better communicate with their clients.</p>
             </div>
           </header>
           <div className="projectPreview__image">
@@ -55,7 +55,7 @@ const ProjectPreview = () => {
               </h2>
             </div>
             <div className="projectPreview__content">
-              <p>The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.</p>
+              <p>Reimagined a small travel agency's approach to help them grow their business through a unique experience served with profound information. From scratch, I designed and coded this site on WordPress.</p>
             </div>
           </header>
           <div className="projectPreview__image">
@@ -71,7 +71,7 @@ const ProjectPreview = () => {
               </h2>
             </div>
             <div className="projectPreview__content">
-              <p>The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.</p>
+              <p>A short and sweet one-page site, to deliver the exact information on how Last Door functions. I did this quick turnaround with engaging animations, colorful gradients and a bit of coding.</p>
             </div>
           </header>
           <div className="projectPreview__image">
