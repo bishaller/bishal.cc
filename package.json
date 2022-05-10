@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
-    "bootstrap": "^5.1.3",
     "gatsby": "^4.11.2",
     "gatsby-cli": "4.8.1",
     "gatsby-image": "^3.7.1",
@@ -38,15 +37,19 @@
     "gatsby-remark-images-contentful": "^4.11.0",
     "gatsby-source-contentful": "^5.14.1",
     "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-transformer-json": "^3.14.0",
+    "gatsby-transformer-json": "^3.9.0",
     "gatsby-transformer-remark": "^4.4.1",
+<<<<<<< HEAD
     "gatsby-transformer-sharp": "^3.14.0",
     "gatsby-transformer-sqip": "^3.14.3",
+=======
+    "gatsby-transformer-sharp": "^4.8.0",
+    "gatsby-transformer-sqip": "^3.5.0",
+>>>>>>> 967e8c8 (add: fix load issue)
     "gsap": "^3.7.0",
     "jquery": "^3.6.0",
     "lmdb-store": "^1.6.14",
     "react": "^17.0.1",
-    "react-bootstrap": "^2.3.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sass": "^1.34.1"
