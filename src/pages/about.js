@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 const AboutPage = () => {
     return (
         <main className="mainStatic">
-            <Seo title="About Bishal || UX Designer, Product Lead, @bishaller" />
+            <Seo title="About Bishal | UX Designer | Product Lead | Username: @bishaller" />
             <Layout>
                 <canvas id="gradient-canvas"/>
                 <div className="letter">

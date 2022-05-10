@@ -114,7 +114,7 @@ function Seo({ description, lang, meta, title }) {
     >
       <script type="application/ld+json">
         {`
-     "@context": "https://schema.org",
+     {"@context": "https://schema.org",
      "@graph": [
          {
              "@type": [
@@ -204,6 +204,7 @@ function Seo({ description, lang, meta, title }) {
              ]
          }
      ]
+    }
  `}
       </script>
     </Helmet>
