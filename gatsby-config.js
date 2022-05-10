@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  },
   siteMetadata: {
     title: "Bishal Mishra, Product Designer | UX Desigern",
     titleTemplate: "Bishal UX Designer",
