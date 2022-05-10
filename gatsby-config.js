@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Bishal Mishra, UX &amp; Product Designer",
+    title: "Bishal Mishra, Product Designer | UX Desigern",
     titleTemplate: "Bishal UX Designer",
     description:
       "Bishal is a UX and a Product Designer experienced in designing cross-platform applications and various user bases from small to large scale.",

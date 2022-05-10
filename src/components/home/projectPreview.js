@@ -67,7 +67,7 @@ const ProjectPreview = () => {
             <div className="projectPreview__titles">
               <p className="projectPreview__meta">Copy, Design, Code</p>
               <h2 className="projectPreview__title" title="idealaya: A thoughtful site for future crafters">
-                What a Landing Page Design for Last Door
+                Perfect Landing page designed for Last Door
               </h2>
             </div>
             <div className="projectPreview__content">
