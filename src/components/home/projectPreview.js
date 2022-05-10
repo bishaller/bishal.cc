@@ -1,6 +1,8 @@
 import * as React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import idealayaGIF from "../../images/idealaya-work-by-bishal-mishra.gif"
+import tpnGIF from "../../images/trekkers-paradise-nepal-work-by-bishal-mishra.gif"
+import ldsGIF from "../../images/lastdoor-work-by-bishal-mishra.gif"
 
 const ProjectPreview = () => {
   // const data = useStaticQuery(graphql`
@@ -57,7 +59,7 @@ const ProjectPreview = () => {
             </div>
           </header>
           <div className="projectPreview__image">
-            <img src={idealayaGIF} alt="Idealaya Design screenshots" />
+            <img src={tpnGIF} alt="Trekkers Paradise Nepal UI Screenshots" />
           </div>
         </section>
         <section className="projectPreview__item" >
@@ -73,7 +75,7 @@ const ProjectPreview = () => {
             </div>
           </header>
           <div className="projectPreview__image">
-            <img src={idealayaGIF} alt="Landing Page for Last Door" />
+            <img src={ldsGIF} alt="Landing Page for Last Door" />
           </div>
         </section>
       </div>
