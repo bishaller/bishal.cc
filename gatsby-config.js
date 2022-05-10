@@ -3,7 +3,7 @@ module.exports = {
     PARALLEL_QUERY_RUNNING: true
   },
   siteMetadata: {
-    title: "Bishal Mishra, Product Designer | UX Desigern",
+    title: "Bishal Mishra, Product Designer | UX Designer",
     titleTemplate: "Bishal UX Designer",
     description:
       "Bishal is a UX and a Product Designer experienced in designing cross-platform applications and various user bases from small to large scale.",
