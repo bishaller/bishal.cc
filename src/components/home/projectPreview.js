@@ -60,6 +60,22 @@ const ProjectPreview = () => {
             <img src={idealayaGIF} alt="Idealaya Design screenshots" />
           </div>
         </section>
+        <section className="projectPreview__item" >
+          <header className="projectPreview__header">
+            <div className="projectPreview__titles">
+              <p className="projectPreview__meta">Copy, Design, Code</p>
+              <h2 className="projectPreview__title" title="idealaya: A thoughtful site for future crafters">
+                What a Landing Page Design for Last Door
+              </h2>
+            </div>
+            <div className="projectPreview__content">
+              <p>The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.</p>
+            </div>
+          </header>
+          <div className="projectPreview__image">
+            <img src={idealayaGIF} alt="Landing Page for Last Door" />
+          </div>
+        </section>
       </div>
     </div>
   )
