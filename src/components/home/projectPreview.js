@@ -1,6 +1,6 @@
 import * as React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
-import idealayaGIF from "../../images/idealaya.gif"
+import idealayaGIF from "../../images/idealaya-work-by-bishal-mishra.gif"
 
 const ProjectPreview = () => {
   // const data = useStaticQuery(graphql`
