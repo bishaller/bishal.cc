@@ -1,8 +1,10 @@
 import * as React from "react"
-// import { useStaticQuery, graphql } from "gatsby"
-import idealayaGIF from "../../images/idealaya-work-by-bishal-mishra.gif"
-import tpnGIF from "../../images/trekkers-paradise-nepal-work-by-bishal-mishra.gif"
-import ldsGIF from "../../images/lastdoor-work-by-bishal-mishra.gif"
+import ldsVideo from "../../images/lastdoor-work-by-bishal-mishra.mp4"
+import ldsCaptions from "file-loader!../../images/lds.vtt"
+import idealayaVideo from "../../images/idealaya-work-by-bishal-mishra.mp4"
+import idealayaCaptions from "file-loader!../../images/idealaya.vtt"
+import tpnVideo from "../../images/trekkers-paradise-nepal-work-by-bishal-mishra.mp4"
+import tpnCaptions from "file-loader!../../images/tpn.vtt"
 
 const ProjectPreview = () => {
   // const data = useStaticQuery(graphql`
@@ -42,9 +44,12 @@ const ProjectPreview = () => {
               <p>2019: idealaya's site is a site redesigned to portray their unique nature of work. The strategic copy and crisp interface helps this top-notch site better communicate with their clients.</p>
             </div>
           </header>
-          <div className="projectPreview__image">
-            <img src={idealayaGIF} alt="Idealaya Design screenshots" />
-          </div>
+          <figure className="projectPreview__image">
+            <video id ="video" autoPlay loop playsInline muted>
+              <source src={idealayaVideo} type="video/mp4" />
+              <track kind="captions" srcLang="en" src={idealayaCaptions} />
+            </video>
+          </figure>
         </section>
         <section className="projectPreview__item" >
           <header className="projectPreview__header">
@@ -58,9 +63,12 @@ const ProjectPreview = () => {
               <p>Reimagined a small travel agency's approach to help them grow their business through a unique experience served with profound information. From scratch, I designed and coded this site on WordPress.</p>
             </div>
           </header>
-          <div className="projectPreview__image">
-            <img src={tpnGIF} alt="Trekkers Paradise Nepal UI Screenshots" />
-          </div>
+          <figure className="projectPreview__image">
+            <video id ="video" autoPlay loop playsInline muted>
+              <source src={tpnVideo} type="video/mp4" />
+              <track kind="captions" srcLang="en" src={tpnCaptions} />
+            </video>
+          </figure>
         </section>
         <section className="projectPreview__item" >
           <header className="projectPreview__header">
@@ -74,9 +82,12 @@ const ProjectPreview = () => {
               <p>A short and sweet one-page site, to deliver the exact information on how Last Door functions. I did this quick turnaround with engaging animations, colorful gradients and a bit of coding.</p>
             </div>
           </header>
-          <div className="projectPreview__image">
-            <img src={ldsGIF} alt="Landing Page for Last Door" />
-          </div>
+          <figure className="projectPreview__image">
+            <video id ="video" autoPlay loop playsInline muted>
+              <source src={ldsVideo} type="video/mp4" />
+              <track kind="captions" srcLang="en" src={ldsCaptions} />
+            </video>
+          </figure>
         </section>
       </div>
     </div>

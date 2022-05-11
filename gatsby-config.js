@@ -3,21 +3,40 @@ module.exports = {
     PARALLEL_QUERY_RUNNING: true
   },
   siteMetadata: {
-    title: "Bishal Mishra, Product Designer | UX Designer",
+    title: "Bishal Mishra — Product Designer, UX Designer, bishal.cc",
     titleTemplate: "Bishal UX Designer",
     description:
       "Bishal is a UX and a Product Designer experienced in designing cross-platform applications and various user bases from small to large scale.",
-    url: "https://bishal.cc", // No trailing slash allowed!
+    siteUrl: "https://bishal.cc", // No trailing slash allowed!
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@bishaller",
     author: `@bishaller`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+          trackingIds: [
+              "UA-149450148-1", // Google Analytics / GA
+          ],
+          pluginConfig: {
+              head: true,
+          },
+      },
+  },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-json`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.bishal.cc',
+        sitemap: 'https://www.bishal.cc/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
     {
       resolve: "gatsby-transformer-remark",
       options: {

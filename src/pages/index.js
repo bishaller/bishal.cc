@@ -15,10 +15,10 @@ import ProjectPreview from "../components/home/projectPreview"
 const WorkPage = ({ data }) => {
   return (
     <main>
-      <Seo title="Bishal Mishra, Product Designer | UX Designer" />
+      <Seo title="Bishal Mishra — Product Designer, UX Designer, bishal.cc" />
       <Layout>
         <Billboard
-          title={`I design<strong>Experiences</strong>`}
+          title={`I design<strong> Experiences</strong>`}
           description={`<p>
           I am a Product Designer who turns complex problem sets to simple solutions, focused in building experiences that expands one’s capacity for impact 🚀.
           </p>`}

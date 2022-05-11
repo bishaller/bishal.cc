@@ -18,7 +18,7 @@ exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
         // presets/plugins.  This will also merge in your configuration from
         // `babel.config.js`.
         ...loaders.js(),
-        test: /\.jsx?$/,
+        test: /\.js$|jsx/,
         // Exclude all node_modules from transpilation, except for 'swiper' and 'dom7'
         exclude: modulePath =>
           /node_modules/.test(modulePath) &&
