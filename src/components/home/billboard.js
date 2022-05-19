@@ -1,3 +1,4 @@
+
 import * as React from "react";
 
 const Billboard = ({title, description, linkData}) => {
@@ -26,7 +27,7 @@ const Billboard = ({title, description, linkData}) => {
                             title="hello@bishal.cc"
                             href="mailto:hello@bishal.cc"
                         >
-                            hello@bishal.cc
+                            Contact me via Mail.
                         </a>
 
                         {/* {linkData.map((linkdata) => {

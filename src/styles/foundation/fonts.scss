@@ -14,6 +14,7 @@ Define Font name in variable and specify here.
     src: url('../fonts/ApercuPro-Bold.woff2') format('woff2'), url('../fonts/ApercuPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -21,6 +22,7 @@ Define Font name in variable and specify here.
     src: url('../fonts/ApercuPro-Regular.woff2') format('woff2'), url('../fonts/ApercuPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +30,7 @@ Define Font name in variable and specify here.
     src: url('../fonts/ApercuPro-Light.woff2') format('woff2'), url('../fonts/ApercuPro-Light.woff') format('woff');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -35,6 +38,7 @@ Define Font name in variable and specify here.
     src: url('../fonts/EasyNotes.woff2') format('woff2'), url('../fonts/EasyNotes.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -42,6 +46,7 @@ Define Font name in variable and specify here.
   src: url('../fonts/Freight-TextMedium.woff2') format('woff2'), url('../fonts/Freight-TextMedium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -49,4 +54,5 @@ Define Font name in variable and specify here.
     src: url('../fonts/Freight-TextMediumItalic.woff2') format('woff2'), url('../fonts/Freight-TextMediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
   }

@@ -25,14 +25,13 @@ function Seo({ description, lang, meta, title }) {
     `
   )
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = title || site.siteMetadata?.title
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle}
+      title={defaultTitle}
       meta={[
         {
           name: `geo:placename`,
@@ -176,7 +175,7 @@ function Seo({ description, lang, meta, title }) {
              },
              "datePublished": "2020-06-03T19:08:28+00:00",
              "dateModified": "2021-02-03T18:43:42+00:00",
-             "description": "Bishal is a UI/UX and a Product Designer who has experience of designing for cross-platform and various user bases from small to large.",
+             "description": "Bishal is a UX and a Product Designer who has experience of designing for cross-platform and various user bases from small to large.",
              "breadcrumb": {
                  "@id": "https://bishal.cc/#breadcrumb"
              },
