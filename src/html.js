@@ -5,7 +5,7 @@ const HTML = props => {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <meta charSet="utf-8" />
+        <meta charset="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="robots"
@@ -24,8 +24,7 @@ const HTML = props => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src={`../gsap.min.js`} />
-        <script>document.getElementById('#video').play();</script>
+        <script src={`https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js`} />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
