@@ -15,7 +15,7 @@ import ProjectPreview from "../components/home/projectPreview"
 const WorkPage = ({ data }) => {
   return (
     <main>
-      <Seo title="Bishal Mishra — Product Designer, UX Designer, bishaller" />
+      <Seo title="Bishal Mishra — Product Designer, UX Designer, bishal.cc" />
       <Layout>
         <Billboard
           title={`I design<strong> Experiences</strong>`}
