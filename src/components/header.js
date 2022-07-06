@@ -1,12 +1,22 @@
 import * as React from "react";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-// import gsap from "gsap";
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
   return (
     <header className="siteHeader">
-      <div className="siteContainer">
-        <ul className="siteHeader__wrap">
+      <nav className="siteContainer">
+        <ul>
+          <li>
+            <a
+              className="buttonSpecial buttonSpecial--alt"
+              title="hello@bishal.cc"
+              href="mailto:hello@bishal.cc"
+            >
+              Contact me via Mail.
+            </a>
+          </li>
+        </ul>
+        {/* <ul className="siteHeader__wrap">
           <li>
             <AniLink
               paintDrip
@@ -50,8 +60,8 @@ const Header = () => {
               <span>Writings</span>
             </AniLink>
           </li>
-        </ul>
-      </div>
+        </ul> */}
+      </nav>
     </header>
   );
 };

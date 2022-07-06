@@ -76,6 +76,7 @@ button,
         .button-stroke:nth-child(2) {
             stroke-dashoffset: 0;
             stroke: $c-black;
+            z-index: 9;
         }
         svg.icon-arrow {
             transform: translateX(7px);
@@ -97,13 +98,13 @@ button,
         position: relative;
         border-bottom: 2px solid transparent;
         transition: all 250ms ease-out;
-        --specialFontSize: clamp(1rem, 2vw, 1.25rem);
+        --specialFontSize: clamp(1rem, 2vw, .875rem);
         --specialLineHeight: 1;
         letter-spacing: 0;
         font: 700 var(--specialFontSize)/var(--specialLineHeight) var(--ff-defaultBold);
 
         &:hover {
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid $c-text;
             transition: all 250ms ease-in;
         }
     }
@@ -118,7 +119,8 @@ button,
     left: -10px;
     bottom: -20px;
     stroke-width: 1;
-
+    z-index: -1;
+    
     &:nth-child(2) {
         stroke-dasharray: 650px;
         stroke-dashoffset: 650px;
