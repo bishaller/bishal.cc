@@ -21,9 +21,17 @@
     overflow: hidden auto;
     height: 100%;
     z-index: 2;
+    position: relative;
 
     footer {
         display: none;
+    }
+
+    .buttonSpecial--alt {
+        color: $c-textWhite;
+        &:hover {
+            border-bottom: 2px solid $c-textWhite;
+        }
     }
 }
 
@@ -57,12 +65,7 @@
 
 .letter__content {
     background-color: $c-white;
-    box-shadow: 0 -40px 200px 40px rgb(0, 0, 0, 15%);
     font-size: clamp(1.0625rem, 1.1vw, 2.5rem);
-
-    @media #{$phone} {
-        box-shadow: none;
-    }
 }
 
 .letter__title {
@@ -77,6 +80,7 @@
 .letter__section {
     padding: clamp(2rem, 7.1vw, 7.5rem);
     position: relative;
+    box-shadow: 0 -40px 70px 50px  rgb(0, 0, 0, 20%);
     &:after {
         position: absolute;
         content: "";
@@ -86,6 +90,9 @@
         background-color: $c-black;
         opacity: .1;
         left: clamp(2rem, 7.1vw, 7.5rem);
+    }
+    @media #{$phone} {
+        box-shadow: none;
     }
 
     &:last-child::after {

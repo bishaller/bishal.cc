@@ -5,7 +5,7 @@ const HTML = props => {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="robots"
@@ -49,7 +49,6 @@ const HTML = props => {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="../custom.js"></script>
       </body>
     </html>
   )
