@@ -2,16 +2,40 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import { useEffect } from 'react'
+import { WaveGradient } from "wave-gradient";
+
+// import { Helmet } from "react-helmet";
+// import { withPrefix } from "gatsby"
 
 const AboutPage = () => {
+
+  useEffect(() => {
+    const canvasElement = document.querySelector("canvas");
+    try {
+      // Throws if it can't get a WebGL 2.0 context. For example, if the
+      // browser does not support it.
+      const gradient = new WaveGradient(canvasElement, {
+        colors: ["#F96887", "#FA8A71", "#D8728C", "B4E762", "21D1B1"],
+        fps: 60,
+        seed: 0,
+        speed: 1.5,
+        amplitude: 440,
+        density: [0.01, 0.36],
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }, [])
+
   return (
     <main className="mainStatic">
-      <Seo 
+      <Seo
         title="About Bishal | UX Designer | Product Lead |  @bishaller"
         description="My name is Bishal. I am a UX and Product Designer, who turns
         complex problem sets to simple solutions, focused to build
         experiences."
-        />
+      />
       <Layout>
         <canvas id="gradient-canvas" />
         <div className="letter">
@@ -84,6 +108,9 @@ const AboutPage = () => {
             </div> */}
           </div>
         </div>
+        {/* <Helmet>
+        <script src={withPrefix('gradient.js')} type="text/javascript" defer={false} async/>
+      </Helmet> */}
       </Layout>
     </main>
   )
