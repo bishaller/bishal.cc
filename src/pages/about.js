@@ -16,10 +16,7 @@ const AboutPage = () => {
       // Throws if it can't get a WebGL 2.0 context. For example, if the
       // browser does not support it.
       const gradient = new WaveGradient(canvasElement, {
-        // colors: ["#F96887", "#FA8A71", "#D8728C", "B4E762", "21D1B1"],
-        // colors: ["#46F4FF", "#A6E07C", "#F0C495", "4BEDAD", "F0C495", "E096D1", "#46F4FF", "#A6E07C", "#F0C495", "17DCBC"],
-        // colors: ["#17DCBC", "#17DCBC", "#17DCBC", "17DCBC", "17DCBC", "#17DCBC", "#17DCBC", "#17DCBC", "#17DCBC", "17DCBC"],
-         colors: ["#ee6c4d", "#F8EB97", "#59F8E8", "#E56B70", "#97FFC4", "#FF928B"],
+        colors: ["#ee6c4d", "#F8EB97", "#59F8E8", "#E56B70", "#97FFC4", "#FF928B"],
         fps: 60,
         seed: 3,
         speed: 1.4,
