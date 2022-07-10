@@ -38,6 +38,7 @@
     "gatsby-remark-gifs": "^1.1.0",
     "gatsby-remark-images": "^5.2.0",
     "gatsby-remark-images-contentful": "^4.11.0",
+    "gatsby-remark-lottie": "^1.0.3",
     "gatsby-source-contentful": "^5.14.1",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-json": "^3.9.0",

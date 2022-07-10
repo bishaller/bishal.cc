@@ -24,6 +24,12 @@ module.exports = {
           },
       },
   },
+  {
+    resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: ["gatsby-remark-lottie"]
+      },
+  },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
