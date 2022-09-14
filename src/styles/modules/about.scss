@@ -59,7 +59,7 @@
 
 .letter__headshot {
     margin-bottom: clamp(1.25rem, 5.2vw, 2.2rem);
-    width: clamp(4rem, 6vw, 10rem);
+    width: clamp(4rem, 6vw, 3.125rem);
     filter: drop-shadow(0 13px 33px rgba(0, 0, 0, 20%));
 }
 
@@ -103,6 +103,13 @@
 .letter__paragraph {
     font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
     max-width: 600px;
+}
+
+.letter__largetext {
+    font-size: clamp(1.65rem, 2.1vw, 2.5rem);
+    line-height: 1.5;
+    font-family: var(--ff-defaultLight);
+    letter-spacing: -0.6px;
 }
 
 .letter__button {

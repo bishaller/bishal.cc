@@ -14,7 +14,6 @@ const AboutPage = () => {
     const canvasElement = document.querySelector("canvas");
     try {
       // Throws if it can't get a WebGL 2.0 context. For example, if the
-      // browser does not support it.
       const gradient = new WaveGradient(canvasElement, {
         colors: ["#ee6c4d", "#F8EB97", "#59F8E8", "#E56B70", "#97FFC4", "#FF928B"],
         fps: 60,
@@ -49,12 +48,10 @@ const AboutPage = () => {
               />
               <div className="letter__paragraph">
                 <h1 className="letter__title">It’s a nice to meet you here</h1>
-                <p>Hi 👋</p>
-                <p>
-                  My name is Bishal. I am a UX &amp; Product Designer, who turns
-                  complex problem sets to simple solutions, focused to build
-                  experiences.
-                </p>
+                <div className="letter__largetext">
+                  <p>Hi, I am Bishal. A Product Designer born and raised in Kathmandu.</p>
+                  <p>I’m an extraverted, outgoing, outspoken, fun, and easy-to-go type.</p>
+                </div>
                 <p>
                   I can Think, Solve, Invent, Design, Code, Manage, Lead and
                   most importantly, Learn. I have worn many hats, but currently
