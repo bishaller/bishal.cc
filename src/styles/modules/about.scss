@@ -107,9 +107,9 @@
 
 .letter__largetext {
     font-size: clamp(1.65rem, 2.1vw, 2.5rem);
-    line-height: 1.5;
+    line-height: 1.25;
     font-family: var(--ff-defaultLight);
-    letter-spacing: -0.6px;
+    letter-spacing: -0.1px;
 }
 
 .letter__button {

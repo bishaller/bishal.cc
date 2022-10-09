@@ -5,8 +5,6 @@ import Seo from "../components/seo"
 import { useEffect } from 'react'
 import { WaveGradient } from "wave-gradient";
 
-// import { Helmet } from "react-helmet";
-// import { withPrefix } from "gatsby"
 
 const AboutPage = () => {
 
@@ -47,7 +45,7 @@ const AboutPage = () => {
                 className="letter__headshot"
               />
               <div className="letter__paragraph">
-                <h1 className="letter__title">It’s a nice to meet you here</h1>
+                <h1 className="letter__title">Howdy!</h1>
                 <div className="letter__largetext">
                   <p>Hi, I am Bishal. A Product Designer born and raised in Kathmandu.</p>
                   <p>I’m an extraverted, outgoing, outspoken, fun, and easy-to-go type.</p>
