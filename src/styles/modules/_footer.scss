@@ -23,14 +23,25 @@
 
 .footer__image {
     animation: rotate 7s linear infinite;
-    top: 35%;
+    top: 65%;
     position: relative;
     image-rendering: -webkit-optimize-contrast;
-    filter: blur(50px) saturate(1.1);
-    transition: transform ease;
+    filter: blur(100px) saturate(2);
+    transition: transform linear;
     -webkit-backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transition: linear all .3s;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+
+    @media #{$tablet} {
+        filter: blur(55px) saturate(1.1);
+        max-width: 100%;
+    }
+    @media #{$phone} {
+        filter: blur(35px) saturate(1.1);
+    }
 }
 
 .footer__main {
@@ -74,7 +85,7 @@
 
 .footer__footer {
     position: relative;
-    margin-top: -20vw;
+    margin-top: -30vw;
     z-index: 0;
 }
 .footer__copyright {

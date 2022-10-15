@@ -8,11 +8,11 @@ const Header = () => {
         <ul>
           <li>
             <a
-              className="buttonSpecial buttonSpecial--alt"
+              className="button button--header"
               title="hello@bishal.cc"
               href="mailto:hello@bishal.cc"
             >
-              Contact me via Mail.
+              Contact
             </a>
           </li>
         </ul>

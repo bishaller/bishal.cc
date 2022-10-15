@@ -53,6 +53,26 @@ button,
     }
 }
 
+.button--header {
+    @include fsz(16px);
+    border-radius: 50px;
+    background-color: $c-white;
+    color: $c-black;
+    position: relative;
+    padding: 13px 30px 11px;
+
+    &::after {
+        @include after-element;
+        border-radius: 50px;
+        background: linear-gradient(to right, $c-black, rgba($c-black, 0) 70%);
+        z-index: -1;
+        top: -1px;
+        left: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+    }
+}
+
 
 .buttonSpecial {
     color: $c-black;
@@ -93,21 +113,7 @@ button,
         width: 160%;
     }
 
-    &--alt {
-        z-index: 1;
-        position: relative;
-        border-bottom: 2px solid transparent;
-        transition: all 250ms ease-out;
-        --specialFontSize: clamp(1rem, 2vw, .875rem);
-        --specialLineHeight: 1;
-        letter-spacing: 0;
-        font: 700 var(--specialFontSize)/var(--specialLineHeight) var(--ff-defaultBold);
-
-        &:hover {
-            border-bottom: 2px solid $c-text;
-            transition: all 250ms ease-in;
-        }
-    }
+    
 }
 
 .button-stroke {

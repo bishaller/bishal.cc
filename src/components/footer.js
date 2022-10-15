@@ -69,17 +69,16 @@ const Footer = () => {
       <div className="footer__footer">
         <div className="footer__media">
           <StaticImage
-            src={"../images/footer_gradient.png"}
+            src={"../images/gradient_svg_main.png"}
             alt="A gradient circle, rotating constantly."
             width={10000}
             className="footer__image"
           />
           <div className="footer__copyright">
             <p>
-              &copy; {new Date().getFullYear()} Bishal Mishra. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Bishal Mishra.
             </p>
-            <p>❤️  &nbsp;Work is in Progress</p>
+            <p>❤️  &nbsp;A self coded portfolio landing website.</p>
           </div>
         </div>
       </div>

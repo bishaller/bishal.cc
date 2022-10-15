@@ -3,6 +3,7 @@ import * as React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import gsap from "gsap";
 import { useEffect } from 'react'
+import headerGradient from "../../images/gradient_svg_main.png"
 
 const Billboard = ({ title, description, linkData }) => {
   function createHTML(props) {
@@ -48,6 +49,7 @@ const Billboard = ({ title, description, linkData }) => {
   return (
     <section className="billboard">
       <div className="siteContainer siteContainer--billboard">
+
         <div className="billboard__inner">
           <h1
             className="billboard__title"
@@ -93,7 +95,10 @@ const Billboard = ({ title, description, linkData }) => {
           </div>
         </div>
       </div>
-      <div className="billBoard__mouse"></div>
+      <span className="billboard__gradient">
+        <img src={headerGradient} alt="Moving background gradient" />
+      </span>
+      {/* <div className="billBoard__mouse"></div> */}
     </section>
   );
 };

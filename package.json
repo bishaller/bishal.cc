@@ -17,7 +17,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "babel-preset-es2015": "^6.24.1",
-    "gatsby": "^4.11.2",
+    "gatsby": "^4.24.3",
     "gatsby-cli": "4.8.1",
     "gatsby-image": "^3.7.1",
     "gatsby-plugin-compile-es6-packages": "^2.1.1",

@@ -1,16 +1,17 @@
 .siteHeader {
-    // padding: 50px 10px 50px 10px;
     position: relative;
+    right: 0;
     z-index: 999;
-    // display: none;
 
     @media #{$phone} {
         position: absolute;
-        // padding: 35px 10px 50px 10px;
     }
 
     ul {
         list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
         li {
             margin-top: 15px;
             a {
@@ -28,6 +29,7 @@
     list-style-type: none;
     max-width: 420px;
     margin: 0 auto;
+
     li {
         width: 8.3vw;
         height: 8.3vw;

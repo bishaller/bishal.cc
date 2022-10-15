@@ -58,12 +58,28 @@ function Seo({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://bishal.cc/bishal_mishra.jpg`,
+        },
+        {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `627`,
+        },
+        {
+          property: `og:image:type`,
+          content: `image/jpg`,
+        },
+        {
           property: `og:image:secure_url`,
-          content: `https://www.bishal.cc/bishal_mishra.jpg`,
+          content: `https://bishal.cc/bishal_mishra.jpg`,
         },
         {
           property: `website:contact_data:website`,
-          content: `https://www.bishal.cc/`,
+          content: `https://bishal.cc/`,
         },
         {
           property: `website:contact_data:email`,
@@ -94,6 +110,10 @@ function Seo({ description, lang, meta, title }) {
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: `@bishaller`,
+        },
+        {
           name: `twitter:creator`,
           content: site.siteMetadata?.author || ``,
         },
@@ -107,7 +127,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://www.bishal.cc/bishal_mishra.jpg`,
+          content: `https://bishal.cc/bishal_mishra.jpg`,
         },
       ].concat(meta)}
     >
