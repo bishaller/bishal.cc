@@ -13,6 +13,7 @@ const Header = () => {
               href="mailto:hello@bishal.cc"
             >
               Contact
+              <span className="paperPlane"></span>
             </a>
           </li>
         </ul>

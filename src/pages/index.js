@@ -27,7 +27,7 @@ const WorkPage = ({ data }) => {
           ]}
         />
         <Intro
-          title={`Heckler for Unrestrained Design and Prototyping 🤘`}
+          title={`I am pushing UX boundaries, and pursuing a Master’s Degree in User Experience & Interaction Design at Thomas Jefferson University.`}
           subtitle={`April 2022`}
           description={`I am learning to code and be consistent with it, which also sums up the in-progress version of my(this) personal site. If found, please do kindly bear with the bugs. Find updates on <a href="https://github.com/bishaller/2022.bishal.cc/" rel="noopener noreferrer nofollow" target="_blank">github</a>.`}
         />

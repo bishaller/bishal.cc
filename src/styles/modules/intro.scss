@@ -1,48 +1,37 @@
 .intro {
     z-index: 1;
     position: relative;
-    background-color: $c-black;
-    color: $c-white;
-    padding: clamp(4rem, 7vw, 6.25rem) 0;
-}
-
-.intro__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.intro__header {
-    width: 50%;
-
-    @media #{$phone} {
-        width: 100%;
+    .siteContainer {
+        padding-top: clamp(4rem, 7vw, 6.25rem);
+        padding-bottom: clamp(4rem, 7vw, 6.25rem);
+        background-color: $c-black;
+        position: relative;
+        box-shadow: 0 40px 50px rgba($c-black, .2);
+        border-radius: 0 20px 20px 0;
+        left: -20px;
+        &:before {
+            @include after-element;
+            background-color: $c-black;
+            right: 100%;
+            width: calc(100vw * (740 / 1240));
+            top: 0;
+            height: 100%;
+            box-shadow: 0 40px 50px rgba($c-black, .2);
+        }
     }
-}
 
-.intro__title {
-    color: $c-white;
-    --wt: 400;
-    --fsz: clamp(2rem, 5vw, 5rem);
-    --lh: 1.05;
-    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
-    font: var(--font);
-    letter-spacing: -0.3vw;
-    margin-bottom: 0;
-
-    @media #{$phone} {
-        margin-bottom: 30px;
-    }
 }
 
 .intro__content {
-    width: 31.5%;
-    font-size: clamp(1.1rem, 1.2vw, 1.25rem);
-    line-height: 1.5;
+    font-size: clamp(1.2rem, 3vw, 2.375rem);
+    line-height: 1.2;
+    color: $c-white;
+    font-family: var(--ff-defaultLight);
+    max-width: 820px;
+    margin-left: 20px;
+    padding-right: 20px;
 
-    p {
-        color: rgba($c-white, .65);
+    p:last-child {
         margin-bottom: 0;
     }
 

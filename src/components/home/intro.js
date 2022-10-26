@@ -8,21 +8,15 @@ const Intro = ({ title, subtitle, description }) => {
     <section className="intro">
       <div className="siteContainer siteContainer--medium">
         <div className="intro__inner">
-          <header className="intro__header">
-            <h2
-              className="intro__title"
-              title={title}
-              dangerouslySetInnerHTML={createHTML(title)}
-            />
-          </header>
           <div className="intro__content">
-            <h3
-              className="intro__subTitle"
-              subtitle={subtitle}
-              dangerouslySetInnerHTML={createHTML(subtitle)}
+          <p
+          className="intro__subTitle"
+          subtitle={subtitle}
+          dangerouslySetInnerHTML={createHTML(subtitle)}
             />
             <p
-              dangerouslySetInnerHTML={createHTML(description)}
+              title={title}
+              dangerouslySetInnerHTML={createHTML(title)}
             />
           </div>
         </div>

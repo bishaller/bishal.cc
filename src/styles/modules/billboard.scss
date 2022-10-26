@@ -8,13 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  z-index: 0;
   // overflow: hidden;
   @media #{$phone} {
     padding: 40vw 0;
   }
-
-  z-index: 0;
 }
 
 .billboard__gradient {
@@ -26,22 +24,12 @@
   height: auto;
   filter: blur(100px) saturate(2);
   opacity: .95;
-  animation: rotate 15s linear infinite, move 10s linear infinite;
+  animation: rotate 8s linear infinite;
   transition: transform ease;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transition: linear all .3s;
   image-rendering: -webkit-optimize-contrast;
-
-  @keyframes move {
-    0% {
-      transform: rotate(0deg) translate(-10%) rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg) translate(-10%) rotate(-360deg);
-    }
-  }
 
   @media #{$tablet} {
     filter: blur(65px) saturate(2);

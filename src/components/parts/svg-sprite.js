@@ -122,7 +122,43 @@ const SvgSprite = () => (
         d="M46.105,11.02c-1.551,0.687-3.219,1.145-4.979,1.362c1.789-1.062,3.166-2.756,3.812-4.758	c-1.674,0.981-3.529,1.702-5.502,2.082C37.86,8.036,35.612,7,33.122,7c-4.783,0-8.661,3.843-8.661,8.582	c0,0.671,0.079,1.324,0.226,1.958c-7.196-0.361-13.579-3.782-17.849-8.974c-0.75,1.269-1.172,2.754-1.172,4.322	c0,2.979,1.525,5.602,3.851,7.147c-1.42-0.043-2.756-0.438-3.926-1.072c0,0.026,0,0.064,0,0.101c0,4.163,2.986,7.63,6.944,8.419	c-0.723,0.198-1.488,0.308-2.276,0.308c-0.559,0-1.104-0.063-1.632-0.158c1.102,3.402,4.299,5.889,8.087,5.963	c-2.964,2.298-6.697,3.674-10.756,3.674c-0.701,0-1.387-0.04-2.065-0.122C7.73,39.577,12.283,41,17.171,41	c15.927,0,24.641-13.079,24.641-24.426c0-0.372-0.012-0.742-0.029-1.108C43.483,14.265,44.948,12.751,46.105,11.02"
       />
     </symbol>
-  </svg>
+    <symbol id="paper-plane" viewBox="0 0 109 96">
+      <g>
+          <defs>
+            <filter x="-26.7%" y="-46.4%" width="153.5%" height="192.7%" filterUnits="objectBoundingBox" id="filter-1">
+              <feGaussianBlur stdDeviation="5.21331029" in="SourceGraphic"></feGaussianBlur>
+            </filter>
+            <linearGradient x1="113.417119%" y1="41.2633658%" x2="3.57477923%" y2="51.9888253%" id="linearGradient-2">
+              <stop stop-color="#2961EC" offset="0%"></stop>
+              <stop stop-color="#4FDAFF" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="122.151037%" y1="-11.9102861%" x2="-9.27821261%" y2="67.3409544%" id="linearGradient-3">
+              <stop stop-color="#2961EC" offset="0%"></stop>
+              <stop stop-color="#4FDAFF" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="78.6504329%" y1="77.1653104%" x2="31.8685141%" y2="25.5958601%" id="linearGradient-4">
+              <stop stop-color="#2961EC" offset="0%"></stop>
+              <stop stop-color="#4FDAFF" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g id="Final-Phase" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Home" transform="translate(-1281.000000, -50.000000)">
+              <g id="Group-10" transform="translate(1208.000000, 50.000000)">
+                <g id="Group-3" transform="translate(89.000000, 0.000000)">
+                  <polygon id="Fill-1" fill="#000000" opacity="0.132560256" filter="url(#filter-1)" points="58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80"></polygon>
+                  <polygon id="Fill-1" fill="#2961EC" points="38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05"></polygon>
+                  <polygon id="5" fill="url(#linearGradient-2)" points="6.88888889 19.1028911 28.1826718 31.3794591 93 0"></polygon>
+                  <polygon id="2" fill="url(#linearGradient-3)" points="93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965"></polygon>
+                  <polygon id="1" fill="url(#linearGradient-4)" points="38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225"></polygon>
+                  <polygon id="4" fill="#4ED6FE" points="27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602"></polygon>
+                  <polygon id="3" fill="#4ED6FE" points="38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846"></polygon>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+    </symbol>
+  </svg >
 )
 
 export default SvgSprite
