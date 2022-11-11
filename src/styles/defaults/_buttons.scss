@@ -5,7 +5,7 @@ button,
     box-shadow: none;
     border: 0;
     border-radius: 4px;
-    background-color: $cb-background;
+    // background-color: $cb-background;
     color: $c-white;
     letter-spacing: 0;
     font-family: $ff-defaultBold;
@@ -103,12 +103,12 @@ button,
             width: 109px;
             height: 96px;
             left: -30%;
-            top: -100%;    
+            top: -100%;
             transition: ease all .3s;
             background-size: 100%;
             background-repeat: no-repeat;
             background-image: url("data:image/svg+xml,%0A%3Csvg width='109px' height='96px' viewBox='0 0 109 96' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 3%3C/title%3E%3Cdefs%3E%3Cfilter x='-26.7%25' y='-46.4%25' width='153.5%25' height='192.7%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeGaussianBlur stdDeviation='5.21331029' in='SourceGraphic'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3ClinearGradient x1='113.417119%25' y1='41.2633658%25' x2='3.57477923%25' y2='51.9888253%25' id='linearGradient-2'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='122.151037%25' y1='-11.9102861%25' x2='-9.27821261%25' y2='67.3409544%25' id='linearGradient-3'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='78.6504329%25' y1='77.1653104%25' x2='31.8685141%25' y2='25.5958601%25' id='linearGradient-4'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Final-Phase' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Home' transform='translate(-1281.000000, -50.000000)'%3E%3Cg id='Group-10' transform='translate(1208.000000, 50.000000)'%3E%3Cg id='Group-3' transform='translate(89.000000, 0.000000)'%3E%3Cpolygon id='Fill-1' fill='%23000000' opacity='0.132560256' filter='url(%23filter-1)' points='58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80'%3E%3C/polygon%3E%3Cpolygon id='Fill-1' fill='%232961EC' points='38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05'%3E%3C/polygon%3E%3Cpolygon id='5' fill='url(%23linearGradient-2)' points='6.88888889 19.1028911 28.1826718 31.3794591 93 0'%3E%3C/polygon%3E%3Cpolygon id='2' fill='url(%23linearGradient-3)' points='93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965'%3E%3C/polygon%3E%3Cpolygon id='1' fill='url(%23linearGradient-4)' points='38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225'%3E%3C/polygon%3E%3Cpolygon id='4' fill='%234ED6FE' points='27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602'%3E%3C/polygon%3E%3Cpolygon id='3' fill='%234ED6FE' points='38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            
+
             @media #{$phone} {
                 width: 80px;
                 left: -20%;
@@ -118,6 +118,30 @@ button,
     }
 }
 
+.mainStatic {
+    .button--header {
+        --bg-gd: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0) 70%);
+        color: $c-white;
+        position: relative;
+        background: transparent;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            padding: 1px;
+            background: var(--bg-gd);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            display: block;
+            top: -1px;
+        }
+    }
+}
 
 .buttonSpecial {
     color: $c-black;
@@ -149,8 +173,8 @@ button,
             transition: all 250ms ease-out;
         }
 
-        color: $c-black;
-        background-color: none !important;
+        color: $c-black !important;
+        background-color: $c-white !important;
     }
 
     &__underline {

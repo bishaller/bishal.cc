@@ -15,8 +15,8 @@ const AboutPage = () => {
       const gradient = new WaveGradient(canvasElement, {
         colors: ["#ee6c4d", "#F8EB97", "#59F8E8", "#E56B70", "#97FFC4", "#FF928B"],
         fps: 60,
-        seed: 3,
-        speed: 1.4,
+        seed: 4,
+        speed: 2,
         amplitude: 440,
         density: [0.06, 0.16],
       });

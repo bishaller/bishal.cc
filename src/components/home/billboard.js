@@ -68,7 +68,7 @@ const Billboard = ({ title, description, linkData }) => {
                 <AniLink
                 cover 
                 direction="left"
-                  bg="#FF4959"
+                  bg="#2a60ec"
                   duration={1.25}
                   to={linkdata.linkUrl}
                   key={linkdata.linkUrl}

@@ -33,6 +33,12 @@
             border-bottom: 2px solid $c-textWhite;
         }
     }
+
+    &::after {
+        @include absolute-cover;
+        position: fixed;
+        backdrop-filter: blur(20px) saturate(1.2);
+    }
 }
 
 .letter {
