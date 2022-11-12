@@ -56,3 +56,19 @@ Define Font name in variable and specify here.
     font-style: normal;
     font-display: swap;
   }
+
+@font-face {
+  font-family: 'FreightTextLight';
+  src: url('../fonts/Freight-TextLight.woff2') format('woff2'), url('../fonts/Freight-TextLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreightTextLightItalic';
+    src: url('../fonts/Freight-TextLightItalic.woff2') format('woff2'), url('../fonts/Freight-TextLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }

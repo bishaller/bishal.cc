@@ -17,15 +17,15 @@
     //Project Colors
     --c-text: #000000;
     --c-textWhite: #ffffff;
-    --c-brandHome: rgb(42, 96, 236);
+    --c-brandHome: rgb(6, 28, 253);
     --c-link: var(--c-brandHome);
 
     //Font Family
     --ff-default: 'ApercuPro-Regular', sans-serif;
     --ff-defaultLight: 'ApercuPro-Light', sans-serif;
     --ff-defaultBold: 'ApercuPro-Bold', sans-serif;
-    --ff-body: 'FreightTextMedium', serif;
-    --ff-bodyItalic: 'FreightTextMediumItalic', serif;
+    --ff-body: 'FreightTextLight', serif;
+    --ff-bodyItalic: 'FreightTextLightItalic', serif;
 
     --headerWeight: 700;
     --headerFontSize: clamp(.875rem, 1.2vw, 1.25rem);;
