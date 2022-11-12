@@ -62,7 +62,7 @@ const AboutPage = () => {
                   with Design and make decisions as a product lead.
                 </p>
                 <p>
-                  As of april 2022, I am learning to code and be consistent with
+                  As of August 2022, I am learning to code and be consistent with
                   it, which also sums up the in-progress version of my personal
                   site. Besides that, I'm a fun person to hang around. You can
                   find me on any social media with @bishaller username. Or,

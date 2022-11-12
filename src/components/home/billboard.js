@@ -66,8 +66,8 @@ const Billboard = ({ title, description, linkData }) => {
             {linkData.map((linkdata) => {
               return (
                 <AniLink
-                cover 
-                direction="left"
+                  cover
+                  direction="left"
                   bg="#2a60ec"
                   duration={1.25}
                   to={linkdata.linkUrl}
