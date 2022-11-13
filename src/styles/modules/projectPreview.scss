@@ -1,16 +1,80 @@
 .projectPreview {
     z-index: 1;
     position: relative;
+    padding: 14vw 0;
+}
+
+.projectPreview__title {
+    --wt: 400;
+    --fsz: clamp(12rem, 29vw, 34rem);
+    --lh: .8;
+    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-bodyItalic);
+    font: var(--font);
+    letter-spacing: clamp(-1.25rem, -1.1vw, -1.25rem);
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    margin: 0 auto 1vw;
+    width: 100%;
+
+    @media #{$desktop} {
+        margin: 0 auto 3vw;
+        letter-spacing: clamp(-1.25rem, -1vw, -.75rem);
+    }
+
+    @media #{$tablet} {
+        letter-spacing: -1.2vw;
+        margin: 0 auto 4vw;
+    }
+
+    &::after {
+        @include after-element;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 130%;
+        z-index: -1;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%0A%3Csvg height='508' viewBox='0 0 1176 508' width='1176' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3ClinearGradient id='a' x1='7.694217%25' x2='97.426964%25' y1='49.030162%25' y2='49.898011%25'%3E%3Cstop offset='0' stop-color='%23ff9049'/%3E%3Cstop offset='1' stop-color='%2347ff68'/%3E%3C/linearGradient%3E%3Cfilter id='b' height='215.4%25' width='131.7%25' x='-15.9%25' y='-57.7%25'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='50'/%3E%3C/filter%3E%3Cpath d='m501.714855 1953c140.122845 0 691.285145-58.20298 691.285145-130s-551.1623-130-691.285145-130-253.714855 58.20298-253.714855 130 113.59201 130 253.714855 130z' fill='url(%23a)' fill-rule='evenodd' filter='url(%23b)' opacity='.601938' transform='translate(-129 -1569)'/%3E%3C/svg%3E");
+    }
 }
 
 .marquee-container {
     background-color: $c-brand--home;
-    // transform: rotate(-5deg);
-    width: 110%;
+    width: 110% !important;
     left: -5%;
-    font-size: clamp(1.2rem, 3vw, 6rem);
+    font-size: clamp(1.6rem, 2.7vw, 6rem);
     color: $c-white;
     font-family: var(--ff-body);
+    padding-top: 9px;
+    padding-bottom: 4px;
+    transform: rotate(-5deg);
+    box-shadow: 0 20px 70px rgba($c-black, .25);
+    position: relative;
+    margin-top: -12.5%;
+    z-index: 2;
+
+    @media #{$phone} {
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
+}
+
+.projectPreview__notice {
+    margin-top: 7%;
+    text-align: center;
+
+    p {
+        display: inline-block;
+        background: $c-white;
+        border-radius: 15px;
+        line-height: 1;
+        border: 1px solid rgba($c-black, .2);
+        padding: 5px 11px 4px;
+        font-size: clamp(0.875rem, 1vw, 1rem);
+        box-shadow: 0 5px 25px -5px rgba($c-black, .15);
+    }
 }
 
 .projectPreview__item {
@@ -30,36 +94,28 @@
     }
 }
 
-.projectPreview__titles {
-    width: 50%;
+// .projectPreview__titles {
+//     width: 50%;
 
-    @media #{$phone} {
-        width: 100%;
-    }
-}
+//     @media #{$phone} {
+//         width: 100%;
+//     }
+// }
 
 .projectPreview__meta {
     font-size: clamp(0.875rem, 1vw, 1rem);
     letter-spacing: -0.1px;
+
     @media #{$phone} {
         margin-bottom: 10px;
     }
-}
-
-.projectPreview__title {
-    --wt: 400;
-    --fsz: clamp(2.4rem, 4vw, 4rem);
-    --lh: 1;
-    --font: var(--wt) var(--fsz)/var(--lh) var(--ff-default);
-    font: var(--font);
-    letter-spacing: -0.2vw;
-    margin-bottom: 15px;
 }
 
 .projectPreview__content {
     width: 38.5%;
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.5;
+
     @media #{$phone} {
         width: 100%;
     }

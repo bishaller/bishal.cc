@@ -35,15 +35,23 @@ const ProjectPreview = () => {
   return (
     <section className="projectPreview">
       <div className="siteContainer siteContainer--medium">
-        <h2>Work</h2>
+        <h2 className="projectPreview__title">work</h2>
       </div>
       <Marquee
-        speed={200}
+        speed={100}
         gradient={false}
       >
-        UX Designer&nbsp;&nbsp;⍟&nbsp;&nbsp;UI Designer&nbsp;&nbsp;⍟&nbsp;&nbsp;UX Research&nbsp;&nbsp;⍟&nbsp;&nbsp;Product Design&nbsp;&nbsp;⍟&nbsp;&nbsp;Systems Design&nbsp;&nbsp;⍟&nbsp;&nbsp;Can Code&nbsp;&nbsp;⍟&nbsp;&nbsp;
+        UX Designer&nbsp;&nbsp;⍟&nbsp;&nbsp;UI Designer&nbsp;&nbsp;⍟&nbsp;&nbsp;Visual Design&nbsp;&nbsp;⍟&nbsp;&nbsp;UX Research&nbsp;&nbsp;⍟&nbsp;&nbsp;Product Design&nbsp;&nbsp;⍟&nbsp;&nbsp;Systems Design&nbsp;&nbsp;⍟&nbsp;&nbsp;FrontEnd&nbsp;&nbsp;⍟&nbsp;&nbsp;
       </Marquee>
+    
+
       <div className="siteContainer siteContainer--medium">
+        <div className="projectPreview__notice">
+          <p>🚧 Case studies are work in progress and are coming soon.</p>
+        </div>
+      </div>
+      
+      {/* <div className="siteContainer siteContainer--medium">
         <section className="projectPreview__item" >
           <header className="projectPreview__header">
             <div className="projectPreview__titles">
@@ -101,7 +109,7 @@ const ProjectPreview = () => {
             </video>
           </figure>
         </section>
-      </div>
+      </div> */}
     </section>
   )
 }
