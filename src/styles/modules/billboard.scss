@@ -24,12 +24,13 @@
   height: auto;
   filter: blur(100px) saturate(2);
   opacity: .95;
-  animation: rotate 8s linear infinite;
+  animation: rotate 6s linear infinite;
   transition: transform ease;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transition: linear all .3s;
   image-rendering: -webkit-optimize-contrast;
+  z-index: -1;
 
   @media #{$tablet} {
     filter: blur(65px) saturate(2);
