@@ -6,29 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Marquee from "react-fast-marquee";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-// const prefersReducedMotion = usePrefersReducedMotion();
 const ProjectPreview = (linkData) => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     items: projectPreviewJson {
-  //       projects {
-  //         category
-  //         title
-  //         description
-  //         image {
-  //           alt
-  //           url {
-  //             childImageSharp {
-  //               fluid(quality: 100) {
-  //                 ...GatsbyImageSharpFluid
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   return (
     <section className="projectPreview">
@@ -56,12 +34,12 @@ const ProjectPreview = (linkData) => {
               <h2>Discovering a<br />better travel experience</h2>
               <StaticImage
                 src={"../../images/dwt-fg.png"}
-                alt=""
+                alt="Photo resembles a couple travelling, work case study for Discovery World Trekking"
                 width={5000}
                 className="projectCard__image"
               />
               <div className="projectCard__footer">
-                <h3 className="projectCard__title">Reimagined a travel portal to approach to help them grow their business through a</h3>
+                <h3 className="projectCard__title">Reimagined a travel portal to help them grow their business through a</h3>
                 <div className="projectCard__icon">
                   <svg className="" viewBox="0 0 17 17">
                     <use xlinkHref="#icon-target-arrow"></use>
@@ -89,7 +67,7 @@ const ProjectPreview = (linkData) => {
                 <h2>Event management simplified.</h2>
                 <StaticImage
                   src={"../../images/traqit.png"}
-                  alt=""
+                  alt="UI screenshots of an event management app."
                   width={5000}
                   className="projectCard__image"
                 />
@@ -107,25 +85,32 @@ const ProjectPreview = (linkData) => {
 
           </div>
           <div className="projectPreview__wrap projectPreview__wrap--three">
-              <article className="projectCard projectCard--sampression">
-                <AniLink
-                  to="https://sampression.com/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
-                  <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
-                <span className="projectCard__soon">Coming Soon</span>
-                <h2>Simplified<br/>no-code websites</h2>
+            <article className="projectCard projectCard--sampression">
+              <AniLink
+                to="https://sampression.com/"
+                className="projectCard__link"
+                target="_blank"
+              >
+                <span className="screen-reader-text">Visit Website</span>
+              </AniLink>
+              <span className="projectCard__soon">Coming Soon</span>
+              <h2>Simplified<br />no-code websites</h2>
+              <StaticImage
+                src={"../../images/sampression.png"}
+                alt=""
+                width={5000}
+                className="projectCard__image"
+              />
+            </article>
+            <div className="projectPreview__wrap projectPreview__wrap--vertical">
+              <article className="projectCard projectCard--idealaya">
+                <h2>Content strategy and web design for creative agency</h2>
                 <StaticImage
-                  src={"../../images/sampression.png"}
+                  src={"../../images/idealaya.png"}
                   alt=""
                   width={5000}
                   className="projectCard__image"
                 />
-              </article>
-              <div className="projectPreview__wrap projectPreview__wrap--vertical">
-              <article className="projectCard projectCard--wp" style={{ backgroundImage: `url(${wpBG})` }}>
                 <AniLink
                   to="https://idealaya.co/"
                   className="projectCard__link"
@@ -134,16 +119,7 @@ const ProjectPreview = (linkData) => {
                   <span className="screen-reader-text">Visit Website</span>
                 </AniLink>
               </article>
-              <article className="projectCard projectCard--wp" style={{ backgroundImage: `url(${wpBG})` }}>
-                <AniLink
-                  to="https://kathmandu.wordcamp.org/2018/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
-                  <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
-              </article>
-              <article className="projectCard projectCard--wp" style={{ backgroundImage: `url(${tpnBG})` }}>
+              <article className="projectCard projectCard--tpn" style={{ backgroundImage: `url(${tpnBG})` }}>
                 <AniLink
                   to="https://trekkersparadisenepal.com/"
                   className="projectCard__link"
@@ -152,19 +128,13 @@ const ProjectPreview = (linkData) => {
                   <span className="screen-reader-text">Visit Website</span>
                 </AniLink>
               </article>
-              </div>
-              <article className="projectCard projectCard--sites">
-                <span className="projectCard__soon">Coming Soon</span>
-                <h2>How might we build a chain of websites that is so similar yet different to each other and resemble their uniqueness.</h2>
-                <AniLink
-                  to="https://kathmandu.wordcamp.org/2018/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
-                  <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
-              </article>
             </div>
+            <article className="projectCard projectCard--sites">
+              <span className="projectCard__soon">Coming Soon</span>
+              <h2>How might we build a chain of websites that is so similar yet different to each other and resemble their uniqueness?</h2>
+            </article>
+          </div>
+          
         </div>
       </div>
     </section>

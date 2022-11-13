@@ -15,9 +15,10 @@
         box-shadow: 0 20px 50px -10px rgba($c-black, .4);
 
         .projectCard__icon {
-            transform:  scale(1.1);
+            transform: scale(1.1);
             transition: ease all .2s;
             background-color: $c-brand--home;
+
             svg {
                 transition: ease all .2s;
                 transform: rotate(45deg);
@@ -152,6 +153,7 @@
             letter-spacing: -.5px;
         }
     }
+
     .projectCard__image {
         width: 120%;
         position: relative;
@@ -185,7 +187,7 @@
 
 .projectCard--sampression {
     background-color: #D4DAE1;
-    max-height: 295px;
+    max-height: 300px;
 
     .projectCard__soon {
         color: rgba($c-black, .75);
@@ -196,7 +198,8 @@
         text-align: center;
         margin-top: 20px;
         margin-bottom: 0px;
-        font-size: clamp(1.2rem, 1.1vw, 2rem);
+        font-size: clamp(1.2rem, 1vw, 2rem);
+
     }
 
     .projectCard__image {
@@ -204,4 +207,35 @@
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+.projectCard--idealaya {
+    background-color: $c-white;
+    border: 1px solid #1DE4D5;
+    padding: 20px;
+    .projectCard__image {
+        position: absolute;
+        width: 120px;
+        right: 15px;
+        top: 15px;
+        z-index: 0;
+    }
+
+    h2 {
+        font-family: $ff-default;
+        font-weight: 400;
+        font-size: clamp(1.2rem, 1vw, 2rem);
+        line-height: 1.2;
+        margin-bottom: 0;
+        position: relative;
+        width: 70%;
+        z-index: 1;
+        letter-spacing: -0.7px;
+    }
+}
+
+.projectCard--tpn {
+    min-height: 195px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
