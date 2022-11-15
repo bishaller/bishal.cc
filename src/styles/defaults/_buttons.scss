@@ -298,3 +298,18 @@ button,
         background-image: url("../images/instagram.svg");
     }
 }
+
+.button--disabled {
+    background-color: $c-white;
+    border: 1px solid rgba($c-black, .25);
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+
+    @media #{$phone} {
+        @include fsz(16px);
+    }
+}

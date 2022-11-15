@@ -93,7 +93,6 @@ const ProjectPreview = (linkData) => {
               >
                 <span className="screen-reader-text">Visit Website</span>
               </AniLink>
-              <span className="projectCard__soon">Coming Soon</span>
               <h2>Simplified<br />no-code websites</h2>
               <StaticImage
                 src={"../../images/sampression.png"}
@@ -134,7 +133,7 @@ const ProjectPreview = (linkData) => {
               <h2>How might we build a chain of websites that is so similar yet different to each other and resemble their uniqueness?</h2>
             </article>
           </div>
-          
+          <span className="button--disabled">More work coming soon...</span>
         </div>
       </div>
     </section>
