@@ -15,13 +15,15 @@
 }
 
 .footer__media {
-    height: clamp(5rem, 55vw, 55rem);
+    height: clamp(5rem, 65vw, 55rem);
     overflow: hidden;
     width: clamp(10rem, 105vw, 105rem);
     margin: 0 auto;
 }
 
 .footer__image {
+    user-select: none;
+    pointer-events: none;
     animation: rotate 7s linear infinite;
     top: 65%;
     position: relative;
@@ -32,7 +34,8 @@
     -webkit-transform-style: preserve-3d;
     transition: linear all .3s;
     max-width: 80%;
-    display: block;
+    display: flex !important;
+    justify-content: center;
     margin: 0 auto;
 
     @media #{$tablet} {
@@ -100,7 +103,11 @@
     padding-bottom: 30px;
     p {
         margin: 0;
-        font-size: 1rem;
+        font-size: 14px;
+
+        @media #{$phone} {
+            font-size: 12px;
+        }
     }
 
     @media #{$phone} {

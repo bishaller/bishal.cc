@@ -65,8 +65,10 @@
 }
 
 .intro__subTitle {
-    color: $c-white;
-    font-size: clamp(0.9rem, 1.2vw, 1.25rem);
+    color: rgba($c-white, .7);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-family: $ff-default;
+    margin-bottom: 10px;
 
     @media #{$phone} {
         margin-bottom: 10px;

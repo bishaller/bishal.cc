@@ -11,11 +11,13 @@
   z-index: 2;
 
   @media #{$phone} {
-    padding: 40vw 0;
+    padding: 50vw 0 40vw;
   }
 }
 
 .billboard__gradient {
+  user-select: none;
+  pointer-events: none;
   position: absolute;
   display: block;
   left: -12%;

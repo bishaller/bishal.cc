@@ -39,7 +39,7 @@ const ProjectPreview = (linkData) => {
                 className="projectCard__image"
               />
               <div className="projectCard__footer">
-                <h3 className="projectCard__title">Reimagined a travel portal to help them grow their business through a</h3>
+                <h3 className="projectCard__title">Reimagined travel booking experinece to improve experiences for three distinct users.</h3>
                 <div className="projectCard__icon">
                   <svg className="" viewBox="0 0 17 17">
                     <use xlinkHref="#icon-target-arrow"></use>
