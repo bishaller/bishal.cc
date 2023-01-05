@@ -4,7 +4,6 @@ import wpBG from "../../images/wordcamp.jpg"
 import tpnBG from "../../images/tpn.jpg"
 import { StaticImage } from "gatsby-plugin-image"
 import Marquee from "react-fast-marquee";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const ProjectPreview = (linkData) => {
 
@@ -46,23 +45,15 @@ const ProjectPreview = (linkData) => {
                   </svg>
                 </div>
               </div>
-              <AniLink
-                to="https://discoveryworldtrekking.com/"
-                className="projectCard__link"
-                target="_blank"
-              >
+              <a className="projectCard__link" href="https://bishaller.notion.site/Discovery-World-Trekking-DWT-d8e41e7cfdd64a02873db1e38ae3066b/" rel="noreferrer" target="_blank">
                 <span className="screen-reader-text">Visit Website</span>
-              </AniLink>
+              </a>
             </article>
             <div className="projectPreview__wrap projectPreview__wrap--two">
               <article className="projectCard projectCard--traqit">
-                <AniLink
-                  to="https://traqit.com/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
+                <a className="projectCard__link" href="https://traqit.com/" rel="noreferrer" target="_blank">
                   <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
+                </a>
                 <span className="projectCard__soon">Coming Soon</span>
                 <h2>Event management simplified.</h2>
                 <StaticImage
@@ -73,26 +64,18 @@ const ProjectPreview = (linkData) => {
                 />
               </article>
               <article className="projectCard projectCard--wp" style={{ backgroundImage: `url(${wpBG})` }}>
-                <AniLink
-                  to="https://kathmandu.wordcamp.org/2018/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
+                <a className="projectCard__link" href="https://kathmandu.wordcamp.org/2018/" rel="noreferrer" target="_blank">
                   <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
+                </a>
               </article>
             </div>
 
           </div>
           <div className="projectPreview__wrap projectPreview__wrap--three">
             <article className="projectCard projectCard--sampression">
-              <AniLink
-                to="https://sampression.com/"
-                className="projectCard__link"
-                target="_blank"
-              >
-                <span className="screen-reader-text">Visit Website</span>
-              </AniLink>
+            <a className="projectCard__link" href="https://sampression.com" rel="noreferrer" target="_blank">
+                  <span className="screen-reader-text">Visit Website</span>
+                </a>
               <h2>Simplified<br />no-code websites</h2>
               <StaticImage
                 src={"../../images/sampression.png"}
@@ -110,22 +93,14 @@ const ProjectPreview = (linkData) => {
                   width={5000}
                   className="projectCard__image"
                 />
-                <AniLink
-                  to="https://idealaya.co/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
+                <a className="projectCard__link" href="https://idealaya.co/" rel="noreferrer" target="_blank">
                   <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
+                </a>
               </article>
               <article className="projectCard projectCard--tpn" style={{ backgroundImage: `url(${tpnBG})` }}>
-                <AniLink
-                  to="https://trekkersparadisenepal.com/"
-                  className="projectCard__link"
-                  target="_blank"
-                >
+                  <a className="projectCard__link" href="https://trekkersparadisenepal.com/" rel="noreferrer" target="_blank">
                   <span className="screen-reader-text">Visit Website</span>
-                </AniLink>
+                </a>
               </article>
             </div>
             <article className="projectCard projectCard--sites">
