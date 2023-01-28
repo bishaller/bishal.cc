@@ -15,6 +15,13 @@ const Rubbermaid = () => {
                 <h1 className="pageHeader__title">
                   Elevating Rubbermaid's Purchasing Experience
                 </h1>
+                <p className="pageHeader__alert">
+                  <strong>⚠️ Disclaimer:</strong>
+                  This is a project done as learning activity in
+                  my Master’s UX & Interaction Design Program at Jefferson
+                  University. I am not associated with the brand and this
+                  project is done for learning purpose.
+                </p>
               </div>
             </div>
 
@@ -26,9 +33,8 @@ const Rubbermaid = () => {
                 className=""
               />
             </div>
-
-            <div className="siteContainer siteContainer--small">
-              <section className="pageSection">
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🏠 About Rubbermaid</h2>
                 <p>
                   Rubbermaid is an American manufacturer and distributor of
@@ -44,25 +50,36 @@ const Rubbermaid = () => {
                   width={5000}
                   className=""
                 />
-              </section>
-            </div>
+              </div>
+            </section>
 
-            <div className="siteContainer siteContainer--small">
-              <div className="pageSection">
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🏹 Process</h2>
               </div>
-            </div>
-            <div className="siteContainer siteContainer--medium">
-              <StaticImage
-                src={"../images/rubbermaid/rubbermaid_process.jpg"}
-                alt=""
-                width={5000}
-                className=""
-              />
-            </div>
 
-            <div className="siteContainer siteContainer--small">
-              <section className="pageSection">
+              <div className="siteContainer siteContainer--medium">
+                <StaticImage
+                  src={"../images/rubbermaid/rubbermaid_process.jpg"}
+                  alt=""
+                  width={5000}
+                  className="pageImage pageImage--large"
+                />
+              </div>
+              <div className="siteContainer siteContainer--small">
+                <p>
+                  Rubbermaid is an American manufacturer and distributor of
+                  household items. They're a big household market player and are
+                  best known for producing food storage containers and trash
+                  cans. Additionally, they make sheds, step stools, closets and
+                  shelving, laundry baskets, bins, air fresheners, and other
+                  household items.
+                </p>
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🔬 Research & Findings</h2>
                 <p>
                   Rubbermaid has been selling its products traditionally and
@@ -76,11 +93,24 @@ const Rubbermaid = () => {
                   width={5000}
                   className=""
                 />
-              </section>
-              <section className="pageSection">
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">
-                  Understanding the Problem
+                  🤔 Understanding the Problem
                 </h2>
+              </div>
+              <div className="siteContainer siteContainer--medium">
+                <StaticImage
+                  src={"../images/rubbermaid/rubbermaid_understanding.jpg"}
+                  alt=""
+                  width={5000}
+                  className="pageImage pageImage--large"
+                />
+              </div>
+              <div className="siteContainer siteContainer--small">
                 <p>
                   Rubbermaid has been selling its products traditionally and
                   needs an online e-commerce shop. They have excellent
@@ -98,20 +128,31 @@ const Rubbermaid = () => {
                   The products Rubbermaid sells revolve around more of what they
                   want to sell rather than what the users need.
                 </p>
-              </section>
-              <section className="pageSection">
-                <h2 className="pageSection__title">💡 The Idea</h2>
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">💡 The Solution</h2>
+              </div>
+              <div className="siteContainer siteContainer--small">
                 <p>
                   I am solving a specific use case where I am taking up a user
                   trying to set up their apartment or any household category
-                  from scratch. However, this solution would still be able to
-                  cater to all those users who have yet to decide what to buy to
+                  from scratch. However, this solution would still cater to
+                  users who have not decided what household items they need to
                   organize their homes.
                 </p>
-                <p>
-                  "Let the users swipe right or left to find the right fit of
-                  household items."
-                </p>
+              </div>
+              <div className="siteContainer siteContainer--medium">
+                <StaticImage
+                  src={"../images/rubbermaid/rubbermaid_solution.jpg"}
+                  alt=""
+                  width={5000}
+                  className="pageImage pageImage--large"
+                />
+              </div>
+              <div className="siteContainer siteContainer--small">
                 <p>
                   I designed an app for Rubbermaid to let users find the perfect
                   match of home organizational products they need. The users
@@ -121,12 +162,46 @@ const Rubbermaid = () => {
                   right for the things they have or will have in their home and
                   swipe left if not, while users would also have options to
                   custom-add the items not shown in the card. When the user is
-                  done swiping, the app suggests a list of products that the
-                  user needs to organize all the items in their home or a
-                  specific category.
+                  done swiping, the app suggests a list of products they need to
+                  organize all the items in their home or a specific category.
                 </p>
-              </section>
-            </div>
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">🧪 Iterations & Testing</h2>
+                <p>
+                  For the first round, I ran down the hall test with a couple of
+                  friends with my sketches. I realized that all items won't go
+                  in the same card swipes and had to introduce "categories" so
+                  that the users could minimize the swiping experience and
+                  choose to narrow their product search.
+                </p>
+                <p>
+                  After a few more paper tests with the Rubbermaid users (that
+                  match the persona), I moved ahead with the UI and tested that
+                  with 7 more users. Some were the same, and I chose some new
+                  users to test the UI. I found out that the "Where am I?" state
+                  in the card swipes was confusing for the users, and I opted to
+                  choose the Instagram story style indicator for more relevancy.
+                </p>
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">
+                  🚀 The Product Track Forward
+                </h2>
+                <p>
+                  To make this product successful, card swiping should use
+                  machine learning to understand users' demographics and
+                  behavior. By doing so, we can predict users' household items
+                  and show the cards accordingly.
+                </p>
+              </div>
+            </section>
 
             <div className="siteContainer.siteContainer--small"></div>
           </div>
