@@ -1,0 +1,53 @@
+.pageHeader {
+  padding: 10vw 0;
+   position: relative;
+
+   &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(../images/pagebanner__bg.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotate(-80deg);
+      filter: blur(5px) saturate(1);
+
+      @media #{$phone} {
+         opacity: .6;
+      }
+   }
+
+  @media #{$tablet} {
+    padding: 10vw 0 8vw;
+  }
+
+  @media #{$phone} {
+    padding: 24vw 0 10vw;
+  }
+}
+
+.pageHeader__title {
+  --wt: 400;
+  --fsz: clamp(3rem, 11vw, 7.5rem);
+  --lh: 0.95;
+  --font: var(--wt) var(--fsz) / var(--lh) var(--ff-defaultBold);
+  font: var(--font);
+  letter-spacing: -0.5vw;
+  text-align: center;
+}
+
+.pageBanner {
+  margin-bottom: 6vw;
+  @media #{$phone} {
+    margin-bottom: 12vw;
+  }
+}
+
+.pageSection__title {
+}
