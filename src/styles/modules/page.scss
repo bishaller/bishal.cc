@@ -26,7 +26,7 @@
     background-position: center;
     background-size: contain;
     transform: rotate(-80deg);
-    filter: blur(5px) saturate(1);
+    filter: blur(15px) saturate(1);
 
     @media #{$phone} {
       opacity: 0.6;

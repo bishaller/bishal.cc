@@ -3,25 +3,21 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 
-const Rubbermaid = () => {
+const Dwt = () => {
   return (
     <main>
-      <Seo title="Rubbermaid Case Study | Bishal Mishra" description="" />
+      <Seo
+        title="Discovery World Trekking UX Case Study | Bishal Mishra"
+        description="UX Case Study for Discovery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
+      />
       <Layout>
         <article>
           <div className="page">
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
                 <h1 className="pageHeader__title">
-                  Elevating Rubbermaid's Purchasing Experience
+                  Redefining travel experience for three distinct users
                 </h1>
-                <p className="pageHeader__alert">
-                  <strong>⚠️ Disclaimer:</strong>
-                  This is a project done as learning activity in my Master’s UX
-                  & Interaction Design Program at Jefferson University. I am not
-                  associated with the brand and this project is done for
-                  learning purpose.
-                </p>
               </div>
             </div>
 
@@ -33,25 +29,66 @@ const Rubbermaid = () => {
                 className=""
               />
             </div>
-            <section className="pageSection">
+
+            <div className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">🏠 About Rubbermaid</h2>
                 <p>
-                  Rubbermaid is an American manufacturer and distributor of
-                  household items. They're a big household market player and are
-                  best known for producing food storage containers and trash
-                  cans. Additionally, they make sheds, step stools, closets and
-                  shelving, laundry baskets, bins, air fresheners, and other
-                  household items.
+                  <strong>Role</strong>
+                  <br />
+                  Project Lead, Research, UI Design, Prototyping, Usability
+                  Testing, FrontEnd.
                 </p>
-                <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_about.jpg"}
-                  alt=""
-                  width={5000}
-                  className=""
-                />
+                <p>
+                  <strong>Company</strong>
+                  <br />
+                  Last Door Solutions
+                </p>
+                <p>
+                  <strong>Type & Timeline</strong>
+                  <br />
+                  4months / Web App / 2019
+                </p>
+                <p>
+                  <strong>Tools</strong>
+                  <br />
+                  Invision, Sketch, Miro, Google Meet, Zoom, Basecamp, Hotjar
+                </p>
               </div>
-            </section>
+            </div>
+
+            <div className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">🏔️ About the Project</h2>
+                <p>
+                  While being at Last Door, I’ve worked with a ton of travel and
+                  tour operators in Nepal. This is one of my favorite project as
+                  it had a lot of missing links between users and the product,
+                  and connecting them was challenging for me to find and meet
+                  the needs for multiple user bases.
+                </p>
+                <p>
+                  Discovery World Trekking(DWT) is a pioneering travel agency
+                  based in Nepal. They had been serving travelers from Europe,
+                  Australia, the US, and other western countries. Unfortunately,
+                  the DWT website had an inferior information architecture, and
+                  the team needed help to have a tiered payment from the client.
+                  In addition, the crew wanted their travelers' information to
+                  be handy and onboard them smoothly when they arrived in Nepal.
+                </p>
+              </div>
+            </div>
+
+            <div className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">🔍 Exploring the Problem</h2>
+                <ul>
+                  <li>Current users couldn’t pay and book the trip from their site.</li>
+                  <li>Agent and group trips can only pay/book the trip manually.</li>
+                  <li>Manual work load to plan the custom trips for extreme users.</li>
+                  <li>Lack of a systemized traveler onboarding to the website and destination, both created issues in handling business.</li>
+                </ul>
+              </div>
+            </div>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
@@ -226,4 +263,4 @@ const Rubbermaid = () => {
     </main>
   )
 }
-export default Rubbermaid
+export default Dwt
