@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import rubbermaidVideo from "../images/rubbermaid/rubbermaid_video.mp4"
 
 const Rubbermaid = () => {
   return (
@@ -81,6 +82,16 @@ const Rubbermaid = () => {
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🔬 Research & Findings</h2>
+                </div>
+                <div className="pageImage">
+                <StaticImage
+                  src={"../images/rubbermaid/rubbermaid_researchPlan.jpg"}
+                  alt=""
+                  width={8000}
+                  className=""
+                />
+                </div>
+                <div className="siteContainer siteContainer--small">
                 <p>
                   Rubbermaid has been selling its products traditionally and
                   needs an online e-commerce shop. They have excellent
@@ -178,7 +189,7 @@ const Rubbermaid = () => {
             </section>
 
             <section className="pageSection">
-              <div className="siteContainer siteContainer--small">
+            <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🧪 Iterations & Testing</h2>
                 <p>
                   For the first round, I ran down the hall test with a couple of
@@ -195,6 +206,11 @@ const Rubbermaid = () => {
                   in the card swipes was confusing for the users, and I opted to
                   choose the Instagram story style indicator for more relevancy.
                 </p>
+              </div>
+              <div className="pageVideo">
+                <video loop autoPlay muted>
+                  <source src={rubbermaidVideo} type="video/mp4" />
+                </video>
               </div>
             </section>
 

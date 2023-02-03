@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import Video from "../components/video"
 
 const Dwt = () => {
   return (
@@ -82,10 +83,20 @@ const Dwt = () => {
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🔍 Exploring the Problem</h2>
                 <ul>
-                  <li>Current users couldn’t pay and book the trip from their site.</li>
-                  <li>Agent and group trips can only pay/book the trip manually.</li>
-                  <li>Manual work load to plan the custom trips for extreme users.</li>
-                  <li>Lack of a systemized traveler onboarding to the website and destination, both created issues in handling business.</li>
+                  <li>
+                    Current users couldn’t pay and book the trip from their
+                    site.
+                  </li>
+                  <li>
+                    Agent and group trips can only pay/book the trip manually.
+                  </li>
+                  <li>
+                    Manual work load to plan the custom trips for extreme users.
+                  </li>
+                  <li>
+                    Lack of a systemized traveler onboarding to the website and
+                    destination, both created issues in handling business.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -232,6 +243,12 @@ const Dwt = () => {
                   in the card swipes was confusing for the users, and I opted to
                   choose the Instagram story style indicator for more relevancy.
                 </p>
+              </div>
+              <div className="pageImage">
+                <Video
+                  videoSrcURL="https://youtu.be/c6Q62BHULIY"
+                  videoTitle="Prototype Demo Rubbermaid"
+                />
               </div>
             </section>
 
