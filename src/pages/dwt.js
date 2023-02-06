@@ -2,7 +2,6 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-import Video from "../components/video"
 
 const Dwt = () => {
   return (
@@ -103,175 +102,168 @@ const Dwt = () => {
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">🏹 Process</h2>
+                <h2 className="pageSection__title">🏹 Project Approach</h2>
               </div>
 
               <div className="siteContainer siteContainer--medium">
                 <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_process.jpg"}
+                  src={"../images/dwt/dwt_process.png"}
                   alt=""
                   width={5000}
                   className="pageImage pageImage--large"
                 />
               </div>
-              <div className="siteContainer siteContainer--small">
-                <p>
-                  Rubbermaid is an American manufacturer and distributor of
-                  household items. They're a big household market player and are
-                  best known for producing food storage containers and trash
-                  cans. Additionally, they make sheds, step stools, closets and
-                  shelving, laundry baskets, bins, air fresheners, and other
-                  household items.
-                </p>
-              </div>
             </section>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">🔬 Research & Findings</h2>
+                <h2 className="pageSection__title">🔬 Secondary Research</h2>
                 <p>
-                  Rubbermaid has been selling its products traditionally and
-                  needs an online e-commerce shop. They have excellent
-                  performance in giants like Amazon, Walmart, Target, etc., but
-                  have yet to have an online store of their own.
+                  Tourism is a sizable industry in Nepal. According to the data
+                  from Ministry of Tourism–Nepal, around 70% of tourists are
+                  from India, US, china, UK and Europe. Upon analyzing the
+                  current site, we see that US, China and Europe are our
+                  audience. Plus, major activities that tourists perform
+                  includes trekking, mountain climbing, bird watching, kayaking,
+                  canyoning, etc. Major local competitors utilize their
+                  web-presence and the metadata to acquire customers and build
+                  trust.
                 </p>
-                <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_research.jpg"}
-                  alt=""
-                  width={5000}
-                  className=""
-                />
               </div>
             </section>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">
-                  🤔 Understanding the Problem
+                  🎙️ Stakeholder & User Interviews to understand business goals,
+                  user pain points and define technical requirements
                 </h2>
               </div>
-              <div className="siteContainer siteContainer--medium">
-                <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_understanding.jpg"}
-                  alt=""
-                  width={5000}
-                  className="pageImage pageImage--large"
-                />
-              </div>
               <div className="siteContainer siteContainer--small">
                 <p>
-                  Rubbermaid has been selling its products traditionally and
-                  needs an online e-commerce shop. They have excellent
-                  performance in giants like Amazon, Walmart, Target, etc., but
-                  have yet to have an online store of their own.
+                  Next, I conducted multiple, semi-structured stakeholder
+                  interviews and user interviews. I took interviews of tour
+                  guides, business owner, past trekkers (who booked their trip
+                  through the site), B2B tour agents, Webmaster (who was taking
+                  care of the past site for 3 years). Talking with different
+                  associates of the product helped me understand the
+                  perspectives and pain points of each user and business.
                 </p>
                 <p>
-                  The brand currently relies on one specific category, i.e.,
-                  food containers. However, when we interviewed the users, we
-                  learned that they were more than happy to buy other products
-                  from Rubbermaid but had yet to know what Rubbermaid sold
-                  outside of food containers.
+                  <strong>Business goals</strong>
                 </p>
+                <ul>
+                  <li>
+                    Enable agents/users to invite more travelers to the site.
+                  </li>
+                  <li>Generate cash flow through online bookings.</li>
+                  <li>
+                    Enable multiple pricing tiers, discounts based on group
+                    size, etc.
+                  </li>
+                  <li>
+                    Hook recurring travelers to the website and collect reviews.
+                  </li>
+                  <li>
+                    Eliminate the manual work for bespoke trips and reduce the
+                    time to confirm bookings.
+                  </li>
+                  <li>
+                    Allow users to print every trip information available online
+                    to increase brand’s reach.
+                  </li>
+                </ul>
                 <p>
-                  The products Rubbermaid sells revolve around more of what they
-                  want to sell rather than what the users need.
+                  <strong>User needs & Pain points</strong>
                 </p>
+                <ul>
+                  <li>
+                    Access to clear and detail oriented day-to-day information.
+                  </li>
+                  <li>Hassle-free online booking.</li>
+                  <li>
+                    Frustrating booking experience due to confusing payment
+                    channel, misunderstandings due to lack of post-booking
+                    communication.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Technical requirements</strong>
+                </p>
+                <ul>
+                  <li>
+                    Live search to browse through more than 200 trips, that are
+                    similarly named.
+                  </li>
+                  <li>
+                    Progressive web app, for service worker offline caching and
+                    to render the website and be able to use in the phone for
+                    agents.
+                  </li>
+                  <li>Highly scalable</li>
+                  <li>Custom dynamic meta-data tools for SEO.</li>
+                  <li>CDN and server-side caching for media and content.</li>
+                  <li>User registration & Sign in, Wishlist, etc.</li>
+                  <li>
+                    Adventure club for rewards and discount with tiers for
+                    retaining the extreme travelers and agents.
+                  </li>
+                </ul>
               </div>
             </section>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">💡 The Solution</h2>
+                <h2 className="pageSection__title">💁‍♀️ The Target Audience</h2>
               </div>
               <div className="siteContainer siteContainer--small">
                 <p>
-                  I am solving a specific use case where I am taking up a user
-                  trying to set up their apartment or any household category
-                  from scratch. However, this solution would still cater to
-                  users who have not decided what household items they need to
-                  organize their homes.
+                  According to secondary research, WFH employees, office
+                  workers, and students are the people who are most affected by
+                  incorrect sitting posture.
                 </p>
-              </div>
-              <div className="siteContainer siteContainer--medium">
-                <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_solution.jpg"}
-                  alt=""
-                  width={5000}
-                  className="pageImage pageImage--large"
-                />
-              </div>
-              <div className="siteContainer siteContainer--small">
-                <p>
-                  I designed an app for Rubbermaid to let users find the perfect
-                  match of home organizational products they need. The users
-                  would sign up, select categories, and swipe through cards.
-                  Each card would show the items in specific categories;
-                  ideally, each would have 30-45 cards. So the users would swipe
-                  right for the things they have or will have in their home and
-                  swipe left if not, while users would also have options to
-                  custom-add the items not shown in the card. When the user is
-                  done swiping, the app suggests a list of products they need to
-                  organize all the items in their home or a specific category.
-                </p>
-                <p>
-                  <a
-                    href="https://figmashort.link/kkDWeZ"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <span>View The Prototype</span>
-                  </a>
-                </p>
+                <ul>
+                  <li>
+                    Travelers interested in trekking, hiking and adventurous
+                    activities.
+                  </li>
+                  <li>B2B travel agencies and tour operators.</li>
+                  <li>Family and premium trekkers</li>
+                </ul>
               </div>
             </section>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">🧪 Iterations & Testing</h2>
-                <p>
-                  For the first round, I ran down the hall test with a couple of
-                  friends with my sketches. I realized that all items won't go
-                  in the same card swipes and had to introduce "categories" so
-                  that the users could minimize the swiping experience and
-                  choose to narrow their product search.
-                </p>
-                <p>
-                  After a few more paper tests with the Rubbermaid users (that
-                  match the persona), I moved ahead with the UI and tested that
-                  with 7 more users. Some were the same, and I chose some new
-                  users to test the UI. I found out that the "Where am I?" state
-                  in the card swipes was confusing for the users, and I opted to
-                  choose the Instagram story style indicator for more relevancy.
-                </p>
-              </div>
-              <div className="pageImage">
-                <Video
-                  videoSrcURL="https://youtu.be/c6Q62BHULIY"
-                  videoTitle="Prototype Demo Rubbermaid"
-                />
+                <h2 className="pageSection__title">💭 Questions</h2>
+                <ul>
+                  <li>
+                    How might we enable travelers to book an online travel
+                    experience with their companions?
+                  </li>
+                  <li>
+                    How might we make it easier for the travelers to choose best
+                    bespoke tours?
+                  </li>
+                  <li>
+                    How might we enable travelers to access their trip
+                    information easily?
+                  </li>
+                  <li>
+                    How might we connect travel agents with business to recruit
+                    B2B travelers?
+                  </li>
+                </ul>
               </div>
             </section>
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">
-                  🚀 The Product Track Forward
-                </h2>
-                <p>
-                  To make this product successful, card swiping should use
-                  machine learning to understand users' demographics and
-                  behavior. By doing so, we can predict users' household items
-                  and show the cards accordingly.
-                </p>
-                <p>
-                  <a
-                    href="https://figmashort.link/kkDWeZ"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <span>View The Prototype</span>
-                  </a>
-                </p>
+                <h2 className="pageSection__title">💬 Solution(s)</h2>
+                <ul>
+                  <li>Built a user account management system, which every users can use and then those who are traveling in groups can invite their travel companions into the account all</li>
+                  <li>Built a user account management system, which every users can use and then those who are traveling in groups can invite their travel companions into the account all</li>
+                </ul>
               </div>
             </section>
           </div>
