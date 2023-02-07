@@ -261,8 +261,65 @@ const Dwt = () => {
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">💬 Solution(s)</h2>
                 <ul>
-                  <li>Built a user account management system, which every users can use and then those who are traveling in groups can invite their travel companions into the account all</li>
-                  <li>Built a user account management system, which every users can use and then those who are traveling in groups can invite their travel companions into the account all</li>
+                  <li>
+                    A travel club where the users can enroll, create their
+                    travel account, invite their travel companions, pay through
+                    different mediums, become a travel agent, get discounts,
+                    save their trips, etc.
+                  </li>
+                  <li>
+                    A dynamic live search that allows informed users to browse
+                    through their interested trips quickly and access the trip
+                    information.
+                  </li>
+                  <li>
+                    The bespoke travel experience form facilitates the users to
+                    select with thorough information and narrow down their needs
+                    to create a unique experience.
+                  </li>
+                  <li>
+                    I refined the information architecture to browse hundreds of
+                    trips with filters for categories, location, type of tour,
+                    and trip relations.
+                  </li>
+                  <li>
+                    Incorporated dynamic reviews from multiple streams to build
+                    trust among users, including Google, Facebook, TripAdvisor,
+                    and custom video reviews.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">💬 Solution(s)</h2>
+                <ul>
+                  <li>
+                    Built a user account management system, which every users
+                    can use and then those who are traveling in groups can
+                    invite their travel companions into the account all
+                  </li>
+                  <li>
+                    A dynamic live search that allows informed users to browse
+                    through their interested trips quickly and access the trip
+                    information.
+                  </li>
+                  <li>
+                    The bespoke travel experience form facilitates the users to
+                    select with thorough information and narrow down their needs
+                    to create a unique experience.
+                  </li>
+                  <li>
+                    I refined the information architecture to browse hundreds of
+                    trips with filters for categories, location, type of tour,
+                    and trip relations.
+                  </li>
+                  <li>
+                    Incorporated dynamic reviews from multiple streams to build
+                    trust among users, including Google, Facebook, TripAdvisor,
+                    and custom video reviews.
+                  </li>
                 </ul>
               </div>
             </section>

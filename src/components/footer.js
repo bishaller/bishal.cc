@@ -78,7 +78,7 @@ const Footer = () => {
             <p>
               &copy; {new Date().getFullYear()} Bishal Mishra.
             </p>
-            <p>❤️  &nbsp;A self coded portfolio landing website.</p>
+            <p>❤️  &nbsp;A self coded website.</p>
           </div>
         </div>
       </div>
