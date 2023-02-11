@@ -88,6 +88,11 @@
     }
 }
 
+.projectPreview__wrap--single {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+}
+
 .projectPreview__wrap--two {
     grid-template-columns: 1fr;
     margin-bottom: 0;
@@ -95,7 +100,6 @@
 
 .projectPreview__wrap--three {
     grid-template-columns: 1.05fr 1.05fr 1.15fr;
-    margin-bottom: 0;
 
     @media #{$tablet} {
         grid-template-columns: 2fr;

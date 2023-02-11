@@ -1,6 +1,6 @@
 .projectCard {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
   position: relative;
   background-color: $c-black;
@@ -263,4 +263,10 @@
   min-height: 195px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+.projectCard--dribbble {
+  background-color: #FF639F;
+  padding: 0;
 }

@@ -93,7 +93,9 @@ const ProjectPreview = linkData => {
                 className="projectCard projectCard--wp"
                 style={{ backgroundImage: `url(${wpBG})` }}
               >
-                <span className="projectCard__soon projectCard__soon--alt">Coming Soon</span>
+                <span className="projectCard__soon projectCard__soon--alt">
+                  Coming Soon
+                </span>
                 <a
                   className="projectCard__link"
                   href="https://kathmandu.wordcamp.org/2018/"
@@ -107,7 +109,9 @@ const ProjectPreview = linkData => {
           </div>
           <div className="projectPreview__wrap projectPreview__wrap--three">
             <article className="projectCard projectCard--sampression">
-            <span className="projectCard__soon projectCard__soon--alt">Coming Soon</span>
+              <span className="projectCard__soon projectCard__soon--alt">
+                Coming Soon
+              </span>
               <a
                 className="projectCard__link"
                 href="https://sampression.com"
@@ -150,7 +154,9 @@ const ProjectPreview = linkData => {
                 className="projectCard projectCard--tpn"
                 style={{ backgroundImage: `url(${tpnBG})` }}
               >
-                  <span className="projectCard__soon projectCard__soon--alt">Coming Soon</span>
+                <span className="projectCard__soon projectCard__soon--alt">
+                  Coming Soon
+                </span>
                 <a
                   className="projectCard__link"
                   href="https://trekkersparadisenepal.com/"
@@ -178,6 +184,24 @@ const ProjectPreview = linkData => {
                 width={5000}
                 className="projectCard__image"
               />
+            </article>
+          </div>
+          <div className="projectPreview__wrap projectPreview__wrap--single">
+            <article className="projectCard projectCard--dribbble">
+              <StaticImage
+                src={"../../images/dribbble.jpg"}
+                alt="Showcase or screenshots of UI work showcased on dribbble."
+                width={5000}
+                className="projectCard__image"
+              />
+              <a
+                className="projectCard__link"
+                href="https://dribbble.com/bishaller"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span className="screen-reader-text">Visit dribbble account</span>
+              </a>
             </article>
           </div>
           <span className="button--disabled">More work coming soon...</span>
