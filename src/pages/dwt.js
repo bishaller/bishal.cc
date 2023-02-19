@@ -16,14 +16,14 @@ const Dwt = () => {
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
                 <h1 className="pageHeader__title">
-                  Redefining travel experience for three distinct users
+                  redefining travel experience for three distinct users
                 </h1>
               </div>
             </div>
 
             <div className="pageBanner">
               <StaticImage
-                src={"../images/rubbermaid/rubbermaid_banner.jpg"}
+                src={"../images/dwt/dwt_banner.jpg"}
                 alt=""
                 width={5000}
                 className=""
@@ -295,17 +295,12 @@ const Dwt = () => {
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">Persona</h2>
                 <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_banner.jpg"}
+                  src={"../images/dwt/dwt_banner.jpg"}
                   alt=""
                   width={5000}
                   className=""
                 />
-                <StaticImage
-                  src={"../images/rubbermaid/rubbermaid_banner.jpg"}
-                  alt=""
-                  width={5000}
-                  className=""
-                />
+
               </div>
             </section>
           </div>

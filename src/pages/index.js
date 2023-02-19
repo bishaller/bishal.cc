@@ -27,8 +27,16 @@ const WorkPage = ({ data }) => {
           ]}
         />
         <Intro
-          title={`Looking for internships/job in UX/Product design while pursuing a Master’s Degree in User Experience & Interaction Design at Thomas Jefferson University.`}
+          title={`I'm pursuing a Master’s degree in User experience & Interaction Design at Thomas Jefferson University. Looking for internships/job in UX/Product design. `}
           subtitle={`Updated Feb 2023`}
+          linkUrl={`/about/`}
+          linkTitle={`go to about page`}
+          linkData={[
+            {
+              linkUrl: `/about/`,
+              linkTitle: `About Me`,
+            },
+          ]}
         />
         <ProjectPreview/>
       </Layout>

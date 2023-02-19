@@ -5,13 +5,22 @@ import Seo from "../components/seo"
 const Traqit = () => {
   return (
     <main>
-      <Seo title="Traqit" description="" />
+      <Seo
+        title="Traqit"
+        description="UX case study for TraqIT software by Bishal Mishra."
+      />
       <Layout>
-         <article>
-            <div className="">
-               
+        <article>
+          <div className="page">
+            <div className="pageHeader">
+              <div className="siteContainer siteContainer--small">
+                <h1 className="pageHeader__title">
+                  Revamping a twenty-year-old software.
+                </h1>
+              </div>
             </div>
-         </article>
+          </div>
+        </article>
       </Layout>
     </main>
   )

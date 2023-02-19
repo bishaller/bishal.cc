@@ -7,7 +7,7 @@ import rubbermaidVideo from "../images/rubbermaid/rubbermaid_video.mp4"
 const Rubbermaid = () => {
   return (
     <main>
-      <Seo title="Rubbermaid Case Study | Bishal Mishra" description="" />
+      <Seo title="Rubbermaid Case Study | Bishal Mishra" description="UX case study for rubbermaid app by Bishal Mishra." />
       <Layout>
         <article>
           <div className="page">

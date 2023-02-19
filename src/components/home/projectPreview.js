@@ -23,7 +23,7 @@ const ProjectPreview = linkData => {
 
       <div className="projectPreview__notice">
         <div className="siteContainer siteContainer--medium">
-          <p>🚧 Case studies are coming soon. A week or two maybe.</p>
+          <p>🚧 Some case studies are work in progress, will be updated in a week or two.</p>
         </div>
       </div>
 
