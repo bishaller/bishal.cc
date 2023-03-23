@@ -293,14 +293,55 @@ const Dwt = () => {
 
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
-                <h2 className="pageSection__title">Persona</h2>
+                <h2 className="pageSection__title">User Persona(s)</h2>
+                <p>
+                  Following the research and interviews, I defined the user and
+                  identified their needs, goals, and frustrations.
+                </p>
+              </div>
+              <div className="pageBanner">
                 <StaticImage
-                  src={"../images/dwt/dwt_banner.jpg"}
+                  src={"../images/dwt/dwt_persona.jpg"}
                   alt=""
                   width={5000}
                   className=""
                 />
-
+              </div>
+            </section>
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">Feature List</h2>
+                <ul>
+                  <li>
+                    Live search accommodate huge directory of trips and trip
+                    information.
+                  </li>
+                  <li>User login / management. </li>
+                  <li>
+                    Multiple payment systems with partial / full paymentoptions.
+                  </li>
+                  <li>Automated emails, downloadable PDFs.</li>
+                  <li>Mailchimp Integration</li>
+                  <li>
+                    Trustpilot, Google Reviews, Facebook Reviews, Tripadvisor,
+                    etc. API integration.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section className="pageSection">
+              <div className="siteContainer siteContainer--small">
+                <h2 className="pageSection__title">Visual Design</h2>
+                <p>
+                View the live site:&nbsp;
+                <a
+                    href="https://discoveryworldtrekking.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span>https://discoveryworldtrekking.com/</span>
+                  </a>
+                </p>
               </div>
             </section>
           </div>

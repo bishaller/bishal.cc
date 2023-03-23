@@ -12,7 +12,7 @@ const Header = () => {
               title="hello@bishal.cc"
               href="mailto:hello@bishal.cc"
             >
-              Hire this guy
+              Contact!
               <span className="paperPlane"></span>
             </a>
           </li>

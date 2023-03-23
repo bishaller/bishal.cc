@@ -35,15 +35,19 @@ function Seo({ description, lang, meta, title }) {
       meta={[
         {
           name: `geo:placename`,
-          content: `Kathmandu`,
+          content: `Philadelphia`,
         },
         {
           name: `geo:position`,
-          content: ``,
+          content: `40.024678, -75.180675`,
+        },
+        {
+          name: `ICBM`,
+          content: `40.024678, -75.180675`,
         },
         {
           name: `geo:region`,
-          content: `NP`,
+          content: `US-PA`,
         },
         {
           name: `description`,
@@ -154,6 +158,13 @@ function Seo({ description, lang, meta, title }) {
                  "height": 1500,
                  "caption": "Bishal Mishra's Display Picture"
              },
+             "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Philadelphia",
+              "addressRegion": "PA",
+              "postalCode": "19144",
+              "streetAddress": "5450 Wissahickon Ave"
+            },
              
              "sameAs": [
                  "https://bishal.cc",

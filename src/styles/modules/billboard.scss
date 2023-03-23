@@ -20,11 +20,11 @@
   pointer-events: none;
   position: absolute;
   display: block;
-  left: -12%;
-  top: -44%;
-  width: clamp(22rem, 53vw, 150rem);
+  left: -35%;
+  top: -120%;
+  width: clamp(50rem, 80vw, 150rem);
   height: auto;
-  filter: blur(100px) saturate(2);
+  filter: blur(100px) saturate(1);
   opacity: .95;
   animation: rotate 6s linear infinite;
   transition: transform ease;
@@ -32,16 +32,16 @@
   -webkit-transform-style: preserve-3d;
   transition: linear all .3s;
   image-rendering: -webkit-optimize-contrast;
-  z-index: -1;
+  z-index: 0;
 
   @media #{$tablet} {
-    filter: blur(65px) saturate(2);
+    filter: blur(65px) saturate(1);
   }
 
   @media #{$phone} {
-    filter: blur(35px) saturate(2);
-    left: -25%;
-    top: -35%;
+    filter: blur(35px) saturate(1);
+    left: -130%;
+    top: -90%;
   }
 }
 
@@ -130,8 +130,12 @@
 }
 
 .billboard__description {
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
   line-height: 1.5;
+
+  @media #{$phone} {
+    margin-bottom: 15px;
+  }
 }
 
 .billboard__profile {

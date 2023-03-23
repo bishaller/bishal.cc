@@ -1,79 +1,73 @@
 import * as React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-// import gsap from "gsap";
-// import { useEffect } from 'react'
-import headerGradient from "../../images/gradient_svg_main.png"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import gsap from "gsap"
+import { useEffect } from "react"
+import headerGradient from "../../images/oval.svg"
 
-const Billboard = ({ title, description, linkData }) => {
-  function createHTML(props) {
-    return { __html: props };
-  }
+const Billboard = () => {
 
-  // useEffect(() => {
-  //   gsap.set(".billBoard__mouse", { xPercent: -50, yPercent: -50 });
-  //   let ball = document.querySelector(".billBoard__mouse");
-  //   const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-  //   const mouse = { x: pos.x, y: pos.y };
-  //   const speed = 0.1;
+  useEffect(() => {
+    gsap.set(".billBoard__mouse", { xPercent: -50, yPercent: -50 })
+    let ball = document.querySelector(".billBoard__mouse")
+    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+    const mouse = { x: pos.x, y: pos.y }
+    const speed = 0.1
 
-  //   const xSet = gsap.quickSetter(ball, "x", "px");
-  //   const ySet = gsap.quickSetter(ball, "y", "px");
+    const xSet = gsap.quickSetter(ball, "x", "px")
+    const ySet = gsap.quickSetter(ball, "y", "px")
 
-  //   window.addEventListener("mousemove", (e) => {
-  //     mouse.x = e.x;
-  //     mouse.y = e.y;
-  //   });
+    window.addEventListener("mousemove", e => {
+      mouse.x = e.x
+      mouse.y = e.y
+    })
 
+    gsap.ticker.add(() => {
+      // adjust speed for higher refresh monitors
+      const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio())
 
-  //   gsap.ticker.add(() => {
-  //     // adjust speed for higher refresh monitors
-  //     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+      pos.x += (mouse.x - pos.x) * dt
+      pos.y += (mouse.y - pos.y) * dt
+      xSet(pos.x)
+      ySet(pos.y)
+    })
 
-  //     pos.x += (mouse.x - pos.x) * dt;
-  //     pos.y += (mouse.y - pos.y) * dt;
-  //     xSet(pos.x);
-  //     ySet(pos.y);
-  //   });
-
-  //   gsap.to(".billBoard__mouse", {
-  //     rotation: "+=360",
-  //     repeat: -1,
-  //     paused: false,
-  //     duration: 5,
-  //     ease: "Linear.easeNone",
-  //   });
-  // }, [])
+    gsap.to(".billBoard__mouse", {
+      rotation: "+=360",
+      repeat: -1,
+      paused: false,
+      duration: 5,
+      ease: "Linear.easeNone",
+    })
+  }, [])
 
   return (
     <section className="billboard">
       <div className="siteContainer siteContainer--billboard">
-
         <div className="billboard__inner">
-          <h1
-            className="billboard__title"
-            title={title}
-            dangerouslySetInnerHTML={createHTML(title)}
-          />
+          <h1 className="billboard__title">
+            I design<strong> Experiences</strong>
+          </h1>
         </div>
         <div className="billboard__intro">
           <div className="billboard__bio">
-            <div
-              className="billboard__description"
-              dangerouslySetInnerHTML={createHTML(description)}
-            />
-            {linkData.map((linkdata) => {
-              return (
-                <AniLink
+            <div className="billboard__description">
+              <p>
+                I am a Product Designer who turns complex problem sets to simple
+                solutions, focused in building experiences that expands one’s
+                capacity for impact 🚀.
+              </p>
+            </div>
+            <AniLink
                   cover
                   direction="left"
-                  bg="#2a60ec"
+                  bg="var(--c-brandHome)"
                   duration={1.25}
-                  to={linkdata.linkUrl}
-                  key={linkdata.linkUrl}
-                  title={linkdata.linkTitle}
+                  to={`/about/`}
+                  key={`/about/`}
+                  title={`go to about page`}
                   className="buttonSpecial"
                 >
-                  {linkdata.linkTitle}
+                  About Me
                   <span>
                     <svg className="icon icon-arrow">
                       <use xlinkHref="#icon-arrow"></use>
@@ -88,17 +82,15 @@ const Billboard = ({ title, description, linkData }) => {
                     </svg>
                   </span>
                 </AniLink>
-              );
-            })}
           </div>
         </div>
       </div>
       <span className="billboard__gradient">
         <img src={headerGradient} alt="Moving background gradient" />
       </span>
-      {/* <div className="billBoard__mouse"></div> */}
+      <div className="billBoard__mouse"></div>
     </section>
-  );
-};
+  )
+}
 
-export default Billboard;
+export default Billboard

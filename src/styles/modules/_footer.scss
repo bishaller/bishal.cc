@@ -4,9 +4,8 @@
 
 .footer {
     padding-top: clamp(7rem, 15vw, 15rem);
-    background-color: $c-white;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     .siteContainer {
         position: relative;
