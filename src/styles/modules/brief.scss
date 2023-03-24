@@ -1,0 +1,20 @@
+.brief {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(5rem, 12vw, 15rem);
+  padding-bottom: clamp(5rem, 12vw, 15rem);
+}
+
+.brief__body {
+  font-size: clamp(1.6rem, 5.2vw, 3.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.175vw;
+
+  span {
+   font-size: clamp(1.6rem, 5.2vw, 3.25rem);
+  }
+
+  p {
+    margin-bottom: clamp(1.125rem, 3vw, 3rem);
+  }
+}

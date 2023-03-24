@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 // Import Components
 import Billboard from "../components/home/billboard"
 import Intro from "../components/home/intro"
+import Brief from "../components/home/brief"
 import ProjectPreview from "../components/home/projectPreview"
 import SectionTitle from "../components/home/sectionTitle"
 
@@ -15,7 +16,7 @@ const WorkPage = ({ data }) => {
       <Layout>
         <Billboard/>
         <Intro/>
-        <SectionTitle/>
+        <Brief/>
         <ProjectPreview/>
       </Layout>
     </main>
@@ -23,4 +24,3 @@ const WorkPage = ({ data }) => {
 }
 
 export default WorkPage
-
