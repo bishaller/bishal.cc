@@ -1,0 +1,33 @@
+.work {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(5rem, 12vw, 15rem);
+  padding-bottom: clamp(5rem, 12vw, 15rem);
+}
+
+.work__title {
+   --wt: 400;
+   --fsz: clamp(12rem, 29vw, 34rem);
+   --lh: 1;
+   --font: var(--wt) var(--fsz)/var(--lh) var(--ff-bodyItalic);
+   font: var(--font);
+   letter-spacing: clamp(-1.25rem, -1.1vw, -1.25rem);
+   text-align: center;
+   position: relative;
+   margin: 0 auto 1vw;
+   width: 100%;
+   background: linear-gradient(to bottom, var(--c-text) 25%, rgba(17,17,17,.05) 65%, rgba(17,17,17,0) 72%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ 
+
+   @media #{$desktop} {
+       margin: 0 auto 3vw;
+       letter-spacing: clamp(-1.25rem, -1vw, -.75rem);
+   }
+
+   @media #{$tablet} {
+       letter-spacing: -1.2vw;
+       margin: 0 auto 4vw;
+   }
+}
