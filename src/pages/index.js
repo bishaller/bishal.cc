@@ -7,7 +7,6 @@ import Billboard from "../components/home/billboard"
 import Intro from "../components/home/intro"
 import Brief from "../components/home/brief"
 import ProjectPreview from "../components/home/projectPreview"
-import SectionTitle from "../components/home/sectionTitle"
 
 const WorkPage = ({ data }) => {
   return (
