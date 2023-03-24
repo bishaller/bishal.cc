@@ -1,0 +1,31 @@
+.heading {
+   font-size: clamp(2.4rem, 14vw, 10.625rem);
+   font-family: var(--ff-default);
+   font-weight: 400;
+   line-height: 1;
+   letter-spacing: -.8vw;
+   margin-bottom: 30px; 
+}
+
+.heading__two {
+
+}
+
+.heading__three {
+   font-size: clamp(2.2rem, 5vw,  3.75rem);
+   letter-spacing: -.22vw;
+   line-height: 1.1;
+   margin-bottom: 30px; 
+   @media #{$phone} {
+      letter-spacing: -.32vw;
+      margin-bottom: 20px; 
+   }
+}
+
+.paragraph {
+   font-size: clamp(1.25rem, 2vw, 1.625rem);
+   font-family: var(--ff-default);
+   font-weight: 400;
+   line-height: 1.34;
+   letter-spacing: -.05vw; 
+}

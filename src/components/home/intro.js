@@ -14,7 +14,7 @@ const Intro = () => {
             <p>
               <a
                 className=""
-                title="Find my resume on https://read.cv/bishaller"
+                title="Find Bishal's resume on https://read.cv/bishaller"
                 href="https://read.cv/bishaller"
                 target="_blank"
                 rel="noreferrer"
