@@ -35,6 +35,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

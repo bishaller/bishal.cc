@@ -165,9 +165,9 @@
   pointer-events: none;
   transition: ease;
   background-size: cover;
-  filter: saturate(1);
+  filter: blur(50) saturate(1);
   background-image: url("../images/gradient.svg");
-  opacity: .8;
+  opacity: .75;
   z-index: -1;
 
   @media #{$phone} {

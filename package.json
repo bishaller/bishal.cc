@@ -20,6 +20,7 @@
     "gatsby": "^4.24.3",
     "gatsby-cli": "4.8.1",
     "gatsby-image": "^3.7.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-compile-es6-packages": "^2.1.1",
     "gatsby-plugin-gatsby-cloud": "^4.13.0",
     "gatsby-plugin-google-gtag": "^4.14.0",

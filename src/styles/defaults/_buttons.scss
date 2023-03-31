@@ -1,315 +1,341 @@
 button,
 .button {
-    -webkit-appearance: none;
-    text-decoration: none;
-    box-shadow: none;
-    border: 0;
-    border-radius: 4px;
-    // background-color: $cb-background;
+  -webkit-appearance: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 4px;
+  // background-color: $cb-background;
+  color: $c-white;
+  letter-spacing: 0;
+  font-family: $ff-defaultBold;
+  font-weight: 700;
+  @include fsz(24px);
+  color: $c-white;
+  line-height: 1;
+  padding: 17px 30px 15px;
+  pointer-events: all;
+  cursor: pointer;
+  display: inline-block;
+  transition: ease 0.25s;
+  box-shadow: 0 0 0 0 rgba($c-black, 0.25);
+
+  @media #{$phone} {
+    @include fsz(16px);
+    padding: 10px 25px;
+  }
+
+  @media #{$phone-portrait} {
+    padding: 10px 20px;
+  }
+
+  &:hover,
+  &:focus {
     color: $c-white;
-    letter-spacing: 0;
-    font-family: $ff-defaultBold;
-    font-weight: 700;
-    @include fsz(24px);
-    color: $c-white;
-    line-height: 1;
-    padding: 17px 30px 15px;
-    pointer-events: all;
-    cursor: pointer;
-    display: inline-block;
-    transition: ease 0.25s;
-    box-shadow: 0 0 0 0 rgba($c-black, 0.25);
+    box-shadow: 0 10px 15px -5px rgba($c-black, 0.25);
+  }
 
-    @media #{$phone} {
-        @include fsz(16px);
-        padding: 10px 25px;
-    }
-
-    @media #{$phone-portrait} {
-        padding: 10px 20px;
-    }
-
-    &:hover,
-    &:focus {
-        color: $c-white;
-        box-shadow: 0 10px 15px -5px rgba($c-black, 0.25);
-    }
-
-    svg {
-        display: block;
-    }
+  svg {
+    display: block;
+  }
 }
 
 .button--linkedin {
-    border: 1px solid #0A66C2;
-    color: #0A66C2;
-    background-color: transparent;
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+  background-color: transparent;
 
-    &:hover,
-    &:focus {
-        background-color: #0A66C2;
-        transform: translate(0, -3px);
-    }
+  &:hover,
+  &:focus {
+    background-color: #0a66c2;
+    transform: translate(0, -3px);
+  }
 }
 
 .button--header {
-    @include fsz(16px);
+  @include fsz(16px);
+  border-radius: 50px;
+  background: $c-white;
+  color: $c-black;
+  position: relative;
+  padding: 13px 30px 11px;
+  box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &::after {
+    @include after-element;
     border-radius: 50px;
-    background: $c-white;
-    color: $c-black;
-    position: relative;
-    padding: 13px 30px 11px;
+    --gd-border: linear-gradient(to right, #0091ff, rgba(0, 193, 202, 0) 70%);
+    background: var(--gd-border);
+    z-index: -2;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--c-brandHome);
     box-shadow: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    transition: ease all 0.25s;
+
+    .paperPlane::after {
+      transform: translate(0, -5px);
+      transition: ease all 0.25s;
+    }
+  }
+
+  @media #{$phone} {
+    padding: 9px 16px 7px;
+  }
+
+  .paperPlane {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 16px;
 
     &::after {
-        @include after-element;
-        border-radius: 50px;
-        --gd-border: linear-gradient(to right, #0091FF, rgba(0, 193, 202, 0) 70%);
-        background: var(--gd-border);
-        z-index: -2;
-        top: -1px;
-        left: -1px;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
+      @include after-element;
+      width: 109px;
+      height: 96px;
+      left: -30%;
+      top: -100%;
+      transition: ease all 0.3s;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='109px' height='96px' viewBox='0 0 109 96' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 3%3C/title%3E%3Cdefs%3E%3Cfilter x='-26.7%25' y='-46.4%25' width='153.5%25' height='192.7%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeGaussianBlur stdDeviation='5.21331029' in='SourceGraphic'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3ClinearGradient x1='113.417119%25' y1='41.2633658%25' x2='3.57477923%25' y2='51.9888253%25' id='linearGradient-2'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='122.151037%25' y1='-11.9102861%25' x2='-9.27821261%25' y2='67.3409544%25' id='linearGradient-3'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='78.6504329%25' y1='77.1653104%25' x2='31.8685141%25' y2='25.5958601%25' id='linearGradient-4'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Final-Phase' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Home' transform='translate(-1281.000000, -50.000000)'%3E%3Cg id='Group-10' transform='translate(1208.000000, 50.000000)'%3E%3Cg id='Group-3' transform='translate(89.000000, 0.000000)'%3E%3Cpolygon id='Fill-1' fill='%23000000' opacity='0.132560256' filter='url(%23filter-1)' points='58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80'%3E%3C/polygon%3E%3Cpolygon id='Fill-1' fill='%232961EC' points='38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05'%3E%3C/polygon%3E%3Cpolygon id='5' fill='url(%23linearGradient-2)' points='6.88888889 19.1028911 28.1826718 31.3794591 93 0'%3E%3C/polygon%3E%3Cpolygon id='2' fill='url(%23linearGradient-3)' points='93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965'%3E%3C/polygon%3E%3Cpolygon id='1' fill='url(%23linearGradient-4)' points='38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225'%3E%3C/polygon%3E%3Cpolygon id='4' fill='%234ED6FE' points='27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602'%3E%3C/polygon%3E%3Cpolygon id='3' fill='%234ED6FE' points='38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+      @media #{$phone} {
+        width: 80px;
+        left: -20%;
+        top: -50%;
+      }
     }
-
-    &:hover,
-    &:focus {
-        color: var(--c-brandHome);
-        box-shadow: none;
-        transition: ease all .25s;
-
-        .paperPlane::after {
-            transform: translate(0, -5px);
-            transition: ease all .25s;
-        }
-    }
-
-    @media #{$phone} {
-        padding: 9px 16px 7px;
-    }
-
-    .paperPlane {
-        position: relative;
-        display: block;
-        width: 50px;
-        height: 16px;
-
-        &::after {
-            @include after-element;
-            width: 109px;
-            height: 96px;
-            left: -30%;
-            top: -100%;
-            transition: ease all .3s;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-image: url("data:image/svg+xml,%0A%3Csvg width='109px' height='96px' viewBox='0 0 109 96' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 3%3C/title%3E%3Cdefs%3E%3Cfilter x='-26.7%25' y='-46.4%25' width='153.5%25' height='192.7%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeGaussianBlur stdDeviation='5.21331029' in='SourceGraphic'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3ClinearGradient x1='113.417119%25' y1='41.2633658%25' x2='3.57477923%25' y2='51.9888253%25' id='linearGradient-2'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='122.151037%25' y1='-11.9102861%25' x2='-9.27821261%25' y2='67.3409544%25' id='linearGradient-3'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3ClinearGradient x1='78.6504329%25' y1='77.1653104%25' x2='31.8685141%25' y2='25.5958601%25' id='linearGradient-4'%3E%3Cstop stop-color='%232961EC' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='%234FDAFF' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='Final-Phase' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Home' transform='translate(-1281.000000, -50.000000)'%3E%3Cg id='Group-10' transform='translate(1208.000000, 50.000000)'%3E%3Cg id='Group-3' transform='translate(89.000000, 0.000000)'%3E%3Cpolygon id='Fill-1' fill='%23000000' opacity='0.132560256' filter='url(%23filter-1)' points='58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80'%3E%3C/polygon%3E%3Cpolygon id='Fill-1' fill='%232961EC' points='38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05'%3E%3C/polygon%3E%3Cpolygon id='5' fill='url(%23linearGradient-2)' points='6.88888889 19.1028911 28.1826718 31.3794591 93 0'%3E%3C/polygon%3E%3Cpolygon id='2' fill='url(%23linearGradient-3)' points='93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965'%3E%3C/polygon%3E%3Cpolygon id='1' fill='url(%23linearGradient-4)' points='38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225'%3E%3C/polygon%3E%3Cpolygon id='4' fill='%234ED6FE' points='27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602'%3E%3C/polygon%3E%3Cpolygon id='3' fill='%234ED6FE' points='38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
-            @media #{$phone} {
-                width: 80px;
-                left: -20%;
-                top: -50%;
-            }
-        }
-    }
+  }
 }
 
 .mainStatic {
-    .button--header {
-        --bg-gd: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0) 70%);
-        color: $c-white;
-        position: relative;
-        background: transparent;
+  .button--header {
+    --bg-gd: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0) 70%);
+    color: $c-white;
+    position: relative;
+    background: transparent;
 
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 50px;
-            padding: 1px;
-            background: var(--bg-gd);
-            -webkit-mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            display: block;
-            top: -1px;
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50px;
+      padding: 1px;
+      background: var(--bg-gd);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      display: block;
+      top: -1px;
     }
+  }
 }
 
 .buttonSpecial {
-    color: $c-black;
-    text-decoration: none;
-    --specialFontSize: clamp(0.6rem, 10vw, 1rem);
-    --specialLineHeight: 1;
-    font: 700 var(--specialFontSize)/var(--specialLineHeight) var(--ff-defaultBold);
-    letter-spacing: -0.2px;
-    display: inline-block;
+  color: $c-black;
+  text-decoration: none;
+  --specialFontSize: clamp(0.6rem, 10vw, 1rem);
+  --specialLineHeight: 1;
+  font: 700 var(--specialFontSize) / var(--specialLineHeight)
+    var(--ff-defaultBold);
+  letter-spacing: -0.2px;
+  display: inline-block;
+
+  svg.icon-arrow {
+    max-width: 15px;
+    max-height: 10px;
+    margin-left: 10px;
+    transition: all 450ms ease-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .button-stroke:nth-child(2) {
+      stroke-dashoffset: 0;
+      stroke: $c-black;
+      z-index: 9;
+    }
 
     svg.icon-arrow {
-        max-width: 15px;
-        max-height: 10px;
-        margin-left: 10px;
-        transition: all 450ms ease-out;
+      transform: translateX(7px);
+      transition: all 250ms ease-out;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-        .button-stroke:nth-child(2) {
-            stroke-dashoffset: 0;
-            stroke: $c-black;
-            z-index: 9;
-        }
+    color: $c-black !important;
+    background-color: transparent !important;
+  }
 
-        svg.icon-arrow {
-            transform: translateX(7px);
-            transition: all 250ms ease-out;
-        }
+  &__underline {
+    display: block;
+    position: relative;
+    width: 160%;
+  }
+}
 
-        color: $c-black !important;
-        background-color: transparent !important;
+.buttonSpecial--large {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+
+  svg.icon-arrow {
+    max-width: 22px;
+    max-height: 14px;
+    margin-left: 10px;
+    top: 2px;
+    position: relative;
+    transition: all 450ms ease-out;
+
+    @media #{$phone} {
+      max-width: 15px;
+      max-height: 10px;
+      top: 0;
     }
-
-    &__underline {
-        display: block;
-        position: relative;
-        width: 160%;
-    }
-
-
+  }
 }
 
 .button-stroke {
-    display: block;
-    width: 100%;
-    height: 20px;
-    stroke: $c-white;
-    position: absolute;
-    left: -10px;
-    bottom: -20px;
-    stroke-width: 1;
-    z-index: -1;
+  display: block;
+  width: 100%;
+  height: 20px;
+  stroke: $c-white;
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+  stroke-width: 1;
+  z-index: -1;
 
-    &:nth-child(2) {
-        stroke-dasharray: 650px;
-        stroke-dashoffset: 650px;
-        stroke: $c-black;
-        stroke-width: 2;
-        transition: stroke-dashoffset 450ms ease-out;
-    }
+  &:nth-child(2) {
+    stroke-dasharray: 650px;
+    stroke-dashoffset: 650px;
+    stroke: $c-black;
+    stroke-width: 2;
+    transition: stroke-dashoffset 450ms ease-out;
+  }
 }
 
 .button--footer {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 100px;
-    font-size: clamp(1.5rem, 4.8vw, 3.75rem);
-    font-family: var(--ff-default);
-    font-weight: 400;
-    letter-spacing: -0.2vw;
-    text-shadow: 0 5px 15px rgba($c-black, 0.25);
-    --pt: clamp(0.7rem, 1.7vw, 1.625rem);
-    --pb: clamp(0.75rem, 1.75vw, 1.75rem);
-    --ph: clamp(1.5rem, 4.8vw, 5rem);
-    padding: var(--pt) var(--ph) var(--pb);
-    background: linear-gradient(180deg, rgba(89, 190, 255, 1) 0%, rgba(42, 96, 236, 1) 100%);
-    --bsb: clamp(1.5rem, 5vw, 5rem);
-    --bsbt: clamp(1.2rem, 2.5vw, 2.5rem);
-    box-shadow: 0 var(--bsbt) var(--bsb) -10px rgba($c-black, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 100px;
+  font-size: clamp(1.5rem, 4.8vw, 3.75rem);
+  font-family: var(--ff-default);
+  font-weight: 400;
+  letter-spacing: -0.2vw;
+  text-shadow: 0 5px 15px rgba($c-black, 0.25);
+  --pt: clamp(0.7rem, 1.7vw, 1.625rem);
+  --pb: clamp(0.75rem, 1.75vw, 1.75rem);
+  --ph: clamp(1.5rem, 4.8vw, 5rem);
+  padding: var(--pt) var(--ph) var(--pb);
+  background: linear-gradient(
+    180deg,
+    rgba(89, 190, 255, 1) 0%,
+    rgba(42, 96, 236, 1) 100%
+  );
+  --bsb: clamp(1.5rem, 5vw, 5rem);
+  --bsbt: clamp(1.2rem, 2.5vw, 2.5rem);
+  box-shadow: 0 var(--bsbt) var(--bsb) -10px rgba($c-black, 0.25);
 
-    svg {
-        display: block;
-        width: clamp(1rem, 3vw, 3.125rem);
-        filter: drop-shadow(0 10px 15px rgba($c-black, .25));
-        margin-left: clamp(0.5rem, 1.56vw, 1.56rem);
-        margin-bottom: clamp(0.1rem, 1vw, 0.4rem);
-    }
+  svg {
+    display: block;
+    width: clamp(1rem, 3vw, 3.125rem);
+    filter: drop-shadow(0 10px 15px rgba($c-black, 0.25));
+    margin-left: clamp(0.5rem, 1.56vw, 1.56rem);
+    margin-bottom: clamp(0.1rem, 1vw, 0.4rem);
+  }
 }
 
-
 .socialIcons {
+  display: block;
+  width: clamp(1.5rem, 2.5vw, 2.375rem);
+  height: 38px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  margin-right: 44px;
+  position: relative;
+  filter: drop-shadow(0 5px 20px rgba($c-black, 0.25));
+  transition: ease all 0.15s;
+
+  &:after {
+    position: absolute;
     display: block;
-    width: clamp(1.5rem, 2.5vw, 2.375rem);
-    height: 38px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-    margin-right: 44px;
-    position: relative;
-    filter: drop-shadow(0 5px 20px rgba($c-black, .25));
+    content: "";
+    right: -24px;
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: rgba($c-black, 0.2);
+    transition: ease all 0.15s;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
     transition: ease all 0.15s;
 
     &:after {
-        position: absolute;
-        display: block;
-        content: '';
-        right: -24px;
-        width: 4px;
-        height: 4px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 2px;
-        background: rgba($c-black, 0.2);
-        transition: ease all 0.15s;
+      transform: none;
+      transition: ease all 0.15s;
     }
+  }
 
-    &:last-child {
-        margin-right: 0;
+  &--twitter {
+    background-image: url("../images/twitter.svg");
+    width: clamp(1.5rem, 2.6vw, 2.6875rem);
+  }
 
-        &:after {
-            display: none;
-        }
-    }
+  &--linkedin {
+    background-image: url("../images/linkedin.svg");
+  }
 
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-        transition: ease all 0.15s;
+  &--dribbble {
+    background-image: url("../images/dribbble.svg");
+  }
 
-        &:after {
-            transform: none;
-            transition: ease all 0.15s;
-        }
-    }
-
-    &--twitter {
-        background-image: url("../images/twitter.svg");
-        width: clamp(1.5rem, 2.6vw, 2.6875rem);
-    }
-
-    &--linkedin {
-        background-image: url("../images/linkedin.svg");
-    }
-
-    &--dribbble {
-        background-image: url("../images/dribbble.svg");
-    }
-
-    &--instagram {
-        background-image: url("../images/instagram.svg");
-    }
+  &--instagram {
+    background-image: url("../images/instagram.svg");
+  }
 }
 
 .button--disabled {
-    background-color: $c-white;
-    border: 1px solid rgba($c-black, .25);
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 50px;
+  background-color: $c-white;
+  border: 1px solid rgba($c-black, 0.25);
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50px;
 
-    @media #{$phone} {
-        @include fsz(16px);
-    }
+  @media #{$phone} {
+    @include fsz(16px);
+  }
+}
+
+.disabled-button {
+  color: rgba($c-black, 0.5);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: -0.05vw;
 }

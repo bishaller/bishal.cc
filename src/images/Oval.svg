@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1388px" height="1388px" viewBox="0 0 1388 1388" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Oval</title>
-    <defs>
-        <linearGradient x1="46.2418304%" y1="61.9951046%" x2="73.4636582%" y2="89.8116303%" id="linearGradient-1">
-            <stop stop-color="#0E3CFF" offset="0%"></stop>
-            <stop stop-color="#4FC3FA" offset="100%"></stop>
-        </linearGradient>
-        <filter x="-13.2%" y="-13.2%" width="126.3%" height="126.3%" filterUnits="objectBoundingBox" id="filter-2">
-            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-    </defs>
-    <g id="Home-Final-Final-Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" fill="url(#linearGradient-1)" filter="url(#filter-2)" cx="694" cy="694" r="570"></circle>
-    </g>
-</svg>
+<svg height="1388" viewBox="0 0 1388 1388" width="1388" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" x1="46.24183%" x2="73.463658%" y1="61.995105%" y2="89.81163%"><stop offset="0" stop-color="#0e3cff"/><stop offset="1" stop-color="#4fc3fa"/></linearGradient><filter id="b" height="126.3%" width="126.3%" x="-13.2%" y="-13.2%"><feGaussianBlur in="SourceGraphic" stdDeviation="50"/></filter><circle cx="694" cy="694" fill="url(#a)" fill-rule="evenodd" filter="url(#b)" r="570"/></svg>

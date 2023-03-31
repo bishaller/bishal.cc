@@ -14,7 +14,7 @@ const Dwt = () => {
             width={5000}
             className="dwt__headerImage"
           />
-          <h3 className="heading">Web App</h3>
+          <h2 className="heading">Web App</h2>
         </div>
         <div
           className="dwt__wrap"
@@ -30,15 +30,15 @@ const Dwt = () => {
               />
             </div>
             <div className="dwt__content">
-              <h2 className="heading heading__three">
+              <h2 className="heading heading--three">
                 Defining the travel experience from the ground up for travelers,
                 agents & sherpas.
               </h2>
               <div className="paragraph">
                 <p>
                   I lead the project to strategize & re-design the travel web
-                  app from the ground up to address the issues in payment,
-                  information architecture, traveler onboarding, and visuals.
+                  app from the scratch to address issues in payment,
+                  information architecture, custom trips, traveler onboarding, the list goes on...
                 </p>
               </div>
               <AniLink
@@ -49,7 +49,7 @@ const Dwt = () => {
                 to={`/dwt/`}
                 key={`/dwt/`}
                 title={`View case study`}
-                className="buttonSpecial"
+                className="buttonSpecial buttonSpecial--large"
               >
                 View Case Study
                 <span>

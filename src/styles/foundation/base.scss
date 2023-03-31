@@ -8,6 +8,18 @@ html {
     box-sizing: inherit;
 }
 
+::-moz-selection { /* Code for Firefox */
+    background: #061CFD;
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+  
+  ::selection {
+    color: white;
+    background: #061CFD;
+    -webkit-text-fill-color: white;
+  }
+
 body {
     background: $c-background;
     margin: 0;

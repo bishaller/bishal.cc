@@ -1,0 +1,56 @@
+.traqit {
+  position: relative;
+  padding-top: clamp(4rem, 10vw, 10rem);
+
+  .siteContainer {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background: #d5dbe2;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.traqit__header {
+  max-width: 1500px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .heading {
+    width: 50%;
+
+    @media #{$header} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.traqit__content {
+  width: 40%;
+  position: relative;
+  margin-top: 3%;
+  @media #{$header} {
+    width: 75%;
+    margin-top: 0;
+  }
+  @media #{$phone} {
+    width: 100%;
+  }
+}
+
+.traqit__image {
+   position: relative;
+   z-index: 2;
+}
