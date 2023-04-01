@@ -1,5 +1,5 @@
 import * as React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import gsap from "gsap"
 import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
@@ -57,10 +57,23 @@ const Billboard = () => {
                 capacity for impact 🚀.
               </p>
             </div>
-            <AnchorLink to="/#work" title="my work">
-              <span>Check out our team!</span>
+            <AnchorLink to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
+              View my Work
+              <span>
+                <svg className="icon icon-arrow">
+                  <use xlinkHref="#icon-arrow"></use>
+                </svg>
+              </span>
+              <span className="buttonSpecial__underline">
+                <svg className="button-stroke" viewBox="0 0 186 13">
+                  <use xlinkHref="#button-line"></use>
+                </svg>
+                <svg className="button-stroke" viewBox="0 0 196 13">
+                  <use xlinkHref="#button-line"></use>
+                </svg>
+              </span>
             </AnchorLink>
-            <AniLink
+            {/* <AniLink
               cover
               direction="left"
               bg="var(--c-brandHome)"
@@ -84,7 +97,7 @@ const Billboard = () => {
                   <use xlinkHref="#button-line"></use>
                 </svg>
               </span>
-            </AniLink>
+            </AniLink> */}
           </div>
         </div>
       </div>

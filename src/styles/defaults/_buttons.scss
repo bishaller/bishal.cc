@@ -184,6 +184,20 @@ button,
   }
 }
 
+.buttonSpecial--down {
+  svg.icon-arrow {
+    transform: rotate(90deg);
+    max-width: 16px;
+    max-height: 12px;
+  }
+
+  &:hover, &:focus, &:active{
+    svg.icon-arrow {
+      transform: rotate(90deg) translateX(-2px);
+    }
+  }
+}
+
 .buttonSpecial--large {
   font-size: clamp(1rem, 2vw, 1.25rem);
 
