@@ -1,4 +1,5 @@
 import * as React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Intro = () => {
   return (
@@ -11,9 +12,9 @@ const Intro = () => {
               <br />
               for 👨‍💻 product & UX opportunities anywhere in the states 🇺🇸 .
             </p>
-            <p>
-              <a
-                className=""
+          </div>
+          <a
+                className="intro__link"
                 title="Find Bishal's resume on https://read.cv/bishaller"
                 href="https://read.cv/bishaller"
                 target="_blank"
@@ -21,8 +22,6 @@ const Intro = () => {
               >
                 And here's my Resume
               </a>
-            </p>
-          </div>
         </div>
       </div>
     </section>

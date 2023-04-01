@@ -12,6 +12,7 @@
   backdrop-filter: blur(50px) saturate(100%);
   box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
   color: $c-text;
+  text-align: center;
 
   @media #{$phone} {
     border-radius: 20px;
@@ -20,32 +21,26 @@
 
 .intro__content {
   font-size: clamp(1.8rem, 4vw, 3.75rem);
-  line-height: 1.2;
   font-family: var(--ff-default);
   padding: 0 30px;
   max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0 auto 20px;
   letter-spacing: -0.2vw;
   line-height: 1.15;
 
-  p:last-child {
-    margin-bottom: 0;
-  }
   @media #{$phone} {
     width: 100%;
   }
-
-  a {
-    text-decoration: none;
-    color: $c-text;
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    letter-spacing: -0.2px;
-    display: inherit;
-    &:hover,
-    &:focus {
-      color: var(--c-brandHome);
-      text-decoration: underline;
-    }
+}
+.intro__link {
+  text-decoration: none;
+  color: $c-text;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  letter-spacing: -0.2px;
+  line-height: 1;
+  &:hover,
+  &:focus {
+    color: var(--c-brandHome);
+    text-decoration: underline;
   }
 }
