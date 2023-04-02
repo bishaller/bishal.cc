@@ -1,0 +1,19 @@
+.marquee-container {
+   width: 110% !important;
+   left: -5%;
+   font-size: clamp(3.1rem, 8vw, 8.125rem);
+   color: #D5DBE2;
+   letter-spacing: -.4vw;
+   font-family: var(--ff-defaultLight);
+   position: relative;
+   z-index: 2;
+
+   @media #{$phone} {
+       padding-top: 5px;
+       padding-bottom: 2px;
+   }
+}
+
+.marquee {
+    transition: ease-in-out .6s;
+}

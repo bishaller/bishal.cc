@@ -57,7 +57,7 @@ const Billboard = () => {
                 capacity for impact 🚀.
               </p>
             </div>
-            <AnchorLink to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
+            <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
               View my Work
               <span>
                 <svg className="icon icon-arrow">

@@ -1,5 +1,5 @@
 import * as React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Intro = () => {
   return (

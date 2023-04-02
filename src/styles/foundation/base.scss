@@ -6,6 +6,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    scroll-behavior: auto;
 }
 
 ::-moz-selection { /* Code for Firefox */

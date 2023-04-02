@@ -40,27 +40,6 @@
     }
 }
 
-.marquee-container {
-    background-color: $c-brand--home;
-    width: 110% !important;
-    left: -5%;
-    font-size: clamp(1.6rem, 2.7vw, 6rem);
-    color: $c-white;
-    font-family: var(--ff-body);
-    padding-top: 5px;
-    padding-bottom: 0;
-    transform: rotate(-5deg);
-    box-shadow: 0 20px 70px rgba($c-black, .25);
-    position: relative;
-    margin-top: -12.5%;
-    z-index: 2;
-
-    @media #{$phone} {
-        padding-top: 5px;
-        padding-bottom: 2px;
-    }
-}
-
 .projectPreview__notice {
     margin-top: 7%;
     text-align: center;
