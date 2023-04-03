@@ -1,14 +1,17 @@
 .brief {
   position: relative;
   z-index: 2;
-  padding-top: clamp(5rem, 12vw, 15rem);
-  padding-bottom: clamp(5rem, 12vw, 15rem);
+  padding-top: clamp(5rem, 10vw, 10rem);
+  padding-bottom: clamp(5rem, 10vw, 10rem);
+  text-align: center;
 }
 
 .brief__body {
   font-size: clamp(1.6rem, 5.2vw, 3.75rem);
   line-height: 1.25;
+  text-align: center;
   letter-spacing: -0.175vw;
+  
 
   span {
    font-size: clamp(1.6rem, 5.2vw, 3.25rem);

@@ -24,7 +24,8 @@
     position: relative;
 
     footer {
-        display: none;
+        border: none;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
     }
 
     .buttonSpecial--alt {
@@ -72,6 +73,7 @@
 .letter__content {
     background-color: $c-white;
     font-size: clamp(1.0625rem, 1.1vw, 2.5rem);
+    border-radius: 15px;
 }
 
 .letter__title {
@@ -86,7 +88,8 @@
 .letter__section {
     padding: clamp(2rem, 7.1vw, 7.5rem);
     position: relative;
-    box-shadow: 0 -40px 80px 50px  rgb(0, 0, 0, 10%);
+    box-shadow: 0 25px 100px -35px rgba(0,0,0,0.7);
+    border-radius: 15px;
     &:after {
         position: absolute;
         content: "";
@@ -109,6 +112,10 @@
 .letter__paragraph {
     font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
     max-width: 600px;
+}
+
+.letter__body {
+    letter-spacing: -0.2px;
 }
 
 .letter__largetext {

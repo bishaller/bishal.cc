@@ -4,12 +4,24 @@
 
 .footer {
     padding-top: clamp(7rem, 15vw, 15rem);
+    background-color: transparent;
     position: relative;
-    z-index: 2;
+    
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        background: #d5dbe2;
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
 
     .siteContainer {
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 }
 

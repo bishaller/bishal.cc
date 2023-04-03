@@ -6,6 +6,7 @@ import Lovebit from "./lovebit"
 import LastDoor from "./lastdoor"
 import Rubbermaid from "./rubbermaid"
 import Chipleti from "../chipleti"
+import Brief from "../brief"
 
 const WorkPreview = () => {
   return (
@@ -19,6 +20,7 @@ const WorkPreview = () => {
       <Trekkersparadise/>
       <Rubbermaid/>
       <Chipleti/>
+      <Brief/>
       <LastDoor/>
     </section>
   )

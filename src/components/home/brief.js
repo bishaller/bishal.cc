@@ -1,22 +1,37 @@
 import * as React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Brief = () => {
   return (
     <section className="brief">
-      <div className="siteContainer siteContainer--small">
-        <h2 className="brief__title screen-reader-text">Brief intro about Bishal Mishra</h2>
-        <div className="brief__body">
+      <div className="siteContainer siteContainer--billboard">
+        <h2 className="brief__title screen-reader-text">
+          Brief intro about Bishal Mishra
+        </h2>
+        <div className="heading heading--three">
           <p>
-            I am an end-to-end <span>👨‍💻</span> designer who believes in building <span>🎩</span> experiences over things that just work*.
-          </p>
-          <p>
-            Since 2015, I’ve been <span>🎨</span> designing experiences of all sizes that I can be proud of.
-          </p>
-          <p>
-            Right now, I’m pursuing a <span>🎓</span> master’s in UX & Interaction design at
-            Jefferson.
+            By now, I’ve designed small to
+            <br />
+            large-scale, end-to-end products and experiences that I am proud of.
           </p>
         </div>
+        <AniLink
+              cover
+              direction="left"
+              bg="var(--c-brandHome)"
+              duration={1.25}
+              to={`/about/`}
+              key={`/about/`}
+              title={`go to about page`}
+              className="buttonSpecial buttonSpecial--large"
+            >
+              About Me
+              <span>
+                <svg className="icon icon-arrow">
+                  <use xlinkHref="#icon-arrow"></use>
+                </svg>
+              </span>
+            </AniLink>
       </div>
     </section>
   )
