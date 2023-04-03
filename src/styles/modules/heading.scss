@@ -11,6 +11,10 @@
    }
 }
 
+.heading--light {
+   font-family: var(--ff-defaultLight);
+}
+
 .heading--one {
    font-size: clamp(3.1rem, 8vw, 8.125rem);
    line-height: 0.85;

@@ -1,0 +1,26 @@
+.trekkersParadise {
+   position: relative;
+   z-index: 2;
+   padding-top: clamp(4rem, 9vw, 8rem);
+}
+
+.trekkersParadise__header {
+   max-width: 860px;
+   margin-bottom: 50px;
+
+   @media #{$tablet} {
+      margin-bottom: 35px;
+   }
+
+   @media #{$phone} {
+      margin-bottom: 25px;
+   }
+
+   .paragraph {
+      max-width: 70%;
+
+      @media #{$tablet} {
+         max-width: 100%;
+      }
+   }
+}

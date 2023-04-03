@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="footer__footer">
         <div className="footer__media">
           <StaticImage
-            src={"../images/gradient_svg_main.png"}
+            src={"../images/oval.svg"}
             alt="A gradient circle, rotating constantly."
             width={10000}
             className="footer__image"
