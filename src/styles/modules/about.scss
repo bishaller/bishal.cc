@@ -112,7 +112,7 @@
 
 .letter__paragraph {
     font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
-    max-width: 600px;
+    max-width: 580px;
 }
 
 .letter__body {
@@ -123,7 +123,12 @@
     font-size: clamp(1.65rem, 2.1vw, 2.5rem);
     line-height: 1.25;
     font-family: var(--ff-defaultLight);
-    letter-spacing: -0.1px;
+    letter-spacing: -0.4px;
+    margin-bottom: 60px;
+
+    p {
+        margin-bottom: 30px;
+    }
 }
 
 .letter__button {

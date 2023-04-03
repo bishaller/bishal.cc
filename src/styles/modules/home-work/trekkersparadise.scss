@@ -17,10 +17,15 @@
    }
 
    .paragraph {
-      max-width: 70%;
+      max-width: 90%;
+      margin-bottom: 30px;
 
       @media #{$tablet} {
          max-width: 100%;
+      }
+
+      @media #{$phone} {
+         margin-bottom: 20px;
       }
    }
 }

@@ -12,14 +12,14 @@ const AboutPage = () => {
       // Throws if it can't get a WebGL 2.0 context. For example, if the
       const gradient = new WaveGradient(canvasElement, {
         colors: [
-          "#ee6c4d",
-          "#F8EB97",
+          // "#ee6c4d",
+          // "#F8EB97",
           "#59F8E8",
           "#E56B70",
-          "#97FFC4",
+          // "#97FFC4",
           "#FF928B",
         ],
-        fps: 60,
+        fps: 24,
         seed: 4,
         speed: 2,
         amplitude: 440,
@@ -53,8 +53,8 @@ const AboutPage = () => {
                 <h1 className="letter__title">Howdy!</h1>
                 <div className="letter__largetext">
                   <p>
-                    Hi, I am Bishal. A Product Designer born and raised in
-                    Kathmandu.
+                    I am Bishal. A product designer made in🇳🇵Nepal, shipped to
+                    the 🇺🇸 US.
                   </p>
                   <p>
                     I’m an extraverted, outgoing, outspoken, fun, and easy-to-go
@@ -62,25 +62,59 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <div className="letter__body">
+                  <h2>Here's more about me & the work I do.</h2>
                   <p>
-                    I can Think, Solve, Invent, Design, Code, Manage, Lead and
-                    most importantly, Learn. I have worn many hats, but
-                    currently I lead all things product(s) and team(s) at Last
-                    Door, a B2B Design and Development agency.
+                    I started as an intern designer watching photoshop and
+                    illustrator tutorials in 2015. I've worn many hats, from
+                    illustrating maps, trying hard on graphic design,
+                    transforming to a UI designer, understanding and grinding on
+                    UX, learning to code, and managing products and teams.
                   </p>
                   <p>
-                    I am passionate about all areas of Design and Marketing.
-                    Being a business studies graduate helps me blend the
-                    business side with Design and make decisions as a product
-                    lead.
+                    Clutching knowledge from every aspect of design, product,
+                    marketing, development, and management, I am an end-to-end
+                    designer who believes in building experiences that create an
+                    impact rather than "just functional." I can Think, Solve,
+                    Invent, Design, Code, Manage, Lead, and, most importantly,
+                    Learn.
                   </p>
                   <p>
-                    As of August 2022, I am learning to code and be consistent
-                    with it, which also sums up the in-progress version of my
-                    personal site. Besides that, I'm a fun person to hang
-                    around. You can find me on any social media with @bishaller
-                    username. Or, let's just connect on linkedin.
+                    I have worked on projects as small as changing a tertiary
+                    button color to designing large-scale applications requiring
+                    an extensive design system. I can fit in most teams,
+                    bridging teams or being an individual contributor.
                   </p>
+                  <p>
+                    Even though I'm a designer, I like exploring horizontals and
+                    scratching my head to understand how my peer work to bring
+                    products to life. Being a marketing student in my undergrad,
+                    a UX student in my master's, and a coding student at night,
+                    I enjoy learning.
+                  </p>
+                  <p>
+                    Are you still reading through? Nice to meet you. Here's more
+                    about me. Momo is my favorite food. I was born in this city
+                    of temples where you can encounter perfectly organized chaos
+                    and overwhelming charismatic culture. I thought I would
+                    become a pilot when I was a kid, ended up being a designer.
+                  </p>
+                  <p>
+                    I like trekking (maybe I used to); I have roamed a lot of
+                    trekking & hiking routes in Nepal. My last trek was to Tsho
+                    Rolpa in 2021. As of now, I'm writing these words sitting on
+                    a desk in Philadelphia. I'm pursuing my masters in UX &
+                    Interaction design to take a break from work. I'll be done
+                    with the program by May 2024.
+                  </p>
+                  <p>
+                    More than that, I'm working on a side project relating to
+                    design systems and learning design. I'm still determining
+                    the idea, so I will let you know if it works out. We should
+                    be friends if you came this far reading all these words. Hit
+                    me on Instagram or any other social media with the username
+                    @bishaller. And thanks for being here.
+                  </p>
+                  <p>Have a good day!</p>
                 </div>
                 <div className="letter__button">
                   <a

@@ -11,9 +11,11 @@ const Trekkersparadise = () => {
           </h2>
           <div className="paragraph">
             <p>
-              From strategy, planning, iterating, and testing to coding the
-              whole site on WordPress, I built this site from scratch to bring
-              its uniqueness online.
+              From strategy, planning, iterating, and testing to coding, I built
+              this site from scratch to bring its uniqueness online. Addressing
+              a massive information library, bringing imagery to life, and
+              topping it with sweet micro-interactions, trekker's paradise is
+              one of my favorite projects.
             </p>
           </div>
           <a
