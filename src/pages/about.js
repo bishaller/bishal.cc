@@ -93,26 +93,69 @@ const AboutPage = () => {
                   </p>
                   <p>
                     Are you still reading through? Nice to meet you. Here's more
-                    about me. Momo is my favorite food. I was born in this city
-                    of temples where you can encounter perfectly organized chaos
-                    and overwhelming charismatic culture. I thought I would
-                    become a pilot when I was a kid, ended up being a designer.
+                    about me.{" "}
+                    <a
+                      href="https://en.wikipedia.org/wiki/Momo_(food)"
+                      title="Momo, staple snack of Nepal"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Nepali Momo
+                    </a>{" "}
+                    is my favorite food. I was born in{" "}
+                    <a
+                      href="https://en.wikipedia.org/wiki/Kathmandu"
+                      title="Link to wikipedia page of Kathmandu"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      the city of temples
+                    </a>{" "}
+                    where you can encounter perfectly organized chaos and
+                    overwhelming charismatic culture. When I was a kid, I
+                    believed I would become a pilot one day, but I ended up
+                    being a designer.
                   </p>
                   <p>
                     I like trekking (maybe I used to); I have roamed a lot of
-                    trekking & hiking routes in Nepal. My last trek was to Tsho
-                    Rolpa in 2021. As of now, I'm writing these words sitting on
-                    a desk in Philadelphia. I'm pursuing my masters in UX &
-                    Interaction design to take a break from work. I'll be done
-                    with the program by May 2024.
+                    trekking & hiking routes in Nepal. My last trek was to{" "}
+                    <a
+                      href="https://www.instagram.com/p/CU-FPkqB9MI/"
+                      title="link to bishal's instagram picture of Tsho rolpa"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Tsho Rolpa
+                    </a>{" "}
+                    in 2021. As of now, I'm writing these words sitting on a
+                    desk in Philadelphia. I'm pursuing my masters in UX &
+                    Interaction design at Jefferson to take a break from work.
+                    I'll be done with the program by May 2024.
                   </p>
                   <p>
                     More than that, I'm working on a side project relating to
                     design systems and learning design. I'm still determining
-                    the idea, so I will let you know if it works out. We should
-                    be friends if you came this far reading all these words. Hit
-                    me on Instagram or any other social media with the username
-                    @bishaller. And thanks for being here.
+                    the idea, so you will know if it works out. And BTW, if you
+                    came this far reading all these words, we should be friends.
+                    Hit me on{" "}
+                    <a
+                      title="Bishal on instagram"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://instagram.com/bishaller"
+                    >
+                      Instagram
+                    </a>{" "}
+                    or any other social media with the username{" "}
+                    <a
+                      title="Find Bishal's social media"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://linktr.ee/bishaller"
+                    >
+                      @bishaller
+                    </a>
+                    . And thanks for being here.
                   </p>
                   <p>Have a good day!</p>
                 </div>
