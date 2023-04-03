@@ -7,21 +7,19 @@ const Trekkersparadise = () => {
       <div className="siteContainer siteContainer--large">
         <div className="trekkersParadise__header">
           <h2 className="heading heading--one heading--light">
-            The true fun of touring in Nepal
+            Unfolding the true touring experience.
           </h2>
           <div className="paragraph">
             <p>
-              I led the UX work, producing all major deliverables &
-              communication. I worked closely with the product team to
-              understand the business goals and user needs. I then designed the
-              user flows, wireframes, and prototypes to help the team validate
-              the product vision.
+              From strategy, planning, iterating, and testing to coding the
+              whole site on WordPress, I built this site from scratch to bring
+              its uniqueness online.
             </p>
           </div>
           <a
             href="https://trekkersparadisenepal.com/"
             target="_blank"
-            rel="noreferrer" 
+            rel="noreferrer"
             title={`Visit the website`}
             className="buttonSpecial buttonSpecial--large"
           >

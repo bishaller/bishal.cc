@@ -1,5 +1,5 @@
 .billboard {
-  padding: 11vw 0;
+  padding: 16vw 0 11vw;
   --wt: 400;
   --fsz: clamp(3rem, 20.8vw, 18.75rem);
   --lh: 0.8;
@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+
+  @media #{$desktop} {
+    padding: 24vw 0 18vw;
+  }
 
   @media #{$phone} {
     padding: 50vw 0 40vw;
@@ -22,7 +26,7 @@
   display: block;
   left: -60%;
   width: 120vw;
-  top: -190%;
+  top: -165%;
   height: auto;
   filter: blur(80px) saturate(2);
   opacity: 0.95;
@@ -37,14 +41,14 @@
   @media #{$desktop} {
     left: -60%;
     width: 125vw;
-    top: -160%;
+    top: -110%;
   }
   
 
   @media #{$tablet} {
     left: -70%;
     width: 125vw;
-    top: -140%;
+    top: -100%;
   }
 
   @media #{$phone} {
@@ -138,12 +142,8 @@
 }
 
 .billboard__description {
-  margin-bottom: 1vw;
+  margin-bottom: 15px;
   line-height: 1.5;
-
-  @media #{$phone} {
-    margin-bottom: 15px;
-  }
 }
 
 .billboard__profile {
