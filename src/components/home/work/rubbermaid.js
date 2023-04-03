@@ -15,8 +15,8 @@ const Rubbermaid = () => {
             direction="left"
             bg="var(--c-brandHome)"
             duration={1.25}
-            to={`/dwt/`}
-            key={`/dwt/`}
+            to={`/rubbermaid/`}
+            key={`/rubbermaid/`}
             title={`View case study`}
             className="buttonSpecial buttonSpecial--large"
           >
