@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import Casebanner from "../components/case/casebanner"
 
 const Dwt = () => {
   return (
@@ -11,8 +12,13 @@ const Dwt = () => {
         description="UX Case Study for Discovery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
       />
       <Layout>
-        <article>
-          <div className="page">
+        <article className="case">
+          <Casebanner
+            title={`redefining 🌏 travel experience for three distinct 👩‍💻🕵️🧙‍♂️ users`}
+            titleContent={`redefining <span>🌏</span> travel experience for three distinct <span>👩‍💻🕵️🧙‍♂️</span> users`}
+          />
+
+          {/* <div className="page">
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
                 <h1 className="pageHeader__title">
@@ -333,8 +339,8 @@ const Dwt = () => {
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">Visual Design</h2>
                 <p>
-                View the live site:&nbsp;
-                <a
+                  View the live site:&nbsp;
+                  <a
                     href="https://discoveryworldtrekking.com/"
                     rel="noreferrer"
                     target="_blank"
@@ -344,7 +350,7 @@ const Dwt = () => {
                 </p>
               </div>
             </section>
-          </div>
+          </div> */}
         </article>
       </Layout>
     </main>
