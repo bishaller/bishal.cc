@@ -23,7 +23,7 @@ const Brief = () => {
               to={`/about/`}
               key={`/about/`}
               title={`go to about page`}
-              className="buttonSpecial buttonSpecial--large"
+              className="buttonSpecial"
             >
               About Me
               <span>
