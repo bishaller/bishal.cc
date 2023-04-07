@@ -3,7 +3,7 @@
 }
 
 .footer {
-  padding-top: clamp(7rem, 15vw, 15rem);
+  padding-top: clamp(7rem, 10vw, 10rem);
   background-color: transparent;
   position: relative;
 
@@ -81,21 +81,12 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgba($c-black, 0.2);
-  width: 45%;
-  margin: clamp(3rem, 5.5vw, 5.5rem) auto 0;
-  padding: clamp(0.625rem, 1.6vw, 1.5625rem) 0;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto clamp(4rem, 8vw, 8rem);
+  padding: 0 0 clamp(2rem, 4vw, 4rem);
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 1px;
-    background: rgba($c-black, 0.2);
-  }
+
   @media #{$tablet} {
     width: 80%;
   }

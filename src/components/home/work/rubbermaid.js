@@ -30,7 +30,7 @@ const Rubbermaid = () => {
         </div>
       </div>
       <StaticImage
-        src={"../../../images/home/rubbermaid_banner.png"}
+        src={"../../../images/home/rubbermaid_banner.webp"}
         alt=""
         width={5000}
         className="rubbermaid__image"

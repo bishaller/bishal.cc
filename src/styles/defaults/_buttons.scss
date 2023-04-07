@@ -191,7 +191,9 @@ button,
     max-height: 12px;
   }
 
-  &:hover, &:focus, &:active{
+  &:hover,
+  &:focus,
+  &:active {
     svg.icon-arrow {
       transform: rotate(90deg) translateX(-2px);
     }
@@ -272,64 +274,51 @@ button,
 
 .socialIcons {
   display: block;
-  width: clamp(1.5rem, 2.5vw, 2.375rem);
-  height: 38px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
-  margin-right: 44px;
+  width: 25%;
   position: relative;
-  filter: drop-shadow(0 5px 20px rgba($c-black, 0.25));
   transition: ease all 0.15s;
+  text-align: center;
+  text-decoration: none;
+  color: $c-black;
+  line-height: 1;
+  font-size: 20px;
+  letter-spacing: -0.4px;
 
-  &:after {
-    position: absolute;
-    display: block;
-    content: "";
-    right: -24px;
-    width: 4px;
-    height: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 2px;
-    background: rgba($c-black, 0.2);
-    transition: ease all 0.15s;
+  @media #{$phone} {
+    width: 50%;
+    margin-bottom: 25px;
+    font-size: 16px;
   }
 
-  &:last-child {
-    margin-right: 0;
+  strong {
+    display: block;
+    margin-bottom: 0;
+    font-size: clamp(1.25rem, 3vw, 2.4rem);
+    letter-spacing: -0.1vw;
+    margin-bottom: 6px;
 
-    &:after {
-      display: none;
+    @media #{$phone} {
+      letter-spacing: -.6px;
     }
   }
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
-    transition: ease all 0.15s;
-
-    &:after {
-      transform: none;
-      transition: ease all 0.15s;
+    .socialIcons__icon {
+      transform: scale(1.1);
+      transition: ease all 0.25s;
     }
   }
+}
 
-  &--twitter {
-    background-image: url("../images/twitter.svg");
-    width: clamp(1.5rem, 2.6vw, 2.6875rem);
-  }
+.socialIcons__icon {
+  max-width: 80px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+  transition: ease all 0.25s;
 
-  &--linkedin {
-    background-image: url("../images/linkedin.svg");
-  }
-
-  &--dribbble {
-    background-image: url("../images/dribbble.svg");
-  }
-
-  &--instagram {
-    background-image: url("../images/instagram.svg");
+  @media #{$phone} {
+    max-width: 60px;
   }
 }
 

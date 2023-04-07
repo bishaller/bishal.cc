@@ -34,7 +34,7 @@ const Trekkersparadise = () => {
           </a>
         </div>
         <StaticImage
-          src={"../../../images/home/trekkersparadise_banner.png"}
+          src={"../../../images/home/trekkersparadise_banner.webp"}
           alt=""
           width={5000}
           className="traqit__image"

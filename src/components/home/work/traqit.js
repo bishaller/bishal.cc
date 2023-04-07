@@ -25,7 +25,7 @@ const Traqit = () => {
         </div>
       </div>
       <StaticImage
-        src={"../../../images/home/traqit_dashboard.png"}
+        src={"../../../images/home/traqit_dashboard.webp"}
         alt=""
         width={5000}
         className="traqit__image"
