@@ -21,11 +21,11 @@
     --c-link: var(--c-brandHome);
 
     //Font Family
-    --ff-default: 'ApercuPro-Regular', sans-serif;
-    --ff-defaultLight: 'ApercuPro-Light', sans-serif;
-    --ff-defaultBold: 'ApercuPro-Bold', sans-serif;
+    --ff-default: 'sansRegular', sans-serif;
+    --ff-defaultLight: 'sansLight', sans-serif;
+    --ff-defaultBold: 'sansBold', sans-serif;
     --ff-body: 'FreightTextLight', serif;
-    --ff-bodyItalic: 'FreightTextLightItalic', serif;
+    --ff-bodyItalic: 'italictext', serif;
 
     --headerWeight: 700;
     --headerFontSize: clamp(.875rem, 1.2vw, 1.25rem);;

@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-import Casebanner from "../components/case/casebanner"
+// import Casebanner from "../components/case/casebanner"
 
 const Dwt = () => {
   return (
@@ -13,12 +13,12 @@ const Dwt = () => {
       />
       <Layout>
         <article className="case">
-          <Casebanner
+          {/* <Casebanner
             title={`redefining 🌏 travel experience for three distinct 👩‍💻🕵️🧙‍♂️ users`}
             titleContent={`redefining <span>🌏</span> travel experience for three distinct <span>👩‍💻🕵️🧙‍♂️</span> users`}
-          />
+          /> */}
 
-          {/* <div className="page">
+          <div className="page">
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
                 <h1 className="pageHeader__title">
@@ -350,7 +350,7 @@ const Dwt = () => {
                 </p>
               </div>
             </section>
-          </div> */}
+          </div>
         </article>
       </Layout>
     </main>
