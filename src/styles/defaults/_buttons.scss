@@ -55,7 +55,7 @@ button,
 .button--header {
   @include fsz(16px);
   border-radius: 50px;
-  background: $c-white;
+  --gd-border: linear-gradient(to right, #111111, rgba(17, 17, 17, 0) 70%);
   color: $c-black;
   position: relative;
   padding: 13px 30px 11px;
@@ -63,17 +63,22 @@ button,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  --bg-gd: linear-gradient(to right, #111111, rgba(17, 17, 17, 0) 70%);
+  background: transparent;
 
   &::after {
-    @include after-element;
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 50px;
-    --gd-border: linear-gradient(to right, #0091ff, rgba(0, 193, 202, 0) 70%);
-    background: var(--gd-border);
-    z-index: -2;
+    padding: 1px;
+    background: var(--bg-gd);
+    -webkit-mask: linear-gradient(#111111 0 0) content-box,
+      linear-gradient(#111111 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    display: block;
     top: -1px;
-    left: -1px;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
   }
 
   &:hover,
@@ -139,6 +144,17 @@ button,
       display: block;
       top: -1px;
     }
+  }
+}
+
+.button--headerWhite {
+  --bg-gd: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0) 70%);
+  color: $c-white;
+
+  &::after {
+    background: var(--bg-gd);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
   }
 }
 
@@ -298,7 +314,7 @@ button,
     margin-bottom: 6px;
 
     @media #{$phone} {
-      letter-spacing: -.6px;
+      letter-spacing: -0.6px;
     }
   }
 

@@ -1,3 +1,28 @@
 .caseBanner {
-   background-color: $c-black;
+  background-color: $c-black;
+  padding: clamp(8rem, 14vw, 15rem) 0 clamp(6rem, 14vw, 13rem);
+
+  .siteContainer {
+    max-width: 960px;
+  }
+}
+
+.caseBanner__title {
+  color: $c-white;
+  --wt: 400;
+  --fsz: clamp(3rem, 7vw, 5rem);
+  --lh: 0.95;
+  --font: var(--wt) var(--fsz) / var(--lh) var(--ff-default);
+  font: var(--font);
+  text-align: center;
+  letter-spacing: -4.5px;
+  margin-bottom: 0;
+
+  @media #{$phone} {
+    letter-spacing: -3px;
+  }
+
+  span {
+    font-size: clamp(2.5rem, 6.5vw, 4.375rem);
+  }
 }

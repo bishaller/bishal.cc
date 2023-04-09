@@ -1,14 +1,37 @@
-import * as React from "react";
+import * as React from "react"
+import { useState, useEffect } from "react"
 // import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-const Header = () => {
+const Header = ({ headerStyle }) => {
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  let buttonClass;
+
+  switch (headerStyle) {
+    case "color-change":
+      buttonClass = scrollY > 650 ? 'button button--header' : 'button button--header button--headerWhite';
+  break;
+  case 'custom-color':
+    buttonClass = 'header-custom';
+    break;
+  default:
+    buttonClass = 'button button--header';
+}
+
+
   return (
     <header className="siteHeader">
       <nav className="siteContainer">
         <ul>
           <li>
             <a
-              className="button button--header"
+              className={`${buttonClass}`}
               title="hello@bishal.cc"
               href="mailto:hello@bishal.cc"
             >
@@ -19,6 +42,6 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
-export default Header;
+  )
+}
+export default Header

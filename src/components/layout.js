@@ -1,16 +1,15 @@
-import * as React from "react";
-import Header from "./header"; // import header
-import Footer from "./footer"; // import footer
+import * as React from "react"
+import Header from "./header" // import header
+import Footer from "./footer" // import footer
 
+const Layout = ({ children, headerStyle }) => {
 
-const Layout = ({ children }) => {
-  
   return (
     <div className="page-wrapper" id="scroller">
-      <Header></Header>
+      <Header headerStyle={headerStyle}/>
       {children}
-      <Footer></Footer>
+      <Footer/>
     </div>
-  );
-};
-export default Layout;
+  )
+}
+export default Layout

@@ -7,7 +7,7 @@ const Casebanner = ({ title, titleContent }) => {
 
   return (
     <section className="caseBanner">
-      <div className="siteContainer siteContainer--medium">
+      <div className="siteContainer">
         <h1
           title={title}
           className="caseBanner__title"

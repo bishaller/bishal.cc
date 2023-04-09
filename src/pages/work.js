@@ -4,14 +4,18 @@ import Seo from "../components/seo"
 import Casebanner from "../components/case/casebanner"
 
 const WorkPage = () => {
+  
   return (
-    <main>
+    <main className="case">
       <Seo title="Case study - Web App - Bishal Mishra" />
-      <Casebanner
-        title={`redefining 🌏 travel experience for three distinct 👩‍💻🕵️🧙‍♂️ users`}
-        titleContent={`redefining <span>🌏</span> travel experience for three distinct <span>👩‍💻🕵️🧙‍♂️</span> users`}
-      />
-      <Layout></Layout>
+      <Layout headerStyle="color-change">
+        <Casebanner
+        title=
+        {`redefining 🌏 travel experience for three distinct 👩‍💻🕵️🧙‍♂️ users`}
+        titleContent=
+        {`redefining <span>🌏</span> travel experience for three distinct <span>👩‍💻🕵️🧙‍♂️</span> users`}
+        />
+      </Layout>
     </main>
   )
 }
