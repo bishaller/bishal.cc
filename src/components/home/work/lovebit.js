@@ -14,7 +14,7 @@ const Lovebit = () => {
           </div>
         </div>
         <StaticImage
-          src={"../../../images/home/lovebit_screens.png"}
+          src={"../../../images/home/lovebit_screens.webp"}
           alt=""
           width={5000}
           className="lovebit__image"
