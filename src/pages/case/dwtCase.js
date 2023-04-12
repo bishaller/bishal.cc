@@ -14,6 +14,10 @@ const DWTCase = () => {
           </h1>
         </div>
       </section>
+      <section className="case__titleBar">
+        <div className="siteContainer">
+          </div>
+      </section>
     </div>
   )
 }
