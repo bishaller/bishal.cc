@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 import CaseBanner from "../components/case/caseBanner"
 import CaseOverview from "../components/case/caseOverview"
 import CaseSnippet from "../components/case/caseSnippet"
+import CaseGeneric from "../components/case/caseGeneric"
 
 const Dwt = () => {
   return (
@@ -82,7 +83,11 @@ const Dwt = () => {
               }
             ]}
           />
-
+          <CaseGeneric
+            title={`A custom trip builder.`}
+            content={`This dynamic form lets the user customize the trips based on their own need and specific preference. Especially, this eliminates the back-and-forth manual communication that the crew would do with the user over email.`}
+            largeContent={`This dynamic form lets the user customize the trips based on their own need and specific preference. Especially, this eliminates the back-and-forth manual communication that the crew would do with the user over email.`}
+          />
 
 
 

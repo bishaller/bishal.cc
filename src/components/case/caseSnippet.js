@@ -12,7 +12,7 @@ const SnippetInner = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px 0;
-  background-color: rgba(29,228,213, .15);
+  background-color: rgba(29, 228, 213, 0.15);
 
   @media screen and (max-width: 740px) {
     justify-content: flex-start;
@@ -47,7 +47,6 @@ const SnippetList = styled.ul`
       }
     }
   }
-  
 `
 
 const CaseSnippet = ({ Role, Scope, Timeline, Company }) => {
