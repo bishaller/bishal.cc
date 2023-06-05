@@ -1,7 +1,8 @@
 .caseBanner {
   background-color: $c-black;
   padding: clamp(8rem, 14vw, 15rem) 0 clamp(6rem, 14vw, 13rem);
-
+  margin-bottom: clamp(5rem, 12vw, 7.5rem);
+  
   .siteContainer {
     max-width: 960px;
   }

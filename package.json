@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
+    "babel-plugin-styled-components": "^2.1.3",
     "babel-preset-es2015": "^6.24.1",
     "gatsby": "^4.24.3",
     "gatsby-cli": "4.8.1",
@@ -34,6 +35,7 @@
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^4.14.0",
+    "gatsby-plugin-styled-components": "^6.10.0",
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-react-router-scroll": "^5.11.0",
     "gatsby-remark-gifs": "^1.1.0",
@@ -54,6 +56,7 @@
     "react-fast-marquee": "^1.3.5",
     "react-helmet": "^6.1.0",
     "sass": "^1.34.1",
+    "styled-components": "^6.0.0-rc.3",
     "wave-gradient": "^0.1.0"
   },
   "devDependencies": {

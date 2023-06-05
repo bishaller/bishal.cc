@@ -1,5 +1,5 @@
 import * as React from "react"
-import Casebanner from "../../components/case/casebanner"
+import Casebanner from "../../components/case/caseBanner"
 
 
 const DWTCase = () => {

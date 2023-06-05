@@ -2,7 +2,9 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-// import Casebanner from "../components/case/casebanner"
+import CaseBanner from "../components/case/caseBanner"
+import CaseOverview from "../components/case/caseOverview"
+import CaseSnippet from "../components/case/caseSnippet"
 
 const Dwt = () => {
   return (
@@ -11,57 +13,80 @@ const Dwt = () => {
         title="Discovery World Trekking UX Case Study | Bishal Mishra"
         description="UX Case Study for Discovery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
       />
-      <Layout>
+      <Layout headerStyle="color-change">
         <article className="case">
-          {/* <Casebanner
+          <CaseBanner
             title={`redefining 🌏 travel experience for three distinct 👩‍💻🕵️🧙‍♂️ users`}
             titleContent={`redefining <span>🌏</span> travel experience for three distinct <span>👩‍💻🕵️🧙‍♂️</span> users`}
-          /> */}
+          />
+          <CaseOverview
+            title={`Overview`}
+            contentLarge={`Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their various interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.`}
+            content={`Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.`}
+          />
+          <CaseSnippet
+            Role={[
+              {
+                content: `Role`
+              },
+              {
+                content: `Project Lead`
+              },
+              {
+                content: `Lead Designer`
+              },
+              {
+                content: `QA & Front-end development`
+              },
+            ]}
+            Scope={[
+              {
+                content: `Scope`
+              },
+              {
+                content: `Research`
+              },
+              {
+                content: `UX`
+              },
+              {
+                content: `Visual Design`
+              },
+              {
+                content: `Prototyping`
+              },
+              {
+                content: `React`
+              },
+              {
+                content: `Testing`
+              }
+            ]}
+            Timeline={[
+              {
+                content: `Timeline`
+              },
+              {
+                content: `6 months`
+              },
+              {
+                content: `2019-2020`
+              }
+            ]}
+            Company={[
+              {
+                content: `Company`,
+              },
+              {
+                content: `Last Door Solutions`,
+              }
+            ]}
+          />
+
+
+
 
           <div className="page">
-            <div className="pageHeader">
-              <div className="siteContainer siteContainer--small">
-                <h1 className="pageHeader__title">
-                  redefining travel experience for three distinct users
-                </h1>
-              </div>
-            </div>
-
-            <div className="pageBanner">
-              <StaticImage
-                src={"../images/dwt/dwt_banner.jpg"}
-                alt=""
-                width={5000}
-                className=""
-              />
-            </div>
-
-            <div className="pageSection">
-              <div className="siteContainer siteContainer--small">
-                <p>
-                  <strong>Role</strong>
-                  <br />
-                  Project Lead, Research, UI Design, Prototyping, Usability
-                  Testing, FrontEnd.
-                </p>
-                <p>
-                  <strong>Company</strong>
-                  <br />
-                  Last Door Solutions
-                </p>
-                <p>
-                  <strong>Type & Timeline</strong>
-                  <br />
-                  4months / Web App / 2019
-                </p>
-                <p>
-                  <strong>Tools</strong>
-                  <br />
-                  Invision, Sketch, Miro, Google Meet, Zoom, Basecamp, Hotjar
-                </p>
-              </div>
-            </div>
-
             <div className="pageSection">
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🏔️ About the Project</h2>
