@@ -12,6 +12,12 @@ const SvgSprite = () => (
     className="svgSprite"
     version="1.1"
   >
+    <symbol id="playVideo" viewBox="0 0 7 8">
+      <path
+        d="M0.892855 0.613281C0.720689 0.613281 0.581055 0.739636 0.581055 0.895429V0.896752V7.104V7.10533C0.581055 7.26112 0.720689 7.38747 0.892855 7.38747C0.95792 7.38714 1.02116 7.36895 1.07379 7.33455L1.07453 7.33521L6.20547 4.25673C6.31623 4.21075 6.38751 4.11086 6.38751 4.00038C6.38751 3.88692 6.31257 3.78438 6.1967 3.74006L1.07453 0.665543H1.07379C1.02079 0.631474 0.957555 0.613281 0.892855 0.613281Z"
+        fill="currentColor"
+      />
+    </symbol>
     <symbol id="icon-arrow" viewBox="0 0 18 12">
       <path
         fill="currentColor"
@@ -38,41 +44,105 @@ const SvgSprite = () => (
     </symbol>
     <symbol id="paper-plane" viewBox="0 0 109 96">
       <g>
-          <defs>
-            <filter x="-26.7%" y="-46.4%" width="153.5%" height="192.7%" filterUnits="objectBoundingBox" id="filter-1">
-              <feGaussianBlur stdDeviation="5.21331029" in="SourceGraphic"></feGaussianBlur>
-            </filter>
-            <linearGradient x1="113.417119%" y1="41.2633658%" x2="3.57477923%" y2="51.9888253%" id="linearGradient-2">
-              <stop stop-color="#2961EC" offset="0%"></stop>
-              <stop stop-color="#4FDAFF" offset="100%"></stop>
-            </linearGradient>
-            <linearGradient x1="122.151037%" y1="-11.9102861%" x2="-9.27821261%" y2="67.3409544%" id="linearGradient-3">
-              <stop stop-color="#2961EC" offset="0%"></stop>
-              <stop stop-color="#4FDAFF" offset="100%"></stop>
-            </linearGradient>
-            <linearGradient x1="78.6504329%" y1="77.1653104%" x2="31.8685141%" y2="25.5958601%" id="linearGradient-4">
-              <stop stop-color="#2961EC" offset="0%"></stop>
-              <stop stop-color="#4FDAFF" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g id="Final-Phase" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Home" transform="translate(-1281.000000, -50.000000)">
-              <g id="Group-10" transform="translate(1208.000000, 50.000000)">
-                <g id="Group-3" transform="translate(89.000000, 0.000000)">
-                  <polygon id="Fill-1" fill="#000000" opacity="0.132560256" filter="url(#filter-1)" points="58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80"></polygon>
-                  <polygon id="Fill-1" fill="#2961EC" points="38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05"></polygon>
-                  <polygon id="5" fill="url(#linearGradient-2)" points="6.88888889 19.1028911 28.1826718 31.3794591 93 0"></polygon>
-                  <polygon id="2" fill="url(#linearGradient-3)" points="93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965"></polygon>
-                  <polygon id="1" fill="url(#linearGradient-4)" points="38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225"></polygon>
-                  <polygon id="4" fill="#4ED6FE" points="27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602"></polygon>
-                  <polygon id="3" fill="#4ED6FE" points="38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846"></polygon>
-                </g>
+        <defs>
+          <filter
+            x="-26.7%"
+            y="-46.4%"
+            width="153.5%"
+            height="192.7%"
+            filterUnits="objectBoundingBox"
+            id="filter-1"
+          >
+            <feGaussianBlur
+              stdDeviation="5.21331029"
+              in="SourceGraphic"
+            ></feGaussianBlur>
+          </filter>
+          <linearGradient
+            x1="113.417119%"
+            y1="41.2633658%"
+            x2="3.57477923%"
+            y2="51.9888253%"
+            id="linearGradient-2"
+          >
+            <stop stop-color="#2961EC" offset="0%"></stop>
+            <stop stop-color="#4FDAFF" offset="100%"></stop>
+          </linearGradient>
+          <linearGradient
+            x1="122.151037%"
+            y1="-11.9102861%"
+            x2="-9.27821261%"
+            y2="67.3409544%"
+            id="linearGradient-3"
+          >
+            <stop stop-color="#2961EC" offset="0%"></stop>
+            <stop stop-color="#4FDAFF" offset="100%"></stop>
+          </linearGradient>
+          <linearGradient
+            x1="78.6504329%"
+            y1="77.1653104%"
+            x2="31.8685141%"
+            y2="25.5958601%"
+            id="linearGradient-4"
+          >
+            <stop stop-color="#2961EC" offset="0%"></stop>
+            <stop stop-color="#4FDAFF" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g
+          id="Final-Phase"
+          stroke="none"
+          stroke-width="1"
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g id="Home" transform="translate(-1281.000000, -50.000000)">
+            <g id="Group-10" transform="translate(1208.000000, 50.000000)">
+              <g id="Group-3" transform="translate(89.000000, 0.000000)">
+                <polygon
+                  id="Fill-1"
+                  fill="#000000"
+                  opacity="0.132560256"
+                  filter="url(#filter-1)"
+                  points="58.5150658 46.2646583 0 59.2457493 13.8260855 67.2167161 14.4695509 67.5879341 22.1987282 67.0324258 25.9261389 74.1927132 35.9993921 80"
+                ></polygon>
+                <polygon
+                  id="Fill-1"
+                  fill="#2961EC"
+                  points="38.5716488 37.3687614 33.3770448 51.0952555 92.9997689 3.29678505e-05"
+                ></polygon>
+                <polygon
+                  id="5"
+                  fill="url(#linearGradient-2)"
+                  points="6.88888889 19.1028911 28.1826718 31.3794591 93 0"
+                ></polygon>
+                <polygon
+                  id="2"
+                  fill="url(#linearGradient-3)"
+                  points="93 0.000329678501 38.5715498 37.3687284 59.8653327 49.6452965"
+                ></polygon>
+                <polygon
+                  id="1"
+                  fill="url(#linearGradient-4)"
+                  points="38.5715498 37.3687284 93 0.000329678501 28.1826718 31.3791294 33.3772759 51.0952225"
+                ></polygon>
+                <polygon
+                  id="4"
+                  fill="#4ED6FE"
+                  points="27.2351369 30.8330829 93 0.000230774951 28.1826718 31.3793602"
+                ></polygon>
+                <polygon
+                  id="3"
+                  fill="#4ED6FE"
+                  points="38.5716819 37.3688933 92.9998019 0.000164839251 39.4231426 37.8597846"
+                ></polygon>
               </g>
             </g>
           </g>
         </g>
+      </g>
     </symbol>
-  </svg >
+  </svg>
 )
 
 export default SvgSprite

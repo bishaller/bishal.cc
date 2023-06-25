@@ -7,12 +7,12 @@ const Snippet = styled.div`
 
 const SnippetInner = styled.div`
   border-top: 1px solid var(--c-brandHome);
-  border-bottom: 1px solid var(--c-brandHome);
+  // border-bottom: 1px solid var(--c-brandHome);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px 0;
-  background-color: rgba(29, 228, 213, 0.15);
+  box-shadow: 0 60px 90px -90px rgba(6, 28, 100, 0.45);
 
   @media screen and (max-width: 740px) {
     justify-content: flex-start;
