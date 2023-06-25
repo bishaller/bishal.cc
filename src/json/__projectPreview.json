@@ -1,23 +1,23 @@
 [{
-    "projects": [{
-            "category": "Strategy, Copywriting, Design",
-            "title": "idealaya: \n A thoughtful site for future crafters",
-            "description": "The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.",
-            "image": {
-                "url": "../images/work_preview_idealaya.png",
-                "alt": "Idealaya's website screenshots",
-                "width": "2480px"
-            }
-        },
-        {
-            "category": "website",
-            "title": "A huge travel cms to support great content",
-            "description": "Super clean website for the wildyak",
-            "image": {
-                "url": "../images/shots.jpg",
-                "alt": "Explore himalaya",
-                "width": "2480px"
-            }
-        }
-    ]
+   "projects": [{
+           "category": "Strategy, Copywriting, Design",
+           "title": "idealaya: \n A thoughtful site for future crafters",
+           "description": "The goal with the iPhone app Fever Free was to make it as simple as possible to track your body temperature over time. With the pandemic of COVID-19 on the rise.",
+           "image": {
+               "url": "../images/work_preview_idealaya.png",
+               "alt": "Idealaya's website screenshots",
+               "width": "2480px"
+           }
+       },
+       {
+           "category": "website",
+           "title": "A huge travel cms to support great content",
+           "description": "Super clean website for the wildyak",
+           "image": {
+               "url": "../images/shots.jpg",
+               "alt": "Explore himalaya",
+               "width": "2480px"
+           }
+       }
+   ]
 }]

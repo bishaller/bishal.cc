@@ -1,5 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+// import Loader from "./libs/loader"
 
 const HTML = props => {
   return (
@@ -24,12 +25,15 @@ const HTML = props => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src={`https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js`} />
+        <script
+          src={`https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js`}
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <div key="loader" id="loader">
+        {/* <Loader /> */}
+        <div className={`loader`} key="loader" id="loader">
           <div className="wrap">
             <span>L</span>
             <span>O</span>

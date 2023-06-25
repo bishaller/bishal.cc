@@ -1,9 +1,9 @@
 import * as React from "react"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import gsap from "gsap"
 import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { StyledBillboard } from "./billboard.style"
 
 const Billboard = () => {
   useEffect(() => {
@@ -22,7 +22,6 @@ const Billboard = () => {
     })
 
     gsap.ticker.add(() => {
-      // adjust speed for higher refresh monitors
       const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio())
 
       pos.x += (mouse.x - pos.x) * dt
@@ -30,18 +29,10 @@ const Billboard = () => {
       xSet(pos.x)
       ySet(pos.y)
     })
-
-    // gsap.to(".billBoard__mouse", {
-    //   rotation: "+=360",
-    //   repeat: -1,
-    //   paused: false,
-    //   duration: 5,
-    //   ease: "Linear.easeNone",
-    // })
   }, [])
 
   return (
-    <section className="billboard">
+    <StyledBillboard className="billboard">
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">
@@ -105,7 +96,7 @@ const Billboard = () => {
         <img src={headerGradient} alt="Moving background gradient" />
       </span>
       <div className="billBoard__mouse"></div>
-    </section>
+    </StyledBillboard>
   )
 }
 

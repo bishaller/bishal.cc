@@ -1,0 +1,125 @@
+:root {
+  /* Add/Edit the variables based on the requirments.  */
+  --black: #000000;
+  --white: #ffffff;
+
+  --brand: #ff0200;
+  --dark: #111111;
+
+  /* Fonts */
+  --ff-sans: "sansRegular", sans-serif;
+  --ff-sansLight: "sansLight", sans-serif;
+  --ff-sansBold: "sansBold", sans-serif;
+  --ff-serifLight: "serifLight", serif;
+  --ff-serifRegular: "serifRegular", serif;
+
+  --font-size-13: 1.4rem;
+  --font-size-14: 1.4rem;
+  --font-size-15: 1.4rem;
+  --font-size-16: 1.6rem;
+  --font-size-18: 1.6rem;
+  --font-size-20: 1.6rem;
+  --font-size-24: 2.1rem;
+
+  --layout-width-container-max: 117.6rem;
+  --layout-width-container-max-plus-padding: 121.2rem;
+
+  --primary-family: "Berlingske Serif", serif;
+  --secondary-family: "Rubik", sans-serif;
+}
+/* 
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00eded;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: transform 0.9s cubic-bezier(1, 0.885, 0.32, 1);
+  transition-delay: 0.6s;
+  transform-origin: bottom;
+  background: #111111;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  top: -75%;
+  background: var(--brand);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@keyframes rotate {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes popping {
+  to {
+    top: -24px;
+  }
+} */
+/* @for $i from 1 through 10 {
+  &:nth-of-type(#{$i}) {
+    transform: rotate(#{(360 / 10) * $i}deg);
+    animation-delay: #{$i/-16}s;
+  }
+} */
+/* 
+#loader.wrap {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  animation: rotate 15s linear 0s infinite;
+  transition: opacity 0.4s ease-in-out, animation-play-state 5s ease-in-out;
+  transition-delay: 0s, 0.4s;
+}
+
+#loader.wrap span {
+  color: #fff;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  transform-origin: 50% 40px;
+  top: -34px;
+  animation: popping 0.35s ease-in-out infinite alternate;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body.loaded {
+  overflow: auto;
+  height: auto;
+  pointer-events: all;
+}
+
+body.loaded #loader .wrap {
+  opacity: 0;
+  animation-iteration-count: 8;
+}
+
+body.loaded #loader .wrap span {
+  animation-play-state: paused;
+
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+} */
