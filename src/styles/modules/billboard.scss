@@ -1,7 +1,7 @@
 .billboard {
   padding: 16vw 0 11vw;
   --wt: 400;
-  --fsz: clamp(3rem, 20.8vw, 18.75rem);
+  --fsz: clamp(3rem, 20.8vw, 20rem);
   --lh: 0.8;
   --font: var(--wt) var(--fsz) / var(--lh) var(--ff-default);
   position: relative;
@@ -25,11 +25,10 @@
   position: absolute;
   display: block;
   left: -60%;
-  width: 120vw;
-  top: -165%;
+  width: 100vw;
+  top: -160%;
   height: auto;
-  filter: blur(80px) saturate(2);
-  opacity: 0.95;
+  filter: blur(80px) saturate(1.5);
   animation: rotate 6s linear infinite;
   transition: transform ease;
   -webkit-backface-visibility: hidden;
@@ -40,31 +39,31 @@
 
   @media #{$desktop} {
     left: -60%;
-    width: 125vw;
-    top: -110%;
+    width: 105vw;
+    top: -115%;
   }
-  
 
   @media #{$tablet} {
     left: -70%;
-    width: 125vw;
+    width: 110vw;
     top: -100%;
   }
 
   @media #{$phone} {
-    width: 140vw;
-    top: -55%;
+    width: 120vw;
+    top: -60%;
   }
 }
 
 .billboard__title {
   font: var(--font);
-  letter-spacing: clamp(-1.25rem, -1.1vw, -1.25rem);
+  letter-spacing: -1.5rem;
   text-align: left;
   z-index: 999;
   position: relative;
   margin: 0 auto 1vw;
   display: inline-block;
+  -webkit-text-stroke: 2px var(--black);
 
   @media #{$desktop} {
     margin: 0 auto 3vw;
@@ -126,15 +125,16 @@
 .billboard__intro {
   width: 100%;
   margin-left: 1.4vw;
+  margin-top: -30px;
 }
 
 .billboard__bio {
-  max-width: 390px;
+  max-width: 240px;
   text-align: left;
   font-family: var(--ff-default);
-  font-size: clamp(1.125rem, 1.43vw, 1.25rem);
-  line-height: 1.36;
-  letter-spacing: 0.01px;
+  font-size: clamp(1rem, 1.43vw, 1.125rem);
+  line-height: 1.3;
+  letter-spacing: 0.1px;
 
   p {
     margin-bottom: 0;
@@ -142,8 +142,8 @@
 }
 
 .billboard__description {
+  font-family: var(--serifLight);
   margin-bottom: 15px;
-  line-height: 1.5;
 }
 
 .billboard__profile {

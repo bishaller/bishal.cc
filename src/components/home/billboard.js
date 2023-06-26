@@ -52,9 +52,7 @@ const Billboard = () => {
           <div className="billboard__bio">
             <div className="billboard__description">
               <p>
-                I am a Product Designer who turns complex problem sets to simple
-                solutions, focused in building experiences that expands one’s
-                capacity for impact 🚀.
+              A Product Designer who turns complex problem sets into simple solutions.
               </p>
             </div>
             <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
