@@ -2,9 +2,9 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-const IntroInner = styled.section`
-  padding-top: clamp(3rem, 7vw, 6.25rem);
-  padding-bottom: clamp(3rem, 7vw, 6.25rem);
+const IntroInner = styled.div`
+  padding-top: clamp(3rem, 11vw, 11rem);
+  padding-bottom: clamp(3rem, 11vw, 11rem);
 `
 
 const IntroWrap = styled.div`
