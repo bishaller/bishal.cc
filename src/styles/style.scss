@@ -34,15 +34,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "defaults/table";
 @import "defaults/typography";
 
-// @import vendors
-@import "vendors/slick";
-
 // @import partials
 @import "partials/grid";
-@import "partials/projectCard";
-@import "partials/banner";
 @import "partials/navigation";
-@import "partials/sidebar";
 @import "partials/loader";
 @import "partials/case";
 // @import modules
@@ -50,9 +44,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/footer";
 @import "modules/heading";
 @import "modules/billboard";
-@import "modules/brief";
-@import "modules/shots";
-@import "modules/projectPreview";
 @import "modules/about";
 @import "modules/page";
-@import "modules/work";
