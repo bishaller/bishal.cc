@@ -17,19 +17,6 @@
   @media #{$phone} {
     padding: 50vw 0 40vw;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1px;
-    background-color: var(--dark);
-    width: calc(100% - 200px);
-    max-width: 1480px;
-  }
 }
 
 .billboard__gradient {
