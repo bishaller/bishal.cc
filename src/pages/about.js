@@ -172,30 +172,9 @@ const AboutPage = () => {
                 </div>
               </div>
             </section>
-            {/* <section className="letter__section">
-              <div className="letter__paragraph">
-                <h2 className="letter__title">I am from the city of temples</h2>
-                <p>
-                  I‘m a UX/UI Designer with over six years experience
-                  conceptualizing and crafting digital products, helping
-                  businesses and non-profits expand their capacity for impact.
-                </p>
-              </div>
-            </section> */}
-            {/* <div className="letter__footer">
-              <h2 className="letter__footerTitle">
-                Shoot me emails (or Request Portfolio)
-              </h2>
-              <address>
-                <a href="mailto:hello@bishal.cc">hello@bishal.cc</a>
-              </address>
-              <h2 className="letter__footerTitle">Visit my Dribbble Profile:</h2>
-            </div> */}
+            
           </div>
         </div>
-        {/* <Helmet>
-        <script src={withPrefix('gradient.js')} type="text/javascript" defer={false} async/>
-      </Helmet> */}
       </Layout>
     </main>
   )
