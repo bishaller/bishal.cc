@@ -1,39 +1,64 @@
 import * as React from "react"
-// import Chipleti from "../chipleti"
-import styled from "styled-components"
+import { useState } from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {Hover, HoverTitle, HoverTitleInner, HoverSubTitle, HoverContent, HoverArrow} from "./hover.style"
 
-const Hover = styled.section``
-
-const HoverTitle = styled.h2`
-  font-family: var(--serif);
-  font-size: clamp(3rem, 11vw, 5rem);
-  font-weight: 400;
-  letter-spacing: -3px;
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-end;
-`
-
-const HoverSubTitle = styled.span`
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: clamp(0.75rem, 3vw, 0.875rem);
-  letter-spacing: 0;
-  margin-right: -3px;
-  opacity: 0;
-`
 
 const WorkDWT = () => {
+  const [isHovering, setIsHovering] = useState(false)
+
+  const handleMouseOver = () => {
+    setIsHovering(true)
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(false)
+  }
+
+  const SVGStyle = {
+    width: isHovering ? "121px" : "0",
+    height: isHovering ? "48px" : "48px",
+  }
+
+  const TextStyle = {
+      opacity: isHovering ? "1" : "0",
+  }
+
+  const colorStyle = {
+    color: isHovering ? "var(--brand)" : "var(--dark)",
+  }
+
   return (
     <Hover>
       <div className="siteContainer siteContainer--small">
-        <HoverTitle>
-          <span>Discovery World</span>
-          <HoverSubTitle>UX Design. Product Head. FrontEnd.</HoverSubTitle>
-        </HoverTitle>
+        <AniLink
+          cover
+          direction="left"
+          bg="var(--brand)"
+          duration={1.25}
+          className="workLInk"
+          to={`/dwt/`}
+          key={`/dwt/`}
+          title={`go to DWT Page`}
+        >
+          <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <HoverArrow style={SVGStyle} className="" viewBox="0 0 121 48">
+              <use xlinkHref="#workArrow"></use>
+            </HoverArrow>
+            <HoverTitleInner>
+              <span style={colorStyle}>Discovery World</span>
+                <HoverSubTitle style={TextStyle}>
+                  UX Design. Product Head. FrontEnd.
+                </HoverSubTitle>
+            </HoverTitleInner>
+          </HoverTitle>
+        </AniLink>
       </div>
-      {/* <Chipleti /> */}
+      {isHovering && (
+        <HoverContent>
+          <h2>Only visible when hovering div</h2>
+        </HoverContent>
+      )}
     </Hover>
   )
 }

@@ -30,9 +30,10 @@ button,
   }
 
   &:hover,
-  &:focus {
+  &:focus, &:active {
     color: $c-white;
     box-shadow: 0 10px 15px -5px rgba($c-black, 0.25);
+    background-color: transparent;
   }
 
   svg {

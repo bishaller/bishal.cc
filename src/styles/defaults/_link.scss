@@ -1,11 +1,25 @@
 a {
-	color: $c-link;
-	@include easeout;
+  color: $c-link;
+  @include easeout;
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $c-linkHover;
-		@include easein;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c-linkHover;
+    @include easein;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
+.workLInk {
+	display: inline-block;
+	h2 {
+		&:hover,
+		&:focus,
+		&:active {
+		  background-color: transparent;
+		}
 	}
 }
