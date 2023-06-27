@@ -1,27 +1,27 @@
 import * as React from "react"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Intro = () => {
   return (
     <section className="intro">
-      <div className="siteContainer siteContainer--large">
+      <div className="siteContainer">
         <div className="intro__inner">
           <div className="intro__content">
             <p>
-              Right now, I am 🔍 looking out
-              <br />
-              for 👨‍💻 product & UX opportunities anywhere in the states 🇺🇸 .
+              <strong className="intro__title">As a designer,</strong>
+              Clutching knowledge from every aspect of design, product,
+              marketing, engineering, & business, I am an end-to-end designer
+              who believes in building experiences that create an impact rather
+              than "just functional."
             </p>
           </div>
-          <a
-                className="intro__link"
-                title="Find Bishal's resume on https://read.cv/bishaller"
-                href="https://read.cv/bishaller"
-                target="_blank"
-                rel="noreferrer"
-              >
-                And here's my Resume
-              </a>
+          <div className="intro__Image">
+            <StaticImage
+              src={"../../images/intro.webp"}
+              alt="RandomImage"
+              width={10000}
+            />
+          </div>
         </div>
       </div>
     </section>

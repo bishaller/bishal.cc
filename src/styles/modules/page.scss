@@ -46,7 +46,7 @@
   --wt: 400;
   --fsz: clamp(3rem, 11vw, 7.5rem);
   --lh: 0.95;
-  --font: var(--wt) var(--fsz) / var(--lh) var(--ff-defaultBold);
+  --font: var(--wt) var(--fsz) / var(--lh) var(--sansBold);
   font: var(--font);
   letter-spacing: -0.5vw;
   text-align: center;

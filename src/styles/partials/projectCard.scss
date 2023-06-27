@@ -88,7 +88,7 @@
   text-align: left;
   font-size: clamp(1.2rem, 2vw, 4rem);
   margin-bottom: 0;
-  font-family: $ff-default;
+  font-family: var(--sans);
   font-weight: normal;
   letter-spacing: -1px;
   flex: 1;
@@ -114,7 +114,7 @@
     text-transform: uppercase;
     padding: 0 20px;
     text-align: center;
-    font-family: var(--ff-defaultBold);
+    font-family: var(--sansBold);
     font-size: clamp(1.5rem, 2.4vw, 4rem);
     letter-spacing: -1.5px;
     line-height: 1.05;
@@ -198,7 +198,7 @@
 
   h2 {
     color: $c-white;
-    font-family: $ff-default;
+    font-family: var(--sans);
     font-weight: 400;
     font-size: clamp(1.2rem, 1vw, 2rem);
     bottom: 0px;
@@ -247,7 +247,7 @@
   }
 
   h2 {
-    font-family: $ff-default;
+    font-family: var(--sans);
     font-weight: 400;
     font-size: clamp(1.2rem, 1vw, 2rem);
     line-height: 1.2;

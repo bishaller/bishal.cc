@@ -1,7 +1,9 @@
 
 :root {
     --white: #ffffff;
-    --black: #111111;
+    --black: #000000;
+    --dark: #111111;
+    --brand: #ff0200;
 
     //Style Colors
     --screen: #E1E8EE;
@@ -11,13 +13,14 @@
     //Project Colors
     --c-text: #111111;
     --c-textWhite: #ffffff;
-    --c-brandHome: rgb(6, 28, 253);
+    --c-brandHome: rgb(255, 2, 0);
+
     --c-link: var(--c-brandHome);
 
     //Font Family
-    --ff-default: 'sansRegular', sans-serif;
-    --ff-defaultLight: 'sansLight', sans-serif;
-    --ff-defaultBold: 'sansBold', sans-serif;
+    --sans: 'sansRegular', sans-serif;
+    --sansLight: 'sansLight', sans-serif;
+    --sansBold: 'sansBold', sans-serif;
     --serif: 'serifRegular', serif;
     --serifLight: 'serifLight', serif;
     --ff-body: 'FreightTextLight', serif;
@@ -26,7 +29,7 @@
     --headerWeight: 700;
     --headerFontSize: clamp(.875rem, 1.2vw, 1.25rem);;
     --headerLineHeight: 1.1;
-    --headerFont: var(--headerWeight) var(--headerFontSize)/var(--headerLineHeight) var(--ff-defaultBold);
+    --headerFont: var(--headerWeight) var(--headerFontSize)/var(--headerLineHeight) var(--sansBold);
 
 }
 
@@ -76,9 +79,8 @@ $cf-borderHover: #333333;
 $cf-bordeFocus: #111111;
 
 // Fonts
-$ff-default: var(--ff-default);
-$ff-accentBold: var(--ff-accentBold);
-$ff-defaultBold: var(--ff-defaultBold);
+$sans: var(--sans);
+$ff-defaultBold: var(--sansBold);
 
 // Typography
 $lh-body: 1.6;

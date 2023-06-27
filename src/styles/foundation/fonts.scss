@@ -36,7 +36,7 @@ Define Font name in variable and specify here.
 @font-face {
     font-family: 'sansRegular';
     src: url('../fonts/sansRegular.woff2') format('woff2'), url('../fonts/sansRegular.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }

@@ -17,7 +17,7 @@ html {
   
   ::selection {
     color: white;
-    background: #061CFD;
+    background: var(--brand);
     -webkit-text-fill-color: white;
   }
 

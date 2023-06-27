@@ -35,7 +35,7 @@ const SnippetList = styled.ul`
   li {
     line-height: 1.41;
     &:first-child {
-      font-family: var(--ff-defaultBold);
+      font-family: var(--sansBold);
       margin-bottom: 15px;
 
       @media screen and (max-width: 840px) {

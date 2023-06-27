@@ -1,8 +1,8 @@
 import React from "react"
 import ModalVideo from "react-modal-video"
 import { StaticImage } from "gatsby-plugin-image"
-import Img from "gatsby-image"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import Img from "gatsby-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 class CaseVideo extends React.Component {
   createHTML(props) {

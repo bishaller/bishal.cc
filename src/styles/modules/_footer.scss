@@ -70,7 +70,7 @@
   --wt: 400;
   --fsz: clamp(3rem, 7.5vw, 7.5rem);
   --lh: 1.05;
-  --font: var(--wt) var(--fsz) / var(--lh) var(--ff-default);
+  --font: var(--wt) var(--fsz) / var(--lh) var(--sans);
   font: var(--font);
   letter-spacing: -0.54vw;
 }

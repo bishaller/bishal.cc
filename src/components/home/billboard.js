@@ -3,7 +3,7 @@ import * as React from "react"
 import gsap from "gsap"
 import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Billboard = () => {
   useEffect(() => {
@@ -11,7 +11,7 @@ const Billboard = () => {
     let ball = document.querySelector(".billBoard__mouse")
     const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
     const mouse = { x: pos.x, y: pos.y }
-    const speed = 0.08
+    const speed = 0.1
 
     const xSet = gsap.quickSetter(ball, "x", "px")
     const ySet = gsap.quickSetter(ball, "y", "px")
@@ -55,7 +55,7 @@ const Billboard = () => {
               A Product Designer who turns complex problem sets into simple solutions.
               </p>
             </div>
-            <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
+            {/* <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
               View my Work
               <span>
                 <svg className="icon icon-arrow">
@@ -70,7 +70,7 @@ const Billboard = () => {
                   <use xlinkHref="#button-line"></use>
                 </svg>
               </span>
-            </AnchorLink>
+            </AnchorLink> */}
             {/* <AniLink
               cover
               direction="left"

@@ -164,7 +164,7 @@ button,
   --specialFontSize: clamp(0.6rem, 10vw, 1rem);
   --specialLineHeight: 1;
   font: 700 var(--specialFontSize) / var(--specialLineHeight)
-    var(--ff-defaultBold);
+    var(--sansBold);
   letter-spacing: -0.2px;
   display: inline-block;
 
@@ -262,7 +262,7 @@ button,
   flex-wrap: wrap;
   border-radius: 100px;
   font-size: clamp(1.5rem, 4.8vw, 3.75rem);
-  font-family: var(--ff-default);
+  font-family: var(--sans);
   font-weight: 400;
   letter-spacing: -0.2vw;
   text-shadow: 0 5px 15px rgba($c-black, 0.25);

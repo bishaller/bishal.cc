@@ -1,9 +1,3 @@
-$bg: #eeece5;
-$b: #00eded;
-$w: $bg;
-$o: #000000;
-$p: #eb98b4;
-$g: #08350e;
 $elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $expo: cubic-bezier(1, 0.885, 0.32, 1);
 
@@ -12,7 +6,7 @@ $expo: cubic-bezier(1, 0.885, 0.32, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $bg;
+    color: var(--c-white);
     position: fixed;
     box-sizing: border-box;
     width: 100vw;
@@ -23,7 +17,7 @@ $expo: cubic-bezier(1, 0.885, 0.32, 1);
     transition: transform 0.9s $expo;
     transition-delay: .6s;
     transform-origin: bottom;
-    background: $o;
+    background: var(--dark);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     &:before {
@@ -32,7 +26,7 @@ $expo: cubic-bezier(1, 0.885, 0.32, 1);
         width: 100%;
         height: 75%;
         top: -75%;
-        background: $c-brand--home;
+        background: var(--brand);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     }
     .wrap {

@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 const Banner = styled.div`
-  background-color: var(--black);
+  background-color: var(--dark);
   padding: clamp(8rem, 14vw, 15rem) 0 clamp(6rem, 14vw, 13rem);
   margin-bottom: clamp(5rem, 12vw, 7.5rem);
 
@@ -16,7 +16,7 @@ color: var(--white);
 --wt: 400;
 --fsz: clamp(3rem, 7vw, 5rem);
 --lh: 0.95;
---font: var(--wt) var(--fsz) / var(--lh) var(--ff-default);
+--font: var(--wt) var(--fsz) / var(--lh) var(--sans);
 font: var(--font);
 text-align: center;
 letter-spacing: -4.5px;

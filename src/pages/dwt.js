@@ -6,7 +6,7 @@ import CaseOverview from "../components/case/caseOverview"
 import CaseSnippet from "../components/case/caseSnippet"
 import CaseGeneric from "../components/case/caseGeneric"
 import tripBuilder from "../images/dwt/dwt_trip_builder.png"
-import VideoPlayer from "react-video-js-player"
+// import VideoPlayer from "react-video-js-player"
 import CaseVideo from "../components/case/caseVideo"
 
 const Dwt = () => {

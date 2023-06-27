@@ -1,6 +1,6 @@
 blockquote {
     border-left: 2px solid $c-text;
-    font-family: $ff-default;
+    font-family: var(--sans);
     margin-left: 0;
     margin-right: 0;
     padding: 1rem 1.5rem;

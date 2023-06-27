@@ -78,7 +78,7 @@
 }
 
 .letter__title {
-    font-family: $ff-default;
+    font-family: var(--sans);
     font-weight: 300;
     font-size: clamp(3.4rem, 7.1vw, 6.625rem);
     line-height: .95;
@@ -122,7 +122,7 @@
 .letter__largetext {
     font-size: clamp(1.65rem, 2.1vw, 2.5rem);
     line-height: 1.25;
-    font-family: var(--ff-defaultLight);
+    font-family: var(--sansLight);
     letter-spacing: -0.4px;
     margin-bottom: 60px;
 

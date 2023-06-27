@@ -1,36 +1,36 @@
 .intro {
   z-index: 9999;
   position: relative;
+  padding-top: clamp(4rem, 7vw, 6.25rem);
+  padding-bottom: clamp(4rem, 7vw, 6.25rem);
 }
 
 .intro__inner {
-  border: 1px solid rgba(17, 17, 17, 0.15);
-  border-radius: 30px;
-  padding-top: clamp(4rem, 7vw, 6.25rem);
-  padding-bottom: clamp(4rem, 7vw, 6.25rem);
-  background-color: rgba($c-white, 0.05);
-  backdrop-filter: blur(50px) saturate(100%);
-  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-  color: $c-text;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  @media #{$phone} {
-    border-radius: 20px;
-  }
+.intro__title {
+  font-family: var(--sansReg);
 }
 
 .intro__content {
-  font-size: clamp(1.8rem, 4vw, 3.75rem);
-  font-family: var(--ff-default);
-  padding: 0 30px;
-  max-width: 960px;
-  margin: 0 auto 20px;
-  letter-spacing: -0.2vw;
-  line-height: 1.15;
 
-  @media #{$phone} {
-    width: 100%;
+  strong {
+    display: block;
   }
+  // font-size: clamp(1.8rem, 4vw, 3.75rem);
+  // font-family: var(--sans);
+  // padding: 0 30px;
+  // max-width: 960px;
+  // margin: 0 auto 20px;
+  // letter-spacing: -0.2vw;
+  // line-height: 1.15;
+
+  // @media #{$phone} {
+  //   width: 100%;
+  // }
 }
 .intro__link {
   text-decoration: none;

@@ -41,7 +41,7 @@ const OverviewLarge = styled.p`
   font-size: clamp(1.5rem, 3vw, 2.375rem);
   line-height: 1.47;
   letter-spacing: -1px;
-  font-family: var(--ff-defaultLight);
+  font-family: var(--sansLight);
   margin-bottom: 30px;
 `
 
