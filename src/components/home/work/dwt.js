@@ -1,8 +1,15 @@
 import * as React from "react"
 import { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import {Hover, HoverTitle, HoverTitleInner, HoverSubTitle, HoverContent, HoverArrow} from "./hover.style"
 
+import {
+  Hover,
+  HoverTitle,
+  HoverTitleInner,
+  HoverSubTitle,
+  HoverContent,
+  HoverArrow,
+} from "./hover.style"
 
 const WorkDWT = () => {
   const [isHovering, setIsHovering] = useState(false)
@@ -21,8 +28,15 @@ const WorkDWT = () => {
   }
 
   const TextStyle = {
-      opacity: isHovering ? "1" : "0",
+    opacity: isHovering ? "1" : "0",
   }
+
+  // const BGStyle = {
+  //   opacity: isHovering ? "1" : "0",
+  //   visibility: isHovering ? "visibile" : "hidden",
+  //   height: isHovering ? "100vh" : "0",
+  //   transition: isHovering ? "ease all 2s" : "ease all 4s",
+  // }
 
   const colorStyle = {
     color: isHovering ? "var(--brand)" : "var(--dark)",
@@ -47,18 +61,18 @@ const WorkDWT = () => {
             </HoverArrow>
             <HoverTitleInner>
               <span style={colorStyle}>Discovery World</span>
-                <HoverSubTitle style={TextStyle}>
-                  UX Design. Product Head. FrontEnd.
-                </HoverSubTitle>
+              <HoverSubTitle style={TextStyle}>
+                UX Design. Product Head. FrontEnd.
+              </HoverSubTitle>
             </HoverTitleInner>
           </HoverTitle>
         </AniLink>
       </div>
-      {isHovering && (
-        <HoverContent>
+      {isHovering && 
+        <HoverContent className={isHovering ? "hover" : ""}>
           <h2>Only visible when hovering div</h2>
         </HoverContent>
-      )}
+      }
     </Hover>
   )
 }

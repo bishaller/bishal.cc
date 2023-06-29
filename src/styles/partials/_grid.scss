@@ -1,43 +1,55 @@
 .page-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .siteContainer {
-    margin: 0 auto;
-    max-width: $container;
-    padding: 0 20px;
-    position: relative;
-    width: 100%;
+  margin: 0 auto;
+  max-width: $container;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
 
-    &--billboard {
-        max-width: 960px;
-    }
-    &--heading {
-        max-width: 810px;
-    }
+  &--billboard {
+    max-width: 960px;
+  }
+  &--heading {
+    max-width: 810px;
+  }
 
-    &--intro {
-        max-width: 1160px;
-    }
+  &--intro {
+    max-width: 1160px;
+  }
 
-    &--hr {
-        max-width: 1520px;
-    }
+  &--hr {
+    max-width: 1520px;
+  }
 }
 
 .siteContainer--large {
-    max-width: 100%;
-    padding: 0 clamp(1.25rem, 3vw, 3.75rem);
+  max-width: 100%;
+  padding: 0 clamp(1.25rem, 3vw, 3.75rem);
 }
 
 .siteContainer--medium {
-    max-width: $containerMedium;
+  max-width: $containerMedium;
 }
 
 .siteContainer--snippet {
-    max-width: 1220px;
+  max-width: 1220px;
 }
 
 .siteContainer--small {
-    max-width: 840px;
+  max-width: 840px;
 }
+
+// .hide {
+//   transition: ease all .25s;
+//   opacity: 0;
+// }
+
+// .hover {
+//   height: 100vh;
+//   opacity: 1;
+//   background: red;
+//   transition: ease all 1s;
+// }
