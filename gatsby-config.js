@@ -64,7 +64,13 @@ module.exports = {
         path: `${__dirname}/src/json`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -94,7 +100,6 @@ module.exports = {
         cache_busting_mode: "none",
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-offline`,
       options: {
