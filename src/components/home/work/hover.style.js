@@ -8,6 +8,7 @@ export const HoverTitle = styled.h2`
   letter-spacing: -3px;
   pointer-events: all;
   cursor: pointer;
+  margin-bottom: 0;
   position: relative;
   z-index: 1;
   display: inline-flex;
@@ -18,6 +19,10 @@ export const HoverTitle = styled.h2`
   &:focus,
   &:active {
     background-color: transparent;
+  }
+
+  span.hover {
+    color: var(--brand);
   }
 `
 export const HoverTitleInner = styled.span`
@@ -37,6 +42,11 @@ export const HoverSubTitle = styled.span`
   position: absolute;
   right: 0;
   bottom: -5px;
+  opacity: 0;
+
+  &.hover {
+    opacity: 1;
+  }
 `
 
 export const HoverContent = styled.div`
@@ -51,6 +61,7 @@ export const HoverContent = styled.div`
 `
 export const HoverArrow = styled.svg`
   color: var(--brand);
+  width: 0;
   height: 48px;
   display: inline-block;
   transition: ease all 0.3s;
@@ -58,5 +69,9 @@ export const HoverArrow = styled.svg`
   &:hover,
   &:focus {
     color: var(--brand);
+  }
+
+  &.hover {
+    width: 121px;
   }
 `

@@ -11,7 +11,7 @@ import {
   HoverArrow,
 } from "./hover.style"
 
-const WorkDWT = () => {
+const WorkWordCamp = () => {
   const [isHovering, setIsHovering] = useState(false)
 
   const handleMouseOver = () => {
@@ -40,7 +40,7 @@ const WorkDWT = () => {
               <use xlinkHref="#workArrow"></use>
             </HoverArrow>
             <HoverTitleInner>
-              <span className={isHovering ? "hover" : ""}>Discovery World</span>
+              <span className={isHovering ? "hover" : ""}>WordCamp Ktm</span>
               <HoverSubTitle className={isHovering ? "hover" : ""}>
                 UX Design. Product Head. FrontEnd.
               </HoverSubTitle>
@@ -56,4 +56,4 @@ const WorkDWT = () => {
   )
 }
 
-export default WorkDWT
+export default WorkWordCamp

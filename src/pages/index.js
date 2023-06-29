@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 // Import Components
 import Billboard from "../components/home/billboard"
 import Intro from "../components/home/intro"
-import WorkPreview from "../components/home/work/workPreview"
+import HoverSlide from "../components/home/work/hoverslide"
 
 const WorkPage = ({ children }) => {
   return (
@@ -15,7 +15,7 @@ const WorkPage = ({ children }) => {
       <Layout>
         <Billboard/>
         <Intro/>
-        <WorkPreview/>
+        <HoverSlide/>
       </Layout>
     </main>
   )
