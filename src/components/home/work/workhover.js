@@ -1,23 +1,23 @@
 import * as React from "react"
+
 // import Chipleti from "../chipleti"
 import styled from "styled-components"
-import WorkDWT from "./dwt"
-import WorkTraqit from "./traqit"
-import WorkIdealaya from "./idealaya"
-import WorkTwinsuk from "./twinsuk"
-import WorkRubbermaid from "./rubbermaid"
-import WorkTrekkersParadise from "./trekkersparadise"
-import WorkLovebit from "./lovebit"
-import TestWork from "./testwork"
+import {
+  WorkDWT,
+  WorkTraqit,
+  WorkIdealaya,
+  WorkTwinsuk,
+  WorkRubbermaid,
+  WorkTrekkersParadise,
+  WorkLovebit
+} from "./workhoverindex"
 
 const Work = styled.section`
   position: relative;
   z-index: 9;
 `
 
-const WorkInner = styled.div`
-  // position: relative;
-`
+const WorkInner = styled.div``
 
 const WorkBG = styled.span`
   position: absolute;
@@ -38,7 +38,6 @@ const WorkHover = () => {
           <h2 id="work" className="work__title">
             work
           </h2>
-          <TestWork />
           <WorkDWT />
           <WorkTraqit />
           <WorkIdealaya />

@@ -12,7 +12,7 @@ import {
   HoverArrow,
 } from "./hover.style"
 
-const HoverText = ({ title, description, bgColor, link, linkColor, children }) => {
+const HoverText = ({ title, description, bgColor, link, linkColor, children, direction}) => {
   const [isHovering, setIsHovering] = useState(false)
 
   const handleMouseOver = () => {
@@ -32,13 +32,13 @@ const HoverText = ({ title, description, bgColor, link, linkColor, children }) =
       <div className="siteContainer siteContainer--small">
         <AniLink
           cover
-          direction="left"
+          direction={direction}
           bg={linkColor}
-          duration={1.25}
+          duration={1}
           className="workLInk"
           to={link}
-          key={`/dwt/`}
-          title={`go to DWT Page`}
+          key={link}
+          title={`see case study for ${title}`}
         >
           <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             <HoverArrow
@@ -62,7 +62,7 @@ const HoverText = ({ title, description, bgColor, link, linkColor, children }) =
         </AniLink>
       </div>
       {isHovering && (
-        <motion.span
+        <motion.div
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
@@ -72,7 +72,7 @@ const HoverText = ({ title, description, bgColor, link, linkColor, children }) =
               {children}
             </HoverContent>
           </FadeIn>
-        </motion.span>
+        </motion.div>
       )}
     </Hover>
   )

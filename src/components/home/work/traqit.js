@@ -1,58 +1,18 @@
 import * as React from "react"
-import { useState } from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-
-import {
-  Hover,
-  HoverTitle,
-  HoverTitleInner,
-  HoverSubTitle,
-  HoverContent,
-  HoverArrow,
-} from "./hover.style"
+import HoverText from "./hoverbase"
 
 const WorkTraqit = () => {
-  const [isHovering, setIsHovering] = useState(false)
-
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
-
+  
   return (
-    <Hover>
-      <div className="siteContainer siteContainer--small">
-        <AniLink
-          cover
-          direction="left"
-          bg="var(--brand)"
-          duration={1.25}
-          className="workLInk"
-          to={`/dwt/`}
-          key={`/dwt/`}
-          title={`go to DWT Page`}
-        >
-          <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <HoverArrow className={isHovering ? "hover" : ""} viewBox="0 0 121 48">
-              <use xlinkHref="#workArrow"></use>
-            </HoverArrow>
-            <HoverTitleInner>
-              <span className={isHovering ? "hover" : ""}>Traqit</span>
-              <HoverSubTitle className={isHovering ? "hover" : ""}>
-                UX Design. Product Head. FrontEnd.
-              </HoverSubTitle>
-            </HoverTitleInner>
-          </HoverTitle>
-        </AniLink>
-      </div>
-      {isHovering && 
-        <HoverContent className={isHovering ? "hover" : ""}>
-        </HoverContent>
-      }
-    </Hover>
+    <HoverText
+      title={`Traqit`}
+      description={`Strategy. UX Design.  FrontEnd.`}
+      linkColor={`var(--brand)`}
+      bgColor={`var(--dark)`}
+      link={`/dwt/`}
+    >
+      <h1>something</h1>
+    </HoverText>
   )
 }
 

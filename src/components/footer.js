@@ -96,7 +96,7 @@ const Footer = () => {
           />
           <div className="footer__copyright">
             <p>&copy; {new Date().getFullYear()} Bishal Mishra.</p>
-            <p>❤️ &nbsp;A self coded website.</p>
+            <p>❤️ &nbsp;A hand-coded website.</p>
           </div>
         </div>
       </div>
