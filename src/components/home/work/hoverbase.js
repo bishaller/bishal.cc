@@ -2,7 +2,6 @@ import React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import FadeIn from "./fadeIn"
 import {
   Hover,
   HoverTitle,
@@ -67,11 +66,9 @@ const HoverText = ({ title, description, bgColor, link, linkColor, children, dir
           initial={{ opacity: 0 }}
           transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
         >
-          <FadeIn>
             <HoverContent style={{ backgroundColor: `${bgColor}` }} className={isHovering ? "hover" : ""}>
               {children}
             </HoverContent>
-          </FadeIn>
         </motion.div>
       )}
     </Hover>

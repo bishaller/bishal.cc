@@ -2,7 +2,6 @@ import * as React from "react"
 import HoverText from "./hoverbase"
 
 const WorkTraqit = () => {
-  
   return (
     <HoverText
       title={`Traqit`}
@@ -15,5 +14,4 @@ const WorkTraqit = () => {
     </HoverText>
   )
 }
-
 export default WorkTraqit

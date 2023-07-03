@@ -2,8 +2,6 @@ import * as React from "react"
 import HoverText from "./hoverbase"
 
 const WorkCashCrate = () => {
-  
-
   return (
     <HoverText
       title={`Cash Crate`}

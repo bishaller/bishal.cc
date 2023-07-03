@@ -1,9 +1,7 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
 
-
 const WorkTravelMax = () => {
-  
   return (
     <HoverText
       title={`Travel Max`}
@@ -16,5 +14,4 @@ const WorkTravelMax = () => {
     </HoverText>
   )
 }
-
 export default WorkTravelMax

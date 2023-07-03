@@ -14,5 +14,4 @@ const WorkIdealaya = () => {
     </HoverText>
   )
 }
-
 export default WorkIdealaya

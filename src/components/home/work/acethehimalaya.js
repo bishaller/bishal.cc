@@ -4,7 +4,7 @@ import HoverText from "./hoverbase"
 const WorkAceTheHimalaya = () => {
   return (
     <HoverText
-      title={`Idealaya`}
+      title={`Ace the Himalaya`}
       description={`Strategy. UX Design. Development.`}
       linkColor={`var(--brand)`}
       bgColor={`#8EDC97`}

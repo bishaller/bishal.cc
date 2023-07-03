@@ -1,5 +1,6 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
+
 const WorkDWT = () => {
   return (
     <HoverText
@@ -13,5 +14,4 @@ const WorkDWT = () => {
     </HoverText>
   )
 }
-
 export default WorkDWT
