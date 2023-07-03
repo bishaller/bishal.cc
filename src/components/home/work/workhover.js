@@ -8,6 +8,7 @@ import WorkTwinsuk from "./twinsuk"
 import WorkRubbermaid from "./rubbermaid"
 import WorkTrekkersParadise from "./trekkersparadise"
 import WorkLovebit from "./lovebit"
+import TestWork from "./testwork"
 
 const Work = styled.section`
   position: relative;
@@ -28,7 +29,7 @@ const WorkBG = styled.span`
   background-image: url("data:image/svg+xml,%0A%3Csvg height='34' viewBox='0 0 34 34' width='34' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0200' fill-rule='evenodd'%3E%3Cpath d='m0 0h34v34h-34z' opacity='0'/%3E%3Ccircle cx='1.5' cy='1.5' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 `
 
-const HoverSlide = () => {
+const WorkHover = () => {
   return (
     <Work className="work">
       <WorkBG />
@@ -37,6 +38,7 @@ const HoverSlide = () => {
           <h2 id="work" className="work__title">
             work
           </h2>
+          <TestWork />
           <WorkDWT />
           <WorkTraqit />
           <WorkIdealaya />
@@ -51,4 +53,4 @@ const HoverSlide = () => {
   )
 }
 
-export default HoverSlide
+export default WorkHover

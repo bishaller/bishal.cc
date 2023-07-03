@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import FadeIn from "./fadeIn"
 
 import {
   Hover,
@@ -36,7 +37,10 @@ const WorkDWT = () => {
           title={`go to DWT Page`}
         >
           <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <HoverArrow className={isHovering ? "hover" : ""} viewBox="0 0 121 48">
+            <HoverArrow
+              className={isHovering ? "hover" : ""}
+              viewBox="0 0 121 48"
+            >
               <use xlinkHref="#workArrow"></use>
             </HoverArrow>
             <HoverTitleInner>
@@ -48,10 +52,11 @@ const WorkDWT = () => {
           </HoverTitle>
         </AniLink>
       </div>
-      {isHovering && 
-        <HoverContent className={isHovering ? "hover" : ""}>
-        </HoverContent>
-      }
+      {isHovering && (
+        <FadeIn>
+          <HoverContent className={isHovering ? "hover" : ""}></HoverContent>
+        </FadeIn>
+      )}
     </Hover>
   )
 }
