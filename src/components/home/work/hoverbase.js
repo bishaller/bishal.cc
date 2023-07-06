@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {
   Hover,
@@ -11,7 +11,15 @@ import {
   HoverArrow,
 } from "./hover.style"
 
-const HoverText = ({ title, description, bgColor, link, linkColor, children, direction}) => {
+const HoverText = ({
+  title,
+  description,
+  bgColor,
+  link,
+  linkColor,
+  children,
+  direction,
+}) => {
   const [isHovering, setIsHovering] = useState(false)
 
   const handleMouseOver = () => {
@@ -60,17 +68,29 @@ const HoverText = ({ title, description, bgColor, link, linkColor, children, dir
           </HoverTitle>
         </AniLink>
       </div>
-      {isHovering && (
-        <motion.div
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
-        >
-            <HoverContent style={{ backgroundColor: `${bgColor}` }} className={isHovering ? "hover" : ""}>
+      {/* <HoverContent
+        style={{ backgroundColor: `${bgColor}` }}
+        className={isHovering ? "hover" : ""}
+      >
+        {children}
+      </HoverContent> */}
+      <AnimatePresence>
+        {isHovering && (
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0}}
+            transition={{ duration: 0.3, delay: "0", ease: "easeOut" }}
+          >
+            <HoverContent
+              style={{ backgroundColor: `${bgColor}` }}
+              className={isHovering ? "hover" : ""}
+            >
               {children}
             </HoverContent>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Hover>
   )
 }
