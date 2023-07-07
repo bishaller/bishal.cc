@@ -2,8 +2,9 @@ import styled from "styled-components"
 
 export const Hover = styled.section``
 export const HoverTitle = styled.h2`
-  font-family: var(--serif);
-  font-size: clamp(3rem, 11vw, 5rem);
+  font-family: var(--serifLight);
+  font-size: clamp(3rem, 8vw, 5.8rem);
+  -webkit-text-stroke: 1px;
   font-weight: 400;
   letter-spacing: -3px;
   pointer-events: all;
@@ -37,15 +38,18 @@ export const HoverSubTitle = styled.span`
   font-size: clamp(0.75rem, 3vw, 0.875rem);
   letter-spacing: 0;
   margin-right: -3px;
+  -webkit-text-stroke: 0;
   opacity: 1;
   transition: ease all 0.3s;
   position: absolute;
   right: 0;
   bottom: -5px;
   opacity: 0;
+  color: var(--black);
 
-  &.hover {
+  &.hoverSub {
     opacity: 1;
+    color: var(--black);
   }
 `
 
@@ -62,15 +66,13 @@ export const HoverArrow = styled.svg`
   color: var(--brand);
   width: 0;
   height: 48px;
+  position: relative;
+  transition: ease all .25s;  
   display: inline-block;
-  transition: ease all 0.3s;
-
-  &:hover,
-  &:focus {
-    color: var(--brand);
-  }
+  margin-right: 8px;
 
   &.hover {
     width: 121px;
+    margin-left: -60px;
   }
 `

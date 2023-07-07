@@ -62,7 +62,7 @@ const HoverText = ({
               />
               <HoverSubTitle
                 dangerouslySetInnerHTML={createHTML(description)}
-                className={isHovering ? "hover" : ""}
+                className={isHovering ? "hoverSub" : ""}
               ></HoverSubTitle>
             </HoverTitleInner>
           </HoverTitle>
