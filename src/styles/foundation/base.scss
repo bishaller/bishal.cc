@@ -10,7 +10,7 @@ html {
 }
 
 ::-moz-selection { /* Code for Firefox */
-    background: #061CFD;
+    background: var(--brand);
     color: white;
     -webkit-text-fill-color: white;
   }

@@ -7,7 +7,7 @@ const WorkTraqit = () => {
       title={`Traqit`}
       description={`Strategy. UX Design.  FrontEnd.`}
       linkColor={`var(--brand)`}
-      bgColor={`var(--dark)`}
+      bgColor={`#EBEDF0`}
       link={`/dwt/`}
     >
       <h1>something</h1>

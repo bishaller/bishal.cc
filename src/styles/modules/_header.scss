@@ -84,9 +84,7 @@
 }
 
 [aria-current] {
-    color: $c-textWhite;
-    background: $c-brand--home;
-    box-shadow: 0 40px 70px rgba($c-black, 0.2);
+    background: transparent;
 
     &:hover,
     &:active,

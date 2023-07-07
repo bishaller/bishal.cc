@@ -42,7 +42,7 @@ const HoverText = ({
           direction={direction}
           bg={linkColor}
           duration={1}
-          className="workLInk"
+          className="workLink"
           to={link}
           key={link}
           title={`see case study for ${title}`}
@@ -68,18 +68,12 @@ const HoverText = ({
           </HoverTitle>
         </AniLink>
       </div>
-      {/* <HoverContent
-        style={{ backgroundColor: `${bgColor}` }}
-        className={isHovering ? "hover" : ""}
-      >
-        {children}
-      </HoverContent> */}
       <AnimatePresence>
         {isHovering && (
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            exit={{ opacity: 0}}
+            exit={{ opacity: 0, duration: .4}}
             transition={{ duration: 0.3, delay: "0", ease: "easeOut" }}
           >
             <HoverContent

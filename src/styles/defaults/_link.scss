@@ -13,13 +13,22 @@ a {
   }
 }
 
-.workLInk {
-	display: inline-block;
-	h2 {
-		&:hover,
-		&:focus,
-		&:active {
-		  background-color: transparent;
-		}
-	}
+.workLink {
+  display: inline-block;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent !important;
+
+    &::selection {
+      background-color: white !important;
+    }
+  }
+  h2, h2 span {
+  	&:hover,
+  	&:focus,
+  	&:active {
+  	  background-color: transparent;
+  	}
+  }
 }
