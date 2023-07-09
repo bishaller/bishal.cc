@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Billboard from "../components/home/billboard"
 import Intro from "../components/home/intro"
 import WorkHover from "../components/home/work/workhover"
-
+// import App from "../components/home/AnimatedTextWord"
 const WorkPage = ({ children }) => {
   return (
     <main>

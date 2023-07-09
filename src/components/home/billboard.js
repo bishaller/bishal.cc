@@ -42,6 +42,7 @@ const Billboard = () => {
 
   return (
     <section className="billboard">
+      
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">

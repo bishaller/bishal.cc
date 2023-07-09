@@ -1,41 +1,34 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
+import { styled } from "styled-components"
+import Plane from "./parts/accentPlane"
 // import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-const Header = ({ headerStyle }) => {
-  const [scrollY, setScrollY] = useState(0)
+const HeaderButton = styled.a`
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0.5em;
+  }
+`
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  let buttonClass;
-
-  switch (headerStyle) {
-    case "color-change":
-      buttonClass = scrollY > 650 ? 'button button--header' : 'button button--header button--headerWhite';
-  break;
-  case 'custom-color':
-    buttonClass = 'header-custom';
-    break;
-  default:
-    buttonClass = 'button button--header';
-}
-
-
+const Header = () => {
   return (
     <header className="siteHeader">
       <nav className="siteContainer">
         <ul>
           <li>
+            <HeaderButton>
+              <span className="icon">
+                <Plane />
+              </span>
+            </HeaderButton>
+
             <a
-              className={`${buttonClass}`}
+              className={`headerButton`}
               title="hello@bishal.cc"
               href="mailto:hello@bishal.cc"
             >
-              Contact!
+              <span className="contact">hello@bishal.cc</span>
               <span className="paperPlane"></span>
             </a>
           </li>

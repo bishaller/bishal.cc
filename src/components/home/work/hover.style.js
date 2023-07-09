@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Hover = styled.section``
 export const HoverTitle = styled.h2`
   font-family: var(--serifLight);
-  font-size: clamp(3rem, 8vw, 5.8rem);
+  font-size: clamp(3rem, 8vw, 5.6rem);
   -webkit-text-stroke: 1px;
   font-weight: 400;
   letter-spacing: -3px;
@@ -24,6 +24,10 @@ export const HoverTitle = styled.h2`
 
   span.hover {
     color: var(--brand);
+  }
+
+  @media screen and (max-width: 768px) {
+    letter-spacing: -1.1px;
   }
 `
 export const HoverTitleInner = styled.span`
