@@ -1,8 +1,8 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
 import { motion } from "framer-motion"
-import RightImage from "../../../images/hover/traqitRight.webp"
-import BottomLeftImage from "../../../images/hover/traqitBottomLeft.webp"
+import RightImage from "../../../images/hover/twinsRight.webp"
+import BottomLeftImage from "../../../images/hover/twinsBottomLeft.webp"
 
 const Right = {
   position: "absolute",
