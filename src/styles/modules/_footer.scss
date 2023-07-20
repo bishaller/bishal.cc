@@ -36,7 +36,7 @@
   user-select: none;
   pointer-events: none;
   animation: rotate 7s linear infinite;
-  top: 60%;
+  top: 75%;
   position: relative;
   image-rendering: -webkit-optimize-contrast;
   filter: blur(100px) saturate(0.75);
@@ -44,7 +44,7 @@
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transition: linear all 0.3s;
-  max-width: 80%;
+  max-width: 70%;
   display: flex !important;
   justify-content: center;
   margin: 0 auto;

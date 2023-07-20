@@ -79,7 +79,7 @@ const HoverText = ({
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            exit={{ opacity: 0, duration: 0.4 }}
+            exit={{ duration: 0.2, opacity: 0 }}
             transition={{ duration: 0.3, delay: "0", ease: "easeOut" }}
           >
             <HoverContent

@@ -3,6 +3,7 @@ import * as React from "react"
 import gsap from "gsap"
 import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
+import { motion } from "framer-motion"
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Billboard = () => {
@@ -30,30 +31,46 @@ const Billboard = () => {
       xSet(pos.x)
       ySet(pos.y)
     })
-
-    // gsap.to(".billBoard__mouse", {
-    //   rotation: "+=360",
-    //   repeat: -1,
-    //   paused: false,
-    //   duration: 5,
-    //   ease: "Linear.easeNone",
-    // })
   }, [])
 
   return (
     <section className="billboard">
-      
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">
-            I design<strong> Experiences</strong>
+            I design
+            <motion.div
+              className="billboard__circle"
+              initial={{ opacity: 0, scale: 0.5}}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                rotate: 360,
+              }}
+              transition={{
+                duration: 6,
+                ease: "linear",
+                repeat: Infinity,
+                repeatDelay: 0
+              }}
+            >
+              <strong>
+                {" "}
+                
+                <svg viewBox="0 0 139.85 139.85">
+                  <use xlinkHref="#circularText"></use>
+                </svg>
+                <span className="screen-reader-text">Experiences</span>
+              </strong>
+            </motion.div>
           </h1>
         </div>
         <div className="billboard__intro">
           <div className="billboard__bio">
             <div className="billboard__description">
               <p>
-              A Product Designer who turns complex problem sets into simple solutions.
+                A Product Designer who turns complex problem sets into simple
+                solutions.
               </p>
             </div>
             {/* <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">

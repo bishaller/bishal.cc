@@ -15,7 +15,6 @@ export const HoverTitle = styled.h2`
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  transition: ease all 0.35s;
   &:hover,
   &:focus,
   &:active {
@@ -44,7 +43,7 @@ export const HoverSubTitle = styled.span`
   margin-right: -3px;
   -webkit-text-stroke: 0;
   opacity: 1;
-  transition: ease all 0.3s;
+  transition: easeOut all 0.2s;
   position: absolute;
   right: 0;
   bottom: -5px;
@@ -64,7 +63,7 @@ export const HoverContent = styled.div`
   left: 0;
   top: 0;
   z-index: 0;
-  transition: ease all .3s;
+  // transition: ease all .3s;
 `
 export const HoverArrow = styled.svg`
   color: var(--brand);
