@@ -1,7 +1,25 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
 import { motion } from "framer-motion"
+import RightImage from "../../../images/hover/twinsRight.webp"
+import BottomLeftImage from "../../../images/hover/twinsBottomLeft.webp"
 
+const Right = {
+  position: "absolute",
+  width: "auto",
+  right: "0",
+  top: "0",
+  bottom: "0",
+  height: "100%",
+}
+
+const BottomLeft = {
+  position: "absolute",
+  width: "24.5%",
+  left: "0",
+  bottom: "0",
+  height: "auto",
+}
 
 const WorkRubbermaid = () => {
 

@@ -65,8 +65,8 @@ const WorkHover = () => {
           </div>
           <WorkDWT />
           <WorkTraqit />
-          <WorkIdealaya />
           <WorkTwinsuk />
+          <WorkIdealaya />
           <WorkTrekkersParadise />
           <WorkRubbermaid />
           <WorkLovebit />

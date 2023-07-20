@@ -6,16 +6,18 @@ import BottomLeftImage from "../../../images/hover/twinsBottomLeft.webp"
 
 const Right = {
   position: "absolute",
-  width: "auto",
+  width: "32%",
   right: "0",
   top: "0",
-  bottom: "0",
-  height: "100%",
+  transform: "translate(0, -50%)",
+  bottom: "auto",
+  height: "auto",
+  boxShadow: "0 30px 70px 0 rgba(0,0,0,.3)",
 }
 
 const BottomLeft = {
   position: "absolute",
-  width: "24.5%",
+  width: "24%",
   left: "0",
   bottom: "0",
   height: "auto",
@@ -42,8 +44,8 @@ const WorkTwinsuk = () => {
       <motion.img
         key={RightImage}
         src={RightImage}
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: "0", opacity: 1 }}
+        initial={{ x: 100, y: "50%", opacity: 0 }}
+        animate={{ x: "0", y: "50%", opacity: 1 }}
         transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
         exit={{ x: 100, opacity: 0 }}
         style={Right}

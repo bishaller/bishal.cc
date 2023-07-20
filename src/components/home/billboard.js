@@ -41,10 +41,10 @@ const Billboard = () => {
             I design
             <motion.div
               className="billboard__circle"
-              initial={{ opacity: 0, scale: 0.5}}
+              initial={{}}
               animate={{
-                opacity: 1,
-                scale: 1,
+                // opacity: 1,
+                // scale: 1,
                 rotate: 360,
               }}
               transition={{
