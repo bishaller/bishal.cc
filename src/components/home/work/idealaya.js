@@ -1,5 +1,6 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
+import { motion } from "framer-motion"
 import BottomRightImage from "../../../images/hover/idealayaBottomRight.webp"
 import BackgroundImage from "../../../images/hover/idealayaBackground.webp"
 
