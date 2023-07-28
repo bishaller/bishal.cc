@@ -1,8 +1,9 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 import RightBottomImage from "../../../images/hover/dwtRightBottom.webp"
+import LeftTopImage from "../../../images/hover/dwtLeftTop.webp"
 
 const LeftImage = {
   position: "absolute",
@@ -31,28 +32,36 @@ const WorkDWT = () => {
       bgColor={`var(--white)`}
       link={`/dwt/`}
     >
-      <motion.div
-        initial={{ x: -25, y: -25, opacity: 0 }}
+
+      <motion.img
+        key={LeftTopImage}
+        src={LeftTopImage}
+        initial={{ x: -100, y: -100, opacity: 0 }}
         animate={{ x: "0", y: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        exit={{ x: -100, y: -100, opacity: 0 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005
+        }}
+        style={LeftImage}
       >
-        <StaticImage
-          src={"../../../images/hover/dwtLeftTop.webp"}
-          alt="Mountain"
-          width={10000}
-          style={LeftImage}
-        />
-      </motion.div>
+      </motion.img>
+
       <motion.img
         key={RightBottomImage}
         src={RightBottomImage}
-        initial={{ y: 25, rotate: -10, opacity: 0 }}
-        animate={{ y: 0, rotate: 0, opacity: 1 }}
-        tranistion={{
-          duration: 0.6,
-          delay: 0.2,
+        initial={{ x: 200, y: 200, rotate: -10, opacity: 0 }}
+        animate={{ x: "0", y: "0", rotate: 0, opacity: 1 }}
+        exit={{ x: 200, y: 200, rotate: -10, opacity: 0 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005
         }}
-        exit={{ opacity: 0 }}
+        
         style={RightImage}
       />
     </HoverText>

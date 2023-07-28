@@ -8,8 +8,7 @@ const Right = {
   position: "absolute",
   width: "32%",
   right: "0",
-  top: "0",
-  transform: "translate(0, -50%)",
+  top: "50%",
   bottom: "auto",
   height: "auto",
   boxShadow: "0 30px 70px 0 rgba(0,0,0,.3)",
@@ -35,18 +34,29 @@ const WorkTwinsuk = () => {
       <motion.img
         key={BottomLeftImage}
         src={BottomLeftImage}
-        initial={{ x: -20, y: 20, opacity: 0 }}
+        initial={{ x: -100, y: 100, opacity: 0 }}
         animate={{ x: "0", y: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        // transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        transition={{
+          type: "spring",
+          damping: 8,
+          stiffness: 70,
+          restDelta: 0.005,
+        }}
         exit={{ x: -20, y: 20, opacity: 0 }}
         style={BottomLeft}
       />
       <motion.img
         key={RightImage}
         src={RightImage}
-        initial={{ x: 100, y: "50%", opacity: 0 }}
-        animate={{ x: "0", y: "50%", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        initial={{ x: 100, y: "-50%", opacity: 0 }}
+        animate={{ x: "0", y: "-50%", opacity: 1 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005,
+        }}
         exit={{ x: 100, opacity: 0 }}
         style={Right}
       />

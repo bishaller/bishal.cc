@@ -3,14 +3,12 @@ import HoverText from "./hoverbase"
 import { motion } from "framer-motion"
 import BottomRightImage from "../../../images/hover/lovebitBottomRight.webp"
 
-
 const BottomRight = {
   position: "absolute",
-  width: "auto",
+  width: "39%",
   right: "0",
-  top: "0",
   bottom: "0",
-  height: "100%",
+  height: "auto",
 }
 
 const WorkLovebit = () => {
@@ -19,15 +17,22 @@ const WorkLovebit = () => {
       title={`Lovebit`}
       description={`Ideation. Product Design.`}
       linkColor={`var(--brand)`}
-      bgColor={`#8EDC97`}
+      bgColor={`#FFA648`}
       link={`/lovebit/`}
     >
       <motion.img
         key={BottomRightImage}
         src={BottomRightImage}
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        initial={{ x: 150, y: 30, opacity: 0 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
+        // transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        transition={{
+          type: "spring",
+          damping: 18,
+          stiffness: 70,
+          restDelta: 0.005,
+          duration: 0.4,
+        }}
         exit={{ x: 100, opacity: 0 }}
         style={BottomRight}
       />

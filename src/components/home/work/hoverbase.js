@@ -47,7 +47,7 @@ const HoverText = ({
           key={link}
           title={`see case study for ${title}`}
         >
-          <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          <HoverTitle  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             <HoverArrow
               className={isHovering ? "hover" : ""}
               viewBox="0 0 121 48"
@@ -68,6 +68,7 @@ const HoverText = ({
           </HoverTitle>
         </AniLink>
       </div>
+      {/* For Debugging Purposes */}
       {/* <HoverContent
         style={{ backgroundColor: `${bgColor}` }}
         className={isHovering ? "hover" : ""}
@@ -79,8 +80,8 @@ const HoverText = ({
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            exit={{ duration: 0.2, opacity: 0 }}
-            transition={{ duration: 0.3, delay: "0", ease: "easeOut" }}
+            exit={{ duration: 0.3, opacity: 0 }}
+            transition={{ duration: 0.35, delay: "0", ease: "easeOut" }}
           >
             <HoverContent
               style={{ backgroundColor: `${bgColor}` }}

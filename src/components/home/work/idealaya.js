@@ -6,7 +6,7 @@ import BackgroundImage from "../../../images/hover/idealayaBackground.webp"
 
 const BottomRight = {
   position: "absolute",
-  width: "24.5%",
+  width: "44.5%",
   right: "0",
   bottom: "0",
   height: "auto",
@@ -21,7 +21,6 @@ const Background = {
   height: "auto",
 }
 
-
 const WorkIdealaya = () => {
   return (
     <HoverText
@@ -32,23 +31,33 @@ const WorkIdealaya = () => {
       link={`/idealaya/`}
     >
       <motion.img
+        key={BackgroundImage}
+        src={BackgroundImage}
+        initial={{ x: 0, y: 200, opacity: 0}}
+        animate={{ x: "0", y: "0", opacity: 0.05 }}
+        transition={{
+          type: "spring",
+          damping: 18,
+          stiffness: 70,
+          restDelta: 0.005,
+        }}
+        exit={{ x: -20, y: 20, opacity: 0 }}
+        style={Background}
+      />
+      <motion.img
         key={BottomRightImage}
         src={BottomRightImage}
-        initial={{ x: -20, y: 20, opacity: 0 }}
-        animate={{ x: "0", y: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        initial={{ x: 100, y: 100, opacity: 0, scale: 1.5 }}
+        animate={{ x: "0", y: "0", opacity: 1, scale: 1 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005,
+        }}
         exit={{ x: -20, y: 20, opacity: 0 }}
         style={BottomRight}
       />
-      <motion.img
-      key={BackgroundImage}
-      src={BackgroundImage}
-      initial={{ x: -20, y: 20, opacity: 0 }}
-      animate={{ x: "0", y: "0", opacity: 1 }}
-      transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
-      exit={{ x: -20, y: 20, opacity: 0 }}
-      style={Background}
-    />
     </HoverText>
   )
 }

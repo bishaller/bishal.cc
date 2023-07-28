@@ -1,9 +1,9 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
 import { motion } from "framer-motion"
-import TopLeftImage from"../../../images/hover/traqitTopLeft.webp"
-import BottomLeftImage from"../../../images/hover/traqitBottomLeft.webp"
-import RightImage from"../../../images/hover/traqitRight.webp"
+import TopLeftImage from "../../../images/hover/traqitTopLeft.webp"
+import BottomLeftImage from "../../../images/hover/traqitBottomLeft.webp"
+import RightImage from "../../../images/hover/traqitRight.webp"
 
 const TopLeft = {
   position: "absolute",
@@ -44,8 +44,13 @@ const WorkTraqit = () => {
         src={TopLeftImage}
         initial={{ x: -20, y: -20, opacity: 0 }}
         animate={{ x: "0", y: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
-        exit={{x: -20, y: -20, opacity: 0 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005,
+        }}
+        exit={{ x: -20, y: -20, opacity: 0 }}
         style={TopLeft}
       />
       <motion.img
@@ -53,17 +58,27 @@ const WorkTraqit = () => {
         src={BottomLeftImage}
         initial={{ x: -20, y: 20, opacity: 0 }}
         animate={{ x: "0", y: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005,
+        }}
         exit={{ x: -20, y: 20, opacity: 0 }}
         style={BottomLeft}
       />
       <motion.img
         key={RightImage}
         src={RightImage}
-        initial={{ x: 100,  opacity: 0 }}
+        initial={{ x: 100, opacity: 0 }}
         animate={{ x: "0", opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
-        exit={{ x: 100,  opacity: 0 }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          restDelta: 0.005,
+        }}
+        exit={{ x: 100, opacity: 0 }}
         style={Right}
       />
     </HoverText>

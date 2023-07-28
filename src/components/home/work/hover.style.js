@@ -43,16 +43,19 @@ export const HoverSubTitle = styled.span`
   margin-right: -3px;
   -webkit-text-stroke: 0;
   opacity: 1;
-  transition: easeOut all 0.2s;
+  transition: ease all .45s;
   position: absolute;
   right: 0;
-  bottom: -5px;
+  bottom: -10px;
   opacity: 0;
   color: var(--black);
 
   &.hoverSub {
+    right: 0;
+    bottom: -5px;
     opacity: 1;
     color: var(--black);
+    transition: ease all .45s;
   }
 `
 

@@ -24,6 +24,9 @@ const WorkTitle = styled.h2`
   align-items: center;
   padding: 0 20px;
   margin-bottom: clamp(30px, 4vw, 45px);
+  padding-top: clamp(3rem, 11vw, 11rem);
+  position: relative;
+  z-index: 1;
 `
 
 const workIcon = {
@@ -31,8 +34,9 @@ const workIcon = {
 }
 
 const WorkInner = styled.div`
-padding-top: clamp(3rem, 11vw, 11rem);
-padding-bottom: clamp(3rem, 11vw, 11rem);
+  padding-bottom: clamp(3rem, 11vw, 11rem);
+  position: relative;
+  // z-index: 2;
 `
 
 const WorkBG = styled.span`
@@ -40,19 +44,19 @@ const WorkBG = styled.span`
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
-  z-index: 1;
+  opacity: .45;
+  z-index: 0;
   background-image: url("data:image/svg+xml,%0A%3Csvg height='34' viewBox='0 0 34 34' width='34' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff0200' fill-rule='evenodd'%3E%3Cpath d='m0 0h34v34h-34z' opacity='0'/%3E%3Ccircle cx='1.5' cy='1.5' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 `
-
 const WorkHover = () => {
+
   return (
     <Work className="work">
       <WorkBG />
       <WorkInner>
         <div className="siteContainer siteContainer--medium">
           <div className="siteContainer siteContainer--small">
-            <WorkTitle >
+            <WorkTitle>
               work
               <StaticImage
                 src="../../../images/love.webp"
@@ -63,13 +67,13 @@ const WorkHover = () => {
               />
             </WorkTitle>
           </div>
+          <WorkTraqit/>
           <WorkDWT />
-          <WorkTraqit />
           <WorkTwinsuk />
+          <WorkLovebit />
+          <WorkRubbermaid />
           <WorkIdealaya />
           <WorkTrekkersParadise />
-          <WorkRubbermaid />
-          <WorkLovebit />
         </div>
         {/* <Chipleti /> */}
       </WorkInner>
