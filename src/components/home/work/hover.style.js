@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Hover = styled.section``
 export const HoverTitle = styled.h2`
   font-family: var(--serifLight);
-  font-size: clamp(3rem, 8vw, 5.6rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   -webkit-text-stroke: 1px;
   font-weight: 400;
   letter-spacing: -3px;
