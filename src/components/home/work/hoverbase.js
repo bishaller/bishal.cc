@@ -11,6 +11,25 @@ import {
   HoverArrow,
 } from "./hover.style"
 
+const workLink = {
+  display: "inline-block",
+
+
+  "&:hover, &:focus,  &:active": {
+    backgroundColor: "transparent !important",
+
+    "&::selection": {
+      backgroundColor: "white !important",
+    }
+  },
+
+  "h2, h2 span": {
+    "&:hover, &:focus, &:active": {
+      backgroundColor: "transparent",
+    }
+  }
+}
+
 const HoverText = ({
   title,
   description,
@@ -42,12 +61,12 @@ const HoverText = ({
           direction={direction}
           bg={linkColor}
           duration={1}
-          className="workLink"
+          style={workLink}
           to={link}
           key={link}
           title={`see case study for ${title}`}
         >
-          <HoverTitle  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+          <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             <HoverArrow
               className={isHovering ? "hover" : ""}
               viewBox="0 0 121 48"

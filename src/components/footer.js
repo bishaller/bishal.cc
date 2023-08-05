@@ -2,12 +2,47 @@ import * as React from "react"
 import SvgSprite from "../components/parts/svg-sprite"
 import { StaticImage } from "gatsby-plugin-image"
 
+import {
+  StyledFooter,
+  FooterMain,
+  FooterSocial,
+  FooterTitle,
+  FooterButton,
+  SocialIcons
+} from "./footer.style"
+
+
+const SocialIconsImage = {
+  maxWidth: "80px",
+  marginBottom: "10px",
+  filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1))",
+  transition: "ease all 0.25s",
+
+  '@media(maxWidth: 768px)': {
+    maxWidth: "60px",
+  },
+};
+
 const Footer = () => {
   return (
-    <footer className="footer">
+    <StyledFooter className="footer">
+      <FooterMain>
+        <div className="siteContainer siteContainer--medium">
+          <FooterTitle>Saying yes to good work.</FooterTitle>
+          <FooterButton
+            title="hello@bishal.cc"
+            href="mailto:hello@bishal.cc"
+          >
+            hello@bishal.cc
+            <svg viewBox="0 0 51 45">
+              <use xlinkHref="#icon-mail"></use>
+            </svg>
+          </FooterButton>
+        </div>
+      </FooterMain>
       <div className="siteContainer siteContainer--medium">
-        <div className="footer__social">
-          <a
+        <FooterSocial>
+          <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Linkedin"
             href="https://linkedin.com/in/bishaller"
@@ -18,12 +53,12 @@ const Footer = () => {
               src={"../images/linkedin.webp"}
               alt="Linkedin Icon"
               width={10000}
-              className="socialIcons__icon"
+              style={SocialIconsImage}
             />
             <strong>Linkedin</strong>
             connecting
-          </a>
-          <a
+          </SocialIcons>
+          <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Instagram"
             href="https://dribbble.com/bishaller"
@@ -34,12 +69,12 @@ const Footer = () => {
               src={"../images/dribbble.webp"}
               alt="Dribbble Icon"
               width={10000}
-              className="socialIcons__icon"
+              style={SocialIconsImage}
             />
             <strong>Dribbble</strong>
             posting interfaces
-          </a>
-          <a
+          </SocialIcons>
+          <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Github"
             href="https://github.com/bishaller"
@@ -50,12 +85,12 @@ const Footer = () => {
               src={"../images/github.webp"}
               alt="Github Icon"
               width={10000}
-              className="socialIcons__icon"
+              style={SocialIconsImage}
             />
             <strong>Github</strong>
             coding sometimes
-          </a>
-          <a
+          </SocialIcons>
+          <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Instagram"
             href="https://instagram.com/bishaller"
@@ -66,34 +101,16 @@ const Footer = () => {
               src={"../images/instagram.webp"}
               alt="Github Icon"
               width={10000}
-              className="socialIcons__icon"
+              style={SocialIconsImage}
             />
             <strong>Instagram</strong>
             let's be friends
-          </a>
-        </div>
-        <div className="footer__main">
-          <h2 className="footer__title">I am open to work</h2>
-          <a
-            className="button button--footer"
-            title="hello@bishal.cc"
-            href="mailto:hello@bishal.cc"
-          >
-            hello@bishal.cc
-            <svg viewBox="0 0 51 45">
-              <use xlinkHref="#icon-mail"></use>
-            </svg>
-          </a>
-        </div>
+          </SocialIcons>
+        </FooterSocial>
       </div>
+
       <div className="footer__footer">
         <div className="footer__media">
-          <StaticImage
-            src={"../images/oval.svg"}
-            alt="A gradient circle, rotating constantly."
-            width={10000}
-            className="footer__image"
-          />
           <div className="footer__copyright">
             <p>&copy; {new Date().getFullYear()} Bishal Mishra.</p>
             <p>I hand-coded this website.</p>
@@ -101,7 +118,7 @@ const Footer = () => {
         </div>
       </div>
       <SvgSprite className="footer__svg" title="Svg Sprite" />
-    </footer>
+    </StyledFooter>
   )
 }
 export default Footer

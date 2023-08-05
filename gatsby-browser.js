@@ -7,7 +7,4 @@ export const onInitialClientRender = () => {
         document.getElementById("loader").style.cssText = "transform: scaleY(0); color: transparent";
         body.classList.add("loaded");
     }, 1200)
-
 }
-
-

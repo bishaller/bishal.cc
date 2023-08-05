@@ -66,7 +66,6 @@ export const HoverContent = styled.div`
   left: 0;
   top: 0;
   z-index: 0;
-  // transition: ease all .3s;
 `
 export const HoverArrow = styled.svg`
   color: var(--brand);
