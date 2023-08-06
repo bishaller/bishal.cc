@@ -87,7 +87,7 @@ const HoverText = ({
           </HoverTitle>
         </AniLink>
       </div>
-      {/* For Debugging Purposes */}
+      {/* For Debugging */}
       {/* <HoverContent
         style={{ backgroundColor: `${bgColor}` }}
         className={isHovering ? "hover" : ""}

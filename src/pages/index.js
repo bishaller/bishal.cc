@@ -12,6 +12,7 @@ const WorkPage = ({ children }) => {
     <main>
       {children}
       <Seo title="Bishal Mishra — Product Designer, UX Designer, bishaller" />
+      {/* Add some random comment */}
       <Layout>
         <Billboard/>
         <Intro/>

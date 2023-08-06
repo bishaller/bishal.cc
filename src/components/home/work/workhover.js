@@ -9,7 +9,6 @@ import {
   WorkIdealaya,
   WorkTwinsuk,
   WorkRubbermaid,
-  WorkTrekkersParadise,
   WorkLovebit,
 } from "./workhoverindex"
 
@@ -95,7 +94,6 @@ const WorkHover = () => {
           <WorkLovebit />
           <WorkRubbermaid />
           <WorkIdealaya />
-          <WorkTrekkersParadise />
         </div>
         {/* <Chipleti /> */}
       </WorkInner>
