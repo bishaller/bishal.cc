@@ -1,6 +1,6 @@
 import * as React from "react"
 import HoverText from "./hoverbase"
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion';
 import BottomRightImage from "../../../images/hover/lovebitBottomRight.webp"
 
 const BottomRight = {
@@ -13,12 +13,18 @@ const BottomRight = {
 
 const TopRight = {
   position: "absolute",
-  display: "block",
-  width: "41%",
-  height: "auto",
-  top: "-20%",
-  right: "-20%",
+  width: "90%",
+  height: "90%",
+  top: "-30%",
+  left: "-30%",
+  opacity: "0.1",
 }
+
+const SVGstyle = {
+  width: "100%",
+  height: "100%",
+  display: "block",
+};
 
 const WorkLovebit = () => {
   return (
@@ -29,28 +35,18 @@ const WorkLovebit = () => {
       bgColor={`#FFA648`}
       link={`/lovebit/`}
     >
-
       <motion.span
-        initial={{ x: 200, y: 200, opacity: 0, scale: 0.25 }}
-        animate={{ x: 0, y: 0, opacity: 1, scale: 1, rotate: 360 }}
-        exit={{ x: 100, opacity: 1, scale: 1 }}
-        transition={{
-          type: "spring",
-          damping: 18,
-          stiffness: 70,
-          restDelta: 0.005,
-          duration: 0.4,
-        }}
+        initial={{ rotate: 0,}}
+        animate={{rotate: 360,}}
+        transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
         style={TopRight}
       >
-        <svg>
+        <svg
+          style={SVGstyle}
+        >
           <use xlinkHref="#circleSVG" />
         </svg>
-        <svg className="icon icon-about">
-          <use xlinkHref="#icon-about"></use>
-        </svg>
       </motion.span>
-
       <motion.img
         key={BottomRightImage}
         src={BottomRightImage}

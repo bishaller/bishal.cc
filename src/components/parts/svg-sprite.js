@@ -14,7 +14,8 @@ const SvgSprite = () => (
   >
 
     <symbol id="circleSVG" viewBox="0 0 712 712">
-      <path d="m356 667c171.760557 0 311-139.239443 311-311s-139.239443-311-311-311-311 139.239443-311 311 139.239443 311 311 311z" fill="none" stroke="#0e0e0e" stroke-dasharray="5 56.1" stroke-linejoin="round" stroke-width="90" />
+
+      <path d="m356 667c171.760557 0 311-139.239443 311-311s-139.239443-311-311-311-311 139.239443-311 311 139.239443 311 311 311z" fill="none" stroke="#0e0e0e" strokeDasharray="5 56.1" strokeLinejoin="round" strokeWidth="90"/>
     </symbol>
 
     <symbol id="circularText" viewBox="0 0 139.85 139.85">

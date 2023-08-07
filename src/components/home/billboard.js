@@ -56,7 +56,6 @@ const Billboard = () => {
             >
               <strong>
                 {" "}
-                
                 <svg viewBox="0 0 139.85 139.85">
                   <use xlinkHref="#circularText"></use>
                 </svg>
@@ -72,9 +71,6 @@ const Billboard = () => {
                 A Product Designer who turns complex problem sets into simple
                 solutions.
               </p>
-              <svg>
-          <use xlinkHref="#circleSVG" />
-        </svg>
             </div>
             {/* <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
               View my Work

@@ -99,7 +99,7 @@ const Intro = () => {
       </div>
       <div className="siteContainer siteContainer--intro">
         <IntroInner>
-          <IntroTitle className="intro__title"><span>About me…</span></IntroTitle>
+          <IntroTitle className="intro__title"><span>What do I do...</span></IntroTitle>
           <IntroWrap className="intro__inner">
             <IntroContent className="intro__content">
               <IntroLarge>

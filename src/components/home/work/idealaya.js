@@ -6,7 +6,7 @@ import BackgroundImage from "../../../images/hover/idealayaBackground.webp"
 
 const BottomRight = {
   position: "absolute",
-  width: "44.5%",
+  width: "50vw",
   right: "0",
   bottom: "0",
   height: "auto",
@@ -27,7 +27,7 @@ const WorkIdealaya = () => {
       title={`Idealaya`}
       description={`Strategy. UX Design. Development.`}
       linkColor={`var(--brand)`}
-      bgColor={`#FFC4C3`}
+      bgColor={`#FFB88A`}
       link={`/idealaya/`}
     >
       <motion.img

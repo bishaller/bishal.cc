@@ -1,6 +1,8 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import AboutIntro from "../components/home/homeAbout"
+import Skills from "../components/home/skills"
 
 // Import Components
 import Billboard from "../components/home/billboard"
@@ -12,11 +14,12 @@ const WorkPage = ({ children }) => {
     <main>
       {children}
       <Seo title="Bishal Mishra — Product Designer, UX Designer, bishaller" />
-      {/* Add some random comment */}
       <Layout>
         <Billboard/>
         <Intro/>
         <WorkHover/>
+        <AboutIntro/>
+        <Skills/>
       </Layout>
     </main>
   )
