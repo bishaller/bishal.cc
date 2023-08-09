@@ -4,7 +4,7 @@ code, kbd, tt, var {
     margin: 0 0 20px;
     padding: 5px 10px;
     white-space: nowrap;
-    @include fsz(16px);
+    font-size: 1rem;
     font-family: $ff-code;
     display: inline-block;
 }
@@ -18,7 +18,7 @@ pre {
     padding: 15px;
     border-radius: 3px;
     font-family: $ff-pre;
-    @include fsz(16px);
+    font-size: 1rem;
 
     & > code {
         border-radius: 0;

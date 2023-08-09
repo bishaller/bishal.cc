@@ -16,7 +16,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 // @import foundation
 @import "foundation/config";
-@import "foundation/mixins";
 @import "foundation/normalize";
 @import "foundation/accessibility";
 @import "foundation/base";
@@ -39,10 +38,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "partials/navigation";
 @import "partials/loader";
 @import "partials/case";
+
 // @import modules
 @import "modules/header";
-@import "modules/footer";
-@import "modules/heading";
 @import "modules/billboard";
 @import "modules/about";
 @import "modules/page";

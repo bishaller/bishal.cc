@@ -169,7 +169,9 @@ export const FooterCopyright = styled.div`
   color: var(--dark);
   margin-bottom: 20px;
   line-height: 1.4;
-
+  position: relative;
+  z-index: 1;
+  
   p {
     margin: 0;
     font-size: 14px;

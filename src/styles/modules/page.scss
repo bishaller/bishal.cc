@@ -1,9 +1,10 @@
 .page {
-  @include fsz(21px);
+  font-size: 1.3125rem;
+
   line-height: 1.66;
 
   @media #{$phone} {
-    @include fsz(18px);
+    font-size: 1.125rem;
     line-height: 1.5;
   }
 }
@@ -54,7 +55,7 @@
 
 .pageHeader__alert {
   max-width: 560px;
-  @include fsz(13px);
+  font-size: 0.8125rem;
   line-height: 1.33;
   letter-spacing: normal;
   margin: 0 auto;
@@ -86,7 +87,7 @@
   }
   @media #{$phone} {
     margin-top: 30px;
-    @include fsz(12px);
+    font-size: 0.75rem;
     margin-bottom: -15px;
   }
   strong {

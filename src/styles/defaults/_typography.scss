@@ -9,7 +9,7 @@ textarea {
 body {
     line-height: $lh-body;
     font-weight: 400;
-    @include fsz(18px);
+    font-size: 1.125rem;
 }
 
 p {
