@@ -162,3 +162,24 @@ export const SocialIcons = styled.a`
     }
   }
 `
+
+export const FooterCopyright = styled.div`
+  text-align: center;
+  width: 100%;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+
+    @media #{$phone} {
+      font-size: 12px;
+    }
+
+    @media #{$phone} {
+      padding-bottom: 15px;
+    }
+  }
+`

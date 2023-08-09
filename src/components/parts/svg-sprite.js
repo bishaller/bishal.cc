@@ -11,6 +11,7 @@ const SvgSprite = () => (
     aria-hidden="true"
     className="svgSprite"
     version="1.1"
+    style={{ display: "none"}}
   >
 
     <symbol id="star" viewBox="0 0 14 16">

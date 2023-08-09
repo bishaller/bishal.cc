@@ -9,7 +9,8 @@ import {
   FooterSocial,
   FooterTitle,
   FooterButton,
-  SocialIcons
+  SocialIcons,
+  FooterCopyright
 } from "./footer.style"
 
 const SocialIconsImage = {
@@ -24,6 +25,9 @@ const SocialIconsImage = {
 };
 
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
   return (
     <StyledFooter className="footer">
       <FooterMain>
@@ -118,15 +122,11 @@ const Footer = () => {
         </FooterSocial>
       </div>
 
-      <div className="footer__footer">
-        <div className="footer__media">
-          <div className="footer__copyright">
-            <p>&copy; {new Date().getFullYear()} Bishal Mishra.</p>
-            <p>I hand-coded this website.</p>
-          </div>
-        </div>
-      </div>
-      <SvgSprite className="footer__svg" title="Svg Sprite" />
+      <FooterCopyright>
+        <p>&copy; {currentYear} Bishal Mishra.</p>
+        <p>A hand-coded website with care.</p>
+      </FooterCopyright>
+      <SvgSprite title="Svg Sprites" />
     </StyledFooter>
   )
 }
