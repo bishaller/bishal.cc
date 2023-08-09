@@ -1,14 +1,15 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import AboutIntro from "../components/home/homeAbout"
-import Skills from "../components/home/skills"
 
 // Import Components
-import Billboard from "../components/home/billboard"
+import Billboard from "../components/home/Billboard"
 import Intro from "../components/home/intro"
 import WorkHover from "../components/home/work/workhover"
-// import App from "../components/home/AnimatedTextWord"
+import AboutIntro from "../components/home/About"
+import Skills from "../components/home/skills"
+import Reviews from "../components/home/review"
+
 const WorkPage = ({ children }) => {
   return (
     <main>
@@ -20,6 +21,7 @@ const WorkPage = ({ children }) => {
         <WorkHover/>
         <AboutIntro/>
         <Skills/>
+        <Reviews/>
       </Layout>
     </main>
   )

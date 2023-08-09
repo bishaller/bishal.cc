@@ -2,28 +2,41 @@ import * as React from "react"
 import styled from "styled-components"
 
 const StyledSkills = styled.div`
-   margin-bottom: clamp(6rem, 12vw, 12rem);
 `
 const SkillsGrid = styled.div`
    display: flex;
    flex-wrap: wrap;
+   margin-bottom: clamp(0rem, 6vw, 6rem);
 `
 
 const SkillsGridItem = styled.div`
-   margin-right: 100px;
+   margin-right: 11%;
+   width: 26%;
 
    &:last-child {
       margin-right: 0;
+   }
+
+   @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
    }
 `
 
 const SkillsTitle = styled.h2`
    font-family: var(--serif);
    font-weight: 400;
+   font-size: clamp(1.5rem, 3vw, 2.25rem);
+
+   @media screen and (max-width: 600px) {
+      margin-bottom: 10px;
+   }
 `
 
 const SkillsList = styled.ul`
    list-style-type: none;
+   margin: 0;
 `
 
 const SkillsListItem = styled.li`
@@ -31,6 +44,10 @@ const SkillsListItem = styled.li`
    letter-spacing: 0.2px;
 `
 
+const Divider = styled.hr`
+   background-color: rgba(11,11,11,.25);
+   margin-bottom: clamp(3.5rem, 8vw, 8rem);
+`
 
 const Skills = () => {
    return (
@@ -71,6 +88,9 @@ const Skills = () => {
                </SkillsGridItem>
 
             </SkillsGrid>
+         </div>
+         <div className="siteContainer siteContainer--hr">
+            <Divider />
          </div>
       </StyledSkills>
    )
