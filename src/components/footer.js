@@ -1,6 +1,7 @@
 import * as React from "react"
 import SvgSprite from "../components/parts/svg-sprite"
 import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
 
 import {
   StyledFooter,
@@ -10,7 +11,6 @@ import {
   FooterButton,
   SocialIcons
 } from "./footer.style"
-
 
 const SocialIconsImage = {
   maxWidth: "80px",
@@ -29,35 +29,28 @@ const Footer = () => {
       <FooterMain>
         <div className="siteContainer siteContainer--medium">
           <FooterTitle>Saying yes to good work.</FooterTitle>
-          <FooterButton
-            title="hello@bishal.cc"
-            href="mailto:hello@bishal.cc"
+          <motion.span
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            style={{ display: "inline-block" }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
           >
-            hello@bishal.cc
-            <svg viewBox="0 0 51 45">
-              <use xlinkHref="#icon-mail"></use>
-            </svg>
-          </FooterButton>
+            <FooterButton
+              title="hello@bishal.cc"
+              href="mailto:hello@bishal.cc"
+            >
+              hello@bishal.cc
+              <svg viewBox="0 0 51 45">
+                <use xlinkHref="#icon-mail"></use>
+              </svg>
+            </FooterButton>
+          </motion.span>
         </div>
       </FooterMain>
       <div className="siteContainer siteContainer--medium">
         <FooterSocial>
-          <SocialIcons
-            className="socialIcons"
-            title="Connect with Bishal on Linkedin"
-            href="https://linkedin.com/in/bishaller"
-            target="_blank"
-            rel="nofollow noreferrer"
-          >
-            <StaticImage
-              src={"../images/linkedin.webp"}
-              alt="Linkedin Icon"
-              width={10000}
-              style={SocialIconsImage}
-            />
-            <strong>Linkedin</strong>
-            connecting
-          </SocialIcons>
+
           <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Instagram"
@@ -105,6 +98,22 @@ const Footer = () => {
             />
             <strong>Instagram</strong>
             let's be friends
+          </SocialIcons>
+          <SocialIcons
+            className="socialIcons"
+            title="Connect with Bishal on Linkedin"
+            href="https://linkedin.com/in/bishaller"
+            target="_blank"
+            rel="nofollow noreferrer"
+          >
+            <StaticImage
+              src={"../images/linkedin.webp"}
+              alt="Linkedin Icon"
+              width={10000}
+              style={SocialIconsImage}
+            />
+            <strong>Linkedin</strong>
+            connect for work
           </SocialIcons>
         </FooterSocial>
       </div>

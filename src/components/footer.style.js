@@ -15,6 +15,7 @@ export const FooterMain = styled.section`
 text-align: center;
 position: relative;
 padding: clamp(4rem, 10vw, 9rem) 0 clamp(6rem, 12vw, 9.4rem);
+margin-bottom: clamp(4rem, 8vw, 8rem);
 background: repeating-linear-gradient(
   to right,
   #BEBEBE,
@@ -75,7 +76,7 @@ export const FooterSocial = styled.div`
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
-  padding: 0 0 clamp(2rem, 4vw, 4rem);
+  padding: 0 0 clamp(2rem, 6vw, 6rem);
   position: relative;
 
   @media screen and (max-width: 768px) {
@@ -93,19 +94,19 @@ export const FooterButton = styled.a`
   font-family: var(--sans);
   font-weight: 400;
   letter-spacing: -0.2vw;
+  line-height: 1;
   text-shadow: 0 5px 15px rgba(0,0,0, 0.25);
-  --pt: clamp(0.7rem, 1.7vw, 0.75rem);
-  --pb: clamp(0.7rem, 1.7vw, 0.75rem);
-  --ph: clamp(1.5rem, 5.5vw, 5.1rem);
+  --pt: clamp(0.8rem, 1.7vw, 1.8rem);
+  --pb: clamp(0.8rem, 1.7vw, 1.8rem);
+  --ph: clamp(3rem, 5.5vw, 4.7rem);
   padding: var(--pt) var(--ph) var(--pb);
   background: var(--brand);
   color: var(--white);
   -webkit-text-stroke: 1px;
-  
-
+  transition: ease all .3s;
   svg {
     display: block;
-    width: clamp(1rem, 3vw, 3.125rem);
+    width: clamp(1.8rem, 3.8vw, 4rem);
     filter: drop-shadow(0 10px 15px rgba(0,0,0, 0.25));
     margin-left: clamp(0.5rem, 1.56vw, 1.56rem);
     margin-bottom: clamp(0.1rem, 1vw, 0.4rem);
@@ -114,6 +115,12 @@ export const FooterButton = styled.a`
   &:hover, &:focus {
     background: var(--dark);
     color: var(--brand);
+    box-shadow: 0 15px 15px -5px rgba(225,20,20, 0.25);
+    transition: ease all .3s;
+  }
+
+  @media screen and (max-width: 768px) {
+    letter-spacing: 0;
   }
 `
 
