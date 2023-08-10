@@ -8,3 +8,5 @@ export const onInitialClientRender = () => {
         body.classList.add("loaded");
     }, 1200)
 }
+
+export const onServiceWorkerUpdateReady = () => window.location.reload();

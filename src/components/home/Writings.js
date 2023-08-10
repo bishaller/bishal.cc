@@ -12,10 +12,10 @@ const WritingsTitle = styled.h2`
 `
 
 const WritingsWrap = styled.div`
-
+   display: block;
 `
 
-const WritingsArticle = styled.article`
+const Article = styled.article`
    border-bottom: 1px solid rgba(var(--dark), .1);
    &:first-of-type {
       border-top: 1px solid rgba(var(--dark), .1);
@@ -26,7 +26,7 @@ const WritingsArticle = styled.article`
    }
 `
 
-const WritingsLink = styled.a`
+const ArticleLink = styled.a`
    display: block;
 `
 
@@ -37,17 +37,31 @@ const ArticleTitle = styled.h3`
 const Writings = () => {
    return (
       <StyledWritings>
-         <WritingsTitle>Writings</WritingsTitle>
-         <WritingsWrap>
-            <article>
-               <WritingsLink>
-                  <ArticleTitle>Article 1</ArticleTitle>
-                  <p style={{display: "none"}}>This is the first article</p>
-               </WritingsLink>
-            </article>
-
-               
+         <div className="siteContainer siteContainer--medium">
+            <WritingsTitle>Writings</WritingsTitle>
+            <WritingsWrap>
+               <Article>
+                  <ArticleLink href="#" title="Article 1">
+                     <ArticleTitle>Article 1</ArticleTitle>
+                     <p style={{ display: "none" }}>This is the first article</p>
+                  </ArticleLink>
+               </Article>
+               <Article>
+                  <ArticleLink href="#" title="Article 1">
+                     <ArticleTitle>Article 1</ArticleTitle>
+                     <p style={{ display: "none" }}>This is the first article</p>
+                  </ArticleLink>
+               </Article>
+               <Article>
+                  <ArticleLink href="#" title="Article 1">
+                     <ArticleTitle>Article 1</ArticleTitle>
+                     <p style={{ display: "none" }}>This is the first article</p>
+                  </ArticleLink>
+               </Article>
+            </WritingsWrap>
          </div>
-      </section>
-   );
+      </StyledWritings>
+   )
 }
+
+export default Writings;

@@ -42,11 +42,7 @@ const Billboard = () => {
             <motion.div
               className="billboard__circle"
               initial={{}}
-              animate={{
-                // opacity: 1,
-                // scale: 1,
-                rotate: 360,
-              }}
+              animate={{rotate: 360}}
               transition={{
                 duration: 6,
                 ease: "linear",

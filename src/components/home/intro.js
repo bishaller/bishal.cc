@@ -1,6 +1,9 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { motion } from "framer-motion"
+// import { useRef } from "react";
+// import { useInView } from "framer-motion";
+import PatternImage from "../../images/intro.webp"
 
 const IntroInner = styled.div`
   padding-top: clamp(3rem, 11vw, 11rem);
@@ -118,11 +121,21 @@ const Intro = () => {
               </IntroNormal>
             </IntroContent>
             <IntroImage className="intro__Image">
-              <StaticImage
-                src={"../../images/intro.webp"}
-                alt="RandomImage"
-                width={10000}
-              />
+              <motion.img
+                key={PatternImage}
+                src={PatternImage}
+                placeholder="blurred"
+                initial={{ x: -100, y: -100, opacity: 0 }}
+                animate={{ x: "0", y: "0", opacity: 1 }}
+                exit={{ x: -100, y: -100, opacity: 0 }}
+                transition={{
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                  restDelta: 0.005
+                }}
+              >
+              </motion.img>
             </IntroImage>
           </IntroWrap>
         </IntroInner>
@@ -131,4 +144,4 @@ const Intro = () => {
   )
 }
 
-export default Intro
+export default Intro;

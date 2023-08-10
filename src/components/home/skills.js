@@ -27,7 +27,7 @@ const SkillsGridItem = styled.div`
 const SkillsTitle = styled.h2`
    font-family: var(--serif);
    font-weight: 400;
-   font-size: clamp(1.5rem, 3vw, 2.25rem);
+   font-size: clamp(1.25rem, 3vw, 1.875rem);
 
    @media screen and (max-width: 600px) {
       margin-bottom: 10px;

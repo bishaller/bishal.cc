@@ -52,30 +52,30 @@
 //   opacity: 1;
 //   background: red;
 //   transition: ease all 1s;
+// // }
+// $fontWeight: 96;
+// .text-wrapper {
+//   overflow: hidden;
+//   span {
+//     display: inline-block;
+//     font-size: $fontWeight + px;
+//     font-weight: 100;
+//     margin: $fontWeight/4 + px 0;
+//     text-transform: uppercase;
+//     font-family: nimbus-sans-extended
+//   }
 // }
-$fontWeight: 96;
-.text-wrapper {
-  overflow: hidden;
-  span {
-    display: inline-block;
-    font-size: $fontWeight + px;
-    font-weight: 100;
-    margin: $fontWeight/4 + px 0;
-    text-transform: uppercase;
-    font-family: nimbus-sans-extended
-  }
-}
-.separator-wrapper {
-  width: 100%;
-  height: 7px;
-  top: -40px;
-  position: relative;
-  overflow: hidden;
-  .separator {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
+// .separator-wrapper {
+//   width: 100%;
+//   height: 7px;
+//   top: -40px;
+//   position: relative;
+//   overflow: hidden;
+//   .separator {
+//     width: 100%;
+//     height: 100%;
+//     background-color: black;
+//     position: absolute;
 
-  }
-}
+//   }
+// }
