@@ -4,7 +4,64 @@ import gsap from "gsap"
 import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
 import { motion } from "framer-motion"
+import styled from "styled-components"
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
+
+const StyledBillboard = styled.section`
+  padding: 17vw 0 12vw;
+  --wt: 400;
+  --fsz: clamp(3rem, 20.8vw, 20rem);
+  --lh: 0.8;
+  --font: var(--wt) var(--fsz) / var(--lh) var(--sans);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  @media screen and (max-width: 1280px) {
+    padding: 24vw 0 18vw;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 50vw 0 40vw;
+  }
+`
+
+const BillboardGradient = styled.span`
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  left: -65%;
+  width: 100vw;
+  top: -165%;
+  height: auto;
+  filter: blur(100px) saturate(1.2);
+  animation: rotate 6s linear infinite;
+  transition: transform ease;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transition: linear all 0.3s;
+  image-rendering: -webkit-optimize-contrast;
+  z-index: 0;
+
+  @media screen and (max-width: 1280px) {
+    left: -60%;
+    width: 105vw;
+    top: -115%;
+  }
+  @media screen and (max-width: 768px) {
+    left: -70%;
+    width: 110vw;
+    top: -100%;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 120vw;
+    top: -60%;
+  }
+`
 
 const Billboard = () => {
   useEffect(() => {
@@ -34,7 +91,7 @@ const Billboard = () => {
   }, [])
 
   return (
-    <section className="billboard">
+    <StyledBillboard>
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">
@@ -112,11 +169,11 @@ const Billboard = () => {
           </div>
         </div>
       </div>
-      <span className="billboard__gradient">
+      <BillboardGradient className="billboard__gradient">
         <img src={headerGradient} alt="Moving background gradient" />
-      </span>
+      </BillboardGradient>
       <div className="billBoard__mouse"></div>
-    </section>
+    </StyledBillboard>
   )
 }
 

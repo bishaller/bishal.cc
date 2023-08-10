@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import pen from "../../images/pen.webp"
 
 const StyledWritings = styled.section`
    padding-top: clamp(3rem, 11vw, 11rem);
@@ -11,6 +12,10 @@ const WritingsTitle = styled.h2`
    font-size: clamp(3rem, 5vw, 5rem);
    text-align: center;
    font-weight: 400;
+   background: url(${pen}) no-repeat center center;
+   line-height: 1.8;
+   background-size: auto 100%;
+   letter-spacing: -.1px;
 `
 
 const WritingsWrap = styled.div`
@@ -40,7 +45,8 @@ const ArticleLink = styled.a`
       content: "";
       display: block;
       position: absolute;
-      top: -5px;
+      top: 50%;
+      transform: translateY(-50%);
       width: calc(100% + 40px);
       height: 0;
       left: -20px;
@@ -48,12 +54,17 @@ const ArticleLink = styled.a`
       opacity: 0;
       transition: all .25s ease;
       filter: blur(15px);
+      -webkit-filter: blur(15px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, -50%, 0);
+      -moz-transform: translate3d(0, -50%, 0);
       z-index: -1;
    }
 
    &:hover, &:focus {
       &:before {
-         opacity: .8;
+         opacity: 1;
          height: calc(100% + 10px);
          transition: all .25s ease;
       }
@@ -64,6 +75,7 @@ const ArticleTitle = styled.h3`
    font-family: var(--serif);
    margin: 0;
    font-weight: 300;
+   font-size: clamp(1.125rem, 2vw, 1.875rem);
 `
 
 const Writings = () => {

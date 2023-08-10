@@ -1,23 +1,15 @@
-.billboard {
-  padding: 17vw 0 12vw;
-  --wt: 400;
-  --fsz: clamp(3rem, 20.8vw, 20rem);
-  --lh: 0.8;
-  --font: var(--wt) var(--fsz) / var(--lh) var(--sans);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+// .billboard {
+  
+  
 
-  @media #{$desktop} {
-    padding: 24vw 0 18vw;
-  }
+//   @media #{$desktop} {
+//     padding: 24vw 0 18vw;
+//   }
 
-  @media #{$phone} {
-    padding: 50vw 0 40vw;
-  }
-}
+//   @media #{$phone} {
+//     padding: 50vw 0 40vw;
+//   }
+// }
 
 .billboard__gradient {
   user-select: none;
