@@ -46,7 +46,7 @@ const SkillsListItem = styled.li`
 
 const Divider = styled.hr`
    background-color: rgba(11,11,11,.25);
-   margin-bottom: clamp(3.5rem, 8vw, 8rem);
+   margin-bottom: clamp(4.5rem, 8vw, 8rem);
 `
 
 const Skills = () => {
@@ -82,12 +82,13 @@ const Skills = () => {
                         <SkillsListItem>CSS</SkillsListItem>
                         <SkillsListItem>Javascript</SkillsListItem>
                         <SkillsListItem>WordPress</SkillsListItem>
+                        <SkillsListItem>Webflow / Framer / Wix</SkillsListItem>
                         <SkillsListItem>React JS / Next JS</SkillsListItem>
                         <SkillsListItem>Python </SkillsListItem>
                      </SkillsList>
                </SkillsGridItem>
 
-            </SkillsGrid>
+         </SkillsGrid>
          </div>
          <div className="siteContainer siteContainer--hr">
             <Divider />

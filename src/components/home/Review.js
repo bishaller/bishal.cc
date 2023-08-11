@@ -1,6 +1,10 @@
 import * as React from "react"
 import styled from "styled-components"
 
+const StyledReviews = styled.section`
+   margin-bottom: clamp(2.5rem, 8vw, 8rem);
+`
+
 const ReviewsTitle = styled.h2`
    display: none;
 `
@@ -33,6 +37,10 @@ const ReviewsGridItem = styled.blockquote`
    @media screen and (max-width: 600px) {
       width: 100%;
       margin-bottom: 50px;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
    }
 `
 
@@ -60,12 +68,9 @@ const ReviewsStar = styled.svg`
    }
 `
 
-
-
-
 const Reviews = () => {
    return (
-      <section>
+      <StyledReviews>
          <div className="siteContainer siteContainer--intro">
             <ReviewsTitle>Reviews</ReviewsTitle>
             <ReviewsGrid>
@@ -85,7 +90,7 @@ const Reviews = () => {
                </ReviewsGridItem>
             </ReviewsGrid>
          </div>
-      </section>
+      </StyledReviews>
    )
 }
 

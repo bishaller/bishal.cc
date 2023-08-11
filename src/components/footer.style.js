@@ -14,6 +14,7 @@ export const StyledFooter = styled.footer`
 export const FooterMain = styled.section`
 text-align: center;
 position: relative;
+z-index: 1;
 padding: clamp(4rem, 10vw, 9rem) 0 clamp(6rem, 12vw, 9.4rem);
 margin-bottom: clamp(4rem, 8vw, 8rem);
 background: repeating-linear-gradient(
@@ -167,7 +168,7 @@ export const FooterCopyright = styled.div`
   text-align: center;
   width: 100%;
   color: var(--dark);
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   line-height: 1.4;
   position: relative;
   z-index: 1;

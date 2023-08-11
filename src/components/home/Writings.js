@@ -3,13 +3,12 @@ import styled from "styled-components"
 import pen from "../../images/pen.webp"
 
 const StyledWritings = styled.section`
-   padding-top: clamp(3rem, 11vw, 11rem);
-   padding-bottom: clamp(3rem, 11vw, 11rem);
+   
 `
 
 const WritingsTitle = styled.h2`
    font-family: var(--serif);
-   font-size: clamp(3rem, 5vw, 5rem);
+   font-size: clamp(2.75rem, 5vw, 5rem);
    text-align: center;
    font-weight: 400;
    background: url(${pen}) no-repeat center center;
@@ -24,10 +23,10 @@ const WritingsWrap = styled.div`
 `
 
 const Article = styled.article`
-   border-bottom: 1px solid rgba(11,11,11,.1);
+   border-bottom: 1px solid rgba(11,11,11,.35);
 
    &:first-of-type {
-      border-top: 1px solid rgba(11,11,11,.1);
+      border-top: 1px solid rgba(11,11,11,.35);
    }
 `
 
@@ -72,7 +71,8 @@ const ArticleLink = styled.a`
 `
 
 const ArticleTitle = styled.h3`
-   font-family: var(--serif);
+   font-family: var(--serifLight);
+   letter-spacing: -0.5px;
    margin: 0;
    font-weight: 300;
    font-size: clamp(1.125rem, 2vw, 1.875rem);

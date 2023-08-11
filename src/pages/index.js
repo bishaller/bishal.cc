@@ -9,6 +9,7 @@ import WorkHover from "../components/home/work/workhover"
 import AboutIntro from "../components/home/About"
 import Skills from "../components/home/skills"
 import Reviews from "../components/home/review"
+import Chipleti from "../components/home/chipleti"
 import Writings from "../components/home/writings"
 
 const WorkPage = ({ children }) => {
@@ -23,6 +24,7 @@ const WorkPage = ({ children }) => {
         <AboutIntro/>
         <Skills/>
         <Reviews/>
+        <Chipleti/>
         <Writings/>
       </Layout>
     </main>

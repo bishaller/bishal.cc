@@ -63,6 +63,24 @@ const BillboardGradient = styled.span`
   }
 `
 
+const BillboardMouse = styled.div`
+  width: 28px;
+  height: 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: ease;
+  opacity: 0.75;
+  z-index: -1;
+
+  @media screen and (max-width:640px) {
+    display: none;
+  }
+`
+
 const Billboard = () => {
   useEffect(() => {
     gsap.set(".billBoard__mouse", { xPercent: -50, yPercent: -50 })
@@ -169,12 +187,12 @@ const Billboard = () => {
           </div>
         </div>
       </div>
-      <BillboardGradient className="billboard__gradient">
+      <BillboardGradient>
         <img src={headerGradient} alt="Moving background gradient" />
       </BillboardGradient>
-      <div className="billBoard__mouse"></div>
+      <BillboardMouse className="billBoard__mouse"></BillboardMouse>
     </StyledBillboard>
   )
 }
 
-export default Billboard
+export default Billboard;

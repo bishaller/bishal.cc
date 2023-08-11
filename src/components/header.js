@@ -14,6 +14,17 @@ const HeaderButton = styled.a`
   }
 `
 
+const SiteHeader = styled.header`
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+
+  @media screen and(max-width: 640px) {
+    position: absolute;
+  }
+`
+
 const HeaderButtonText = styled.span`
   display: block;
   font-size: clamp(0.75rem, 2vw, 0.875rem);
@@ -39,7 +50,7 @@ const scale = {
 
 const Header = () => {
   return (
-    <header className="siteHeader">
+    <SiteHeader>
       <nav className="siteContainer">
         <ul>
           <li>
@@ -63,7 +74,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </SiteHeader>
   )
 }
 export default Header
