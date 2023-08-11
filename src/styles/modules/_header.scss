@@ -1,53 +1,10 @@
-
-
-.siteHeader__link {
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-    text-align: center;
-    color: $c-text;
-    font: var(--headerFont);
-
-    &:hover,
-    &:focus {
-        color: $c-text;
-        background-color: rgba($c-black, 0.05);
-
-    }
-
-    .icon {
-        max-width: 29%;
-        max-height: 29%;
-    }
-
-    span {
-        display: block;
-        margin-top: 12px;
-
-        @media #{$tablet} {
-            margin-top: 8px;
-        }
-
-        @media #{$phone} {
-            margin-top: 6px;
-        }
-    }
-}
-
-[aria-current] {
+a[aria-current="page"] {
     background: transparent;
+    border-bottom: 1px solid var(--dark);
 
     &:hover,
     &:active,
     &:focus {
-        background-color: $c-brand--home;
-        color: $c-textWhite;
+        color: var(--dark);
     }
 }

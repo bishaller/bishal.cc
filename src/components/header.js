@@ -1,12 +1,8 @@
 import * as React from "react"
 import { styled } from "styled-components"
 import Plane from "./parts/accentPlane"
-// import { useState } from "react"
 import { motion } from "framer-motion"
-
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-
 
 const SiteHeader = styled.header`
   position: fixed;
@@ -43,8 +39,29 @@ const HeaderLinks = styled.ul`
   flex-wrap: wrap;
 `
 const HeaderLinkItem = styled.li`
+  line-height: 1;
+  
   a {
     text-decoration: none;
+    color: var(--dark);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: -.5px;
+    transition: ease all .25s;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      transition: ease all .25s;
+      color: var(--dark);
+      border-bottom: 1px solid var(--dark);
+    }
+  }
+
+  a.transparent {
+    border-bottom: 1px solid var(--dark);
   }
 `
 
@@ -85,9 +102,10 @@ const Header = () => {
                 duration={1}
                 to={`/`}
                 key={`/`}
-                title={`Go to Home`}
+                title={`Go to Home Page`}
+                activeClass="transparent"
               >
-                Work
+                Index
               </AniLink>
               {","}&nbsp;&nbsp;
             </HeaderLinkItem>
@@ -116,9 +134,7 @@ const Header = () => {
                 Linkedin
               </a>
             </HeaderLinkItem>
-
           </HeaderLinks>
-
           <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
             <motion.div
               variants={scale}
