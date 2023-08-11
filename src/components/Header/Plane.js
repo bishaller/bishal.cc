@@ -35,7 +35,7 @@ const scale = {
    tap: { scale: 0.9 },
 }
 
-const Plane = () => {
+const FlyingPlane = () => {
    <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
       <motion.div
          variants={scale}
@@ -55,4 +55,4 @@ const Plane = () => {
    </HeaderButton>
 }
 
-export default Plane;
+export default FlyingPlane;

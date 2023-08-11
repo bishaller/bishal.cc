@@ -41,7 +41,7 @@ const HeaderLinkItem = styled.li`
   }
 `
 
-const Nav = () => {
+const HeaderNav = () => {
   return (
     <HeaderLinks>
       <HeaderLinkItem>
@@ -53,7 +53,6 @@ const Nav = () => {
           to={`/`}
           key={`/`}
           title={`Go to Home Page`}
-          activeClass="transparent"
         >
           Index
         </AniLink>
@@ -86,4 +85,4 @@ const Nav = () => {
     </HeaderLinks>
   )
 }
-export default Nav;
+export default HeaderNav;

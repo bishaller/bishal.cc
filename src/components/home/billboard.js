@@ -5,6 +5,8 @@ import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
 import { motion } from "framer-motion"
 import styled from "styled-components"
+import FlyingPlane from "../Header/Plane"
+
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const StyledBillboard = styled.section`
@@ -110,6 +112,7 @@ const Billboard = () => {
 
   return (
     <StyledBillboard>
+      <FlyingPlane />
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">

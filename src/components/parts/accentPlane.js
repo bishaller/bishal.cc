@@ -1,5 +1,5 @@
 import * as React from "react"
-const PlaneSVG = () => (
+const Plane = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
@@ -118,4 +118,4 @@ const PlaneSVG = () => (
     </g>
   </svg>
 )
-export default PlaneSVG;
+export default Plane;
