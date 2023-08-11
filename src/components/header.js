@@ -4,7 +4,30 @@ import Plane from "./parts/accentPlane"
 // import { useState } from "react"
 import { motion } from "framer-motion"
 
-// import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+
+
+const SiteHeader = styled.header`
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+
+  @media screen and(max-width: 640px) {
+    position: absolute;
+  }
+`
+
+const NavWrap = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 30px;
+`
 
 const HeaderButton = styled.a`
   .icon {
@@ -14,14 +37,14 @@ const HeaderButton = styled.a`
   }
 `
 
-const SiteHeader = styled.header`
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 99999;
-
-  @media screen and(max-width: 640px) {
-    position: absolute;
+const HeaderLinks = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+`
+const HeaderLinkItem = styled.li`
+  a {
+    text-decoration: none;
   }
 `
 
@@ -51,29 +74,70 @@ const scale = {
 const Header = () => {
   return (
     <SiteHeader>
-      <nav className="siteContainer">
-        <ul>
-          <li>
-            <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
-              <motion.div
-                variants={scale}
-                initial="initial"
-                whileHover="animate"
-                whileTap="tap"
-                transition={{ type: "spring", stiffness: 200, damping: 13 }}
+      <div className="siteContainer">
+        <NavWrap>
+          <HeaderLinks>
+            <HeaderLinkItem>
+              <AniLink
+                cover
+                direction="left"
+                bg="var(--brand)"
+                duration={1}
+                to={`/`}
+                key={`/`}
+                title={`Go to Home`}
               >
-                <motion.span variants={text}>
-                  <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
-                </motion.span>
+                Work
+              </AniLink>
+              {","}&nbsp;&nbsp;
+            </HeaderLinkItem>
+            <HeaderLinkItem>
+              <AniLink
+                cover
+                direction="right"
+                bg="var(--brand)"
+                duration={1}
+                to={`/about/`}
+                key={`/about/`}
+                title={`Know more about Bishal`}
+              >
+                About
+              </AniLink>
+              {","}&nbsp;&nbsp;
+            </HeaderLinkItem>
 
-                <span className="icon">
-                  <Plane />
-                </span>
-              </motion.div>
-            </HeaderButton>
-          </li>
-        </ul>
-      </nav>
+            <HeaderLinkItem>
+              <a
+                title="Connect on Linkedin"
+                target="_blank"
+                rel="noreferrer"
+                href="https://linkedin.com/in/bishaller/"
+              >
+                Linkedin
+              </a>
+            </HeaderLinkItem>
+
+          </HeaderLinks>
+
+          <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
+            <motion.div
+              variants={scale}
+              initial="initial"
+              whileHover="animate"
+              whileTap="tap"
+              transition={{ type: "spring", stiffness: 200, damping: 13 }}
+            >
+              <motion.span variants={text}>
+                <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
+              </motion.span>
+
+              <span className="icon">
+                <Plane />
+              </span>
+            </motion.div>
+          </HeaderButton>
+        </NavWrap>
+      </div>
     </SiteHeader>
   )
 }

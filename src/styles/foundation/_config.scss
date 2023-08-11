@@ -13,7 +13,6 @@
     //Project Colors
     --c-text: #111111;
     --c-textWhite: #ffffff;
-    --c-brandHome: rgb(255, 2, 0);
 
     --c-link: var(--c-brandHome);
 
@@ -56,14 +55,14 @@ $cb-border-focus: #ccc;
 $cb-border-input: #ccc;
 
 // Project Colors
-$c-brand: #006AAB;
+$c-brand: #E11414;
 $c-primary: #F8E71C;
 $c-secondary: #001421;
 
 // Links
-$c-link:  #1983D4;
-$c-linkHover: var(--c-brandHome);
-$c-linkVisited: lighten($c-link, 20%);
+$c-link:  var(--brand);
+$c-linkHover: var(--brand);
+$c-linkVisited: lighten(#E11414, 20%);
 
 // Forms
 $cf-input: #ffffff;

@@ -1,46 +1,4 @@
-.siteHeader {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 99999;
 
-    @media #{$phone} {
-        position: absolute;
-    }
-
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        li {
-            margin-top: 30px;
-            margin-right: 10px;
-            a {
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-.siteHeader__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    max-width: 420px;
-    margin: 0 auto;
-
-    li {
-        width: 8.3vw;
-        height: 8.3vw;
-        min-width: 80px;
-        max-width: 140px;
-        max-height: 140px;
-        min-height: 80px;
-    }
-}
 
 .siteHeader__link {
     text-decoration: none;
