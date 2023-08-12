@@ -12,21 +12,13 @@ const AboutPage = () => {
       // Throws if it can't get a WebGL 2.0 context. For example, if the
       const gradient = new WaveGradient(canvasElement, {
         colors: [
-          // "#FFFFFF",
-          // "#C72F4F",
-          // "#E11414",
-          // "#FFFFFF",
-          // "#97FFC4",
-          // "#FFFFFF",
-          // "#F8A5A5", "#E11414", "#FFE5DB", "#FFDFC3", "F8A5A5"
-          "#f1e1c2", "#E11414", "#f1e1c2"
-          // "#E11414", "#FFA5EA", "#F8DFD8", "#45DF88"
+          "fafafa", "#FF5454"
         ],
-        fps: 30,
-        seed: 100,
-        speed: 1.25,
-        amplitude: 600,
-        density: [0.06, 0.6],
+        fps: 24,
+        seed: 0,
+        speed: 2,
+        amplitude: 440,
+        density: [0.16, 1],
       })
     } catch (e) {
       console.error(e)
@@ -182,4 +174,4 @@ const AboutPage = () => {
     </main>
   )
 }
-export default AboutPage
+export default AboutPage;
