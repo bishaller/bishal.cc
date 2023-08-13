@@ -113,7 +113,7 @@
 .billboard__intro {
   width: 100%;
   margin-left: 1.4vw;
-  margin-top: -30px;
+  margin-top: -15px;
   @media #{$tablet} {
     margin-top: -15px;
   }
@@ -128,7 +128,7 @@
   text-align: left;
   font-family: var(--sans);
   font-size: clamp(1rem, 1.43vw, 1.125rem);
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: 0.1px;
 
   p {

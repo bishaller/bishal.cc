@@ -32,7 +32,6 @@ const WorkDWT = () => {
       bgColor={`var(--white)`}
       link={`/dwt/`}
     >
-
       <motion.img
         key={LeftTopImage}
         src={LeftTopImage}

@@ -13,22 +13,42 @@ color: var(--dark);
 --wt: 400;
 --fsz: clamp(3rem, 7vw, 7.5rem);
 --lh: 0.84;
---font: var(--wt) var(--fsz) / var(--lh) var(--serif);
+--font: var(--wt) var(--fsz) / var(--lh) var(--serifLight);
 font: var(--font);
 text-align: left;
 letter-spacing: -.1vw;
 margin-bottom: 0;
 
-@media #{$phone} {
-  letter-spacing: -3px;
-}
-
-span {
-  font-size: clamp(2.5rem, 6.5vw, 4.375rem);
-}
+  @media #{$phone} {
+    letter-spacing: -3px;
+  }
 `
 
-const CaseBanner = ({ title, titleContent }) => {
+const BannerImage = {
+  width: "80vw",
+  height: "0",
+  marginTop: "-2%",
+  zIndex: "-1",
+  position: "relative",
+}
+
+const BannerIntroWrap = styled.div`
+  width: 80vw;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+`
+
+const BannerIntro = styled.p`
+  max-width: 300px;
+  width: 100%;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.35;
+`
+
+const CaseBanner = ({ title, titleContent, intro }) => {
   function createHTML(props) {
     return { __html: props }
   }
@@ -44,18 +64,24 @@ const CaseBanner = ({ title, titleContent }) => {
       <motion.img
         src={sampleImage}
         key={sampleImage}
-        initial={{ x: -100, y: -100, opacity: 0 }}
-        animate={{ x: "0", y: "0", opacity: 1 }}
-        exit={{ x: -100, y: -100, opacity: 0 }}
+        style={BannerImage}
+        initial={{ height: "0" }}
+        animate={{ height: "auto" }}
+        exit={{ height: "0" }}
         transition={{
           type: "spring",
           damping: 20,
           stiffness: 100,
-          restDelta: 0.005
+          restDelta: 0.005,
+          delay: 2,
         }}
       >
-
       </motion.img>
+      <BannerIntroWrap>
+        <BannerIntro
+          dangerouslySetInnerHTML={createHTML(intro)}
+        />
+      </BannerIntroWrap>
     </Banner>
   )
 }

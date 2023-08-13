@@ -10,9 +10,8 @@ const OverviewTitle = styled.h2`
   text-align: center;
   position: relative;
   z-index: 1;
-  font-style: italic;
   font-size: clamp(2.4rem, 3vw, 3.75rem);
-  font-family: var(--ff-bodyItalic);
+  font-family: var(--serifLight);
   font-weight: 300;
   line-height: 1;
 `
@@ -29,7 +28,7 @@ const OverviewTitleInner = styled.span`
     display: block;
     top: 50%;
     left: 50%;
-    background-color: var(--c-brandHome);
+    background-color: var(--brand);
     height: 2px;
     width: calc(100% + 80px);
     transform: translate(-50%, -50%);
@@ -63,7 +62,6 @@ const CaseOverview = ({ title, contentLarge, content }) => {
             dangerouslySetInnerHTML={createHTML(title)}
           />
         </OverviewTitle>
-
         <OverviewLarge dangerouslySetInnerHTML={createHTML(contentLarge)} />
         <OverviewNormal dangerouslySetInnerHTML={createHTML(content)} />
       </div>
