@@ -48,6 +48,7 @@ const WorkTitle = styled.h2`
   z-index: 1;
   border-radius: 100px;
   background: var(--white);
+  margin-left: -18px;
 `
 
 const workIcon = {

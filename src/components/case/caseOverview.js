@@ -36,17 +36,17 @@ const OverviewTitle = styled.h2`
   }
 `
 
-const OverviewLarge = styled.p`
-  font-size: clamp(1.5rem, 3vw, 2.375rem);
-  line-height: 1.47;
-  letter-spacing: -1px;
-  font-family: var(--sansLight);
-  margin-bottom: 30px;
-`
+// const OverviewLarge = styled.p`
+//   font-size: clamp(1.5rem, 3vw, 2.375rem);
+//   line-height: 1.47;
+//   letter-spacing: -1px;
+//   font-family: var(--sansLight);
+//   margin-bottom: 30px;
+// `
 
-const OverviewNormal = styled.p`
-  font-size: clamp(1.125rem, 2.5vw, 1.32rem);
-`
+// const OverviewNormal = styled.p`
+//   font-size: clamp(1.125rem, 2.5vw, 1.32rem);
+// `
 
 const Snippet = styled.div`
   display: flex;
@@ -119,9 +119,8 @@ const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Com
             })}
           </SnippetList>
         </Snippet>
-        {/* <OverviewLarge dangerouslySetInnerHTML={createHTML(contentLarge)} />
-        <OverviewNormal dangerouslySetInnerHTML={createHTML(content)} /> */}
       </div>
+      {Image && (
       <div className="siteContainer siteContainer--hr">
             <motion.img
               src={Image}
@@ -138,9 +137,9 @@ const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Com
                 delay: 2,
               }}
             >
-
             </motion.img>
       </div>
+      )}
     </Overview>
   )
 }

@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 const Banner = styled.div`
-  padding-top: clamp(12rem, 14vw, 15rem);
-  margin-bottom: clamp(3rem, 12vw, 7.5rem);
+  padding-top: clamp(12rem, 17vw, 15rem);
+  margin-bottom: clamp(5rem, 12vw, 10rem);
 `
 
 const BannerTitle = styled.h1`
@@ -46,6 +46,11 @@ const BannerIntro = styled.p`
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   line-height: 1.35;
   letter-spacing: -.2px;
+
+  @media screen and (max-width: 540px) {
+    max-width: 240px;
+    letter-spacing: 0px;
+  }
 `
 
 const CaseBanner = ({ title, titleContent, intro, children, image }) => {
