@@ -8,11 +8,13 @@ import { motion } from "framer-motion"
 import CaseBanner from "../components/case/caseBanner"
 import CaseOverview from "../components/case/caseOverview"
 import CaseGeneric from "../components/case/caseGeneric"
-import CaseVideo from "../components/case/caseVideo"
+import CaseImage from "../components/case/CaseImage"
+// import CaseVideo from "../components/case/caseVideo"
 
 // Images
-import tripBuilder from "../images/dwt/dwt_trip_builder.png"
-import sampleImage from "../images/dwt/dwtBanner.webp"
+import bannerImage from "../images/dwt/dwtBanner.webp"
+import overviewImage from "../images/dwt/dwtOverview.webp"
+import largeImage1 from "../images/dwt/dwtLargeOne.webp"
 
 const Dwt = () => {
   return (
@@ -27,12 +29,12 @@ const Dwt = () => {
             title={`Discovery World`}
             titleContent={`Discovery <br> World`}
             intro={`Defining the travel experience from the ground up for three distinct users: travelers, agents and sherpas.`}
-            image={sampleImage}
+            image={bannerImage}
           >
           </CaseBanner>
           <CaseOverview
             Title={`Overview`}
-            Image={sampleImage}
+            Image={overviewImage}
             contentLarge={`Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their various interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.`}
             content={`Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.`}
             Role={[
@@ -97,25 +99,14 @@ const Dwt = () => {
             Title={`Redefining travel experience for three distinct users`}
             LargeContent={`<p>Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.</p>`}
             Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
-            Image={sampleImage}
+          />
+
+          <CaseImage
+            LargeImage={largeImage1}
           />
 
 
-
-          <CaseGeneric
-            title={`A custom trip builder.`}
-            content={`<p>This dynamic form lets the user customize the trips based on their own need and specific preference. Especially, this eliminates the back-and-forth manual communication that the crew would do with the user over email.</p>`}
-          />
-
-          <CaseGeneric
-            title={`User management for agents and groups of users.`}
-            content={`
-              <p>Most of the trips run by the discovery world trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package. </p>
-              <p>To help users smoothen their journey with their companions, I designed this user management system where one user could book the trip for their group and invite all of their friends to the portal. And that goes the same for the travel agents. The travel agents can book a trip and onboard all their travelers.</p>
-              <p>Why do we need to onboard the users on the system?</p>
-            `}
-          />
-          <figure
+          {/*  <figure
             className="caseImage caseImage--medium"
             style={{ marginTop: "-30px" }}
           >
@@ -163,13 +154,13 @@ const Dwt = () => {
             >
 
             </motion.img>
-          </figure>
+            </figure>
 
           <CaseVideo
             videoID={`833883367`}
             videoImage={tripBuilder}
             videoAlt="somethting"
-          />
+          /> */}
         </article>
       </Layout>
     </main>

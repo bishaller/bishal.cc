@@ -6,34 +6,28 @@ const Generic = styled.div`
   margin-bottom: clamp(4rem, 7vw, 5rem);
 `
 const GenericTitle = styled.h2`
-  font-size: clamp(2rem, 3.5vw, 3.75rem);
+  font-size: clamp(2.5rem, 4.5vw, 4.375rem);
   font-weight: 400;
-  letter-spacing: -3px;
-
-  @media screen and (max-width: 1040px) {
-    letter-spacing: -2px;
-  }
-
-  @media screen and (max-width: 640px) {
-    letter-spacing: -1.5px;
-    margin-bottom: 10px;
-  }
-`
-
-const GenericContent = styled.div`
-  font-size: clamp(1.125rem, 2.5vw, 1.32rem);
+  font-family: var(--serifLight);
+  letter-spacing: -1.4px;
+  line-height: 1;
+  max-width: 620px;
 `
 
 const GenericLargeContent = styled.div`
-  font-size: clamp(1.5rem, 3vw, 2.375rem);
-  line-height: 1.47;
-  letter-spacing: -1px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.32;
+  letter-spacing: -.2px;
   font-family: var(--sansLight);
   margin-bottom: 30px;
 
   @media screen and (max-width: 640px) {
     letter-spacing: -0.5px;
   }
+`
+
+const GenericContent = styled.div`
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 `
 
 const GenericImage = {

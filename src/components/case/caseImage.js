@@ -1,18 +1,17 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 
-const StyledCaseImage = {
+const ImageContainer = {
    width: "100%",
    height: "auto",
 }
 
-const CaseImage = ({ Image }) => {
+const CaseImage = ({ LargeImage, Children }) => {
    return (
-      <ImageContainer>
          <motion.img
-            src={Image}
-            key={Image}
-            style={StyledCaseImage}
+            src={LargeImage}
+            key={LargeImage}
+            style={ImageContainer}
             initial={{ width: "0", opacity: 0, }}
             animate={{ width: "100%", opacity: 1 }}
             exit={{ height: "0", opacity: 0 }}
@@ -25,6 +24,7 @@ const CaseImage = ({ Image }) => {
             }}
          >
          </motion.img>
-      </ImageContainer>
    )
 }
+
+export default CaseImage

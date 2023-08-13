@@ -82,8 +82,6 @@ const Header = () => {
             </motion.div>
           </HeaderButton>
         </SiteHeaderWrap>
-
-
       </div>
     </SiteHeader>
   )
