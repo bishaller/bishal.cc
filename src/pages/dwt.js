@@ -1,22 +1,24 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { motion } from "framer-motion"
 import CaseBanner from "../components/case/caseBanner"
 import CaseOverview from "../components/case/caseOverview"
 import CaseSnippet from "../components/case/caseSnippet"
 import CaseGeneric from "../components/case/caseGeneric"
 import tripBuilder from "../images/dwt/dwt_trip_builder.png"
-import { motion } from "framer-motion"
+import sampleImage from "../images/dwt/dwtBanner.webp"
 
 // import VideoPlayer from "react-video-js-player"
 import CaseVideo from "../components/case/caseVideo"
+
 
 const Dwt = () => {
   return (
     <main>
       <Seo
         title="Discovery World Trekking UX Case Study | Bishal Mishra"
-        description="UX Case Study for Discovwery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
+        description="UX Case Study for Discovery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
       />
       <Layout >
         <article className="case">
@@ -24,7 +26,9 @@ const Dwt = () => {
             title={`Discovery World`}
             titleContent={`Discovery <br> World`}
             intro={`Defining the travel experience from the ground up for three distinct users: travelers, agents and sherpas.`}
-          />
+            image={sampleImage}
+          >
+          </CaseBanner>
 
           <CaseOverview
             title={`Overview`}

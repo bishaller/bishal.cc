@@ -1,10 +1,9 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import sampleImage from "../../images/dwt/dwtBanner.webp"
 
 const Banner = styled.div`
-  padding: clamp(8rem, 14vw, 15rem) 0 clamp(6rem, 14vw, 13rem);
+  padding-top: clamp(8rem, 14vw, 15rem);
   margin-bottom: clamp(5rem, 12vw, 7.5rem);
 `
 
@@ -33,7 +32,7 @@ const BannerImage = {
 }
 
 const BannerIntroWrap = styled.div`
-  width: 80vw;
+  max-width: 80vw;
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -48,7 +47,7 @@ const BannerIntro = styled.p`
   line-height: 1.35;
 `
 
-const CaseBanner = ({ title, titleContent, intro }) => {
+const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   function createHTML(props) {
     return { __html: props }
   }
@@ -62,8 +61,8 @@ const CaseBanner = ({ title, titleContent, intro }) => {
         />
       </div>
       <motion.img
-        src={sampleImage}
-        key={sampleImage}
+        src={image}
+        key={image}
         style={BannerImage}
         initial={{ height: "0" }}
         animate={{ height: "auto" }}
@@ -77,6 +76,7 @@ const CaseBanner = ({ title, titleContent, intro }) => {
         }}
       >
       </motion.img>
+      {children}
       <BannerIntroWrap>
         <BannerIntro
           dangerouslySetInnerHTML={createHTML(intro)}
