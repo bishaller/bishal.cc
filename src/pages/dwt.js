@@ -1,17 +1,19 @@
+// Defaults
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { motion } from "framer-motion"
+
+// Modules
 import CaseBanner from "../components/case/caseBanner"
 import CaseOverview from "../components/case/caseOverview"
 import CaseSnippet from "../components/case/caseSnippet"
 import CaseGeneric from "../components/case/caseGeneric"
-import tripBuilder from "../images/dwt/dwt_trip_builder.png"
-import sampleImage from "../images/dwt/dwtBanner.webp"
-
-// import VideoPlayer from "react-video-js-player"
 import CaseVideo from "../components/case/caseVideo"
 
+// Images
+import tripBuilder from "../images/dwt/dwt_trip_builder.png"
+import sampleImage from "../images/dwt/dwtBanner.webp"
 
 const Dwt = () => {
   return (

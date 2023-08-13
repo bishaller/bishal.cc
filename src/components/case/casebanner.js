@@ -18,7 +18,7 @@ text-align: left;
 letter-spacing: -.1vw;
 margin-bottom: 0;
 
-  @media #{$phone} {
+  @media screen and (max-width: 640px) {
     letter-spacing: -3px;
   }
 `
@@ -43,8 +43,9 @@ const BannerIntroWrap = styled.div`
 const BannerIntro = styled.p`
   max-width: 300px;
   width: 100%;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   line-height: 1.35;
+  letter-spacing: -.2px;
 `
 
 const CaseBanner = ({ title, titleContent, intro, children, image }) => {
