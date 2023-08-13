@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const Generic = styled.div`
   margin-bottom: clamp(4rem, 7vw, 5rem);
@@ -35,7 +36,11 @@ const GenericLargeContent = styled.div`
   }
 `
 
-const CaseGeneric = ({ title, content, largeContent, image, video }) => {
+const GenericImage = {
+  width: "100%",
+}
+
+const CaseGeneric = ({ Title, Content, LargeContent, Image, Children }) => {
   function createHTML(props) {
     return { __html: props }
   }
@@ -44,14 +49,31 @@ const CaseGeneric = ({ title, content, largeContent, image, video }) => {
     <Generic className="caseGeneric">
       <div className="siteContainer siteContainer--small">
         <GenericTitle
-          title={title}
-          dangerouslySetInnerHTML={createHTML(title)}
+          Title={Title}
+          dangerouslySetInnerHTML={createHTML(Title)}
         />
-        <GenericContent dangerouslySetInnerHTML={createHTML(content)} />
-        <GenericLargeContent dangerouslySetInnerHTML={createHTML(largeContent)}
-        />
+        <GenericLargeContent dangerouslySetInnerHTML={createHTML(LargeContent)} />
+        <GenericContent dangerouslySetInnerHTML={createHTML(Content)} />
       </div>
-      
+      <div className="siteContainer siteContainer--hr">
+        <motion.img
+          src={Image}
+          key={Image}
+          style={GenericImage}
+          initial={{ height: "0" }}
+          animate={{ height: "auto" }}
+          exit={{ height: "0" }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 100,
+            restDelta: 0.005,
+            delay: 2,
+          }}
+        >
+        </motion.img>
+      </div>
+      {Children}
     </Generic>
   )
 }

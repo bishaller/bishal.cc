@@ -3,20 +3,20 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 const Banner = styled.div`
-  padding-top: clamp(8rem, 14vw, 15rem);
-  margin-bottom: clamp(5rem, 12vw, 7.5rem);
+  padding-top: clamp(12rem, 14vw, 15rem);
+  margin-bottom: clamp(3rem, 12vw, 7.5rem);
 `
 
 const BannerTitle = styled.h1`
-color: var(--dark);
---wt: 400;
---fsz: clamp(3rem, 7vw, 7.5rem);
---lh: 0.84;
---font: var(--wt) var(--fsz) / var(--lh) var(--serifLight);
-font: var(--font);
-text-align: left;
-letter-spacing: -.1vw;
-margin-bottom: 0;
+  color: var(--dark);
+  --wt: 400;
+  --fsz: clamp(3.5rem, 9vw, 8.5rem);
+  --lh: 0.84;
+  --font: var(--wt) var(--fsz) / var(--lh) var(--serifLight);
+  font: var(--font);
+  text-align: left;
+  letter-spacing: -.1vw;
+  margin-bottom: 0;
 
   @media screen and (max-width: 640px) {
     letter-spacing: -3px;
