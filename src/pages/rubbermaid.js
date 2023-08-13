@@ -217,7 +217,7 @@ const Rubbermaid = () => {
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">
-                  🚀 The Product Track Forward
+                  🚀 The Product Track Forward
                 </h2>
                 <p>
                   To make this product successful, card swiping should use
