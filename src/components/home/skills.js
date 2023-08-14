@@ -1,8 +1,8 @@
 import * as React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
-const StyledSkills = styled.div`
-`
 const SkillsGrid = styled.div`
    display: flex;
    flex-wrap: wrap;
@@ -51,20 +51,23 @@ const Divider = styled.hr`
 
 const Skills = () => {
    return (
-      <StyledSkills>
+      <AnimatedSection>
          <div className="siteContainer siteContainer--intro">
             <SkillsGrid>
                <SkillsGridItem>
-                  <SkillsTitle>Design Consulting</SkillsTitle>
+                  <motion.div variants={childVariants}>
+                     <SkillsTitle>Design Consulting</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>Strategy</SkillsListItem>
                         <SkillsListItem>Design Audit</SkillsListItem>
                         <SkillsListItem>Team Lead</SkillsListItem>
                         <SkillsListItem>Mentorship</SkillsListItem>
                      </SkillsList>
+                  </motion.div>
                </SkillsGridItem>
                <SkillsGridItem>
-                  <SkillsTitle>Product Design</SkillsTitle>
+                  <motion.div variants={childVariants}>
+                     <SkillsTitle>Product Design</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>Market Research</SkillsListItem>
                         <SkillsListItem>User Research</SkillsListItem>
@@ -74,9 +77,11 @@ const Skills = () => {
                         <SkillsListItem>Prototyping/Pretotyping</SkillsListItem>
                         <SkillsListItem>Testing</SkillsListItem>
                      </SkillsList>
+                  </motion.div>
                </SkillsGridItem>
                <SkillsGridItem>
-                  <SkillsTitle>Development</SkillsTitle>
+                  <motion.div variants={childVariants}>
+                     <SkillsTitle>Development</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>HTML</SkillsListItem>
                         <SkillsListItem>CSS</SkillsListItem>
@@ -86,14 +91,14 @@ const Skills = () => {
                         <SkillsListItem>React JS / Next JS</SkillsListItem>
                         <SkillsListItem>Python </SkillsListItem>
                      </SkillsList>
+                  </motion.div>
                </SkillsGridItem>
-
-         </SkillsGrid>
+            </SkillsGrid>
          </div>
          <div className="siteContainer siteContainer--hr">
             <Divider />
          </div>
-      </StyledSkills>
+      </AnimatedSection >
    )
 
 }
