@@ -9,6 +9,26 @@ import FlyingPlane from "../Header/Plane"
 
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letterAni = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 2,
+    },
+  },
+};
+
 const StyledBillboard = styled.section`
   padding: 17vw 0 12vw;
   --wt: 400;
@@ -84,6 +104,37 @@ const BillboardMouse = styled.div`
   }
 `
 
+
+const AnimatedLetters = ({ title, disabled }) => (
+  <motion.span
+    className='row-title'
+    variants={disabled ? null : banner}
+    initial='initial'
+    animate='animate'
+    transition={{
+      delay: 5
+    }}
+  >
+    {[...title].map((letter) => (
+      <motion.span
+        className='row-letter'
+        variants={disabled ? null : letterAni}>
+        {letter}
+      </motion.span>
+    ))}
+  </motion.span>
+);
+
+const BannerRowTop = ({ title }) => {
+  return (
+    <div className={"banner-row"}>
+      <div className='row-col'>
+        <AnimatedLetters title={title} />
+      </div>
+    </div>
+  );
+};
+
 const Billboard = () => {
   useEffect(() => {
     gsap.set(".billBoard__mouse", { xPercent: -50, yPercent: -50 })
@@ -117,7 +168,9 @@ const Billboard = () => {
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">
-            I design
+            <motion.div variants={banner}>
+              <BannerRowTop title={"I" + "\u00A0" + "design"} />
+            </motion.div>
             <motion.div
               className="billboard__circle"
               initial={{}}
@@ -147,47 +200,6 @@ const Billboard = () => {
                 solutions.
               </p>
             </div>
-            {/* <AnchorLink duration="600" to="/#work" title="my work" className="buttonSpecial buttonSpecial--down">
-              View my Work
-              <span>
-                <svg className="icon icon-arrow">
-                  <use xlinkHref="#icon-arrow"></use>
-                </svg>
-              </span>
-              <span className="buttonSpecial__underline">
-                <svg className="button-stroke" viewBox="0 0 186 13">
-                  <use xlinkHref="#button-line"></use>
-                </svg>
-                <svg className="button-stroke" viewBox="0 0 196 13">
-                  <use xlinkHref="#button-line"></use>
-                </svg>
-              </span>
-            </AnchorLink> */}
-            {/* <AniLink
-              cover
-              direction="left"
-              bg="var(--c-brandHome)"
-              duration={1.25}
-              to={`/about/`}
-              key={`/about/`}
-              title={`go to about page`}
-              className="buttonSpecial"
-            >
-              About Me
-              <span>
-                <svg className="icon icon-arrow">
-                  <use xlinkHref="#icon-arrow"></use>
-                </svg>
-              </span>
-              <span className="buttonSpecial__underline">
-                <svg className="button-stroke" viewBox="0 0 186 13">
-                  <use xlinkHref="#button-line"></use>
-                </svg>
-                <svg className="button-stroke" viewBox="0 0 196 13">
-                  <use xlinkHref="#button-line"></use>
-                </svg>
-              </span>
-            </AniLink> */}
           </div>
         </div>
       </div>
@@ -219,5 +231,6 @@ const Billboard = () => {
     </StyledBillboard>
   )
 }
+
 
 export default Billboard;

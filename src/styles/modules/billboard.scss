@@ -58,7 +58,7 @@
     position: absolute;
     display: block;
     right: -6.6%;
-    bottom: -12.9%;
+    bottom: 0%;
     background-repeat: no-repeat;
     width: clamp(5rem, 8.4vw, 14rem);
     height: clamp(5rem, 8.4vw, 14rem);
@@ -78,8 +78,8 @@
     @media #{$phone} {
       width: clamp(5rem, 16vw, 14rem);
       height: clamp(5rem, 16vw, 14rem);
-      right: -12%;
-      bottom: -35%;
+      right: -11%;
+      bottom: -13%;
     }
 
     @media #{$phone-portrait} {
@@ -113,9 +113,9 @@
 .billboard__intro {
   width: 100%;
   margin-left: 1.4vw;
-  margin-top: -15px;
+  margin-top: -35px;
   @media #{$tablet} {
-    margin-top: -15px;
+    margin-top: -35px;
   }
 
   @media #{$phone} {
