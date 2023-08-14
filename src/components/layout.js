@@ -7,7 +7,6 @@ const Layout = ({ children, headerStyle }) => {
   return (
     <div className="page-wrapper" id="scroller">
       <Header headerStyle={headerStyle}/>
-      
       {children}
       <Footer/>
     </div>

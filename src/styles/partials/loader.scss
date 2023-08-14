@@ -1,87 +1,114 @@
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
 $elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $expo: cubic-bezier(1, 0.885, 0.32, 1);
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--c-white);
+  position: fixed;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: transform 0.9s $expo;
+  transition-delay: 0.6s;
+  transform-origin: bottom;
+  background: var(--dark);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    top: -75%;
+    background: var(--brand);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .wrap {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    animation: rotate 15s linear 0s infinite;
+    transition:
+      opacity 0.4s ease-in-out,
+      animation-play-state 5s ease-in-out;
+    transition-delay: 0s, 0.4s;
+    @keyframes rotate {
+      0% {
+      }
+      100% {
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+      }
+    }
+    span {
+      color: #fff;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      font-size: 12px;
+      transform-origin: 50% 40px;
+      top: -34px;
+      animation: popping 0.35s ease-in-out infinite alternate;
+      @keyframes popping {
+        to {
+          top: -24px;
+        }
+      }
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transform: rotate(#{(360 / 10) * $i}deg);
+          animation-delay: #{$i/-16}s;
+        }
+      }
+    }
+  }
+}
 
-#loader {
+.dFlex {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--c-white);
-    position: fixed;
-    box-sizing: border-box;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    transition: transform 0.9s $expo;
-    transition-delay: .6s;
-    transform-origin: bottom;
-    background: var(--dark);
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 75%;
-        top: -75%;
-        background: var(--brand);
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-    }
-    .wrap {
-        width: 10px;
-        height: 10px;
-        position: relative;
-        animation: rotate 15s linear 0s infinite;
-        transition: opacity 0.4s ease-in-out, animation-play-state 5s ease-in-out;
-        transition-delay: 0s, 0.4s;
-        @keyframes rotate {
-            0% {}
-            100% {
-                -webkit-transform: rotate(-360deg);
-                -moz-transform: rotate(-360deg);
-                transform: rotate(-360deg);
-            }
-        }
-        span {
-            color: #fff;
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            font-size: 12px;
-            transform-origin: 50% 40px;
-            top: -34px;
-            animation: popping 0.35s ease-in-out infinite alternate;
-            @keyframes popping {
-                to {
-                    top: -24px;
-                }
-            }
-            @for $i from 1 through 10 {
-                &:nth-of-type(#{$i}) {
-                    transform: rotate(#{(360 / 10) * $i}deg);
-                    animation-delay: #{$i/-16}s;
-                }
-            }
-        }
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
-body {
-    overflow: hidden;
-    height: 100%;
-    &.loaded {
-        overflow: auto;
-        height: auto;
-        pointer-events: all;
-        #loader {
-            .wrap {
-                opacity: 0;
-                animation-iteration-count: 8;
-                span {
-                    animation-play-state: paused;
-                }
-            }
-        }
-    }
+
+.line {
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: var(--brand);
+    margin-bottom: 30px;
 }
+
+// body {
+//   overflow: hidden;
+//   height: 100%;
+//   &.loaded {
+//     overflow: auto;
+//     height: auto;
+//     pointer-events: all;
+//     #loader {
+//       .wrap {
+//         opacity: 0;
+//         animation-iteration-count: 8;
+//         span {
+//           animation-play-state: paused;
+//         }
+//       }
+//     }
+//   }
+// }

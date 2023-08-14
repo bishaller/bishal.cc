@@ -30,7 +30,7 @@ const StyledBillboard = styled.section`
   }
 `
 
-const BillboardGradient = styled.span`
+const BillboardGradient = styled.div`
   user-select: none;
   pointer-events: none;
   position: absolute;
@@ -40,13 +40,14 @@ const BillboardGradient = styled.span`
   top: -165%;
   height: auto;
   filter: blur(100px) saturate(1.2);
-  animation: rotate 6s linear infinite;
-  transition: transform ease;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transition: linear all 0.3s;
-  image-rendering: -webkit-optimize-contrast;
-  z-index: 0;
+  // transition: linear all .3s;
+  // animation: rotate 6s linear infinite;
+  // transition: transform ease;
+  // -webkit-backface-visibility: hidden;
+  // -webkit-transform-style: preserve-3d;
+  // transition: linear all 0.3s;
+  // image-rendering: -webkit-optimize-contrast;
+  z-index: -999;
 
   @media screen and (max-width: 1280px) {
     left: -60%;
@@ -120,7 +121,7 @@ const Billboard = () => {
             <motion.div
               className="billboard__circle"
               initial={{}}
-              animate={{rotate: 360}}
+              animate={{ rotate: 360 }}
               transition={{
                 duration: 6,
                 ease: "linear",
@@ -190,9 +191,30 @@ const Billboard = () => {
           </div>
         </div>
       </div>
-      <BillboardGradient>
-        <img src={headerGradient} alt="Moving background gradient" />
-      </BillboardGradient>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 1,
+          delay: 1.2,
+        }}>
+        <BillboardGradient>
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+              repeatDelay: 0
+            }}
+          >
+            <img src={headerGradient} alt="Moving background gradient" />
+          </motion.div>
+        </BillboardGradient>
+      </motion.div>
       <BillboardMouse className="billBoard__mouse"></BillboardMouse>
     </StyledBillboard>
   )

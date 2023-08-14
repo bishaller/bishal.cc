@@ -47,15 +47,15 @@ const HeaderButtonText = styled.span`
 `
 
 const text = {
-   initial: { opacity: 0},
-   animate: { opacity: 1},
-   transition: { type: "spring", stiffness: 300, damping: 24 },
-  }
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { type: "spring", stiffness: 300, damping: 24 },
+}
 
 const scale = {
-   initial: { scale: 1 },
-   animate: { scale: 1.05, x: 10, y: -4 },
-   tap: { scale: 0.9 },
+  initial: { scale: 1 },
+  animate: { scale: 1.05, x: 10, y: -4 },
+  tap: { scale: 0.9 },
 }
 
 const Header = () => {
@@ -63,24 +63,45 @@ const Header = () => {
     <SiteHeader>
       <div className="siteContainer">
         <SiteHeaderWrap>
-          <HeaderNav />
-          <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
-            <motion.div
-              variants={scale}
-              initial="initial"
-              whileHover="animate"
-              whileTap="tap"
-              transition={{ type: "spring", stiffness: 200, damping: 13 }}
-            >
-              <motion.div variants={text}>
-                <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -180 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.6,
+            }}
+          >
+            <HeaderNav />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -180 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.6,
+            }}
+          >
+            <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
+              <motion.div
+                variants={scale}
+                initial="initial"
+                whileHover="animate"
+                whileTap="tap"
+                transition={{ type: "spring", stiffness: 200, damping: 13 }}
+              >
+                <motion.div variants={text}>
+                  <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
+                </motion.div>
 
-              <span className="icon">
-                <Plane />
-              </span>
-            </motion.div>
-          </HeaderButton>
+                <span className="icon">
+                  <Plane />
+                </span>
+              </motion.div>
+            </HeaderButton>
+          </motion.div>
+
         </SiteHeaderWrap>
       </div>
     </SiteHeader>

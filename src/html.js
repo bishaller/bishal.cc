@@ -29,7 +29,7 @@ const HTML = props => {
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <div key="loader" id="loader">
+        {/* <div key="loader" id="loader">
           <div className="wrap">
             <span>L</span>
             <span>O</span>
@@ -42,7 +42,7 @@ const HTML = props => {
             <span>•</span>
             <span>•</span>
           </div>
-        </div>
+        </div> */}
         <div
           key={`body`}
           id="___gatsby"
