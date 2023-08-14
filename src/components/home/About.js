@@ -1,6 +1,12 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
+
+// Import Images
+import HomeImage from "../../images/bishalMishraHomeOffice.webp"
+import BishalImage from "../../images/bishalMishraWorking.webp"
+import OfficeImage from "../../images/bishalMishraOffice.webp"
 
 const StyledAboutIntro = styled.div`
    padding-top: clamp(6rem, 12vw, 12rem);
@@ -44,7 +50,7 @@ const AboutNormal = styled.span`
   line-height: 1.3;
   letter-spacing: 0.2px;
   max-width: 400px;
-  margin-top: 12px;
+  margin-top: -12px;
   display: block;
 `
 
@@ -60,49 +66,58 @@ const ImageGridItem = {
 
 const AboutIntro = () => {
    return (
-      <StyledAboutIntro>
-         <div className="siteContainer siteContainer--intro">
-            <AboutContent>
-               <p>
-                  <AboutLarge>
-                     <strong>Working since 2015,</strong>
+      <AnimatedSection>
+         <StyledAboutIntro>
+            <div className="siteContainer siteContainer--intro">
+               <AboutContent>
+                  <p>
+                     <motion.div variants={childVariants}>
+                        <AboutLarge>
+                           <strong>Working since 2015,</strong>
+                           <br />
+                           as a Designer, Developer &
+                           <br />a Product Guy,
+                        </AboutLarge>
+                     </motion.div>
                      <br />
-                     as a Designer, Developer &
-                     <br />a Product Guy,
-                  </AboutLarge>
-                  <br />
-                  <AboutNormal>
-                     from the office & remotely,
-                     <br />as a freelancer in various markets,
-                     <br />in-house & in creative agencies.
-                  </AboutNormal>
-               </p>
-            </AboutContent>
-         </div>
+                     <motion.div variants={childVariants}>
+                        <AboutNormal>
+                           from the office & remotely,
+                           <br />as a freelancer in various markets,
+                           <br />in-house & in creative agencies.
+                        </AboutNormal>
+                     </motion.div>
+                  </p>
+               </AboutContent>
+            </div>
 
-         <div className="siteContainer siteContainer--hr">
-            <ImageGrid>
-               <StaticImage
-                  src={"../../images/bishalMishraHomeOffice.webp"}
-                  alt="Home office work setup."
-                  width={10000}
-                  style={ImageGridItem}
-               />
-               <StaticImage
-                  src={"../../images/bishalMishraWorking.webp"}
-                  alt="Work mode portrait of Bishal Mishra"
-                  width={10000}
-                  style={ImageGridItem}
-               />
-               <StaticImage
-                  src={"../../images/bishalMishraOffice.webp"}
-                  alt="Working at office."
-                  width={10000}
-                  style={ImageGridItem}
-               />
-            </ImageGrid>
-         </div>
-      </StyledAboutIntro>
+            <div className="siteContainer siteContainer--hr">
+                  <ImageGrid>
+                     <motion.img
+                        key={HomeImage}
+                        src={HomeImage}
+                        variants={childVariants}
+                        alt="Home office work setup."
+                        style={ImageGridItem}
+                     />
+                     <motion.img
+                        key={BishalImage}
+                        src={BishalImage}
+                        variants={childVariants}
+                        alt="Work mode portrait of Bishal Mishra"
+                        style={ImageGridItem}
+                     />
+                     <motion.img
+                        key={OfficeImage}
+                        src={OfficeImage}
+                        variants={childVariants}
+                        alt="Working at office."
+                        style={ImageGridItem}
+                     />
+                  </ImageGrid>
+            </div>
+         </StyledAboutIntro>
+      </AnimatedSection>
    )
 }
 

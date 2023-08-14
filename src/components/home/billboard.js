@@ -60,13 +60,6 @@ const BillboardGradient = styled.div`
   top: -165%;
   height: auto;
   filter: blur(100px) saturate(1.2);
-  // transition: linear all .3s;
-  // animation: rotate 6s linear infinite;
-  // transition: transform ease;
-  // -webkit-backface-visibility: hidden;
-  // -webkit-transform-style: preserve-3d;
-  // transition: linear all 0.3s;
-  // image-rendering: -webkit-optimize-contrast;
   z-index: -999;
 
   @media screen and (max-width: 1280px) {
@@ -204,12 +197,14 @@ const Billboard = () => {
         <div className="billboard__intro">
           <div className="billboard__bio">
             <motion.div
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                ease: "easeInOut",
-                duration: 1,
-                delay: 1.4,
+                type: "spring",
+                damping: 8,
+                stiffness: 30,
+                restDelta: 0.005,
+                delay: 1.8,
               }}>
               <div className="billboard__description">
                 <p>

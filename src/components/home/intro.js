@@ -1,8 +1,7 @@
 import * as React from "react"
+import { useRef } from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
-// import { useRef } from "react";
-// import { useInView } from "framer-motion";
+import { motion, useScroll } from "framer-motion"
 import PatternImage from "../../images/intro.webp"
 
 const IntroInner = styled.div`
@@ -94,65 +93,110 @@ const IntroNormal = styled.p`
   letter-spacing: 0.2px;
 `
 
+const childVariants = {
+  hidden: {
+    y: "50px",
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 50,
+      restDelta: 0.005
+    }
+  }
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      type: "spring",
+      damping: 20,
+      stiffness: 50,
+      restDelta: 0.005
+    }
+  }
+};
+
 const Intro = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"]
+  });
+
   return (
-    <section className="intro">
-      <div className="siteContainer siteContainer--hr">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100%"}}
-          transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 50,
-            restDelta: 0.005,
-            delay: 2,
-          }}
-        >
-          <hr />
-        </motion.div>
-      </div>
-      <div className="siteContainer siteContainer--intro">
-        <IntroInner>
-          <IntroTitle className="intro__title"><span>What do I do...</span></IntroTitle>
-          <IntroWrap className="intro__inner">
-            <IntroContent className="intro__content">
-              <IntroLarge>
-                Clutching knowledge from every aspect of{" "}
-                <strong>
-                  design, product, marketing, engineering, & business,
-                </strong>{" "}
-                I am an end-to-end designer who believes in building experiences
-                that create an impact rather than "Just Functional."
-              </IntroLarge>
-              <IntroNormal>
-                I have worked on projects as small as changing a tertiary button
-                color to designing large-scale applications requiring an
-                extensive design system. I can fit in most teams, leading and
-                bridging teams or being an individual contributor.
-              </IntroNormal>
-            </IntroContent>
-            <IntroImage className="intro__Image">
-              <motion.img
-                key={PatternImage}
-                src={PatternImage}
-                placeholder="blurred"
-                initial={{ x: -100, y: -100, opacity: 0 }}
-                animate={{ x: "0", y: "0", opacity: 1 }}
-                exit={{ x: -100, y: -100, opacity: 0 }}
-                transition={{
-                  type: "spring",
-                  damping: 20,
-                  stiffness: 100,
-                  restDelta: 0.005
-                }}
-              >
-              </motion.img>
-            </IntroImage>
-          </IntroWrap>
-        </IntroInner>
-      </div>
-    </section>
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        margin: "0px 0px -400px 0px",
+        once: true
+      }}
+      variants={containerVariants}
+      onViewportEnter={() => console.log(scrollYProgress.current)}
+    >
+      <section className="intro">
+        <div className="siteContainer siteContainer--hr">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{
+              type: "spring",
+              damping: 20,
+              stiffness: 50,
+              restDelta: 0.005,
+              delay: 2,
+            }}
+          >
+            <hr />
+          </motion.div>
+        </div>
+        <div className="siteContainer siteContainer--intro">
+          <IntroInner>
+            <motion.div variants={childVariants}>
+              <IntroTitle className="intro__title"><span>What do I do...</span></IntroTitle>
+            </motion.div>
+            <IntroWrap className="intro__inner">
+              <IntroContent className="intro__content">
+                <motion.div variants={childVariants}>
+                  <IntroLarge>
+                    Clutching knowledge from every aspect of{" "}
+                    <strong>
+                      design, product, marketing, engineering, & business,
+                    </strong>{" "}
+                    I am an end-to-end designer who believes in building experiences
+                    that create an impact rather than "Just Functional."
+                  </IntroLarge>
+                </motion.div>
+                <motion.div variants={childVariants}>
+                  <IntroNormal>
+                    I have worked on projects as small as changing a tertiary button
+                    color to designing large-scale applications requiring an
+                    extensive design system. I can fit in most teams, leading and
+                    bridging teams or being an individual contributor.
+                  </IntroNormal>
+                </motion.div>
+              </IntroContent>
+              <IntroImage className="intro__Image">
+                <motion.img
+                  variants={childVariants}
+                  key={PatternImage}
+                  src={PatternImage}
+                >
+                </motion.img>
+              </IntroImage>
+            </IntroWrap>
+          </IntroInner>
+        </div>
+      </section>
+    </motion.section>
   )
 }
 

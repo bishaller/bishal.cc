@@ -1,5 +1,5 @@
 import * as React from "react"
-import SvgSprite from "../components/parts/svg-sprite"
+import SvgSprite from "../parts/svg-sprite"
 import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 
@@ -63,7 +63,7 @@ const Footer = () => {
             rel="nofollow noreferrer"
           >
             <StaticImage
-              src={"../images/dribbble.webp"}
+              src={"../../images/dribbble.webp"}
               alt="Dribbble Icon"
               width={10000}
               style={SocialIconsImage}
@@ -79,7 +79,7 @@ const Footer = () => {
             rel="nofollow noreferrer"
           >
             <StaticImage
-              src={"../images/github.webp"}
+              src={"../../images/github.webp"}
               alt="Github Icon"
               width={10000}
               style={SocialIconsImage}
@@ -95,7 +95,7 @@ const Footer = () => {
             rel="nofollow noreferrer"
           >
             <StaticImage
-              src={"../images/instagram.webp"}
+              src={"../../images/instagram.webp"}
               alt="Github Icon"
               width={10000}
               style={SocialIconsImage}
@@ -111,7 +111,7 @@ const Footer = () => {
             rel="nofollow noreferrer"
           >
             <StaticImage
-              src={"../images/linkedin.webp"}
+              src={"../../images/linkedin.webp"}
               alt="Linkedin Icon"
               width={10000}
               style={SocialIconsImage}

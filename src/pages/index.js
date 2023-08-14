@@ -47,9 +47,7 @@ function WorkPage() {
                 <Writings />
               </Layout>
               {!loading && (
-                  <motion.div>
-                    
-                  </motion.div>
+                  <motion.div></motion.div>
               )}
             </>
           )}
