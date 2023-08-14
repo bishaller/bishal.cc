@@ -47,7 +47,6 @@ const WorkDWT = () => {
         style={LeftImage}
       >
       </motion.img>
-
       <motion.img
         key={RightBottomImage}
         src={RightBottomImage}

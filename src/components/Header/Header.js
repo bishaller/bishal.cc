@@ -67,8 +67,10 @@ const Header = () => {
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              ease: "easeInOut",
-              duration: 1,
+              type: "spring",
+              damping: 20,
+              stiffness: 50,
+              restDelta: 0.005,
               delay: 1,
             }}
           >
@@ -78,8 +80,10 @@ const Header = () => {
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              ease: "easeInOut",
-              duration: 1,
+              type: "spring",
+              damping: 20,
+              stiffness: 50,
+              restDelta: 0.005,
               delay: 1,
             }}
           >

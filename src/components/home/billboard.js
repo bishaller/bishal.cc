@@ -30,7 +30,7 @@ const letterAni = {
 };
 
 const StyledBillboard = styled.section`
-  padding: 15vw 0 12vw;
+  padding: 15vw 0 11vw;
   --wt: 400;
   --fsz: clamp(3rem, 20.8vw, 20rem);
   --lh: 0.8;
@@ -173,10 +173,10 @@ const Billboard = () => {
               animate={{ opacity: 1, y:0}}
               transition={{
                 type: "spring",
-                damping: 6,
-                stiffness: 50,
+                damping: 10,
+                stiffness: 75,
                 restDelta: 0.005,
-                delay: 1.9,
+                delay: 2,
               }}>
 
               <strong>
@@ -185,7 +185,7 @@ const Billboard = () => {
                   initial={{}}
                   animate={{ rotate: 360 }}
                   transition={{
-                    duration: 6,
+                    duration: 5,
                     ease: "linear",
                     repeat: Infinity,
                     repeatDelay: 0

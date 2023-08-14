@@ -98,7 +98,19 @@ const Intro = () => {
   return (
     <section className="intro">
       <div className="siteContainer siteContainer--hr">
-        <hr />
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "100%"}}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 50,
+            restDelta: 0.005,
+            delay: 2,
+          }}
+        >
+          <hr />
+        </motion.div>
       </div>
       <div className="siteContainer siteContainer--intro">
         <IntroInner>
