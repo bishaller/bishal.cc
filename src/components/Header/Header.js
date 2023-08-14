@@ -69,7 +69,7 @@ const Header = () => {
             transition={{
               ease: "easeInOut",
               duration: 1,
-              delay: 0.6,
+              delay: 1,
             }}
           >
             <HeaderNav />
@@ -80,7 +80,7 @@ const Header = () => {
             transition={{
               ease: "easeInOut",
               duration: 1,
-              delay: 0.6,
+              delay: 1,
             }}
           >
             <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
@@ -94,14 +94,12 @@ const Header = () => {
                 <motion.div variants={text}>
                   <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
                 </motion.div>
-
                 <span className="icon">
                   <Plane />
                 </span>
               </motion.div>
             </HeaderButton>
           </motion.div>
-
         </SiteHeaderWrap>
       </div>
     </SiteHeader>

@@ -24,13 +24,13 @@ const letterAni = {
     y: 0,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 2,
+      duration: 1.5,
     },
   },
 };
 
 const StyledBillboard = styled.section`
-  padding: 17vw 0 12vw;
+  padding: 15vw 0 12vw;
   --wt: 400;
   --fsz: clamp(3rem, 20.8vw, 20rem);
   --lh: 0.8;
@@ -111,9 +111,6 @@ const AnimatedLetters = ({ title, disabled }) => (
     variants={disabled ? null : banner}
     initial='initial'
     animate='animate'
-    transition={{
-      delay: 5
-    }}
   >
     {[...title].map((letter) => (
       <motion.span
@@ -169,37 +166,58 @@ const Billboard = () => {
         <div className="billboard__inner">
           <h1 className="billboard__title">
             <motion.div variants={banner}>
-              <BannerRowTop title={"I" + "\u00A0" + "design"} />
+              <BannerRowTop title={"I\u00A0design"} />
             </motion.div>
             <motion.div
-              className="billboard__circle"
-              initial={{}}
-              animate={{ rotate: 360 }}
+              initial={{ opacity: 0, y:100}}
+              animate={{ opacity: 1, y:0}}
               transition={{
-                duration: 6,
-                ease: "linear",
-                repeat: Infinity,
-                repeatDelay: 0
-              }}
-            >
+                type: "spring",
+                damping: 6,
+                stiffness: 50,
+                restDelta: 0.005,
+                delay: 1.9,
+              }}>
+
               <strong>
-                {" "}
-                <svg viewBox="0 0 139.85 139.85">
-                  <use xlinkHref="#circularText"></use>
-                </svg>
-                <span className="screen-reader-text">Experiences</span>
+                <motion.div
+                  className="billboard__circle"
+                  initial={{}}
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 6,
+                    ease: "linear",
+                    repeat: Infinity,
+                    repeatDelay: 0
+                  }}
+                >
+                  {" "}
+                  <svg viewBox="0 0 139.85 139.85">
+                    <use xlinkHref="#circularText"></use>
+                  </svg>
+                  <span className="screen-reader-text">Experiences</span>
+                </motion.div>
               </strong>
             </motion.div>
           </h1>
         </div>
         <div className="billboard__intro">
           <div className="billboard__bio">
-            <div className="billboard__description">
-              <p>
-                A Product Designer who turns complex problem sets into simple
-                solutions.
-              </p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                delay: 1.4,
+              }}>
+              <div className="billboard__description">
+                <p>
+                  A Product Designer who turns complex problem sets into simple
+                  solutions.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
