@@ -1,19 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
-// const line = {
-//    display: "block",
-//    width: "200px",
-//    height: "1px",
-//    backgroundColor: "var(--brand)",
-//    marginBottom: "30px",
-// }
-
 const Loader = ({ setLoading }) => {
 
    return (
-      <motion.div key="loader" >
+      <motion.div key="loader" id="loader">
          <motion.div
             onAnimationComplete={() => setLoading(false)}
             initial={{ opacity: 0 }}

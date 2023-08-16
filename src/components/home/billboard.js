@@ -1,13 +1,8 @@
 import * as React from "react"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
-import gsap from "gsap"
-import { useEffect } from "react"
 import headerGradient from "../../images/oval.svg"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import FlyingPlane from "../Header/Plane"
-
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const banner = {
   animate: {
@@ -79,23 +74,23 @@ const BillboardGradient = styled.div`
   }
 `
 
-const BillboardMouse = styled.div`
-  width: 28px;
-  height: 28px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border: 1px solid var(--dark);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: ease;
-  opacity: 0.75;
-  z-index: -1;
+// const BillboardMouse = styled.div`
+//   width: 28px;
+//   height: 28px;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   border: 1px solid var(--dark);
+//   border-radius: 50%;
+//   pointer-events: none;
+//   transition: ease;
+//   opacity: 0.75;
+//   z-index: -1;
 
-  @media screen and (max-width:640px) {
-    display: none;
-  }
-`
+//   @media screen and (max-width:640px) {
+//     display: none;
+//   }
+// `
 
 
 const AnimatedLetters = ({ title, disabled }) => (
@@ -125,32 +120,8 @@ const BannerRowTop = ({ title }) => {
   );
 };
 
+
 const Billboard = () => {
-  useEffect(() => {
-    gsap.set(".billBoard__mouse", { xPercent: -50, yPercent: -50 })
-    let ball = document.querySelector(".billBoard__mouse")
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
-    const mouse = { x: pos.x, y: pos.y }
-    const speed = 0.1
-
-    const xSet = gsap.quickSetter(ball, "x", "px")
-    const ySet = gsap.quickSetter(ball, "y", "px")
-
-    window.addEventListener("mousemove", e => {
-      mouse.x = e.x
-      mouse.y = e.y
-    })
-
-    gsap.ticker.add(() => {
-      // adjust speed for higher refresh monitors
-      const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio())
-
-      pos.x += (mouse.x - pos.x) * dt
-      pos.y += (mouse.y - pos.y) * dt
-      xSet(pos.x)
-      ySet(pos.y)
-    })
-  }, [])
 
   return (
     <StyledBillboard>
@@ -162,8 +133,8 @@ const Billboard = () => {
               <BannerRowTop title={"I\u00A0design"} />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y:100}}
-              animate={{ opacity: 1, y:0}}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 type: "spring",
                 damping: 10,
@@ -240,7 +211,6 @@ const Billboard = () => {
           </motion.div>
         </BillboardGradient>
       </motion.div>
-      <BillboardMouse className="billBoard__mouse"></BillboardMouse>
     </StyledBillboard>
   )
 }

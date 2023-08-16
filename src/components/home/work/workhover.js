@@ -1,5 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
+import AnimatedSection from "./../../AnimatedSection"
 
 // import Chipleti from "../chipleti"
 import styled from "styled-components"
@@ -11,6 +13,23 @@ import {
   WorkRubbermaid,
   WorkLovebit,
 } from "./workhoverindex"
+
+const childVariants = {
+  hidden: {
+    y: "100px",
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 30,
+      restDelta: 0.005
+    }
+  }
+};
 
 const Work = styled.section`
   position: relative;
@@ -58,7 +77,6 @@ const workIcon = {
 const WorkInner = styled.div`
   padding-bottom: clamp(3rem, 11vw, 11rem);
   position: relative;
-  // z-index: 2;
 `
 
 const WorkBG = styled.span`
@@ -70,35 +88,40 @@ const WorkBG = styled.span`
   z-index: -2;
   background-image: url("data:image/svg+xml,%0A%3Csvg height='34' viewBox='0 0 34 34' width='34' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E11414' fill-rule='evenodd'%3E%3Cpath d='m0 0h34v34h-34z' opacity='0'/%3E%3Ccircle cx='1.5' cy='1.5' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 `
+
 const WorkHover = () => {
 
   return (
-    <Work>
-      <WorkBG />
-      <WorkInner>
-        <div className="siteContainer siteContainer--medium">
-          <div className="siteContainer siteContainer--small">
-            <WorkTitle>
-              work
-              <StaticImage
-                src="../../../images/love.webp"
-                alt="workImage"
-                width={400}
-                height={400}
-                style={workIcon}
-              />
-            </WorkTitle>
+    <AnimatedSection>
+      <Work>
+        <WorkBG />
+        <WorkInner>
+          <div className="siteContainer siteContainer--medium">
+            <div className="siteContainer siteContainer--small">
+              <motion.span variants={childVariants}>
+                <WorkTitle>
+                  work
+                  <StaticImage
+                    src="../../../images/love.webp"
+                    alt="workImage"
+                    width={400}
+                    height={400}
+                    style={workIcon}
+                  />
+                </WorkTitle>
+              </motion.span>
+            </div>
+            <WorkTraqit />
+            <WorkDWT />
+            <WorkTwinsuk />
+            <WorkLovebit />
+            <WorkRubbermaid />
+            <WorkIdealaya />
           </div>
-          <WorkTraqit/>
-          <WorkDWT />
-          <WorkTwinsuk />
-          <WorkLovebit />
-          <WorkRubbermaid />
-          <WorkIdealaya />
-        </div>
-        {/* <Chipleti /> */}
-      </WorkInner>
-    </Work>
+          {/* <Chipleti /> */}
+        </WorkInner>
+      </Work>
+    </AnimatedSection>
   )
 }
 
