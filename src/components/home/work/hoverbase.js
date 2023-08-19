@@ -9,7 +9,6 @@ import {
   HoverContent,
   HoverArrow,
 } from "./hover.style"
-import { containerVariants } from "../../AnimatedSection"
 
 const workLink = {
   display: "inline-block",
@@ -87,6 +86,19 @@ const HoverText = ({
     offset: ["start end", "end end"]
   });
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+       transition: {
+          staggerChildren: 0.4,
+          type: "spring",
+          damping: 20,
+          stiffness: 50,
+          restDelta: 0.005
+       }
+    }
+ };
+
   return (
     <motion.div
       ref={ref} 
@@ -94,7 +106,7 @@ const HoverText = ({
       whileInView="visible"
       viewport={{
         margin: "0px 0px -250px 0px",
-        once: false,
+        once: true,
       }}
       exit="hidden"
       variants={containerVariants}

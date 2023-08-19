@@ -24,11 +24,7 @@ const BannerTitle = styled.h1`
 `
 
 const BannerImage = {
-  width: "80vw",
-  height: "0",
-  marginTop: "-2%",
-  zIndex: "-1",
-  position: "relative",
+  width: "100%",
 }
 
 const BannerIntroWrap = styled.div`
@@ -53,10 +49,35 @@ const BannerIntro = styled.p`
   }
 `
 
+const ImageContainer = styled.div`
+  margin-top: -2%;
+  overflow: hidden;
+  max-width: 80vw;
+  height: auto;
+  z-index: -1;
+  position: relative;
+  display: block;
+`
+
+const RevealMask = {
+  width: "0%",
+  height: "100%",
+  position: "absolute",
+  top: "0",
+  zIndex: "2",
+  left: "0",
+  bottom: "0",
+  background: "var(--brand)",
+  transformOrigin: "left"
+}
+
+
+
 const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   function createHTML(props) {
     return { __html: props }
   }
+
 
   return (
     <Banner>
@@ -66,13 +87,57 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           dangerouslySetInnerHTML={createHTML(titleContent)}
         />
       </div>
-      <motion.img
+      <ImageContainer>
+        <motion.span
+          style={RevealMask}
+          animate={{
+            width: ["0%", "100%", "0%"],
+            left: ["0%", "0%", "100%"],
+            right: ["100%", "0%", "0%"]
+          }}
+          transition={{
+            type: "easeInOut",
+            duration: 1,
+            delay: 1,
+          }}
+        >
+
+        </motion.span>
+        <motion.img
+          src={image}
+          key={image}
+          style={BannerImage}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            type: "easeInOut",
+            delay: 1.2,
+          }}
+        >
+        </motion.img>
+
+      </ImageContainer>
+
+      {/* <ImageContainer >
+        <motion.img
+          className="reveal-image"
+          src={image}
+          key={image}
+          style={BannerImage}
+          alt="Reveal Image"
+          initial={{ opacity: 0, y: 100 }}
+          animate={controls}
+        />
+      </ImageContainer> */}
+
+
+      {/* <motion.img
         src={image}
         key={image}
         style={BannerImage}
         initial={{ width: "0" }}
         animate={{ width: "80vw" }}
-        exit={{ height: "0" }}
+        exit={{ height: "auto" }}
         transition={{
           // type: "spring",
           // damping: 20,
@@ -84,7 +149,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           delay: 0.5,
         }}
       >
-      </motion.img>
+      </motion.img> */}
       {children}
       <BannerIntroWrap>
         <BannerIntro
