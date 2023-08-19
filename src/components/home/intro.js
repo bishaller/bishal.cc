@@ -3,6 +3,7 @@ import { useRef } from "react"
 import styled from "styled-components"
 import { motion, useScroll } from "framer-motion"
 import PatternImage from "../../images/intro.webp"
+import { childVariants } from "../AnimatedSection"
 
 const IntroInner = styled.div`
   padding-top: clamp(3rem, 11vw, 11rem);
@@ -93,22 +94,22 @@ const IntroNormal = styled.p`
   letter-spacing: 0.2px;
 `
 
-const childVariants = {
-  hidden: {
-    y: "50px",
-    opacity: 0
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      damping: 20,
-      stiffness: 50,
-      restDelta: 0.005
-    }
-  }
-};
+// const childVariants = {
+//   hidden: {
+//     y: "50px",
+//     opacity: 0
+//   },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       type: "spring",
+//       damping: 20,
+//       stiffness: 50,
+//       restDelta: 0.005
+//     }
+//   }
+// };
 
 const containerVariants = {
   hidden: {},

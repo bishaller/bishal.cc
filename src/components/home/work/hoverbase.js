@@ -1,15 +1,15 @@
 import React from "react"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useRef } from "react"
+import { motion, useScroll, AnimatePresence } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {
-  Hover,
   HoverTitle,
   HoverTitleInner,
   HoverSubTitle,
   HoverContent,
   HoverArrow,
 } from "./hover.style"
+import { containerVariants } from "../../AnimatedSection"
 
 const workLink = {
   display: "inline-block",
@@ -29,6 +29,34 @@ const workLink = {
     }
   }
 }
+
+export const childVariants = {
+  hidden: {
+    x: "60px",
+    y: "200px",
+    rotate: "15deg",
+    opacity: 0,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 50,
+      restDelta: 0.005
+    }
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    rotate: "0",
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 50,
+      restDelta: 0.005
+    }
+  }
+};
+
 
 const HoverText = ({
   title,
@@ -53,9 +81,27 @@ const HoverText = ({
     return { __html: props }
   }
 
+  const ref = useRef()
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"]
+  });
+
   return (
-    <Hover>
+    <motion.div
+      ref={ref} 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        margin: "0px 0px -250px 0px",
+        once: false,
+      }}
+      exit="hidden"
+      variants={containerVariants}
+      onViewportEnter={() => console.log(scrollYProgress.current)}
+    >
       <div className="siteContainer siteContainer--small">
+
         <AniLink
           cover
           direction={direction}
@@ -66,24 +112,27 @@ const HoverText = ({
           key={link}
           title={`see case study for ${title}`}
         >
+
           <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <HoverArrow
-              className={isHovering ? "hover" : ""}
-              viewBox="0 0 121 48"
-            >
-              <use xlinkHref="#workArrow"></use>
-            </HoverArrow>
-            <HoverTitleInner>
-              <span
-                dangerouslySetInnerHTML={createHTML(title)}
-                title={title}
+            <motion.span variants={childVariants} className='motion'>
+              <HoverArrow
                 className={isHovering ? "hover" : ""}
-              />
-              <HoverSubTitle
-                dangerouslySetInnerHTML={createHTML(description)}
-                className={isHovering ? "hoverSub" : ""}
-              ></HoverSubTitle>
-            </HoverTitleInner>
+                viewBox="0 0 121 48"
+              >
+                <use xlinkHref="#workArrow"></use>
+              </HoverArrow>
+              <HoverTitleInner>
+                <span
+                  dangerouslySetInnerHTML={createHTML(title)}
+                  title={title}
+                  className={isHovering ? "hover" : ""}
+                />
+                <HoverSubTitle
+                  dangerouslySetInnerHTML={createHTML(description)}
+                  className={isHovering ? "hoverSub" : ""}
+                ></HoverSubTitle>
+              </HoverTitleInner>
+            </motion.span>
           </HoverTitle>
         </AniLink>
       </div>
@@ -111,7 +160,7 @@ const HoverText = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </Hover>
+    </motion.div>
   )
 }
 export default HoverText

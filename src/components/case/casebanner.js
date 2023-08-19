@@ -70,15 +70,18 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
         src={image}
         key={image}
         style={BannerImage}
-        initial={{ height: "0" }}
-        animate={{ height: "auto" }}
+        initial={{ width: "0" }}
+        animate={{ width: "80vw" }}
         exit={{ height: "0" }}
         transition={{
-          type: "spring",
-          damping: 20,
-          stiffness: 100,
-          restDelta: 0.005,
-          delay: 2,
+          // type: "spring",
+          // damping: 20,
+          // stiffness: 100,
+          // restDelta: 0.005,
+          // delay: .5,
+          type: "easeOut",
+          duration: 0.5,
+          delay: 0.5,
         }}
       >
       </motion.img>

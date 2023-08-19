@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-export const Hover = styled.section``
 export const HoverTitle = styled.h2`
   font-family: var(--serifLight);
   font-size: clamp(3rem, 8vw, 6rem);
@@ -12,9 +11,11 @@ export const HoverTitle = styled.h2`
   margin-bottom: 0;
   position: relative;
   z-index: 1;
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
+  span.motion {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
   &:hover,
   &:focus,
   &:active {
