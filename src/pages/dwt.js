@@ -27,7 +27,7 @@ const Dwt = () => {
         <article className="case">
           <CaseBanner
             title={`Discovery World`}
-            titleContent={`Discovery <br> World`}
+            titleContent={`Discovery World`}
             intro={`Defining the travel experience from the ground up for three distinct users: travelers, agents and sherpas.`}
             image={bannerImage}
           >

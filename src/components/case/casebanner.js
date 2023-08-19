@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Banner = styled.div`
   padding-top: clamp(12rem, 17vw, 15rem);
-  margin-bottom: clamp(5rem, 12vw, 10rem);
+  margin-bottom: clamp(5rem, 14vw, 14rem);
 `
 
 const BannerTitle = styled.h1`
@@ -17,6 +17,9 @@ const BannerTitle = styled.h1`
   text-align: left;
   letter-spacing: -.1vw;
   margin-bottom: 0;
+  display: block;
+  max-width: 40vw;
+  width: 100%;
 
   @media screen and (max-width: 640px) {
     letter-spacing: -3px;
@@ -50,7 +53,7 @@ const BannerIntro = styled.p`
 `
 
 const ImageContainer = styled.div`
-  margin-top: -2%;
+  margin-top: -3%;
   overflow: hidden;
   max-width: 80vw;
   height: auto;
@@ -72,20 +75,73 @@ const RevealMask = {
 }
 
 
+const letterAni = {
+  initial: { y: 200 },
+  animate: {
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 50,
+      restDelta: 0.005,
+      duration: .5
+   }
+  },
+};
+
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+
+
+const AnimatedLetters = ({ title, disabled }) => (
+  <motion.span
+    className='row-title row-title2'
+    variants={disabled ? null : banner}
+    initial='initial'
+    animate='animate'
+  >
+    {[...title].map((letter) => (
+      <motion.span
+        className='row-letter'
+        variants={disabled ? null : letterAni}>
+        {letter}
+      </motion.span>
+    ))}
+  </motion.span>
+);
+
+const BannerRowTop = ({ title }) => {
+  return (
+    <span className="banner-row">
+      <span className='row-col2'>
+        <AnimatedLetters title={title} />
+      </span>
+    </span>
+  );
+};
+
+
 
 const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   function createHTML(props) {
     return { __html: props }
   }
 
-
   return (
     <Banner>
       <div className="siteContainer siteContainer--medium">
-        <BannerTitle
-          title={title}
-          dangerouslySetInnerHTML={createHTML(titleContent)}
-        />
+        <BannerTitle>
+          <BannerRowTop title={title}
+            dangerouslySetInnerHTML={createHTML(titleContent)}
+          />
+        </BannerTitle>
       </div>
       <ImageContainer>
         <motion.span
@@ -98,7 +154,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           transition={{
             type: "easeInOut",
             duration: 1,
-            delay: 1,
+            delay: 1.5,
           }}
         >
 
@@ -111,51 +167,30 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           animate={{ opacity: 1 }}
           transition={{
             type: "easeInOut",
-            delay: 1.2,
+            delay: 1.8,
+            duration: 1,
           }}
         >
         </motion.img>
-
       </ImageContainer>
-
-      {/* <ImageContainer >
-        <motion.img
-          className="reveal-image"
-          src={image}
-          key={image}
-          style={BannerImage}
-          alt="Reveal Image"
-          initial={{ opacity: 0, y: 100 }}
-          animate={controls}
-        />
-      </ImageContainer> */}
-
-
-      {/* <motion.img
-        src={image}
-        key={image}
-        style={BannerImage}
-        initial={{ width: "0" }}
-        animate={{ width: "80vw" }}
-        exit={{ height: "auto" }}
+      {children}
+      <motion.div
+        initial={{ y: "100px", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{
-          // type: "spring",
-          // damping: 20,
-          // stiffness: 100,
-          // restDelta: 0.005,
-          // delay: .5,
-          type: "easeOut",
-          duration: 0.5,
-          delay: 0.5,
+          type: "spring",
+          damping: 20,
+          stiffness: 50,
+          restDelta: 0.005,
+          delay: 2,
         }}
       >
-      </motion.img> */}
-      {children}
-      <BannerIntroWrap>
-        <BannerIntro
-          dangerouslySetInnerHTML={createHTML(intro)}
-        />
-      </BannerIntroWrap>
+        <BannerIntroWrap>
+          <BannerIntro
+            dangerouslySetInnerHTML={createHTML(intro)}
+          />
+        </BannerIntroWrap>
+      </motion.div>
     </Banner>
   )
 }

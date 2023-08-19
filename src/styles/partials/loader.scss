@@ -1,10 +1,17 @@
 .banner-row {
   overflow: hidden;
+  display: block;
   .row-title,
   .row-letter {
     position: relative;
     display: inline-block;
     white-space: nowrap;
+  }
+  .row-title2 {
+    white-space: break-spaces;
+  }
+  .row-col2 {
+    line-height: 0.84;
   }
   .row-col {
     line-height: 1.05;
