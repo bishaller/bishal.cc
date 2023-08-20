@@ -31,9 +31,9 @@ const workLink = {
 
 export const childVariants = {
   hidden: {
-    x: "60px",
+    x: "40px",
     y: "200px",
-    rotate: "15deg",
+    rotate: "10deg",
     opacity: 0,
     transition: {
       type: "spring",
@@ -87,25 +87,26 @@ const HoverText = ({
   });
 
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
-       transition: {
-          staggerChildren: 0.4,
-          type: "spring",
-          damping: 20,
-          stiffness: 50,
-          restDelta: 0.005
-       }
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        type: "spring",
+        damping: 20,
+        stiffness: 50,
+        restDelta: 0.005,
+      }
     }
- };
+  };
 
   return (
     <motion.div
-      ref={ref} 
+      ref={ref}
       initial="hidden"
       whileInView="visible"
       viewport={{
-        margin: "0px 0px -250px 0px",
+        margin: "0px 0px -200px 0px",
         once: true,
       }}
       exit="hidden"

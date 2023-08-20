@@ -1,9 +1,8 @@
 import * as React from "react"
-import { useRef } from "react"
 import styled from "styled-components"
-import { motion, useScroll } from "framer-motion"
+import { motion } from "framer-motion"
 import PatternImage from "../../images/intro.webp"
-import { childVariants } from "../AnimatedSection"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 const IntroInner = styled.div`
   padding-top: clamp(3rem, 11vw, 11rem);
@@ -36,7 +35,7 @@ const IntroImage = styled.div`
 
 const IntroTitle = styled.h2`
   font-family: var(--sansReg);
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 400;
   letter-spacing: -0.5px;
   color: rgba(var(--dark),.6);
@@ -89,115 +88,66 @@ const IntroLarge = styled.p`
 const IntroNormal = styled.p`
   max-width: 610px;
   font-family: var(--sansLight);
-  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   line-height: 1.46;
   letter-spacing: 0.2px;
 `
-
-// const childVariants = {
-//   hidden: {
-//     y: "50px",
-//     opacity: 0
-//   },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       type: "spring",
-//       damping: 20,
-//       stiffness: 50,
-//       restDelta: 0.005
-//     }
-//   }
-// };
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-      type: "spring",
-      damping: 20,
-      stiffness: 50,
-      restDelta: 0.005
-    }
-  }
-};
-
 const Intro = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"]
-  });
-
   return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{
-        margin: "0px 0px -400px 0px",
-        once: true
-      }}
-      variants={containerVariants}
-      onViewportEnter={() => console.log(scrollYProgress.current)}
-    >
-      <section className="intro">
-        <div className="siteContainer siteContainer--hr">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{
-              type: "spring",
-              damping: 20,
-              stiffness: 50,
-              restDelta: 0.005,
-              delay: 2,
-            }}
-          >
-            <hr />
+    <AnimatedSection>
+      <div className="siteContainer siteContainer--hr">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 50,
+            restDelta: 0.005,
+            delay: 2,
+          }}
+        >
+          <hr />
+        </motion.div>
+      </div>
+      <div className="siteContainer siteContainer--intro">
+        <IntroInner>
+          <motion.div variants={childVariants}>
+            <IntroTitle className="intro__title"><span>What do I do...</span></IntroTitle>
           </motion.div>
-        </div>
-        <div className="siteContainer siteContainer--intro">
-          <IntroInner>
-            <motion.div variants={childVariants}>
-              <IntroTitle className="intro__title"><span>What do I do...</span></IntroTitle>
-            </motion.div>
-            <IntroWrap className="intro__inner">
-              <IntroContent className="intro__content">
-                <motion.div variants={childVariants}>
-                  <IntroLarge>
-                    Clutching knowledge from every aspect of{" "}
-                    <strong>
-                      design, product, marketing, engineering, & business,
-                    </strong>{" "}
-                    I am an end-to-end designer who believes in building experiences
-                    that create an impact rather than "Just Functional."
-                  </IntroLarge>
-                </motion.div>
-                <motion.div variants={childVariants}>
-                  <IntroNormal>
-                    I have worked on projects as small as changing a tertiary button
-                    color to designing large-scale applications requiring an
-                    extensive design system. I can fit in most teams, leading and
-                    bridging teams or being an individual contributor.
-                  </IntroNormal>
-                </motion.div>
-              </IntroContent>
-              <IntroImage className="intro__Image">
-                <motion.img
-                  variants={childVariants}
-                  key={PatternImage}
-                  src={PatternImage}
-                >
-                </motion.img>
-              </IntroImage>
-            </IntroWrap>
-          </IntroInner>
-        </div>
-      </section>
-    </motion.section>
+          <IntroWrap className="intro__inner">
+            <IntroContent className="intro__content">
+              <motion.div variants={childVariants}>
+                <IntroLarge>
+                  Clutching knowledge from every aspect of{" "}
+                  <strong>
+                    design, product, marketing, engineering, & business,
+                  </strong>{" "}
+                  I am an end-to-end designer who believes in building experiences
+                  that create an impact rather than "Just Functional."
+                </IntroLarge>
+              </motion.div>
+              <motion.div variants={childVariants}>
+                <IntroNormal>
+                  I have worked on projects as small as changing a tertiary button
+                  color to designing large-scale applications requiring an
+                  extensive design system. I can fit in most teams, leading and
+                  bridging teams or being an individual contributor.
+                </IntroNormal>
+              </motion.div>
+            </IntroContent>
+            <IntroImage className="intro__Image">
+              <motion.img
+                variants={childVariants}
+                key={PatternImage}
+                src={PatternImage}
+              >
+              </motion.img>
+            </IntroImage>
+          </IntroWrap>
+        </IntroInner>
+      </div>
+    </AnimatedSection>
   )
 }
 

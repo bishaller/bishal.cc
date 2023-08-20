@@ -26,7 +26,7 @@ const childVariants = {
       type: "spring",
       damping: 10,
       stiffness: 30,
-      restDelta: 0.005
+      restDelta: 0.005,
     }
   }
 };
@@ -94,7 +94,9 @@ const WorkHover = () => {
   return (
     <AnimatedSection>
       <Work>
-        <WorkBG />
+        <motion.span variants={childVariants}>
+          <WorkBG />
+        </motion.span>
         <WorkInner>
           <div className="siteContainer siteContainer--medium">
             <div className="siteContainer siteContainer--small">
