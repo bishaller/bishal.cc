@@ -2,6 +2,7 @@ import * as React from "react"
 import SvgSprite from "../parts/svg-sprite"
 import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 import {
   StyledFooter,
@@ -30,31 +31,35 @@ const Footer = () => {
 
   return (
     <StyledFooter className="footer">
-      <FooterMain>
-        <div className="siteContainer siteContainer--medium">
-          <FooterTitle>Saying yes to good work.</FooterTitle>
-          <motion.span
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            style={{ display: "inline-block" }}
-            transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          >
-            <FooterButton
-              title="hello@bishal.cc"
-              href="mailto:hello@bishal.cc"
+      <AnimatedSection>
+        <FooterMain>
+          <div className="siteContainer siteContainer--medium">
+            <motion.span variants={childVariants}>
+              <FooterTitle>Saying yes to good work.</FooterTitle>
+            </motion.span>
+            <motion.span
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              style={{ display: "inline-block" }}
+              variants={childVariants}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
             >
-              hello@bishal.cc
-              <svg viewBox="0 0 51 45">
-                <use xlinkHref="#icon-mail"></use>
-              </svg>
-            </FooterButton>
-          </motion.span>
-        </div>
-      </FooterMain>
+              <FooterButton
+                title="hello@bishal.cc"
+                href="mailto:hello@bishal.cc"
+              >
+                hello@bishal.cc
+                <svg viewBox="0 0 51 45">
+                  <use xlinkHref="#icon-mail"></use>
+                </svg>
+              </FooterButton>
+            </motion.span>
+          </div>
+        </FooterMain>
+      </AnimatedSection>
       <div className="siteContainer siteContainer--medium">
         <FooterSocial>
-
           <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Instagram"
@@ -62,15 +67,18 @@ const Footer = () => {
             target="_blank"
             rel="nofollow noreferrer"
           >
-            <StaticImage
-              src={"../../images/dribbble.webp"}
-              alt="Dribbble Icon"
-              width={10000}
-              style={SocialIconsImage}
-            />
-            <strong>Dribbble</strong>
-            posting interfaces
+            <motion.span variants={childVariants}>
+              <StaticImage
+                src={"../../images/dribbble.webp"}
+                alt="Dribbble Icon"
+                width={10000}
+                style={SocialIconsImage}
+              />
+              <strong>Dribbble</strong>
+              posting interfaces
+            </motion.span>
           </SocialIcons>
+
           <SocialIcons
             className="socialIcons"
             title="Connect with Bishal on Github"
@@ -78,14 +86,17 @@ const Footer = () => {
             target="_blank"
             rel="nofollow noreferrer"
           >
-            <StaticImage
-              src={"../../images/github.webp"}
-              alt="Github Icon"
-              width={10000}
-              style={SocialIconsImage}
-            />
-            <strong>Github</strong>
-            coding sometimes
+            <motion.span variants={childVariants}>
+              <StaticImage
+                src={"../../images/github.webp"}
+                alt="Github Icon"
+                width={10000}
+                style={SocialIconsImage}
+              />
+              <strong>Github</strong>
+              coding sometimes
+            </motion.span>
+
           </SocialIcons>
           <SocialIcons
             className="socialIcons"
@@ -94,14 +105,17 @@ const Footer = () => {
             target="_blank"
             rel="nofollow noreferrer"
           >
-            <StaticImage
-              src={"../../images/instagram.webp"}
-              alt="Github Icon"
-              width={10000}
-              style={SocialIconsImage}
-            />
-            <strong>Instagram</strong>
-            let's be friends
+            <motion.span variants={childVariants}>
+              <StaticImage
+                src={"../../images/instagram.webp"}
+                alt="Github Icon"
+                width={10000}
+                style={SocialIconsImage}
+              />
+              <strong>Instagram</strong>
+              let's be friends
+            </motion.span>
+
           </SocialIcons>
           <SocialIcons
             className="socialIcons"
@@ -110,24 +124,29 @@ const Footer = () => {
             target="_blank"
             rel="nofollow noreferrer"
           >
-            <StaticImage
-              src={"../../images/linkedin.webp"}
-              alt="Linkedin Icon"
-              width={10000}
-              style={SocialIconsImage}
-            />
-            <strong>Linkedin</strong>
-            connect for work
+            <motion.span variants={childVariants}>
+              <StaticImage
+                src={"../../images/linkedin.webp"}
+                alt="Linkedin Icon"
+                width={10000}
+                style={SocialIconsImage}
+              />
+              <strong>Linkedin</strong>
+              connect for work
+            </motion.span>
+
           </SocialIcons>
         </FooterSocial>
       </div>
 
-      <FooterCopyright>
-        <p>&copy; {currentYear} Bishal Mishra.</p>
-        <p>A hand-coded website with care.</p>
-      </FooterCopyright>
+      <motion.span variants={childVariants}>
+        <FooterCopyright>
+          <p>&copy; {currentYear} Bishal Mishra.</p>
+          <p>A hand-coded website with care.</p>
+        </FooterCopyright>
+      </motion.span>
       <SvgSprite title="Svg Sprites" />
-    </StyledFooter>
+    </StyledFooter >
   )
 }
 export default Footer

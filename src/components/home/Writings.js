@@ -1,8 +1,10 @@
 import * as React from "react"
 import styled from "styled-components"
 import pen from "../../images/pen.webp"
+import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
-const StyledWritings = styled.section`
+const StyledWritings = styled.div`
    
 `
 
@@ -80,31 +82,44 @@ const ArticleTitle = styled.h3`
 
 const Writings = () => {
    return (
-      <StyledWritings>
-         <div className="siteContainer siteContainer--heading">
-            <WritingsTitle>Writings</WritingsTitle>
-            <WritingsWrap>
-               <Article>
-                  <ArticleLink href="#" title="Maximalism is taking over the web">
-                     <ArticleTitle>Maximalism is taking over the web</ArticleTitle>
-                     <p>Maximalism is taking over the web</p>
-                  </ArticleLink>
-               </Article>
-               <Article>
-                  <ArticleLink href="#" title="CSS Animation/Interaction How?">
-                     <ArticleTitle>CSS Animation/Interaction How?</ArticleTitle>
-                     <p>CSS Animation/Interaction How?</p>
-                  </ArticleLink>
-               </Article>
-               <Article>
-                  <ArticleLink href="#" title="Why do you fail as a Frontend Developer?">
-                     <ArticleTitle>Why do you fail as a Frontend Developer?</ArticleTitle>
-                     <p>This is the first article</p>
-                  </ArticleLink>
-               </Article>
-            </WritingsWrap>
-         </div>
-      </StyledWritings>
+      <AnimatedSection>
+
+         <StyledWritings>
+            <div className="siteContainer siteContainer--heading">
+               <motion.span variants={childVariants}>
+                  <WritingsTitle>Writings</WritingsTitle>
+               </motion.span>
+               <WritingsWrap>
+                  <motion.span variants={childVariants}>
+                     <Article>
+                        <ArticleLink href="#" title="Maximalism is taking over the web">
+                           <ArticleTitle>Maximalism is taking over the web</ArticleTitle>
+                           <p>Maximalism is taking over the web</p>
+                        </ArticleLink>
+                     </Article>
+                  </motion.span>
+
+                  <motion.span variants={childVariants}>
+                     <Article>
+                        <ArticleLink href="#" title="CSS Animation/Interaction How?">
+                           <ArticleTitle>CSS Animation/Interaction How?</ArticleTitle>
+                           <p>CSS Animation/Interaction How?</p>
+                        </ArticleLink>
+                     </Article>
+                  </motion.span>
+
+                  <motion.span variants={childVariants}>
+                     <Article>
+                        <ArticleLink href="#" title="Why do you fail as a Frontend Developer?">
+                           <ArticleTitle>Why do you fail as a Frontend Developer?</ArticleTitle>
+                           <p>This is the first article</p>
+                        </ArticleLink>
+                     </Article>
+                  </motion.span>
+               </WritingsWrap>
+            </div>
+         </StyledWritings>
+      </AnimatedSection>
    )
 }
 
