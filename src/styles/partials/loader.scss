@@ -17,3 +17,19 @@
     line-height: 1.05;
   }
 }
+
+
+.marquee {
+  display: flex;
+  align-items: center;
+  cursor: -webkit-grab;
+  padding: 50vh 0;
+  margin: -50vh 0;
+  z-index: 1;
+  position: relative;
+}
+
+drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
