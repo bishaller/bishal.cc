@@ -54,8 +54,12 @@ const BillboardGradient = styled.div`
   width: 100vw;
   top: -165%;
   height: auto;
-  filter: blur(100px) saturate(1.2);
   z-index: -999;
+
+  div {
+    filter: blur(100px) saturate(1.2);
+    -webkit-filter: blur(100px) saturate(1.2);
+  }
 
   @media screen and (max-width: 1280px) {
     left: -60%;

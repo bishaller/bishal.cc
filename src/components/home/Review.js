@@ -1,7 +1,9 @@
 import * as React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
-const StyledReviews = styled.section`
+const StyledReviews = styled.div`
    margin-bottom: clamp(2.5rem, 8vw, 8rem);
 `
 
@@ -70,27 +72,36 @@ const ReviewsStar = styled.svg`
 
 const Reviews = () => {
    return (
-      <StyledReviews>
-         <div className="siteContainer siteContainer--intro">
-            <ReviewsTitle>Reviews</ReviewsTitle>
-            <ReviewsGrid>
-               <ReviewsGridItem>
-                  <ReviewsStar viewBox="0 0 14 16">
-                     <use xlinkHref="#star"></use>
-                  </ReviewsStar>
-                  <p>A “Rare Gem” is the phrase that comes to me when I think about Bishal. He has unyielding drive for excellence that few people can boast of today.</p>
-                  <ReviewsCite>Pravash Karki, <span>CEO @ Last Door</span></ReviewsCite>
-               </ReviewsGridItem>
-               <ReviewsGridItem>
-                  <ReviewsStar viewBox="0 0 14 16">
-                     <use xlinkHref="#star"></use>
-                  </ReviewsStar>
-                  <p>The main thing that struck me about Bishal’s work is his commitment to go above and beyond to put forward the best possible version of the work.</p>
-                  <ReviewsCite>Kshitij Lohani, <span>Sr. Software Engineer @ Apple</span></ReviewsCite>
-               </ReviewsGridItem>
-            </ReviewsGrid>
-         </div>
-      </StyledReviews>
+      <AnimatedSection>
+         <StyledReviews>
+            <div className="siteContainer siteContainer--intro">
+               <motion.div variants={childVariants}>
+                  <ReviewsTitle>Reviews</ReviewsTitle>
+               </motion.div>
+
+               <ReviewsGrid>
+                  <ReviewsGridItem>
+                     <motion.div variants={childVariants}>
+                        <ReviewsStar viewBox="0 0 14 16">
+                           <use xlinkHref="#star"></use>
+                        </ReviewsStar>
+                        <p>A “Rare Gem” is the phrase that comes to me when I think about Bishal. He has unyielding drive for excellence that few people can boast of today.</p>
+                        <ReviewsCite>Pravash Karki, <span>CEO @ Last Door</span></ReviewsCite>
+                     </motion.div>
+                  </ReviewsGridItem>
+                  <ReviewsGridItem>
+                     <motion.div variants={childVariants}>
+                        <ReviewsStar viewBox="0 0 14 16">
+                           <use xlinkHref="#star"></use>
+                        </ReviewsStar>
+                        <p>The main thing that struck me about Bishal’s work is his commitment to go above and beyond to put forward the best possible version of the work.</p>
+                        <ReviewsCite>Kshitij Lohani, <span>Sr. Software Engineer @ Apple</span></ReviewsCite>
+                     </motion.div>
+                  </ReviewsGridItem>
+               </ReviewsGrid>
+            </div>
+         </StyledReviews>
+      </AnimatedSection>
    )
 }
 

@@ -174,7 +174,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
         </motion.img>
       </ImageContainer>
       {children}
-      <motion.div
+      <motion.span
         initial={{ y: "100px", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -190,7 +190,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
             dangerouslySetInnerHTML={createHTML(intro)}
           />
         </BannerIntroWrap>
-      </motion.div>
+      </motion.span>
     </Banner>
   )
 }
