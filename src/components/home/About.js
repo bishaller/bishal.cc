@@ -71,14 +71,14 @@ const AboutIntro = () => {
             <div className="siteContainer siteContainer--intro">
                <AboutContent>
                   <p>
-                     <motion.div variants={childVariants}>
+                     <motion.span variants={childVariants}>
                         <AboutLarge>
                            <strong>Working since 2015,</strong>
                            <br />
                            as a Designer, Developer &
                            <br />a Product Guy,
                         </AboutLarge>
-                     </motion.div>
+                     </motion.span>
                      <br />
                      <motion.div variants={childVariants}>
                         <AboutNormal>

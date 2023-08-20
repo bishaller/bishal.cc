@@ -18,7 +18,7 @@ const BannerTitle = styled.h1`
   letter-spacing: -.1vw;
   margin-bottom: 0;
   display: block;
-  max-width: 40vw;
+  max-width: 50%;
   width: 100%;
 
   @media screen and (max-width: 640px) {
@@ -100,15 +100,16 @@ const banner = {
 
 
 
-const AnimatedLetters = ({ title, disabled }) => (
+const LetterAnimated = ({ title, disabled }) => (
   <motion.span
     className='row-title row-title2'
     variants={disabled ? null : banner}
     initial='initial'
     animate='animate'
   >
-    {[...title].map((letter) => (
+    {[...title].map((letter, index) => (
       <motion.span
+        key={index}
         className='row-letter'
         variants={disabled ? null : letterAni}>
         {letter}
@@ -121,7 +122,7 @@ const BannerRowTop = ({ title }) => {
   return (
     <span className="banner-row">
       <span className='row-col2'>
-        <AnimatedLetters title={title} />
+        <LetterAnimated title={title} />
       </span>
     </span>
   );

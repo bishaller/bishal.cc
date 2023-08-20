@@ -104,8 +104,9 @@ const AnimatedLetters = ({ title, disabled }) => (
     initial='initial'
     animate='animate'
   >
-    {[...title].map((letter) => (
+    {[...title].map((letter, index) => (
       <motion.span
+        key={index}
         className='row-letter'
         variants={disabled ? null : letterAni}>
         {letter}
