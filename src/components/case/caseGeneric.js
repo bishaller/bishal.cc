@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 const Generic = styled.div`
   margin-bottom: clamp(4.5rem, 9vw, 9.375rem);
@@ -65,51 +66,61 @@ const CaseGeneric = ({ LargeTitle, Title, Content, LargeContent, Image, Children
   }
 
   return (
-    <Generic className="caseGeneric">
-      <div className="siteContainer siteContainer--small">
-        {LargeTitle && (
-          <GenericLargeTitle
-            Title={LargeTitle}
-            dangerouslySetInnerHTML={createHTML(LargeTitle)}
-          />
-        )}
-        {Title && (
-          <GenericTitle
-            Title={Title}
-            dangerouslySetInnerHTML={createHTML(Title)}
-          />
-        )}
+    <AnimatedSection>
+      <Generic className="caseGeneric">
+        <div className="siteContainer siteContainer--small">
+          {LargeTitle && (
+            <motion.div variants={childVariants}>
+              <GenericLargeTitle
+                Title={LargeTitle}
+                dangerouslySetInnerHTML={createHTML(LargeTitle)}
+              />
+            </motion.div>
+          )}
+          {Title && (
+            <motion.div variants={childVariants}>
+              <GenericTitle
+                Title={Title}
+                dangerouslySetInnerHTML={createHTML(Title)}
+              />
+            </motion.div>
+          )}
 
-        {LargeContent && (
-          <GenericLargeContent dangerouslySetInnerHTML={createHTML(LargeContent)} />
-        )}
+          {LargeContent && (
+            <motion.div variants={childVariants}>
+              <GenericLargeContent dangerouslySetInnerHTML={createHTML(LargeContent)} />
+            </motion.div>
+          )}
 
-        {Content && (
-          <GenericContent dangerouslySetInnerHTML={createHTML(Content)} />
-        )}
-      </div>
-      {Image && (
-        <div className="siteContainer siteContainer--hr">
-          <motion.img
-            src={Image}
-            key={Image}
-            style={GenericImage}
-            initial={{ height: "0" }}
-            animate={{ height: "auto" }}
-            exit={{ height: "0" }}
-            transition={{
-              type: "spring",
-              damping: 20,
-              stiffness: 100,
-              restDelta: 0.005,
-              delay: 2,
-            }}
-          >
-          </motion.img>
+          {Content && (
+            <motion.div variants={childVariants}>
+              <GenericContent dangerouslySetInnerHTML={createHTML(Content)} />
+            </motion.div>
+          )}
         </div>
-      )}
-      {Children}
-    </Generic>
+        {Image && (
+          <div className="siteContainer siteContainer--hr">
+            <motion.img
+              src={Image}
+              key={Image}
+              style={GenericImage}
+              initial={{ height: "0" }}
+              animate={{ height: "auto" }}
+              exit={{ height: "0" }}
+              transition={{
+                type: "spring",
+                damping: 20,
+                stiffness: 100,
+                restDelta: 0.005,
+                delay: 2,
+              }}
+            >
+            </motion.img>
+          </div>
+        )}
+        {Children}
+      </Generic>
+    </AnimatedSection>
   )
 }
 
