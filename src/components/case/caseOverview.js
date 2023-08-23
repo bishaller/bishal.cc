@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 const Overview = styled.section`
   margin-bottom: clamp(4.5rem, 9vw, 9.375rem);
@@ -85,44 +86,56 @@ const OverviewImage = {
   width: "100%",
 }
 
-const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Company, Image}) => {
+const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Company, Image }) => {
   function createHTML(props) {
     return { __html: props }
   }
 
   return (
-    <Overview>
-      <div className="siteContainer siteContainer--billboard">
-        <OverviewTitle
-          title={Title}
-          dangerouslySetInnerHTML={createHTML(Title)}
-        />
-        <Snippet>
-          <SnippetList>
-            {Role.map(dataItem => {
-              return <li key={dataItem.content}>{dataItem.content}</li>
-            })}
-          </SnippetList>
-          <SnippetList>
-            {Scope.map(dataItem => {
-              return <li key={dataItem.content}>{dataItem.content}</li>
-            })}
-          </SnippetList>
-          <SnippetList>
-            {Timeline.map(dataItem => {
-              return <li key={dataItem.content}>{dataItem.content}</li>
-            })}
-          </SnippetList>
-          <SnippetList>
-            {Company.map(dataItem => {
-              return <li key={dataItem.content}>{dataItem.content}</li>
-            })}
-          </SnippetList>
-        </Snippet>
-      </div>
-      {Image && (
-      <div className="siteContainer siteContainer--hr">
+    <AnimatedSection>
+      <Overview>
+        <div className="siteContainer siteContainer--billboard">
+          <motion.div variantts={childVariants}>
+            <OverviewTitle
+              title={Title}
+              dangerouslySetInnerHTML={createHTML(Title)}
+            />
+          </motion.div>
+          <Snippet>
+            <motion.div variants={childVariants}>
+              <SnippetList>
+                {Role.map(dataItem => {
+                  return <li key={dataItem.content}>{dataItem.content}</li>
+                })}
+              </SnippetList>
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <SnippetList>
+                {Scope.map(dataItem => {
+                  return <li key={dataItem.content}>{dataItem.content}</li>
+                })}
+              </SnippetList>
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <SnippetList>
+                {Timeline.map(dataItem => {
+                  return <li key={dataItem.content}>{dataItem.content}</li>
+                })}
+              </SnippetList>
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <SnippetList>
+                {Company.map(dataItem => {
+                  return <li key={dataItem.content}>{dataItem.content}</li>
+                })}
+              </SnippetList>
+            </motion.div>
+          </Snippet>
+        </div>
+        {Image && (
+          <div className="siteContainer siteContainer--hr">
             <motion.img
+              variants={childVariants}
               src={Image}
               key={Image}
               style={OverviewImage}
@@ -138,9 +151,10 @@ const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Com
               }}
             >
             </motion.img>
-      </div>
-      )}
-    </Overview>
+          </div>
+        )}
+      </Overview>
+    </AnimatedSection>
   )
 }
 
