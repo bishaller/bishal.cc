@@ -74,54 +74,55 @@ const InteractiveMarquee = () => {
    const slowDown = useRef(false);
    const isScrolling = useRef(false);
    const constraintsRef = useRef(null);
+   const timeoutRef = useRef(null);
 
    const x = useRef(0);
-   const w = useRef(window.innerWidth).current;
+   const w = useRef(typeof window !== 'undefined' ? window.innerWidth : 0).current;
    const speed = useSpring(_.speed, {
-      damping: 30,
-      stiffness: 50,
-      mass: 5
+     damping: 30,
+     stiffness: 50,
+     mass: 5
    });
    const skewX = useTransform(speed, [-w * 0.25, 0, w * 0.25], [-25, 0, 25]);
-
+ 
    const onWheel = (e) => {
-      const normalized = normalizeWheel(e);
-      x.current = normalized.pixelY * _.wheelFactor;
-
-      // Reset speed on scroll end
-      window.clearTimeout(isScrolling.current);
-      isScrolling.current = setTimeout(function () {
-         speed.set(_.speed);
-      }, 30);
+     const normalized = normalizeWheel(e);
+     x.current = normalized.pixelY * _.wheelFactor;
+ 
+     // Reset speed on scroll end
+     clearTimeout(timeoutRef.current);
+     timeoutRef.current = setTimeout(function () {
+       speed.set(_.speed);
+     }, 30);
    };
-
+ 
    const onDragStart = () => {
-      slowDown.current = true;
-      marquee.current.classList.add("drag");
-      speed.set(0);
+     slowDown.current = true;
+     marquee.current.classList.add("drag");
+     speed.set(0);
    };
-
+ 
    const onDrag = (e, info) => {
-      speed.set(_.dragFactor * -info.delta.x);
+     speed.set(_.dragFactor * -info.delta.x);
    };
-
-   const onDragEnd = (e) => {
-      slowDown.current = false;
-      marquee.current.classList.remove("drag");
-      x.current = _.speed;
+ 
+   const onDragEnd = () => {
+     slowDown.current = false;
+     marquee.current.classList.remove("drag");
+     x.current = _.speed;
    };
-
+ 
    const loop = () => {
-      if (slowDown.current || Math.abs(x.current) < _.threshold) return;
-      x.current *= 0.66;
-      if (x.current < 0) {
-         x.current = Math.min(x.current, 0);
-      } else {
-         x.current = Math.max(x.current, 0);
-      }
-      speed.set(_.speed + x.current);
+     if (slowDown.current || Math.abs(x.current) < _.threshold) return;
+     x.current *= 0.66;
+     if (x.current < 0) {
+       x.current = Math.min(x.current, 0);
+     } else {
+       x.current = Math.max(x.current, 0);
+     }
+     speed.set(_.speed + x.current);
    };
-
+ 
    useRafLoop(loop, true);
 
    return (

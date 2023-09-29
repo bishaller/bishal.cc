@@ -9,9 +9,9 @@ const WorkSampression = () => {
       description={`Ideation. Product Design.`}
       linkColor={`var(--brand)`}
       bgColor={`red`}
-      link={`/sampression/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

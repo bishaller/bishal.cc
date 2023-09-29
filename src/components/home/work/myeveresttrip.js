@@ -8,9 +8,9 @@ const WorkMyEverestTrip = () => {
       description={`Website Redesign.`}
       linkColor={`var(--brand)`}
       bgColor={`#8EDC97`}
-      link={`/my-everest-trip/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

@@ -134,10 +134,10 @@ const Billboard = () => {
       <div className="siteContainer siteContainer--billboard">
         <div className="billboard__inner">
           <h1 className="billboard__title">
-            <motion.div variants={banner}>
+            <motion.span variants={banner}>
               <BannerRowTop title={"I\u00A0design"} />
-            </motion.div>
-            <motion.div
+            </motion.span>
+            <motion.span
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -149,7 +149,7 @@ const Billboard = () => {
               }}>
 
               <strong>
-                <motion.div
+                <motion.span
                   className="billboard__circle"
                   initial={{}}
                   animate={{ rotate: 360 }}
@@ -165,9 +165,9 @@ const Billboard = () => {
                     <use xlinkHref="#circularText"></use>
                   </svg>
                   <span className="screen-reader-text">Experiences</span>
-                </motion.div>
+                </motion.span>
               </strong>
-            </motion.div>
+            </motion.span>
           </h1>
         </div>
         <div className="billboard__intro">

@@ -104,16 +104,7 @@ const CaseGeneric = ({ LargeTitle, Title, Content, LargeContent, Image, Children
               src={Image}
               key={Image}
               style={GenericImage}
-              initial={{ height: "0" }}
-              animate={{ height: "auto" }}
-              exit={{ height: "0" }}
-              transition={{
-                type: "spring",
-                damping: 20,
-                stiffness: 100,
-                restDelta: 0.005,
-                delay: 2,
-              }}
+              variants={childVariants}
             >
             </motion.img>
           </div>

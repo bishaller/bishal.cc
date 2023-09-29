@@ -5,6 +5,8 @@ import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 const StyledReviews = styled.div`
    margin-bottom: clamp(2.5rem, 8vw, 8rem);
+   position: relative;
+   z-index: 2;
 `
 
 const ReviewsTitle = styled.h2`
@@ -78,7 +80,6 @@ const Reviews = () => {
                <motion.div variants={childVariants}>
                   <ReviewsTitle>Reviews</ReviewsTitle>
                </motion.div>
-
                <ReviewsGrid>
                   <ReviewsGridItem>
                      <motion.div variants={childVariants}>

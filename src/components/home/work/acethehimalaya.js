@@ -8,9 +8,9 @@ const WorkAceTheHimalaya = () => {
       description={`Strategy. UX Design. Development.`}
       linkColor={`var(--brand)`}
       bgColor={`#8EDC97`}
-      link={`/idealaya/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

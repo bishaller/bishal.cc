@@ -8,6 +8,7 @@ import CaseBanner from "../components/case/caseBanner"
 import CaseOverview from "../components/case/caseOverview"
 import CaseGeneric from "../components/case/caseGeneric"
 import CaseImage from "../components/case/CaseImage"
+// import AnimatedSection, { childVariants} from "../components/AnimatedSection"
 // import CaseVideo from "../components/case/caseVideo"
 
 // Images
@@ -108,7 +109,7 @@ const Dwt = () => {
           <CaseGeneric
             Title={`<span>Three phases of design: </span>Rebuild from ground up, </br>– Introduce agents & user accounts – Test, re-test & elevate the product.`}
             LargeContent={`<p>I worked on redefining the information architecture, and content placement, improving the trip content strategies, and built 4 main features: a multiple-user management system, a custom trip planner, tiered payments with group discount tiers, and a live search for easy content access.</p>`}
-            Content={`<p>Kicked off the project with initial research, planned the project in phases, launched them one by one, and kept working on design tests, reviews, iteration, adding features, publishing the updates on design by rectifying the mistakes till 2022.</p>`}
+            Content={`<p>Kicked off the project with initial research, planned the project in phases, launched them one by one, and kept working on design tests, reviews, iteration, adding features, and publishing the updates on design by rectifying the mistakes till 2022.</p>`}
             Image={dwtProcess}
           />
 

@@ -120,7 +120,6 @@ const WorkHover = () => {
             <WorkRubbermaid />
             <WorkIdealaya />
           </div>
-          {/* <Chipleti /> */}
         </WorkInner>
       </Work>
     </AnimatedSection>

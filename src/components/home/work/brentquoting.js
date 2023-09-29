@@ -8,9 +8,9 @@ const WorkBrentQuoting = () => {
       description={`UX Design.`}
       linkColor={`var(--brand)`}
       bgColor={`var(--brand)`}
-      link={`/brent-quoting-system/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

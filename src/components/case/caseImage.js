@@ -1,5 +1,6 @@
 import * as React from "react"
 import { motion } from "framer-motion"
+import AnimatedSection, { childVariants } from "../AnimatedSection"
 
 const ImageContainer = {
    width: "100%",
@@ -9,22 +10,15 @@ const ImageContainer = {
 
 const CaseImage = ({ LargeImage, Children }) => {
    return (
+      <AnimatedSection>
          <motion.img
             src={LargeImage}
             key={LargeImage}
             style={ImageContainer}
-            initial={{ width: "0", opacity: 0, }}
-            animate={{ width: "100%", opacity: 1 }}
-            exit={{ height: "0", opacity: 0 }}
-            transition={{
-               type: "spring",
-               damping: 20,
-               stiffness: 100,
-               restDelta: 0.005,
-               delay: 2,
-            }}
+            variants={childVariants}
          >
          </motion.img>
+      </AnimatedSection>
    )
 }
 

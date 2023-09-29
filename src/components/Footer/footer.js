@@ -32,31 +32,33 @@ const Footer = () => {
   return (
     <StyledFooter className="footer">
       <AnimatedSection>
-        <FooterMain>
-          <div className="siteContainer siteContainer--medium">
-            <motion.span variants={childVariants}>
-              <FooterTitle>Saying yes to good work.</FooterTitle>
-            </motion.span>
-            <motion.span
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              style={{ display: "inline-block" }}
-              variants={childVariants}
-              transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            >
-              <FooterButton
-                title="hello@bishal.cc"
-                href="mailto:hello@bishal.cc"
+        <motion.div variants={childVariants}>
+          <FooterMain>
+            <div className="siteContainer siteContainer--medium">
+              <motion.span variants={childVariants}>
+                <FooterTitle>Saying yes to good work.</FooterTitle>
+              </motion.span>
+              <motion.span
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                style={{ display: "inline-block" }}
+                variants={childVariants}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
-                hello@bishal.cc
-                <svg viewBox="0 0 51 45">
-                  <use xlinkHref="#icon-mail"></use>
-                </svg>
-              </FooterButton>
-            </motion.span>
-          </div>
-        </FooterMain>
+                <FooterButton
+                  title="hello@bishal.cc"
+                  href="mailto:hello@bishal.cc"
+                >
+                  hello@bishal.cc
+                  <svg viewBox="0 0 51 45">
+                    <use xlinkHref="#icon-mail"></use>
+                  </svg>
+                </FooterButton>
+              </motion.span>
+            </div>
+          </FooterMain>
+        </motion.div>
       </AnimatedSection>
       <div className="siteContainer siteContainer--medium">
         <FooterSocial>

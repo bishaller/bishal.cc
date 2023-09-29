@@ -8,9 +8,9 @@ const WorkWordCamp = () => {
       description={`Strategy. Print Design.`}
       linkColor={`var(--brand)`}
       bgColor={`blue`}
-      link={`/wordcamp-kathmandu/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

@@ -37,18 +37,6 @@ const OverviewTitle = styled.h2`
   }
 `
 
-// const OverviewLarge = styled.p`
-//   font-size: clamp(1.5rem, 3vw, 2.375rem);
-//   line-height: 1.47;
-//   letter-spacing: -1px;
-//   font-family: var(--sansLight);
-//   margin-bottom: 30px;
-// `
-
-// const OverviewNormal = styled.p`
-//   font-size: clamp(1.125rem, 2.5vw, 1.32rem);
-// `
-
 const Snippet = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -95,12 +83,12 @@ const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Com
     <AnimatedSection>
       <Overview>
         <div className="siteContainer siteContainer--billboard">
-          <motion.div variantts={childVariants}>
+          <motion.span variants={childVariants}>
             <OverviewTitle
               title={Title}
               dangerouslySetInnerHTML={createHTML(Title)}
             />
-          </motion.div>
+          </motion.span>
           <Snippet>
             <motion.div variants={childVariants}>
               <SnippetList>
@@ -139,16 +127,6 @@ const CaseOverview = ({ Title, contentLarge, content, Role, Scope, Timeline, Com
               src={Image}
               key={Image}
               style={OverviewImage}
-              initial={{ height: "0" }}
-              animate={{ height: "auto" }}
-              exit={{ height: "0" }}
-              transition={{
-                type: "spring",
-                damping: 20,
-                stiffness: 100,
-                restDelta: 0.005,
-                delay: 2,
-              }}
             >
             </motion.img>
           </div>

@@ -8,9 +8,9 @@ const WorkTravelMax = () => {
       description={`Strategy. UX Design. FrontEnd.`}
       linkColor={`var(--brand)`}
       bgColor={`blue`}
-      link={`/travel-max/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

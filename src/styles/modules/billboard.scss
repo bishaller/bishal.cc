@@ -44,6 +44,10 @@
   display: inline-block;
   -webkit-text-stroke: 3px var(--dark);
 
+  span {
+    display: block;
+  }
+
   @media #{$desktop} {
     margin: 0 auto 3vw;
     letter-spacing: clamp(-1.25rem, -1vw, -0.75rem);
@@ -62,6 +66,11 @@
     background-repeat: no-repeat;
     width: clamp(5rem, 8.4vw, 14rem);
     height: clamp(5rem, 8.4vw, 14rem);
+
+    @media screen and (min-width: 1720px) {
+      right: -3.6vw;
+    }
+
     @media #{$desktop} {
       right: -4.6%;
     }

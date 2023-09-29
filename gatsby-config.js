@@ -1,6 +1,7 @@
 module.exports = {
   flags: {
-    PARALLEL_QUERY_RUNNING: true
+    PARALLEL_QUERY_RUNNING: true,
+    DEV_SSR: false,
   },
   siteMetadata: {
     title: "Bishal Mishra — Product Designer, UX Designer, bishal.cc",

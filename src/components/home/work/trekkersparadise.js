@@ -8,9 +8,9 @@ const WorkTrekkersParadise = () => {
       description={`Web Design. WordPress Dev.`}
       linkColor={`var(--brand)`}
       bgColor={`blue`}
-      link={`/travel-max/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

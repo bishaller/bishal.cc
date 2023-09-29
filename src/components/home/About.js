@@ -20,6 +20,10 @@ const AboutContent = styled.div`
    @media screen and (max-width: 800px) {
       max-width: 100%;
    }
+
+   span {
+      display: block;
+     }
 `
 
 const AboutLarge = styled.span`
@@ -80,41 +84,41 @@ const AboutIntro = () => {
                         </AboutLarge>
                      </motion.span>
                      <br />
-                     <motion.div variants={childVariants}>
+                     <motion.span variants={childVariants}>
                         <AboutNormal>
                            from the office & remotely,
                            <br />as a freelancer in various markets,
                            <br />in-house & in creative agencies.
                         </AboutNormal>
-                     </motion.div>
+                     </motion.span>
                   </p>
                </AboutContent>
             </div>
 
             <div className="siteContainer siteContainer--hr">
-                  <ImageGrid>
-                     <motion.img
-                        key={HomeImage}
-                        src={HomeImage}
-                        variants={childVariants}
-                        alt="Home office work setup."
-                        style={ImageGridItem}
-                     />
-                     <motion.img
-                        key={BishalImage}
-                        src={BishalImage}
-                        variants={childVariants}
-                        alt="Work mode portrait of Bishal Mishra"
-                        style={ImageGridItem}
-                     />
-                     <motion.img
-                        key={OfficeImage}
-                        src={OfficeImage}
-                        variants={childVariants}
-                        alt="Working at office."
-                        style={ImageGridItem}
-                     />
-                  </ImageGrid>
+               <ImageGrid>
+                  <motion.img
+                     key={HomeImage}
+                     src={HomeImage}
+                     variants={childVariants}
+                     alt="Home office work setup."
+                     style={ImageGridItem}
+                  />
+                  <motion.img
+                     key={BishalImage}
+                     src={BishalImage}
+                     variants={childVariants}
+                     alt="Work mode portrait of Bishal Mishra"
+                     style={ImageGridItem}
+                  />
+                  <motion.img
+                     key={OfficeImage}
+                     src={OfficeImage}
+                     variants={childVariants}
+                     alt="Working at office."
+                     style={ImageGridItem}
+                  />
+               </ImageGrid>
             </div>
          </StyledAboutIntro>
       </AnimatedSection>

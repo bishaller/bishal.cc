@@ -8,9 +8,9 @@ const WorkLastDoor = () => {
       description={`Ideation. Web Design.`}
       linkColor={`var(--brand)`}
       bgColor={`#8EDC97`}
-      link={`/lastdoor/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

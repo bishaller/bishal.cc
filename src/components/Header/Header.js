@@ -58,12 +58,16 @@ const scale = {
   tap: { scale: 0.9 },
 }
 
+const opacityZero = {
+  opacity: 0,
+}
+
 const Header = () => {
   return (
     <SiteHeader>
       <div className="siteContainer">
         <SiteHeaderWrap>
-          <motion.div
+          <motion.span
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -75,7 +79,7 @@ const Header = () => {
             }}
           >
             <HeaderNav />
-          </motion.div>
+          </motion.span>
           <motion.div
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,22 +90,23 @@ const Header = () => {
               restDelta: 0.005,
               delay: 1,
             }}
+            style={opacityZero}
           >
             <HeaderButton title="hello@bishal.cc" href="mailto:hello@bishal.cc">
-              <motion.div
+              <motion.span
                 variants={scale}
                 initial="initial"
                 whileHover="animate"
                 whileTap="tap"
                 transition={{ type: "spring", stiffness: 200, damping: 13 }}
               >
-                <motion.div variants={text}>
+                <motion.span variants={text}>
                   <HeaderButtonText>hello@bishal.cc</HeaderButtonText>
-                </motion.div>
+                </motion.span>
                 <span className="icon">
                   <Plane />
                 </span>
-              </motion.div>
+              </motion.span>
             </HeaderButton>
           </motion.div>
         </SiteHeaderWrap>

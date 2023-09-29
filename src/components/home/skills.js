@@ -55,7 +55,7 @@ const Skills = () => {
          <div className="siteContainer siteContainer--intro">
             <SkillsGrid>
                <SkillsGridItem>
-                  <motion.div variants={childVariants}>
+                  <motion.span variants={childVariants}>
                      <SkillsTitle>Design Consulting</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>Strategy</SkillsListItem>
@@ -63,10 +63,10 @@ const Skills = () => {
                         <SkillsListItem>Team Lead</SkillsListItem>
                         <SkillsListItem>Mentorship</SkillsListItem>
                      </SkillsList>
-                  </motion.div>
+                  </motion.span>
                </SkillsGridItem>
                <SkillsGridItem>
-                  <motion.div variants={childVariants}>
+                  <motion.span variants={childVariants}>
                      <SkillsTitle>Product Design</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>Market Research</SkillsListItem>
@@ -77,10 +77,10 @@ const Skills = () => {
                         <SkillsListItem>Prototyping/Pretotyping</SkillsListItem>
                         <SkillsListItem>Testing</SkillsListItem>
                      </SkillsList>
-                  </motion.div>
+                  </motion.span>
                </SkillsGridItem>
                <SkillsGridItem>
-                  <motion.div variants={childVariants}>
+                  <motion.span variants={childVariants}>
                      <SkillsTitle>Development</SkillsTitle>
                      <SkillsList>
                         <SkillsListItem>HTML</SkillsListItem>
@@ -91,12 +91,25 @@ const Skills = () => {
                         <SkillsListItem>React JS / Next JS</SkillsListItem>
                         <SkillsListItem>Python </SkillsListItem>
                      </SkillsList>
-                  </motion.div>
+                  </motion.span>
                </SkillsGridItem>
             </SkillsGrid>
          </div>
          <div className="siteContainer siteContainer--hr">
-            <Divider />
+            <motion.div
+            variants={childVariants}
+               initial={{ width: 0 }}
+               animate={{ width: "100%" }}
+               transition={{
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 50,
+                  restDelta: 0.005,
+                  delay: 2,
+               }}
+            >
+               <Divider />
+            </motion.div>
          </div>
       </AnimatedSection >
    )

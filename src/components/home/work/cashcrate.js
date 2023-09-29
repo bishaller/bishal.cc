@@ -8,9 +8,9 @@ const WorkCashCrate = () => {
       description={`UX Design.`}
       linkColor={`var(--brand)`}
       bgColor={`#eab308`}
-      link={`/cash-crate/`}
+      link={`/dwt/`}
     >
-      <h1>something</h1>
+      <span>Something</span>
     </HoverText>
   )
 }

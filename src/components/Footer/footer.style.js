@@ -11,7 +11,7 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const FooterMain = styled.section`
+export const FooterMain = styled.div`
 text-align: center;
 position: relative;
 z-index: 1;
