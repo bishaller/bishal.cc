@@ -23,7 +23,7 @@ const containerVariants = {
    hidden: {},
    visible: {
       transition: {
-         staggerChildren: 0.4,
+         staggerChildren: 0.25,
          type: "spring",
          damping: 20,
          stiffness: 50,

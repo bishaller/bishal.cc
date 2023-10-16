@@ -4,10 +4,10 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 // Modules
-import CaseBanner from "../components/case/caseBanner"
-import CaseOverview from "../components/case/caseOverview"
-import CaseGeneric from "../components/case/caseGeneric"
-import CaseImage from "../components/case/CaseImage"
+import CaseBanner from "../components/Case/caseBanner"
+import CaseOverview from "../components/Case/caseOverview"
+import CaseGeneric from "../components/Case/caseGeneric"
+import CaseImage from "../components/Case/caseImage"
 // import CaseVideo from "../components/case/caseVideo"
 
 // Images

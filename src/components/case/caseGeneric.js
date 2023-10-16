@@ -48,8 +48,14 @@ const GenericLargeContent = styled.div`
 `
 
 const GenericContent = styled.div`
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.3125rem);
   margin-bottom: 30px;
+  letter-spacing: 0.05px;
+  line-height: 1.6667;
+
+  h3 {
+    margin-bottom: 8px;
+  }
   
   p:last-child {
     margin-bottom: 0;
