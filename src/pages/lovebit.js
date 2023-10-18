@@ -16,7 +16,7 @@ import overviewImage from "../images/dwt/dwtOverview.webp"
 import largeImage1 from "../images/dwt/dwtLargeOne.webp"
 import dwtProcess from "../images/dwt/dwtProcess.webp"
 
-const Traqit = () => {
+const Lovebit = () => {
   return (
     <main>
       <Seo
@@ -26,7 +26,8 @@ const Traqit = () => {
       <Layout >
         <article className="case">
           <CaseBanner
-            title={`Managing events simplified`}
+            title={`Simplified & Events`}
+            titleContent={`Simplified Events`}
             intro={`Transitioning users from the old overwhelming software to a task-focused minimal interface in multiple phases.`}
             image={bannerImage}
           >
@@ -138,4 +139,4 @@ const Traqit = () => {
   )
 }
 
-export default Traqit
+export default Lovebit

@@ -29,7 +29,7 @@ const WorkTwinsuk = () => {
       description={`Information Architecture. UX & Web Design`}
       linkColor={`var(--brand)`}
       bgColor={`#663C6C`}
-      link={`/travel-max/`}
+      link={`/twinsuk/`}
     >
       <motion.img
         key={BottomLeftImage}

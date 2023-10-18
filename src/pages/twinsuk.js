@@ -12,11 +12,10 @@ import CaseImage from "../components/Case/caseImage"
 
 // Images
 import bannerImage from "../images/traqit/traqitBanner.webp"
-import overviewImage from "../images/dwt/dwtOverview.webp"
-import largeImage1 from "../images/dwt/dwtLargeOne.webp"
+// import largeImage1 from "../images/dwt/dwtLargeOne.webp"
 import dwtProcess from "../images/dwt/dwtProcess.webp"
 
-const Traqit = () => {
+const TwinsUK = () => {
   return (
     <main>
       <Seo
@@ -33,7 +32,7 @@ const Traqit = () => {
           </CaseBanner>
           <CaseOverview
             Title={`Overview`}
-            Image={overviewImage}
+            // Image={overviewImage}
             contentLarge={`Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their various interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.`}
             content={`Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.`}
             Role={[
@@ -100,9 +99,9 @@ const Traqit = () => {
             Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
           />
 
-          <CaseImage
+          {/* <CaseImage
             LargeImage={largeImage1}
-          />
+          /> */}
 
           <CaseGeneric
             Title={`<span>Three phases of design: </span>Rebuild from ground up, </br>– Introduce agents & user accounts – Test, re-test & elevate the product.`}
@@ -138,4 +137,4 @@ const Traqit = () => {
   )
 }
 
-export default Traqit
+export default TwinsUK

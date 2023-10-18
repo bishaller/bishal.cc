@@ -37,7 +37,7 @@ const WorkTraqit = () => {
       description={`Strategy. UX Design.  FrontEnd.`}
       linkColor={`var(--brand)`}
       bgColor={`#EBEDF0`}
-      link={`/dwt/`}
+      link={`/traqit/`}
     >
       <motion.img
         key={TopLeftImage}

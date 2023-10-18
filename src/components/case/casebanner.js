@@ -1,29 +1,11 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import styled from "styled-components"
+import AnimatedTitle from "../AnimatedTitle"
 
 const Banner = styled.div`
   padding-top: clamp(12rem, 17vw, 15rem);
   margin-bottom: clamp(5rem, 14vw, 14rem);
-`
-
-const BannerTitle = styled.h1`
-  color: var(--dark);
-  --wt: 400;
-  --fsz: clamp(3.5rem, 9vw, 8.5rem);
-  --lh: 0.84;
-  --font: var(--wt) var(--fsz) / var(--lh) var(--serifLight);
-  font: var(--font);
-  text-align: left;
-  letter-spacing: -.1vw;
-  margin-bottom: 0;
-  display: block;
-  max-width: 50%;
-  width: 100%;
-
-  @media screen and (max-width: 640px) {
-    letter-spacing: -3px;
-  }
 `
 
 const BannerImage = {
@@ -74,62 +56,6 @@ const RevealMask = {
   transformOrigin: "left"
 }
 
-
-const letterAni = {
-  initial: { y: 200 },
-  animate: {
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 50,
-      restDelta: 0.005,
-      duration: .5
-   }
-  },
-};
-
-const banner = {
-  animate: {
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-
-
-const LetterAnimated = ({ title, disabled }) => (
-  <motion.span
-    className='row-title row-title2'
-    variants={disabled ? null : banner}
-    initial='initial'
-    animate='animate'
-  >
-    {[...title].map((letter, index) => (
-      <motion.span
-        key={index}
-        className='row-letter'
-        variants={disabled ? null : letterAni}>
-        {letter}
-      </motion.span>
-    ))}
-  </motion.span>
-);
-
-const BannerRowTop = ({ title }) => {
-  return (
-    <span className="banner-row">
-      <span className='row-col2'>
-        <LetterAnimated title={title} />
-      </span>
-    </span>
-  );
-};
-
-
-
 const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   function createHTML(props) {
     return { __html: props }
@@ -138,11 +64,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   return (
     <Banner>
       <div className="siteContainer siteContainer--medium">
-        <BannerTitle>
-          <BannerRowTop title={title}
-            dangerouslySetInnerHTML={createHTML(titleContent)}
-          />
-        </BannerTitle>
+        <AnimatedTitle text={title}/>
       </div>
       <ImageContainer>
         <motion.span
@@ -155,7 +77,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           transition={{
             type: "easeInOut",
             duration: 1,
-            delay: 1.5,
+            delay: .8,
           }}
         >
 
@@ -168,7 +90,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           animate={{ opacity: 1 }}
           transition={{
             type: "easeInOut",
-            delay: 1.8,
+            delay: 1,
             duration: 1,
           }}
         >
