@@ -64,7 +64,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
   return (
     <Banner>
       <div className="siteContainer siteContainer--medium">
-        <AnimatedTitle text={title}/>
+        <AnimatedTitle style={RevealMask} text={title}/>
       </div>
       <ImageContainer>
         <motion.span
@@ -76,8 +76,8 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           }}
           transition={{
             type: "easeInOut",
-            duration: 1,
-            delay: .8,
+            duration: .8,
+            delay: .5,
           }}
         >
 
@@ -90,8 +90,8 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           animate={{ opacity: 1 }}
           transition={{
             type: "easeInOut",
-            delay: 1,
-            duration: 1,
+            delay: .8,
+            duration: .5,
           }}
         >
         </motion.img>
@@ -105,7 +105,7 @@ const CaseBanner = ({ title, titleContent, intro, children, image }) => {
           damping: 20,
           stiffness: 50,
           restDelta: 0.005,
-          delay: 2,
+          delay: 1.2,
         }}
       >
         <BannerIntroWrap>

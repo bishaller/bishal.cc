@@ -50,7 +50,6 @@ export default function AnimatedSection ({ children }) {
          }}
          variants={containerVariants}
          onViewportEnter={() => console.log(scrollYProgress.current)}
-         
       >
          {children}
       </motion.section>

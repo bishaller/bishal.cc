@@ -185,7 +185,6 @@ const Dwt = () => {
               </motion.img>
             </div>
           </CaseGeneric>
-
         </article>
       </Layout>
     </main>
