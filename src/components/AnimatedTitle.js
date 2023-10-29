@@ -15,7 +15,7 @@ const Title = styled.h1`
    letter-spacing: 0;
    margin-bottom: 0;
    display: block;
-   max-width: 50%;
+   max-width: 70%;
    width: 100%;
 `;
 

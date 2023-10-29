@@ -145,7 +145,7 @@ const Billboard = () => {
                 damping: 10,
                 stiffness: 75,
                 restDelta: 0.005,
-                delay: 2,
+                delay: 2.1,
               }}>
 
               <strong>

@@ -12,12 +12,31 @@ const TitleStyle = styled.h2`
    font-family: var(--serifLight);
    font-weight: 300;
    line-height: 1;
-   letter-spacing: -2px;
+
+   &:after {
+   content: "";
+   position: absolute;
+   display: block;
+   left: -5.5vw;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 4vw;
+   height: 4px;
+   background-color: var(--brand);
+
+   @media screen and (max-width:1000px) {
+      height: 3px;
+   }
+
+   @media screen and (max-width:640px) {
+      display: none;
+   }
+   }
 `
 
 const TitleWrapper = styled.div`
    width: 100%;
-   border-bottom: var(--brand) 4px solid;
+   // border-bottom: var(--brand) 4px solid;
    margin-bottom: clamp(4.5rem, 9vw, 6.25rem);
 `
 
@@ -27,7 +46,9 @@ const CaseTitle = ({ Title, Children }) => {
          <TitleWrapper>
             <motion.div variants={childVariants}>
                <div className="siteContainer siteContainer--small">
-                  <TitleStyle>{Title}</TitleStyle>
+                  <TitleStyle>
+                     {Title}
+                  </TitleStyle>
                </div>
             </motion.div>
          </TitleWrapper>

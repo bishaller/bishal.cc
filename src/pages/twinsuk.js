@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 import CaseBanner from "../components/Case/caseBanner"
 import CaseOverview from "../components/Case/caseOverview"
 import CaseGeneric from "../components/Case/caseGeneric"
-import CaseImage from "../components/Case/caseImage"
+// import CaseImage from "../components/Case/caseImage"
 // import CaseVideo from "../components/case/caseVideo"
 
 // Images
@@ -19,13 +19,13 @@ const TwinsUK = () => {
   return (
     <main>
       <Seo
-        title="Traqit Software UX Case Study | Bishal Mishra"
+        title="Twins UK Case Study | Bishal Mishra"
         description="UX Case Study for Discovery World Trekking, a travel agency based in Nepal. I designed a website for them to help them sell their trekking packages online."
       />
       <Layout >
         <article className="case">
           <CaseBanner
-            title={`Managing events simplified`}
+            title={`UK’s largest adult twin registry`}
             intro={`Transitioning users from the old overwhelming software to a task-focused minimal interface in multiple phases.`}
             image={bannerImage}
           >
@@ -99,9 +99,6 @@ const TwinsUK = () => {
             Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
           />
 
-          {/* <CaseImage
-            LargeImage={largeImage1}
-          /> */}
 
           <CaseGeneric
             Title={`<span>Three phases of design: </span>Rebuild from ground up, </br>– Introduce agents & user accounts – Test, re-test & elevate the product.`}

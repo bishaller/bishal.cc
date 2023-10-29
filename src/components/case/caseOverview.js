@@ -2,7 +2,6 @@ import * as React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import AnimatedSection, { childVariants } from "../AnimatedSection"
-import AnimatedTitle from "../AnimatedTitle"
 
 const Overview = styled.section`
   margin-bottom: clamp(4.5rem, 9vw, 9.375rem);

@@ -167,6 +167,12 @@ const Dwt = () => {
           />
 
           <CaseGeneric
+            Title={`Accessing complex information`}
+            Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site. `}
+            Image={ImgSolutions}
+          />
+
+          <CaseGeneric
             Title={`Simplifying search over 300+ extensive trips, step-by-step.`}
             Content={`
               <p>We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.</p>
