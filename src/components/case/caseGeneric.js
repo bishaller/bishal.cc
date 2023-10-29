@@ -7,6 +7,7 @@ const Generic = styled.div`
   margin-bottom: clamp(4.5rem, 9vw, 9.375rem);
 `
 
+
 const GenericLargeTitle = styled.h2`
   font-size: clamp(2.5rem, 4.5vw, 4.375rem);
   margin-bottom: clamp(1.25rem, 2vw, 2rem);
@@ -66,14 +67,14 @@ const GenericImage = {
   width: "100%",
 }
 
-const CaseGeneric = ({ LargeTitle, Title, Content, LargeContent, Image, Children }) => {
+const CaseGeneric = ({ LargeTitle, Title, Content, LargeContent, Image, Children, customMargin }) => {
   function createHTML(props) {
     return { __html: props }
   }
 
   return (
     <AnimatedSection>
-      <Generic className="caseGeneric">
+      <Generic className="caseGeneric" style={{ marginBottom: customMargin }}>
         <div className="siteContainer siteContainer--small">
           {LargeTitle && (
             <motion.div variants={childVariants}>

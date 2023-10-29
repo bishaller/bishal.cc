@@ -2,6 +2,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import styled from "styled-components"
 
 // Modules
 import CaseBanner from "../components/Case/caseBanner"
@@ -24,6 +25,13 @@ import ImgCompAnalysis from "../images/dwt/dwtCompetitiveAnalysis.webp"
 import ImgPrimaryResearch from "../images/dwt/dwtPrimaryResearch.webp"
 import ImgProblems from "../images/dwt/dwtProblems.webp"
 import ImgSolutions from "../images/dwt/dwtStrategy.webp"
+import ImgDwtOldSite from "../images/dwt/dwtOldSite.webp"
+import ImgDWTNavProcess from "../images/dwt/dwtNavProcess.webp"
+import ImgDwtNavEvolvement from "../images/dwt/dwtNavEvolvement.webp"
+import ImgDwtSearch01 from "../images/dwt/dwtSearch01.webp"
+import ImgDwtSearch02 from "../images/dwt/dwtSearch02.webp"
+import ImgDwtSearch03 from "../images/dwt/dwtSearch03.webp"
+
 
 const GenericImage = {
   width: "100%",
@@ -169,7 +177,16 @@ const Dwt = () => {
           <CaseGeneric
             Title={`Accessing complex information`}
             Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site. `}
-            Image={ImgSolutions}
+            Image={ImgDwtOldSite}
+            customMargin="30px"
+          />
+
+          <CaseImage
+            LargeImage={ImgDWTNavProcess}
+          />
+
+          <CaseGeneric
+            Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.`}
           />
 
           <CaseGeneric

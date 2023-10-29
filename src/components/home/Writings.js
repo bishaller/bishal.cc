@@ -25,12 +25,15 @@ const WritingsWrap = styled.div`
 `
 
 const Article = styled.article`
-   border-bottom: 1px solid rgba(11,11,11,.35);
 
    &:first-of-type {
-      border-top: 1px solid rgba(11,11,11,.35);
+      border-top: 1px solid rgba(11,11,11,.25);
    }
 `
+
+const LastArticle = {
+   borderBottom: "1px solid rgba(11,11,11,.25)"
+}
 
 const ArticleLink = styled.a`
    display: inline-block;
@@ -109,7 +112,7 @@ const Writings = () => {
                   </motion.span>
 
                   <motion.span variants={childVariants}>
-                     <Article>
+                     <Article style={LastArticle}>
                         <ArticleLink href="#" title="Why do you fail as a Frontend Developer?">
                            <ArticleTitle>Why do you fail as a Frontend Developer?</ArticleTitle>
                            <p>This is the first article</p>

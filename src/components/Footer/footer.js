@@ -144,7 +144,7 @@ const Footer = () => {
       <motion.span variants={childVariants}>
         <FooterCopyright>
           <p>&copy; {currentYear} Bishal Mishra.</p>
-          <p>A hand-coded website with care.</p>
+          <p>A self-coded website with care.</p>
         </FooterCopyright>
       </motion.span>
       <SvgSprite title="Svg Sprites" />
