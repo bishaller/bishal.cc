@@ -175,7 +175,7 @@ const Dwt = () => {
           />
 
           <CaseGeneric
-            Title={`Accessing complex information`}
+            Title={`Accessing complex information with simplified navigation`}
             Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site. `}
             Image={ImgDwtOldSite}
             customMargin="30px"
@@ -183,31 +183,51 @@ const Dwt = () => {
 
           <CaseImage
             LargeImage={ImgDWTNavProcess}
+            customMargin="30px"
           />
 
           <CaseGeneric
             Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.`}
+            customMargin="60px"
+          />
+
+          <CaseImage
+            LargeImage={ImgDwtNavEvolvement}
           />
 
           <CaseGeneric
             Title={`Simplifying search over 300+ extensive trips, step-by-step.`}
             Content={`
-              <p>We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.</p>
-              <p>Why do we need this? – Upon analyzing the analytics, user interviews, and client feedback, we found that most of the users who make a trip with DWT go through extensive research independently. That's because the trekking trips offered by local & international competitors have very competitive services and different routes and serve a different experience. So, our significant user base would use the search to find information rather than scanning the navigation.</p>
-            `}
-            Image={ImgSolutions}
+                <p>We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.</p>
+                <p>Why do we need this? – Upon analyzing the analytics, user interviews, and client feedback, we found that most of the users who make a trip with DWT go through extensive research independently. That's because the trekking trips offered by local & international competitors have very competitive services and different routes and serve a different experience. So, our significant user base would use the search to find information rather than scanning the navigation.</p>
+                <p>Initially, I opted for a filter-based search system because the developers were dealing with technical limitations, causing headaches. The trip data I was working with was dynamic, and keeping things updated in real time was tough. Building a filter-based search allowed me to work within these constraints, enabling users to effectively narrow their search results by applying filters like location and activity. While this approach was a reasonable compromise, it needed more responsiveness and user-friendliness, which I ultimately aimed for.</p>
+              `}
+            Image={ImgDwtSearch01}
+            customMargin="60px"
+          />
 
-          >
-            <div className="siteContainer siteContainer--hr">
-              <motion.img
-                src={ImgSolutions}
-                key={ImgSolutions}
-                style={GenericImage}
-                variants={childVariants}
-              >
-              </motion.img>
-            </div>
-          </CaseGeneric>
+          <CaseGeneric
+            Content={`
+              <p>As my project evolved and developers accelerated, I seized the opportunity to implement a live suggested search feature. This shift aimed to provide users with a more dynamic and engaging search experience, allowing them to view relevant search terms as they typed. This enhanced content discoverability and streamlined the search process, as confirmed by HotJar data. Observing user data input and search patterns, I recognized a broader scope of user interests, spanning topics related to location, travel, booking, and company information. Consequently, I developed a robust live search functionality, clearing technical hurdles and enabling users to fully immerse themselves in the search experience.</p>
+            `}
+            customMargin="60px"
+          />
+
+          <CaseImage
+            LargeImage={ImgDwtSearch02}
+            customMargin="60px"
+          />
+
+          <CaseGeneric
+            Content={`
+              <p>So, I took the plunge and went all-in on a full-fledged live search system. This was a game-changer. It meant that users could get real-time updates on their searches, which was essential given the constantly changing data. It was a journey from filter-based to live suggested search and finally to a full-blown live search, all driven by my determination to deliver the best user experience possible and overcome those initial technical hurdles.</p>
+            `}
+            customMargin="60px"
+          />
+
+          <CaseImage
+            LargeImage={ImgDwtSearch03}
+          />
         </article>
       </Layout>
     </main>

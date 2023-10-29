@@ -8,16 +8,23 @@ const ImageContainer = {
    marginBottom: "clamp(4.5rem, 7.5vw, 7.5rem)",
 }
 
-const CaseImage = ({ LargeImage, Children }) => {
+const CaseImage = ({ LargeImage, Children, customMargin }) => {
+
+   const imageStyles = {
+      ...ImageContainer,
+      marginBottom: customMargin || ImageContainer.marginBottom,
+   };
+
    return (
       <AnimatedSection>
          <motion.img
             src={LargeImage}
             key={LargeImage}
-            style={ImageContainer}
+            style={imageStyles}
             variants={childVariants}
          >
          </motion.img>
+         {Children}
       </AnimatedSection>
    )
 }
