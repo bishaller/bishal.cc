@@ -224,7 +224,6 @@ const Dwt = () => {
             `}
             customMargin="60px"
           />
-
           <CaseImage
             LargeImage={ImgDwtSearch03}
           />
