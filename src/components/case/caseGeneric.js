@@ -61,6 +61,15 @@ const GenericContent = styled.div`
   p:last-child {
     margin-bottom: 0;
   }
+
+  ol {
+    list-style: decimal outside;
+    margin-inline-start: 40px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
 `
 
 const GenericImage = {

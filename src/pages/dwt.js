@@ -227,6 +227,23 @@ const Dwt = () => {
           <CaseImage
             LargeImage={ImgDwtSearch03}
           />
+
+
+
+          <CaseGeneric
+            Title={`User management for agents and groups of users.`}
+            Content={`
+              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
+              <p>To help users smoothen their journey with their companions, I designed this user management system where one user could book the trip for their group and invite all of their friends to the portal. And that goes the same for the travel agents. The travel agents can book a trip and onboard all their travelers.</p>
+              <p><strong>Why do we need to onboard the users on the system? Why can’t we just do a guest checkout?</strong></p>
+              <ol>
+                <li>For group joining trips, we could let each traveler know about their travel companions, and they could connect with each other before joining the trip.</li>
+                <li>While we onboard the users on the system, it eliminates all the manual work the DWT crew would do on the backend. Once the users are in, the system asks users to upload relevant travel documents and emergency contacts so the crew can get permits in national parks or do other official chores.</li>
+                <li>We could also maintain a missing database of users on the previous site. This would then eliminate the manual communication of reviews and post-trip experience, and the company could also offer discount tiers for returning users (or agents).</li>
+              </ol>
+            
+              `}
+          />
         </article>
       </Layout>
     </main>
