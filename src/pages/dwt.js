@@ -2,7 +2,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import styled from "styled-components"
 
 // Modules
 import CaseBanner from "../components/Case/caseBanner"
@@ -10,8 +9,6 @@ import CaseOverview from "../components/Case/caseOverview"
 import CaseGeneric from "../components/Case/caseGeneric"
 import CaseImage from "../components/Case/caseImage"
 import CaseTitle from "../components/Case/caseTitle"
-import { motion } from "framer-motion"
-import { childVariants } from "../components/AnimatedSection"
 
 // import AnimatedSection, { childVariants} from "../components/AnimatedSection"
 // import CaseVideo from "../components/case/caseVideo"
@@ -31,11 +28,11 @@ import ImgDwtNavEvolvement from "../images/dwt/dwtNavEvolvement.webp"
 import ImgDwtSearch01 from "../images/dwt/dwtSearch01.webp"
 import ImgDwtSearch02 from "../images/dwt/dwtSearch02.webp"
 import ImgDwtSearch03 from "../images/dwt/dwtSearch03.webp"
+import ImgDwtDashboard01 from "../images/dwt/dwtDashboard01.webp"
+import ImgDwtDashboard02 from "../images/dwt/dwtDashboard02.webp"
+import ImgDwtDashboard03 from "../images/dwt/dwtDashboard03.webp"
+import ImgDwtDashboard04 from "../images/dwt/dwtDashboard04.webp"
 
-
-const GenericImage = {
-  width: "100%",
-}
 
 const Dwt = () => {
   return (
@@ -231,7 +228,8 @@ const Dwt = () => {
 
 
           <CaseGeneric
-            Title={`User management for agents and groups of users.`}
+            Title={`User management for agents & groups of users.`}
+            customMargin="60px"
             Content={`
               <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
               <p>To help users smoothen their journey with their companions, I designed this user management system where one user could book the trip for their group and invite all of their friends to the portal. And that goes the same for the travel agents. The travel agents can book a trip and onboard all their travelers.</p>
@@ -241,8 +239,29 @@ const Dwt = () => {
                 <li>While we onboard the users on the system, it eliminates all the manual work the DWT crew would do on the backend. Once the users are in, the system asks users to upload relevant travel documents and emergency contacts so the crew can get permits in national parks or do other official chores.</li>
                 <li>We could also maintain a missing database of users on the previous site. This would then eliminate the manual communication of reviews and post-trip experience, and the company could also offer discount tiers for returning users (or agents).</li>
               </ol>
-            
               `}
+          />
+
+          <CaseImage
+            LargeImage={ImgDwtDashboard01}
+            customMargin="30px"
+          />
+          <CaseImage
+            LargeImage={ImgDwtDashboard02}
+            customMargin="30px"
+          />
+          <CaseImage
+            LargeImage={ImgDwtDashboard03}
+            customMargin="30px"
+          />
+          <CaseGeneric
+            Content={`
+              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.  To help users smoothen their journey with their companions, I designed this user management system where one user could book the trip for their group and invite all of their friends to the portal. And that goes the same for the travel agents. The travel agents can book a trip and onboard all their travelers.</p>
+            `}
+            customMargin="30px"
+          />
+          <CaseImage
+            LargeImage={ImgDwtDashboard04}
           />
         </article>
       </Layout>
