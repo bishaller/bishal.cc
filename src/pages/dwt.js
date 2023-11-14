@@ -168,15 +168,25 @@ const Dwt = () => {
           />
 
           <CaseTitle
-            Title={`Solutions:`}
+            Title={`Detailed Work:`}
           />
 
           <CaseGeneric
             Title={`Accessing complex information with simplified navigation`}
-            Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site. `}
+            Content={`<p>By the time we hopped into this project, I had already worked on more than 50+ travel websites, and all the combined research and tests done on those projects gave us a confident sense that we needed to simplify our content navigation system to make sure our users find the intended information with their intuition.</p>
+                      <p>A crucial point for us to start was we should not be oversimplifying the menu or designing a distinctive menu from their competitors. So we took a mixed route–sorting, speculative design, testing, and revising methods to perfect our navigation.</p>`}
             Image={ImgDwtOldSite}
-            customMargin="30px"
+            customMargin="60px"
           />
+
+          <CaseGeneric
+            Content={`<p>I started with "trying to make sense" of the pages, categories, trips, and informational pages by grouping them. Then, I turned the sorted cards into possible flows to explore how users could navigate the website. The goal is to accommodate the window shopper, experienced, and newborn users.</p>`}
+            customMargin="30px"
+         />
+          <CaseGeneric
+            Content={`<p>Over time, I did multiple in-person usability and tree tests. On top of that, I used tools like Hotjar and Heap for long-run tests and then kept revising the navigation and the journey to find the information on the website.</p>`}
+            customMargin="30px"
+         />
 
           <CaseImage
             LargeImage={ImgDWTNavProcess}
