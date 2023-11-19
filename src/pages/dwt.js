@@ -32,6 +32,9 @@ import ImgDwtDashboard01 from "../images/dwt/dwtDashboard01.webp"
 import ImgDwtDashboard02 from "../images/dwt/dwtDashboard02.webp"
 import ImgDwtDashboard03 from "../images/dwt/dwtDashboard03.webp"
 import ImgDwtDashboard04 from "../images/dwt/dwtDashboard04.webp"
+import ImgDwtTripModules from "../images/dwt/dwtTripModules.webp"
+import ImgDwtTripPlanner01 from "../images/dwt/dwtTripPlanner01.webp"
+import ImgDwtTripPlanner02 from "../images/dwt/dwtTripPlanner02.webp"
 
 
 const Dwt = () => {
@@ -182,11 +185,7 @@ const Dwt = () => {
           <CaseGeneric
             Content={`<p>I started with "trying to make sense" of the pages, categories, trips, and informational pages by grouping them. Then, I turned the sorted cards into possible flows to explore how users could navigate the website. The goal is to accommodate the window shopper, experienced, and newborn users.</p>`}
             customMargin="30px"
-         />
-          <CaseGeneric
-            Content={`<p>Over time, I did multiple in-person usability and tree tests. On top of that, I used tools like Hotjar and Heap for long-run tests and then kept revising the navigation and the journey to find the information on the website.</p>`}
-            customMargin="30px"
-         />
+          />
 
           <CaseImage
             LargeImage={ImgDWTNavProcess}
@@ -194,12 +193,26 @@ const Dwt = () => {
           />
 
           <CaseGeneric
-            Content={`We serve different users with their unique needs. Users know what they need, those who know half the information, those who are looking for information, and those who are just window shopping. To cater to all these users, I implemented a live search that could filter through the keywords, content, or any word and find a relevant article, page, trip, or any page or section on the site.`}
+            Content={`<p>Over time, I did multiple in-person usability and tree tests. On top of that, I used tools like Hotjar and Heap for long-run tests and then kept revising the navigation and the journey to find the information on the website.</p>`}
             customMargin="60px"
           />
 
           <CaseImage
             LargeImage={ImgDwtNavEvolvement}
+            customMargin="60px"
+          />
+
+          <CaseGeneric
+            Content={`
+                      <p>Talking about the trip page, which is the primary source of information for the user, a single trip page has an overview, snapshot content, numeric section, subsections, and nested information. Recognizing the challenge posed by the diverse and extensive content, I introduced different breaks in the design pattern to ensure a seamless user journey. A secondary navigation bar was incorporated, replacing the main header, facilitating improved access to the in-page content and enhancing the overall navigational experience.</p>
+                      <p>Navigating the intricacies of the body content, especially when dealing with dynamic factors such as weather, rules and regulations, road conditions, changing permits, and seasonal variations, presented a unique set of challenges. To address this, I implemented a minute snapshot content strategy. This approach empowers users with a quick and informative overview, streamlining their experience and alleviating the need to delve into lengthy paragraphs. By weaving together these design elements, the trip page emerges as a repository of information and a user-friendly platform that balances depth and brevity.</p>
+                    `}
+            customMargin="60px"
+          />
+
+
+          <CaseImage
+            LargeImage={ImgDwtTripModules}
           />
 
           <CaseGeneric
@@ -235,7 +248,28 @@ const Dwt = () => {
             LargeImage={ImgDwtSearch03}
           />
 
+          <CaseGeneric
+            Title={`Bespoke trips: One size doesn’t fit for all!`}
+            Content={`
+              <p>When 90% of the users were asking for changes in itineraries or some sort of modification, I recognized the essence of the trip customization feature as the primary entry point for users embarking on their journey with our team. Acknowledging that each traveler possesses unique preferences and may need to be better-versed in the plethora of customizable options available, I sought to create an innovative solution that not only streamlines the booking process but also serves as a valuable avenue for understanding user needs and effectively upselling our services.</p>
+            `}
+            Image={ImgDwtTripPlanner01}
+            customMargin="50px"
+          />
 
+          <CaseGeneric
+            Content={`
+              <p>To address these objectives, I conceptualized and meticulously designed a dynamic and interactive form, the cornerstone of our custom trip builder. This form is a user-friendly gateway, empowering individuals to tailor their trips based on their needs and preferences. By embedding a versatile range of options within the form, users can effortlessly navigate choices that align with their travel aspirations.</p>
+            `}
+            Image={ImgDwtTripPlanner02}
+            customMargin="60px"
+          />
+
+          <CaseGeneric
+            Content={`
+              <p>Implementing the custom trip builder has revolutionized both the user and client experience, significantly streamlining the trip customization process and reducing potential delays and miscommunications. Back-and-forth emailing has been reduced by 67%. This tool efficiently captures user preferences and provides valuable insights into our clientele's diverse needs, allowing for a more personalized trip-planning approach. The integration of intelligent upselling has enhanced the overall user experience and contributed to increased revenue generation. We have effectively capitalized on opportunities to showcase additional services and offerings by presenting relevant and enticing options based on user inputs. According to our stakeholder Paul, they have been able to revise and update the trip itineraries based on the customization users prefer. This adds value to the user experience and is a strategic business driver.</p>
+            `}
+          />
 
           <CaseGeneric
             Title={`User management for agents & groups of users.`}
