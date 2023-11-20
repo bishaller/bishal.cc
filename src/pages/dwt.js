@@ -155,7 +155,7 @@ const Dwt = () => {
 
           <CaseGeneric
             Title={`<span>Problems:</span><br/>
-            Narrowing down to increase focus `}
+            Narrowing down to increase focus`}
             Content={`
               <p>Because the site is too huge, I could see too many opportunities that I can take care of. However, it would only be ideal for addressing a limited set of problems as I could only solve a finite set of issues because of multiple constraints within the limited budget, tech, and time-space.</p>
             `}

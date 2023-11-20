@@ -4,12 +4,29 @@ import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import rubbermaidVideo from "../images/rubbermaid/rubbermaid_video.mp4"
 
+// Modules
+import CaseBanner from "../components/Case/caseBanner"
+import CaseOverview from "../components/Case/caseOverview"
+import CaseGeneric from "../components/Case/caseGeneric"
+import CaseImage from "../components/Case/caseImage"
+import CaseTitle from "../components/Case/caseTitle"
+
+// Images
+import ImgBanner from "../images/rubbermaid/rubbermaidBanner.webp"
+
 const Rubbermaid = () => {
   return (
     <main>
-      <Seo title="Rubbermaid Case Study | Bishal Mishra" description="UX case study for rubbermaid app by Bishal Mishra." />
+      <Seo title="Rubbermaid Case Study | Bishal Mishra"
+      description="UX case study for rubbermaid app by Bishal Mishra." />
       <Layout>
-        <article>
+        <article className="case">
+          <CaseBanner
+            title={`Rubbermaid's Purchasing Experience`}
+            titleContent={`Rubbermaid’s purchase experience`}
+            intro={`A bespoke guide for those shaping their living space anew, catering to both discerning decorators and those yet to define their household essentials.`}
+            image={ImgBanner}
+          />
           <div className="page">
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
@@ -28,7 +45,7 @@ const Rubbermaid = () => {
 
             <div className="pageBanner">
               <StaticImage
-                src={"../images/rubbermaid/rubbermaid_banner.jpg"}
+                src={"../images/rubbermaid/rubbermaidBanner.jpg"}
                 alt=""
                 width={5000}
                 className=""
