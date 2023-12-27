@@ -13,12 +13,13 @@ import CaseTitle from "../components/Case/caseTitle"
 
 // Images
 import ImgBanner from "../images/rubbermaid/rubbermaidBanner.webp"
+import ImgOverview from "../images/rubbermaid/rubbermaidBanner.webp"
 
 const Rubbermaid = () => {
   return (
     <main>
       <Seo title="Rubbermaid Case Study | Bishal Mishra"
-      description="UX case study for rubbermaid app by Bishal Mishra." />
+        description="UX case study for rubbermaid app by Bishal Mishra." />
       <Layout>
         <article className="case">
           <CaseBanner
@@ -27,6 +28,71 @@ const Rubbermaid = () => {
             intro={`A bespoke guide for those shaping their living space anew, catering to both discerning decorators and those yet to define their household essentials.`}
             image={ImgBanner}
           />
+
+          <CaseOverview
+            Title={`Overview`}
+            Image={ImgOverview}
+            contentLarge={`Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their various interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.`}
+            content={`Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.`}
+            Role={[
+              {
+                content: `Role`,
+              },
+              {
+                content: `Project Lead`,
+              },
+              {
+                content: `Lead Designer / Strategist`,
+              },
+              {
+                content: `QA & FrontEnd development`,
+              },
+            ]}
+            Scope={[
+              {
+                content: `Scope`,
+              },
+              {
+                content: `Research`,
+              },
+              {
+                content: `UX`,
+              },
+              {
+                content: `Visual Design`,
+              },
+              {
+                content: `Prototyping`,
+              },
+              {
+                content: `Testing`,
+              },
+              {
+                content: `Coding`,
+              },
+            ]}
+            Timeline={[
+              {
+                content: `Timeline`,
+              },
+              {
+                content: `6 months & continued work`,
+              },
+              {
+                content: `2019-2020`,
+              },
+            ]}
+            Company={[
+              {
+                content: `Company`,
+              },
+              {
+                content: `Last Door Solutions`,
+              },
+            ]}
+          />
+
+
           <div className="page">
             <div className="pageHeader">
               <div className="siteContainer siteContainer--small">
@@ -99,16 +165,16 @@ const Rubbermaid = () => {
             <section className="pageSection">
               <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🔬 Research & Findings</h2>
-                </div>
-                <div className="pageImage">
+              </div>
+              <div className="pageImage">
                 <StaticImage
                   src={"../images/rubbermaid/rubbermaid_researchPlan.jpg"}
                   alt=""
                   width={8000}
                   className=""
                 />
-                </div>
-                <div className="siteContainer siteContainer--small">
+              </div>
+              <div className="siteContainer siteContainer--small">
                 <p>
                   Rubbermaid has been selling its products traditionally and
                   needs an online e-commerce shop. They have excellent
@@ -206,7 +272,7 @@ const Rubbermaid = () => {
             </section>
 
             <section className="pageSection">
-            <div className="siteContainer siteContainer--small">
+              <div className="siteContainer siteContainer--small">
                 <h2 className="pageSection__title">🧪 Iterations & Testing</h2>
                 <p>
                   For the first round, I ran down the hall test with a couple of

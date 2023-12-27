@@ -6,6 +6,9 @@ const HeaderLinks = styled.ul`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 36px;
 `
 const HeaderLinkItem = styled.li`
   line-height: 1;
@@ -25,7 +28,7 @@ const HeaderLinkItem = styled.li`
     &:focus {
       transition: ease all .25s;
       color: var(--dark);
-      border-bottom: 1px solid var(--dark);
+      border-bottom: 1px solid var(--brand);
     }
   }
 

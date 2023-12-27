@@ -32,6 +32,7 @@ import ImgDwtDashboard01 from "../images/dwt/dwtDashboard01.webp"
 import ImgDwtDashboard02 from "../images/dwt/dwtDashboard02.webp"
 import ImgDwtDashboard03 from "../images/dwt/dwtDashboard03.webp"
 import ImgDwtDashboard04 from "../images/dwt/dwtDashboard04.webp"
+import ImgDwtDashboard05 from "../images/dwt/dwtDashboard05.webp"
 import ImgDwtTripModules from "../images/dwt/dwtTripModules.webp"
 import ImgDwtTripPlanner01 from "../images/dwt/dwtTripPlanner01.webp"
 import ImgDwtTripPlanner02 from "../images/dwt/dwtTripPlanner02.webp"
@@ -120,6 +121,14 @@ const Dwt = () => {
             LargeTitle={`Redefining travel experience for three distinct users`}
             LargeContent={`<p>Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.</p>`}
             Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
+          />
+
+          <CaseGeneric
+            Title={`TLDR;<br/>Project Outcomes`}
+            customMargin="60px"
+            Content={`
+              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
+              `}
           />
 
           <CaseImage
@@ -306,7 +315,28 @@ const Dwt = () => {
           />
           <CaseImage
             LargeImage={ImgDwtDashboard04}
+            customMargin="30px"
           />
+          <CaseImage
+            LargeImage={ImgDwtDashboard05}
+          />
+
+          <CaseGeneric
+            Title={`About the UI Design`}
+            customMargin="60px"
+            Content={`
+              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
+              `}
+          />
+
+          <CaseGeneric
+            Title={`Conclusion`}
+            customMargin="60px"
+            Content={`
+              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
+              `}
+          />
+
         </article>
       </Layout>
     </main>
