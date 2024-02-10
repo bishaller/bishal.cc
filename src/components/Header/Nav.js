@@ -6,9 +6,12 @@ const HeaderLinks = styled.ul`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  background: white;
-  padding: 10px 20px;
+  background: rgba(255,255,255,.25);
+  padding: 8px 20px;
   border-radius: 36px;
+  border: 1px solid rgba(255,255,255,.25);
+  // filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
 `
 const HeaderLinkItem = styled.li`
   line-height: 1;

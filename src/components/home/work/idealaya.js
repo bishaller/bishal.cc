@@ -28,12 +28,14 @@ const WorkIdealaya = () => {
       description={`Strategy. UX Design. Development.`}
       linkColor={`var(--brand)`}
       bgColor={`#FFB88A`}
-      link={`/idealaya/`}
+      link={`https://www.idealaya.co/`}
+      target={`_blank`}
+      rel={`noopener noreferrer`}
     >
       <motion.img
         key={BackgroundImage}
         src={BackgroundImage}
-        initial={{ x: 0, y: 200, opacity: 0}}
+        initial={{ x: 0, y: 200, opacity: 0 }}
         animate={{ x: "0", y: "0", opacity: 0.05 }}
         transition={{
           type: "spring",

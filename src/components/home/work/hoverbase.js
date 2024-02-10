@@ -59,6 +59,8 @@ export const childVariants = {
 
 const HoverText = ({
   title,
+  target,
+  rel,
   description,
   bgColor,
   link,
@@ -124,6 +126,8 @@ const HoverText = ({
           to={link}
           key={link}
           title={`see case study for ${title}`}
+          target={target}
+          rel={rel}
         >
 
           <HoverTitle onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>

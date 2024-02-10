@@ -29,7 +29,9 @@ const WorkTwinsuk = () => {
       description={`Information Architecture. UX & Web Design`}
       linkColor={`var(--brand)`}
       bgColor={`#663C6C`}
-      link={`/twinsuk/`}
+      link={`https://twinsuk.ac.uk/`}
+      target={`_blank`}
+      rel={`noopener noreferrer`}
     >
       <motion.img
         key={BottomLeftImage}

@@ -90,11 +90,11 @@ const Dwt = () => {
                 content: `Prototyping`,
               },
               {
-                content: `Testing`,
-              },
-              {
                 content: `Coding`,
               },
+              {
+                content: `Testing`,
+              }
             ]}
             Timeline={[
               {
@@ -322,21 +322,13 @@ const Dwt = () => {
           />
 
           <CaseGeneric
-            Title={`About the UI Design`}
-            customMargin="60px"
-            Content={`
-              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
-              `}
-          />
-
-          <CaseGeneric
             Title={`Conclusion`}
             customMargin="60px"
             Content={`
-              <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
+              <p><strong>The site saw a massive 1700% growth in sales while the traffic bumped up, and now is under the #5 most visited site within its market.</strong> This helped us gain the client's trust, and we're working on several other projects with them.</p>
+              <p>In conclusion, the UX overhaul of Discovery World Trekking's web application stands out as a project particularly close to my heart, cherished for its challenges and victories. Working with the client while making design decisions was tough. However, Along the way, I learned their business side, and they were accommodating. Navigating the ups and downs, we successfully revamped the user experience to cater to individual travelers, agents, and the DWT crew. Introducing features like a multi-user management system, custom trip planner, tiered payments, and an intuitive live search was pivotal. These enhancements not only streamlined the booking process and aligned the platform with DWT's brand but also resonated deeply with my passion for creating impactful, user-centric designs. </p>
               `}
           />
-
         </article>
       </Layout>
     </main>

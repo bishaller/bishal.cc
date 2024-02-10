@@ -12,9 +12,10 @@ import CaseImage from "../components/Case/caseImage"
 
 // Images
 import bannerImage from "../images/traqit/traqitBanner.webp"
-import overviewImage from "../images/dwt/dwtOverview.webp"
-import largeImage1 from "../images/dwt/dwtLargeOne.webp"
-import dwtProcess from "../images/dwt/dwtProcess.webp"
+import overviewImage from "../images/traqit/traqitOverview.webp"
+import problemImage from "../images/traqit/traqitProblem.webp"
+import transitionImage from "../images/traqit/traqitTransition.webp"
+import dwtProcess from "../images/traqit/traqitBanner.webp"
 
 const Traqit = () => {
   return (
@@ -26,7 +27,7 @@ const Traqit = () => {
       <Layout >
         <article className="case">
           <CaseBanner
-            title={`Managing events simplified`}
+            title={`Event Management Simplified`}
             intro={`Transitioning users from the old overwhelming software to a task-focused minimal interface in multiple phases.`}
             image={bannerImage}
           >
@@ -41,10 +42,10 @@ const Traqit = () => {
                 content: `Role`,
               },
               {
-                content: `Project Lead`,
+                content: `Lead Designer`,
               },
               {
-                content: `Lead Designer / Strategist`,
+                content: `Project Co-ordinator`,
               },
               {
                 content: `QA & FrontEnd development`,
@@ -53,9 +54,6 @@ const Traqit = () => {
             Scope={[
               {
                 content: `Scope`,
-              },
-              {
-                content: `Research`,
               },
               {
                 content: `UX`,
@@ -67,10 +65,10 @@ const Traqit = () => {
                 content: `Prototyping`,
               },
               {
-                content: `Testing`,
+                content: `Coding`,
               },
               {
-                content: `Coding`,
+                content: `Testing`,
               },
             ]}
             Timeline={[
@@ -78,10 +76,10 @@ const Traqit = () => {
                 content: `Timeline`,
               },
               {
-                content: `6 months & continued work`,
+                content: `5 months; part-time work`,
               },
               {
-                content: `2019-2020`,
+                content: `2018`,
               },
             ]}
             Company={[
@@ -95,34 +93,47 @@ const Traqit = () => {
           />
 
           <CaseGeneric
-            LargeTitle={`Redefining travel experience for three distinct users`}
-            LargeContent={`<p>Re-do the discovery world trekking’s website into a web app where the users could book their desired trip based on their interests, agents could bring in their entire group of travelers, and the crew could access their travelers' information pre-trip for a smooth onboarding in their journey.</p>`}
-            Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
-          />
-
-          <CaseImage
-            LargeImage={largeImage1}
+            Title={`About the project`}
+            LargeContent={`<p>This UX case study is about the journey of evolving TRAQ-IT's event management software, a leading developer and provider of software solutions for tradeshow organizers, corporate event managers, and exhibitors.<br><br>I played a crucial role in this transformative process, enclosing the detailed evaluation of existing functionalities, addressing critical usability issues, and innovating upon a 20+ year legacy product.</p>`}
+            // Content={`<p>I led the project strategically and segmented it into phases, with each stage thoughtfully designed to transition users seamlessly from the familiar to the futuristic. I have detailed my contributions in navigating the complexities of this transition, balancing modern design principles with user familiarity, managing stakeholder inputs, and overcoming challenges such as limited budgets and extended development cycles. The case study highlights the impact of these changes on user efficiency and satisfaction, emphasizing the value of user experience in software evolution.</p>`}
           />
 
           <CaseGeneric
-            Title={`<span>Three phases of design: </span>Rebuild from ground up, </br>– Introduce agents & user accounts – Test, re-test & elevate the product.`}
-            LargeContent={`<p>I worked on redefining the information architecture, and content placement, improving the trip content strategies, and built 4 main features: a multiple-user management system, a custom trip planner, tiered payments with group discount tiers, and a live search for easy content access.</p>`}
-            Content={`<p>Kicked off the project with initial research, planned the project in phases, launched them one by one, and kept working on design tests, reviews, iteration, adding features, publishing the updates on design by rectifying the mistakes till 2022.</p>`}
+            Image={problemImage}
+            Title={`<span>The Problem:</span> Old, outdated, buggy and a frustrating software`}
+            LargeContent={`<p>TraQ-IT has significantly aged, with its outdated features and persistent bugs causing <strong>daily user frustration</strong>. The bugs and reliance on an older .NET framework made it difficult for the tool to meet modern design, usability, and cross-platform needs, leading to disrupted workflows and decreased efficiency. </p>`}
+            Content={`<p>Built initially on .NET frameworks, TraQ-IT's technology base is now a significant obstacle to its progress and user satisfaction. The forms, actions, and processes—once the backbone of its project management capabilities—have become outdated. Designed in a different technological era, they fail to align with current user expectations for intuitive interfaces and seamless experiences across various devices. This misalignment isn't just a minor issue; it's a significant problem that frustrates users and hampers their productivity, highlighting the tool's struggle to adapt to the evolving digital landscape.</p>`}
+            customMargin="0"
+          />
+
+          <CaseGeneric
+            Title={`<span>Approach:</span> Prioritizing user transition over outright software redesign`}
+            LargeContent={`<p>This UX case study is about the journey of evolving TRAQ-IT's event management software, a staple tool for tradeshow organizers and corporate event managers since 1998. My role in this transformative process was pivotal, enclosing the detailed evaluation of existing functionalities, addressing critical usability issues, and innovating upon a 20+ year legacy product.</p>`}
+            Content={`<p>I led the project strategically and segmented it into phases, with each stage thoughtfully designed to transition users seamlessly from the familiar to the futuristic. I have detailed my contributions in navigating the complexities of this transition, balancing modern design principles with user familiarity, managing stakeholder inputs, and overcoming challenges such as limited budgets and extended development cycles. The case study highlights the impact of these changes on user efficiency and satisfaction, emphasizing the value of user experience in software evolution.</p>`}
+            Image={transitionImage}
+          />
+
+          <CaseImage
+            LargeImage={problemImage}
+          />
+
+          <CaseGeneric
+            Title={`<span>Blank</span>Blank`}
+            LargeContent={`<p>Blank</p>`}
+            Content={`<p>Blank</p>`}
             Image={dwtProcess}
           />
 
           <CaseGeneric
-            Title={`A custom trip builder.`}
-            Content={`<p>This dynamic form lets the user customize the trips based on their own need and specific preference. Especially, this eliminates the back-and-forth manual communication that the crew would do with the user over email.</p>`}
+            Title={`Blnk`}
+            Content={`<p>Blank</p>`}
             Image={bannerImage}
           />
 
           <CaseGeneric
-            Title={`User management for agents & groups of users.`}
+            Title={`Blank`}
             Content={`
-              <p>Most of the trips run by the discovery world trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
-              <p>To help users smoothen their journey with their companions, I designed this user management system where one user could book the trip for their group and invite all of their friends to the portal. And that goes the same for the travel agents. The travel agents can book a trip and onboard all their travelers.</p>
-              <p>Why do we need to onboard the users on the system?</p>
+              <p>Blank</p>
             `}
             Image={bannerImage}
           />
