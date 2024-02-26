@@ -33,7 +33,9 @@ const WorkLovebit = () => {
       description={`Ideation. Product Design.`}
       linkColor={`var(--brand)`}
       bgColor={`#FFA648`}
-      link={`/lovebit/`}
+      link={`https://www.figma.com/proto/mA8zYyAFMxvhGdLX7QnPgq/lovebit_final_presentation?page-id=0%3A1&type=design&node-id=13-8&viewport=58%2C311%2C0.02&t=W8gdv7n2BFzs8FFO-1&scaling=contain&starting-point-node-id=13%3A8&mode=design`}
+      target={`_blank`}
+      rel={`noopener noreferrer`}
     >
       <motion.span
         initial={{ rotate: 0,}}

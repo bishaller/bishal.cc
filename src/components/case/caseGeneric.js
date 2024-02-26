@@ -64,6 +64,15 @@ const GenericContent = styled.div`
 
   ol {
     list-style: decimal outside;
+    margin-inline-start: 20px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    list-style: outside;
     margin-inline-start: 40px;
 
     li {

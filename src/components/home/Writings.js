@@ -93,18 +93,10 @@ const Writings = () => {
                   <WritingsTitle>Writings</WritingsTitle>
                </motion.span>
                <WritingsWrap>
-                  <motion.span variants={childVariants}>
-                     <Article>
-                        <ArticleLink href="#" title="Maximalism is taking over the web">
-                           <ArticleTitle>Maximalism is taking over the web</ArticleTitle>
-                           <p>Maximalism is taking over the web</p>
-                        </ArticleLink>
-                     </Article>
-                  </motion.span>
 
                   <motion.span variants={childVariants}>
                      <Article>
-                        <ArticleLink href="#" title="CSS Animation/Interaction How?">
+                        <ArticleLink href="https://public.3.basecamp.com/p/bUJNKgs3KX6fZ6irhN1WHiKx" title="CSS Animation/Interaction How?">
                            <ArticleTitle>CSS Animation/Interaction How?</ArticleTitle>
                            <p>CSS Animation/Interaction How?</p>
                         </ArticleLink>
@@ -113,7 +105,7 @@ const Writings = () => {
 
                   <motion.span variants={childVariants}>
                      <Article style={LastArticle}>
-                        <ArticleLink href="#" title="Why do you fail as a Frontend Developer?">
+                        <ArticleLink href="https://medium.com/@bishaller/why-do-you-fail-as-a-frontend-developer-ab90e1de373a" title="Why do you fail as a Frontend Developer?">
                            <ArticleTitle>Why do you fail as a Frontend Developer?</ArticleTitle>
                            <p>This is the first article</p>
                         </ArticleLink>

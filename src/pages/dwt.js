@@ -123,13 +123,13 @@ const Dwt = () => {
             Content={`<p>Discovery World Trekking(DWT) is a pioneering travel agency based in Nepal. They had been serving travelers from Europe, Australia, the US, and other Western countries. Unfortunately, the DWT website had an inferior information architecture with a vast lineup of trips and packages. All the payments would carry out a manual bank-to-bank transfer and not be handled by the website. They felt their brand was not reflecting "who they are" in the website and how they operate. On the business side, they wanted all their travelers' information to be handy and onboard them smoothly when they arrived in Nepal.</p>`}
           />
 
-          <CaseGeneric
+          {/* <CaseGeneric
             Title={`TLDR;<br/>Project Outcomes`}
             customMargin="60px"
             Content={`
               <p>Most of the trips run by the Discovery World trekking are in groups. Even most solo travelers prefer joining a group. This exists because of the remote trekking routes and the fostering of the group trek culture. They follow most trips' traditional group trekking practice as a base package.</p>
               `}
-          />
+          /> */}
 
           <CaseImage
             LargeImage={largeImage1}
@@ -218,7 +218,6 @@ const Dwt = () => {
                     `}
             customMargin="60px"
           />
-
 
           <CaseImage
             LargeImage={ImgDwtTripModules}
