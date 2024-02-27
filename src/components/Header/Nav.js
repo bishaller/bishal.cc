@@ -12,6 +12,7 @@ const HeaderLinks = styled.ul`
   border: 1px solid rgba(255,255,255,.25);
   // filter: blur(60px);
   -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
 `
 const HeaderLinkItem = styled.li`
   line-height: 1;

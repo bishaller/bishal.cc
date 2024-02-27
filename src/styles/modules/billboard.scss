@@ -62,7 +62,7 @@
     position: absolute;
     display: block;
     right: -6.6%;
-    bottom: 0%;
+    bottom: 30px;
     background-repeat: no-repeat;
     width: clamp(5rem, 8.4vw, 14rem);
     height: clamp(5rem, 8.4vw, 14rem);
@@ -123,13 +123,17 @@
 .billboard__intro {
   width: 100%;
   margin-left: 1.4vw;
-  margin-top: -35px;
-  @media #{$tablet} {
-    margin-top: -35px;
+  margin-top: -8vh;
+  @media #{$desktop} {
+    margin-top: -8vh;
+  }
+
+  @media #{$header} {
+    margin-top: -6vh;
   }
 
   @media #{$phone} {
-    margin-top: -5px;
+    margin-top: -10px;
   }
 }
 

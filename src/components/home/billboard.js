@@ -25,7 +25,7 @@ const letterAni = {
 };
 
 const StyledBillboard = styled.section`
-  padding: 15vw 0 11vw;
+  padding: 22vh 0 11vw;
   --wt: 400;
   --fsz: clamp(3rem, 20.8vw, 20rem);
   --lh: 0.8;
@@ -36,12 +36,13 @@ const StyledBillboard = styled.section`
   justify-content: center;
   z-index: 2;
 
+
   @media screen and (max-width: 1280px) {
-    padding: 24vw 0 18vw;
+    padding: 18vh 0 18vw;
   }
 
   @media screen and (max-width: 640px) {
-    padding: 50vw 0 40vw;
+    padding: 30vh 0 25vh;
   }
 `
 
@@ -50,9 +51,12 @@ const BillboardGradient = styled.div`
   pointer-events: none;
   position: absolute;
   display: block;
-  left: -65%;
+  // left: -65%;
+  left: 0;
+  top: 0;
   width: 100vw;
-  top: -165%;
+  // top: -165%;
+  transform: translate(-70%, -70%);
   height: auto;
   z-index: -999;
 
@@ -61,21 +65,21 @@ const BillboardGradient = styled.div`
     -webkit-filter: blur(100px) saturate(1.2);
   }
 
-  @media screen and (max-width: 1280px) {
-    left: -60%;
-    width: 105vw;
-    top: -115%;
-  }
-  @media screen and (max-width: 768px) {
-    left: -70%;
-    width: 110vw;
-    top: -100%;
-  }
+  // @media screen and (max-width: 1280px) {
+  //   left: -60%;
+  //   width: 105vw;
+  //   top: -115%;
+  // }
+  // @media screen and (max-width: 768px) {
+  //   left: -70%;
+  //   width: 110vw;
+  //   top: -100%;
+  // }
 
-  @media screen and (max-width: 640px) {
-    width: 120vw;
-    top: -60%;
-  }
+  // @media screen and (max-width: 640px) {
+  //   width: 120vw;
+  //   top: -60%;
+  // }
 `
 
 // const BillboardMouse = styled.div`

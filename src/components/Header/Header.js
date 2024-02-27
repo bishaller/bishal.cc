@@ -9,7 +9,7 @@ const SiteHeader = styled.header`
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: 10000000;
   width: 100%;
 
   @media screen and(max-width: 640px) {
