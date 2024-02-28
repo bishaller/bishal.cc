@@ -61,14 +61,15 @@
   .billboard__circle {
     position: absolute;
     display: block;
-    right: -6.6%;
-    bottom: 30px;
+    right: -3.5vw;
+    bottom: 3vw;
     background-repeat: no-repeat;
     width: clamp(5rem, 8.4vw, 14rem);
     height: clamp(5rem, 8.4vw, 14rem);
 
     @media screen and (min-width: 1720px) {
-      right: -3.6vw;
+      right: -3.5vw;
+      bottom: 2vw;
     }
 
     @media #{$desktop} {
